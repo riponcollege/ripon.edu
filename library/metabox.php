@@ -493,41 +493,6 @@ function page_metaboxes( $meta_boxes ) {
             ),
         )
     );
-	
-
-	// generate an array of interest categories.	
-	$int_cats = get_terms( 'interest_cat' );
-	$interest_categories = array();
-	foreach ( $int_cats as $int_cat ) {
-		$interest_categories[$int_cat->slug] = $int_cat->name;
-	}
-
-
-    // interest listings
-    $meta_boxes['interest_list'] = array(
-        'id' => 'interest_list',
-        'title' => 'Interest Listings',
-        'pages' => array( 'page', 'story' ), // post type
-        'context' => 'normal',
-        'priority' => 'high',
-        'show_names' => true, // Show field names on the left
-        'fields' => array(
-			array(
-			    'name' => 'Column One',
-			    'desc' => 'Select the categories to list in column one.',
-			    'id' => CMB_PREFIX . 'interests_col_1',
-			    'type' => 'multicheck',
-			    'options' => $interest_categories
-			),
-			array(
-			    'name' => 'Column Two',
-			    'desc' => 'Select the categories to list in column two.',
-			    'id' => CMB_PREFIX . 'interests_col_2',
-			    'type' => 'multicheck',
-			    'options' => $interest_categories
-			),
-        ),
-    );
 
 
     // footer quote

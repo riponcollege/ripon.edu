@@ -21,34 +21,10 @@ get_header();
 		</div>
 		<!-- #content -->
 
-		<?php 
-
-		the_two_column_content(); 
-
-		the_narrow_content(); 
-
-		the_photo_grid(); 
-		
-		the_tiles( 1 );
-		
-		the_blockquote( 1 );
-		
-		the_tiles( 2 );
-		
-		the_blockquote( 2 );
-		
-		the_tiles( 3 );
-		
-		the_blockquote( 3 );
-		
-		the_tiles( 4 );
-		
-		the_interest_lists();
-		
-		the_footer_quote();
-		
-		?>
-
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php
+
+get_footer();
+
+?>

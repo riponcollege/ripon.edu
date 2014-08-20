@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
         watch: {
             js: {
-                files: ['js/src/*.js', 'js/lib/**/*.js'],
+                files: ['js/src/*.js'],
                 tasks: ['uglify'],
                 options: {
                     spawn: false
@@ -29,8 +29,8 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'js/main.js': [
-                        'js/magnific/dist/jquery.magnific-popup.min.js',
-                        'js/src/*.js'
+                        'js/src/showcase.js',
+                        'js/src/main.js',
                     ]
                 }
             }
@@ -45,10 +45,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'css/src/main-unprefixed.css': [
-                        'css/src/main.scss',
-                        'js/magnific/dist/magnific-popup.css',
-                    ]
+                    'css/src/main-unprefixed.css': 'css/src/main.scss'
                 }
             }
         },
@@ -60,44 +57,7 @@ module.exports = function(grunt) {
                 dest: 'css/main.css',
                 src: 'css/src/main-unprefixed.css'
             }
-        },
-
-
-        // minify images
-        imagemin: { 
-            dynamic: {                         // Another target
-                files: [{
-                    expand: true,                  // Enable dynamic expansion
-                    cwd: 'img/src/',                   // Src matches are relative to this path
-                    src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-                    dest: 'img/'                  // Destination path prefix
-                }]
-            }
-        },
-
-
-        // sync up some files when the js/css build.
-        rsync: {
-            js: {
-                files: 'js/main.js',
-                options: {
-                    host: 'jpederson.com',
-                    port: '22',
-                    user: 'james',
-                    remoteBase: '~/viewbook.jpederson.net/wp-content/themes/ripon-viewbook'
-                }
-            },
-            css: {
-                files: 'css/main.css',
-                options: {
-                    host: 'jpederson.com',
-                    port: '22',
-                    user: 'james',
-                    remoteBase: '~/viewbook.jpederson.net/wp-content/themes/ripon-viewbook'
-                }
-            }
         }
-
 
     });
 
@@ -105,7 +65,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['watch']);
 
     // a build task just in case we want to
-    grunt.registerTask('build', ['sass','autoprefixer','uglify','imagemin']);
+    grunt.registerTask('build', ['sass','autoprefixer','uglify']);
 
 };
 

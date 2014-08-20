@@ -26,12 +26,13 @@
 	<header>
 
 		<div class="logo">
-			<a href="<?php bloginfo( "home" ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
 			</a>
 		</div>
 
 		<nav role="navigation">
+			<button class="menu-toggle">show/hide menu</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav>
 
