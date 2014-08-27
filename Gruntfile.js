@@ -29,6 +29,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'js/main.js': [
+                        'js/lib/fitvids/jquery.fitvids.js',
                         'js/src/showcase.js',
                         'js/src/main.js',
                     ]

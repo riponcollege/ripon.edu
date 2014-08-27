@@ -1,0 +1,6 @@
+[submodule "js/lib/fitvids"]
+	path = js/lib/fitvids
+	url = git@github.com:davatron5000/FitVids.js.git
+[submodule "library/twitter"]
+	path = library/twitter
+	url = git@github.com:abraham/twitteroauth.git
