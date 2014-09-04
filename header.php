@@ -6,7 +6,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<title><?php wp_title( '|', true, 'right' ); ?> Ripon College Viewbook</title>
+<title><?php wp_title( '|', true, 'right' ); ?> Ripon College</title>
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -21,9 +21,9 @@
 </head>
 <body <?php body_class(); ?>>
 
-<div class="wrap">
+<header>
 
-	<header>
+	<div class="wrap">
 
 		<div class="logo">
 			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -35,5 +35,13 @@
 			<button class="menu-toggle">show/hide menu</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav>
+	
+	</div>
 
-	</header>
+	<div class="search">
+		<?php get_search_form(); ?>
+	</div>
+
+</header>
+
+<section class="content">

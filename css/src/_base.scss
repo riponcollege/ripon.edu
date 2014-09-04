@@ -62,36 +62,8 @@ img, video, iframe {
   max-width: 100%;
 }
 
-.clearfix, .group {
-  zoom: 1;
-}
-
-.clearfix {
-  &:before, &:after {
-	content: "";
-	display: table;
-  }
-}
-
-.group {
-  &:before, &:after {
-	content: "";
-	display: table;
-  }
-}
-
-.clearfix {
-  clear: both;
-  &:before, &:after {
-	clear: both;
-  }
-}
-
-.group {
-  clear: both;
-  &:before, &:after {
-	clear: both;
-  }
+video, iframe {
+  display: block;
 }
 
 body {
@@ -100,7 +72,7 @@ body {
   color: #474a54;
   font-size: 15px;
   line-height: 22px;
-  background: #ccc;
+  background: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -153,11 +125,7 @@ strong {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-  span {
-    opacity: .6;
-  }
+  @include font-title;
 }
 
 h1 a, h2 a, h3 a, h4 a {
@@ -292,10 +260,5 @@ input {
 .wrap {
   max-width: 1220px;
   margin: 0 auto;
-  background: white;
-}
-
-.site-content {
-  background: white;
 }
 

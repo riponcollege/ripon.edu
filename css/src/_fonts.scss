@@ -1,5 +1,52 @@
 
-@import url(//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Open+Sans:300italic,600italic,800italic,300,600,800|La+Belle+Aurore:400);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,800italic,300,600,800);
+
+
+@font-face {
+    font-family: 'Texgyre Adventor Regular';
+    src: url('fonts/texgyreadventor-regular.eot');
+    src: url('fonts/texgyreadventor-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/texgyreadventor-regular.woff') format('woff'),
+         url('fonts/texgyreadventor-regular.ttf') format('truetype'),
+         url('fonts/texgyreadventor-regular.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Texgyre Adventor Italic';
+    src: url('fonts/texgyreadventor-italic.eot');
+    src: url('fonts/texgyreadventor-italic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/texgyreadventor-italic.woff') format('woff'),
+         url('fonts/texgyreadventor-italic.ttf') format('truetype'),
+         url('fonts/texgyreadventor-italic.svg#texgyreadventoritalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Texgyre Adventor Bold Italic';
+    src: url('fonts/texgyreadventor-bolditalic.eot');
+    src: url('fonts/texgyreadventor-bolditalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/texgyreadventor-bolditalic.woff') format('woff'),
+         url('fonts/texgyreadventor-bolditalic.ttf') format('truetype'),
+         url('fonts/texgyreadventor-bolditalic.svg#texgyreadventorbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Texgyre Adventor Bold';
+    src: url('fonts/texgyreadventor-bold.eot');
+    src: url('fonts/texgyreadventor-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/texgyreadventor-bold.woff') format('woff'),
+         url('fonts/texgyreadventor-bold.ttf') format('truetype'),
+         url('fonts/texgyreadventor-bold.svg#texgyreadventorbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 @mixin font {
 	font-family: "Open Sans", sans-serif;
@@ -16,7 +63,18 @@
 	font-weight: 800;
 }
 
-@mixin font-cursive {
-	font-family: "La Belle Aurore", cursive;
-	font-weight: 400;
+@mixin font-title {
+	font-family: "Texgyre Adventor Regular", sans-serif;
+}
+
+@mixin font-title-bold {
+	font-family: "Texgyre Adventor Bold", sans-serif;
+}
+
+@mixin font-title-italic {
+	font-family: "Texgyre Adventor Italic", sans-serif;
+}
+
+@mixin font-title-bold-italic {
+	font-family: "Texgyre Adventor Bold Italic", sans-serif;
 }

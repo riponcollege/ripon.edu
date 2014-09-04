@@ -18,7 +18,7 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 				?>
 				<hr>
-				<h3><?php the_title(); ?></h3>
+				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 				<?php the_excerpt(); ?>
 				<?php
 			endwhile;

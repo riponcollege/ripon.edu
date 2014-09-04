@@ -1,62 +1,59 @@
 
 
-// stristr function
-function stristr( haystack, needle ){
+// function to wrap the first [numWords] in [tag]
+jQuery.fn.wrapStart = function ( numWords, tag ) { 
 
-	var pos = 0;
+	if ( typeof( tag ) == 'undefined' ) {
+		tag = 'span';
+	}
+    var node = this.contents().filter(function () { 
+            return this.nodeType == 3 
+        }).first(),
+        text = node.text(),
+        first = text.split(" ", numWords).join(" ");
 
-	// haystack needs to be a string
-	haystack += '';
+    if (!node.length)
+        return;
 
-	// convert to lowercase, and get position of needle in haystack
-	pos = haystack
-		.toLowerCase()
-		.indexOf( ( needle + '' ).toLowerCase() );
+    node[0].nodeValue = text.slice(first.length);
+    node.before('<' + tag + '>' + first + '</' + tag + '>');
 
-	// return boolean based on if we find a match.
-	return ( pos == -1 ? false : true );
+};
 
-}
 
 
 // onload
 jQuery(document).ready(function($){
 
-	// remove the width and height attribute from story images.
-	$( '.stories .story img' ).removeAttr( 'height' ).removeAttr( 'width' );
+	var menu = $( 'header nav' ),
+		menu_toggle = menu.find( 'button.menu-toggle' ),
+		menu_ul = menu.find( '.nav-menu' );
 
-	// set up magnific iframe class for video/map popups
-	$( '.lightbox-iframe' ).magnificPopup({ 'type': 'iframe' });
 
-	// if we have a search field in the page, filter the list items inside it
-	// as the user types.
-	var search = $( '.search-box' );
+	menu_toggle.click(function(){
 
-	// if we have a search box on the page
-	if ( search ) {
+		if ( menu_ul.is( ':visible' ) ) {
+			menu_ul.hide();
+		} else {
+			menu_ul.show();
+		}
 
-		// bind to keyup on the search box input
-		search.find( 'input[type=text]' ).keyup(function(){
-
-			// store the search input value
-			var search_value = $( this ).val();
-
-			// loop through the list items in the search box
-			search.find( 'li a' ).each(function(){
-
-				// store the list item
-				var li = $( this );
-
-				// if the string is found in the item, make it show
-				if ( stristr( $( this ).text(), search_value ) ) {
-					li.removeClass( 'hidden' );
-				} else { // otherwise, hide that shiz
-					li.addClass( 'hidden' );
-				}
-			});
-
+		menu_ul.find( 'a' ).click(function(){
+			var submenu = $( this ).next( 'ul' );
+			if ( !submenu.is( ':visible' ) ) {
+				event.preventDefault();
+				submenu.show();
+			}
 		});
 
-	}
+	});
+
+	$( '.spotlight' ).fitVids();
+	$( '.content' ).fitVids();
+
+	$( 'footer nav li a' ).each(function(){
+		$( this ).wrapStart( 1 );
+	});
 
 });
+

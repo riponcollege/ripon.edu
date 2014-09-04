@@ -2,10 +2,12 @@
 
 // set colors
 $grey: #5f626f;
-$red: #b30838;
+$grey-light: #ebeae9;
+$red-dark: #6a0a1b;
+$red-light: #a91c3a;
 $black: #25252A;
 
-$link-color: $red;
+$link-color: $red-light;
 
 
 // mixin library
@@ -22,10 +24,11 @@ $link-color: $red;
 @import "header";
 @import "showcase";
 @import "content";
-@import "stories";
-@import "quotes";
-@import "search";
 @import "footer";
+
+
+// home-specific styles
+@import "home";
 
 
 // magnific stuff

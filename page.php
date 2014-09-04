@@ -4,24 +4,17 @@ get_header();
 
 ?>
 
-	<div id="primary" class="site-content">
+	<?php the_showcase(); ?>
 
-		<?php the_showcase(); ?>
+	<main class="content-narrow">
 
-		<!-- #content -->
-		<div id="content" class="site-content" role="main">
-		<?php while ( have_posts() ) : the_post(); ?>
-			<div class="image right">
-				<?php the_post_thumbnail(); ?>
-			</div>
-			<div class="content left">
-				<?php the_content(); ?>
-			</div>
-		<?php endwhile; ?>
-		</div>
-		<!-- #content -->
+		<?php 
+		while ( have_posts() ) : the_post();
+			the_content();
+		endwhile; 
+		?>
 
-	</div><!-- #primary -->
+	</main><!-- #primary -->
 
 <?php
 
