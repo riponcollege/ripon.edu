@@ -1,3 +1,6 @@
+
+$menu-breakpoint: 900px;
+
 header {
 	position: relative;
 	background: $red-dark;
@@ -15,7 +18,7 @@ header {
 			float: left;
 		}
 
-		@include respond-to( 768px ) {
+		@include respond-to( $menu-breakpoint ) {
 			img {
 				float: none;
 				height: auto;
@@ -24,7 +27,6 @@ header {
 	}
 
 	nav {
-
 		button.menu-toggle {
 			float: right;
 			background: $red-dark url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMAsfS51A2+6cnu0ds/UQcva7D7E8RTPvJoAAAAW0lEQVQY063POQKAIAwF0W+ComwqkPtfVWsSOl453SATeYUoo4qpwovJI7lwKsElLFXslLgfSucEEhNBJpBDDG7wpwyUtiutYKWb+d0GL/ONKKY4/3iELoXk+QCXmhAnR7E6TAAAAABJRU5ErkJggg==) center center no-repeat;
@@ -37,7 +39,7 @@ header {
 			border: 0;
 			box-shadow: none;
 
-			@include respond-to( 768px ) {
+			@include respond-to( $menu-breakpoint ) {
 				display: none;
 			}
 		}
@@ -46,7 +48,7 @@ header {
 			@include clearfix;
 			display: none;
 
-			@include respond-to( 768px ) {
+			@include respond-to( $menu-breakpoint ) {
 				display: block;
 			}
 
@@ -64,9 +66,12 @@ header {
 					&:hover {
 						color: white;
 					}
+
+					@include respond-to( 1040px ) { padding: 10px 20px; }
+					@include respond-to( 1220px ) { padding: 10px 30px; }
 				}
 
-				@include respond-to( 768px ) {
+				@include respond-to( $menu-breakpoint ) {
 					float: left;
 					position: relative;
 				}
@@ -80,7 +85,7 @@ header {
 					background: white;
 					display: none;
 
-					@include respond-to( 768px ) {
+					@include respond-to( $menu-breakpoint ) {
 						position: absolute;
 						top: 44px;
 						width: 220px;
@@ -100,7 +105,7 @@ header {
 					}
 				}
 				
-				@include respond-to( 768px ) {
+				@include respond-to( $menu-breakpoint ) {
 					&:hover {
 						& > a {
 							background-color: darken( $red-light, 2% );
@@ -159,6 +164,15 @@ header {
   	.search {
   		position: relative;
   		height: 40px;
+  		border-bottom: 1px solid lighten( $grey, 50% );
+
+  		@include respond-to( $menu-breakpoint ) {
+			position: absolute;
+			left: 68%;
+			top: 50%;
+			margin: -20px 0 0;
+			width: 30%;
+  		}
 
   		input[type=text] {
   			position: absolute;
@@ -166,6 +180,7 @@ header {
   			left: 0;
   			right: 40px;
   			display: block;
+  			margin: 0;
   			width: 100%;
   			border: 0;
   			line-height: 40px;
@@ -179,8 +194,10 @@ header {
   			top: 0;
   			right: 0;
   			width: 40px;
-  			background: $red-light url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozNkNCN0EzNDJCRTExMUU0ODgxN0JCQUQzNUM4OUQ2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozNkNCN0EzNTJCRTExMUU0ODgxN0JCQUQzNUM4OUQ2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjM2Q0I3QTMyMkJFMTExRTQ4ODE3QkJBRDM1Qzg5RDY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjM2Q0I3QTMzMkJFMTExRTQ4ODE3QkJBRDM1Qzg5RDY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+d5yEzwAAAcVJREFUeNpi/P//P8NgAUwMgwgMKsewkKL49evXvkDKFovUYVFR0c2UOoaRmDQDdIQ7kOoEYn08yi4CcTnQUTtp5higQ2YBqVQSzJwNdFAa1R0DdIgPkCIn+H2BDtpCbceAgl4Pi9RMIP4ExHxAnI5F/hLQMfpUcww0sW5CE94PxElAix4gqVMAUvOA2BFNbQBQ3UZqZW1suQbFISAA5ScRqZ9q5cxMdIegOWgmmvBvajoGXe4LAbPeofH/U9Mx/9D43ATMEkJPj7SMpgxoYsWW2BWw5CpmajrmCBaxeUCL5dAcIg/NTcTop1k58xqUdqlZzhCqKKtxlMDpBPRVUb0JAS3SZ5NTHdCy1vaA1tp6JJitA/TMVao7Bkt75i8Q/4FGsxQQx2FRvgHomECaOQaPI0EJGluzIQ/ooMl0dQzUQceBlAWa8CNQ1AId9JHebeAuLGKgMmkK3RvkQN+vB1JLsUjFAEPNfyB6B9nQqEEHFXR3DDRt9GCRsoAmcvokYLTEvAFIYYsaI6CDz9O7E1eLQ9yJ7j1KoO8vY2n5EWyK0qx7C3RQBqinid7zpHuaQUs/xdAQAXWBewfUMaNDIsPOMQABBgBN1qocOI5QDQAAAABJRU5ErkJggg==);) center center no-repeat;
+  			height: 40px;
+  			background: $red-light url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozNkNCN0EzNDJCRTExMUU0ODgxN0JCQUQzNUM4OUQ2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozNkNCN0EzNTJCRTExMUU0ODgxN0JCQUQzNUM4OUQ2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjM2Q0I3QTMyMkJFMTExRTQ4ODE3QkJBRDM1Qzg5RDY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjM2Q0I3QTMzMkJFMTExRTQ4ODE3QkJBRDM1Qzg5RDY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+d5yEzwAAAcVJREFUeNpi/P//P8NgAUwMgwgMKsewkKL49evXvkDKFovUYVFR0c2UOoaRmDQDdIQ7kOoEYn08yi4CcTnQUTtp5higQ2YBqVQSzJwNdFAa1R0DdIgPkCIn+H2BDtpCbceAgl4Pi9RMIP4ExHxAnI5F/hLQMfpUcww0sW5CE94PxElAix4gqVMAUvOA2BFNbQBQ3UZqZW1suQbFISAA5ScRqZ9q5cxMdIegOWgmmvBvajoGXe4LAbPeofH/U9Mx/9D43ATMEkJPj7SMpgxoYsWW2BWw5CpmajrmCBaxeUCL5dAcIg/NTcTop1k58xqUdqlZzhCqKKtxlMDpBPRVUb0JAS3SZ5NTHdCy1vaA1tp6JJitA/TMVao7Bkt75i8Q/4FGsxQQx2FRvgHomECaOQaPI0EJGluzIQ/ooMl0dQzUQceBlAWa8CNQ1AId9JHebeAuLGKgMmkK3RvkQN+vB1JLsUjFAEPNfyB6B9nQqEEHFXR3DDRt9GCRsoAmcvokYLTEvAFIYYsaI6CDz9O7E1eLQ9yJ7j1KoO8vY2n5EWyK0qx7C3RQBqinid7zpHuaQUs/xdAQAXWBewfUMaNDIsPOMQABBgBN1qocOI5QDQAAAABJRU5ErkJggg==) center center no-repeat;
   			color: white;
+  			margin: 0;
   			border: 0;
   			text-indent: -1000px;
   			overflow: hidden;
