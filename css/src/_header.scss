@@ -9,6 +9,7 @@ header {
 	
 	.wrap {
 		@include clearfix;
+		position: relative;
 	}
 	
 	.logo {
@@ -168,10 +169,10 @@ header {
 
   		@include respond-to( $menu-breakpoint ) {
 			position: absolute;
-			left: 68%;
+			right: 5%;
 			top: 50%;
-			margin: -20px 0 0;
-			width: 30%;
+			margin: -20px 0 150px;
+			width: 400px;
   		}
 
   		input[type=text] {

@@ -17,6 +17,35 @@
 			}
 		}
 
+		@include respond-to( 480px ) {
+			li:nth-child(2) a, li:nth-child(4) a, li:nth-child(6) a {
+				border-left: 4px solid $red-dark;
+				margin-bottom: 5px;
+			}
+		}
+
+		@include respond-to( 768px ) {
+			li:nth-child(4) a {
+				border-left: 0;
+			}
+
+			li:nth-child(2) a, li:nth-child(3) a, li:nth-child(5) a, li:nth-child(6) a {
+				border-left: 4px solid $red-dark;
+				margin-bottom: 5px;
+			}
+		}
+
+		@include respond-to( 1100px ) {
+			li:nth-child(1) a, li:nth-child(2) a, li:nth-child(3) a, li:nth-child(4) a, li:nth-child(5) a, li:nth-child(6) a {
+				border-left: 4px solid $red-dark;
+				margin-bottom: 0;
+			}
+
+			li:nth-child(1) a {
+				border-left: 0;
+			}
+		}
+
 		a {
 			color: white;
 			padding: 15px 5px;
@@ -37,8 +66,14 @@
 				color: lighten( $grey, 50% );
 			}
 
-			@include respond-to( 768px ) {
+			@include respond-to( 480px ) {
 				float: left;
+				width: 50%;
+				border: 0;
+
+			}
+
+			@include respond-to( 768px ) {
 				width: 33%;
 				border: 0;
 			}
