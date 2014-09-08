@@ -55,5 +55,47 @@ jQuery(document).ready(function($){
 		$( this ).wrapStart( 1 );
 	});
 
+
+
+	// select the footer and colophon only once
+	var colophon = $( 'div.colophon' );
+	var footer = $( 'footer.footer' );
+
+	// if the window is wide enough, tack a margin onto the colophon
+	if ( $(window).width() > 1099 ) {
+		colophon.css( 'margin-top', footer.height() + parseInt( footer.css( 'padding-top' ) ) + parseInt( footer.css( 'padding-bottom' ) ) );
+	}
+
+	$( window ).scroll(function(){
+
+		// get the document and window heights
+		var doc_height = $( document ).height();
+		var win_height = $( window ).height();
+
+		// calculate colophon height including padding
+		var col_height = colophon.height() + 
+			parseInt( colophon.css( 'padding-top' ) ) + 
+			parseInt( colophon.css( 'padding-bottom' ) );
+
+		// get current scrolling position
+		var scroll_position = $( window ).scrollTop();
+
+		// calculate footer height including padding
+		var footer_height = $( 'footer.footer' ).height() + 
+			parseInt( footer.css( 'padding-top' ) ) + 
+			parseInt( footer.css( 'padding-bottom' ) );
+
+		// if we've scrolled to the point where we can see the 
+		// colophon content, snap the footer back to a static position
+		// and remove the margin on the colophon.
+		if ( doc_height - win_height - col_height < scroll_position ) {
+			footer.removeClass( 'fixed' );
+			$( "div.colophon" ).css( 'margin-top', 0 );
+		} else {
+			footer.addClass( 'fixed' );
+			$( "div.colophon" ).css( 'margin-top', footer_height );
+		}
+	});
+
 });
 

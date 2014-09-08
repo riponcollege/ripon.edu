@@ -83,7 +83,15 @@
 				border-left: 4px solid $red-dark;
 			}
 		}
+	}
 
+	&.fixed {
+		@include respond-to( 1100px ) {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
 	}
 }
 
@@ -92,40 +100,49 @@
 	padding: 20px;
 	font-size: .9em;
 	text-align: center;
+	@include clearfix;
 
 	.campus-map {
 		display: block;
 		padding: 20px;
 		line-height: 40px;
-		margin-top: 20px;
+		margin-top: 10px;
 		background: url(../img/map-icon.jpg) right center no-repeat;
 		text-align: left;
+	}
+
+	.fold {
+		display: block;
 	}
 	
 	@include respond-to( 768px ) {
 		.addresses {
 			float: left;
-			width: 30%;
+			width: 40%;
 			padding: 10px 0;
 			margin-bottom: 50px;
 		}
 
 		.electronic {
 			float: right;
-			width: 30%;
+			width: 25%;
 			padding: 10px 0;
 		}
 		
 		.campus-map {
 			float: left;
 			width: 35%;
-			margin-left: 20px;
+			margin-top: 0;
 		}
 	}
 
-	@include respond-to( 900px ) {
+	@include respond-to( 1024px ) {
 		.campus-map {
 			width: 275px;
+		}
+
+		.fold {
+			display: inline;
 		}
 	}
 }
