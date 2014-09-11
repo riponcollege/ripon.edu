@@ -156,6 +156,7 @@
 
 .social {
 	padding: 30px 0;
+	background: lighten( $grey, 55% );
 
 	h3 {
 		background: $red-dark;
@@ -173,8 +174,12 @@
 			max-width: 12.2%;
 		}
 	}
+	
+	.feeds {
+		@include clearfix;
+	}
 
-	.feed-twitter {
+	.twitter {
 		margin: 10px;
 		padding: 8px;
 		background: $red-dark;
@@ -200,6 +205,101 @@
 				}
 			}
 		}
+	}
+
+	.facebook, .tumblr {
+		display: none;
+	}
+
+	@include respond-to( 768px ) {
+		h3 {
+			width: 54%;
+			float: left;
+			padding: 2%;
+			margin-top: 10px;
+		}
+
+		.icons {
+			width: 50%;
+			margin-left: -4%;
+			float: left;
+			background: lighten( $grey, 55% );
+			border-radius: 50px;
+
+			img {
+				margin: 0 .5% 0 0;
+				width: 14%;
+			}
+		}
+
+		.twitter {
+			background: white;
+			margin: 30px 2% 10px 200px;
+			position: relative;
+
+			h4 { display: none; }
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 50%;
+				left: -150px;
+				width: 106px;
+				height: 86px;
+				margin-top: -43px;
+				background: url(../img/social-twitter-bird.png) center center no-repeat;
+			}
+
+			&:after {
+				position: absolute;
+				content: '';
+				top: 50%;
+				left: -60px;
+				height: 0;
+				width: 0;
+				border: solid transparent;
+				pointer-events: none;
+				border-color: rgba( white, 0 );
+				border-right-color: white;
+				border-width: 30px;
+				margin-top: -30px;
+			}
+		}
+
+		.facebook, .tumblr {
+			display: block;
+			position: relative;
+			width: 46%;
+			float: left;
+			margin: 30px 2%;
+			background: white;
+			padding: 20px 30px 20px 80px;
+			height: 540px;
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 20px;
+				left: 15px;
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		.facebook:before { 
+			background: url(../img/social-facebook.png) center center no-repeat; 
+			background-size: cover;
+		}
+
+		.tumblr {
+			overflow: auto;
+
+			&:before { 
+				background: url(../img/social-tumblr.png) center center no-repeat; 
+				background-size: cover;
+			}
+		}
+
 	}
 }
 

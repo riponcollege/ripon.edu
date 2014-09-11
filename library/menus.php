@@ -8,4 +8,15 @@ register_nav_menus( array(
 ) );
 
 
+if ( function_exists('register_sidebar') ) {
+ 	register_sidebar(array(
+		'name'=> 'Tumblr Feed',
+		'id' => 'tumblr',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ));
+}
+
 ?>
