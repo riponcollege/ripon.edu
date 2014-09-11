@@ -25,6 +25,10 @@
 
 	</footer><!-- #colophon -->
 	
+	<div class="footer-badge">
+		Ripon College. Learn more. Do more. Be more. More. Together.
+	</div>
+
 	<div class="colophon">
 		
 		<div class="addresses">

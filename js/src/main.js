@@ -60,6 +60,7 @@ jQuery(document).ready(function($){
 	// select the footer and colophon only once
 	var colophon = $( 'div.colophon' );
 	var footer = $( 'footer.footer' );
+	var footer_badge = $( '.footer-badge' );
 
 	// if the window is wide enough, tack a margin onto the colophon
 	if ( $(window).width() > 1099 ) {
@@ -74,6 +75,7 @@ jQuery(document).ready(function($){
 
 		// calculate colophon height including padding
 		var col_height = colophon.height() + 
+			footer_badge.height() +
 			parseInt( colophon.css( 'padding-top' ) ) + 
 			parseInt( colophon.css( 'padding-bottom' ) );
 

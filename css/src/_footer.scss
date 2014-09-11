@@ -96,6 +96,18 @@
 }
 
 
+.footer-badge {
+	display: none;
+
+	@include respond-to( 768px ) {
+		display: block;
+		height: 45px;
+		background: $red-dark url(../img/footer-badge-text.png) center center no-repeat;
+		text-indent: -100%;
+	}
+}
+
+
 .colophon {
 	padding: 20px;
 	font-size: .9em;
