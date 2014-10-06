@@ -4,7 +4,9 @@
 // register a couple nav menus
 register_nav_menus( array(
 	'primary' => 'Main Menu',
-	'footer' => 'Footer Menu'
+	'footer' => 'Footer Menu',
+    'academics-top' => 'Academics - Top',
+    'academics-bototm' => 'Academics - Bottom'
 ) );
 
 
