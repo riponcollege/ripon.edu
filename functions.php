@@ -9,6 +9,10 @@ ini_set( "display_errors", 1 );
 define( "CMB_PREFIX", "_p_" );
 
 
+// include the faculty content type
+include( "library/post-type/faculty.php" );
+
+
 // include some theme-related things
 include( "library/menus.php" );
 include( "library/scripts.php" );

@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Front Page
+Template Name: Page - Home
 */
 
 get_header();

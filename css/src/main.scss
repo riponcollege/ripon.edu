@@ -23,7 +23,9 @@ $link-color: $red-light;
 // then we'll include the section-specific styles
 @import "header";
 @import "showcase";
+@import "menus";
 @import "content";
+@import "widgets";
 @import "footer";
 
 
