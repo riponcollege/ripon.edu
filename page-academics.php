@@ -20,9 +20,9 @@ get_header();
 
 			<div class="menu-primary">
 				<h5 class="menu-title">Academics</h5>
-				<?php wp_nav_menu( array( 'theme_location' => 'academics-top', 'menu_class' => 'nav-menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'academics-primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</div>
-			<div class="menu-buttons"><?php wp_nav_menu( array( 'theme_location' => 'academics-bottom', 'menu_class' => 'nav-menu' ) ); ?></div>
+			<div class="menu-buttons"><?php wp_nav_menu( array( 'theme_location' => 'academics-buttons', 'menu_class' => 'nav-menu' ) ); ?></div>
 
 		</div>
 

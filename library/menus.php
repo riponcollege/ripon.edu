@@ -5,8 +5,8 @@
 register_nav_menus( array(
 	'primary' => 'Main Menu',
 	'footer' => 'Footer Menu',
-    'academics-top' => 'Academics - Top',
-    'academics-bototm' => 'Academics - Bottom'
+    'academics-primary' => 'Academics Menu',
+    'academics-buttons' => 'Academics Buttons'
 ) );
 
 

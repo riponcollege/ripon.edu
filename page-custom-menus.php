@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Page - Academics
+Template Name: Page - Generic 3-column
 */
 
 get_header();
