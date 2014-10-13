@@ -33,11 +33,13 @@ function the_showcase() {
 				<?php if ( !empty( $link ) ) { ?><a href="<?php print $link ?>" class="<?php print ( stristr( $link, 'vimeo' ) || stristr( $link, 'youtube' ) || stristr( $link, 'google.com/maps' ) ? 'lightbox-iframe' : '' ) ?>"><?php } ?>
 				<?php print $image; ?>
 				<?php if ( !empty( $link ) ) { ?></a><?php } ?>
-
+				
+				<?php if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
 				<div class="slide-content<?php print ( $slide["color"] == 'black' ? ' black' : '' ) ?>">
 					<?php if ( !empty( $title ) ) { ?><h1><?php print $title; ?></h1><?php } ?>
 					<?php if ( !empty( $subtitle ) ) { ?><h2><?php print $subtitle; ?></h2><?php } ?>
 				</div>
+				<?php } ?>
 			</div>
 				<?php
 				$count++;
@@ -47,8 +49,8 @@ function the_showcase() {
 		if ( $count > 1 ) { 
 			?>
 			<div class="showcase-nav">
-				<a class="previous"><img src="<?php print get_template_directory_uri() ?>/img/slider-arrow-left.png" alt="Previous Slide"></a>
-				<a class="next"><img src="<?php print get_template_directory_uri() ?>/img/slider-arrow-right.png" alt="Next Slide"></a>
+				<a class="previous">Previous</a>
+				<a class="next">Next</a>
 			</div>
 			<?php
 		}
