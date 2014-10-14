@@ -33,7 +33,7 @@
 
 		<nav role="navigation">
 			<button class="menu-toggle">show/hide menu</button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav>
 	
 	</div>

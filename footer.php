@@ -18,7 +18,7 @@
 			
 		<nav role="navigation">
 			<?php wp_nav_menu( array( 
-				'theme_location' => 'footer', 
+				'theme_location' => 'footer-menu', 
 				'menu_class' => 'nav-menu' ) 
 			); ?>
 		</nav>

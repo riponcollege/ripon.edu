@@ -3,8 +3,8 @@
 
 // register a couple nav menus
 register_nav_menus( array(
-	'primary' => 'Main Menu',
-	'footer' => 'Footer Menu',
+	'main-menu' => 'Main Menu',
+	'footer-menu' => 'Footer Menu',
     'academics-primary' => 'Academics Menu',
     'academics-buttons' => 'Academics Buttons'
 ) );
