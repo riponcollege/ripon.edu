@@ -7,6 +7,7 @@
 	padding: 10px 20px;
 
 	nav {
+		@include wrap-main;
 		@include clearfix;
 
 		li:first-child a {
