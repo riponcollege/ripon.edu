@@ -39,7 +39,7 @@ get_header();
 				$num = 1;
 				while ( have_posts() ) {
 					the_post();
-					?> 
+					?>
 			<article<?php print ( $num == 1 ? ' class="first"' : '' ); ?>>
 				<h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
 				<?php the_excerpt() ?>
@@ -54,6 +54,7 @@ get_header();
 
 		<div class="events">
 			<h3>Ripon <span>Events</span></h3>
+			Testing!
 			<article class="first">
 				<div class="date">
 					Jul <span>20</span>

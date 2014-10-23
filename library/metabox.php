@@ -76,6 +76,79 @@ function page_metaboxes( $meta_boxes ) {
 	);
 
 
+    // footer quote
+    $meta_boxes['faculty_info'] = array(
+        'id' => 'faculty_info',
+        'title' => 'Faculty Member Information',
+        'pages' => array( 'faculty' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+            array(
+                'name' => 'Title',
+                'id' => CMB_PREFIX . 'faculty_title',
+                'type' => 'text'
+            ),
+            array(
+                'name' => 'Office Number',
+                'id' => CMB_PREFIX . 'faculty_office',
+                'type' => 'text_medium'
+            ),
+            array(
+                'name' => 'Phone Number',
+                'id' => CMB_PREFIX . 'faculty_phone',
+                'type' => 'text_medium'
+            ),
+            array(
+                'name' => 'Email Address',
+                'id' => CMB_PREFIX . 'faculty_email',
+                'type' => 'text_email'
+            ),
+            array(
+                'name' => 'Facebook',
+                'id' => CMB_PREFIX . 'faculty_facebook',
+                'type' => 'text_url'
+            ),
+            array(
+                'name' => 'LinkedIn',
+                'id' => CMB_PREFIX . 'faculty_linkedin',
+                'type' => 'text_url'
+            ),
+            array(
+                'name' => 'Twitter',
+                'id' => CMB_PREFIX . 'faculty_twitter',
+                'type' => 'text_url'
+            ),
+            array(
+                'name' => 'Education',
+                'id' => CMB_PREFIX . 'faculty_education',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Courses Taught',
+                'id' => CMB_PREFIX . 'faculty_courses',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Awards/Honors',
+                'id' => CMB_PREFIX . 'faculty_awards',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Publications',
+                'id' => CMB_PREFIX . 'faculty_publications',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Areas of Interest',
+                'id' => CMB_PREFIX . 'faculty_areas',
+                'type' => 'wysiwyg'
+            ),
+        ),
+    );
+
+
     $all_menus = get_all_menus();
 
     // second blockquote

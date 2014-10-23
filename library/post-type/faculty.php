@@ -11,7 +11,7 @@ function faculty_post_type() {
 	// creating (registering) the custom type 
 	register_post_type( 'faculty', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
-		array( 
+		array(
 			'labels' => array(
 				'name' => __( 'Faculty', 'ptheme' ), /* This is the Title of the Group */
 				'singular_name' => __( 'Faculty', 'ptheme' ), /* This is the individual type */
@@ -23,7 +23,7 @@ function faculty_post_type() {
 				'new_item' => __( 'New Faculty Member', 'ptheme' ), /* New Display Title */
 				'view_item' => __( 'View Faculty', 'ptheme' ), /* View Display Title */
 				'search_items' => __( 'Search Faculty', 'ptheme' ), /* Search Custom Type Title */ 
-				'not_found' =>  __( 'Nothing found in the batabase.', 'ptheme' ), /* This displays if there are no entries yet */ 
+				'not_found' =>  __( 'Nothing found in the database.', 'ptheme' ), /* This displays if there are no entries yet */ 
 				'not_found_in_trash' => __( 'Nothing found in Trash', 'ptheme' ), /* This displays if there is nothing in the trash */
 				'parent_item_colon' => ''
 			), /* end of arrays */
