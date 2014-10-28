@@ -37,9 +37,39 @@
 		color: lighten( $grey, 20% );
 		cursor: pointer;
 		border-bottom: 1px solid lighten( $grey, 50% );
+		position: relative;
+
+		&:before {
+			position: absolute;
+			font-family: "FontAwesome", sans-serif;
+			left: 15px;
+			top: 22px;
+			font-size: 30px;
+			color: lighten( $grey, 20% );
+		}
+
+		&.one:before {
+			content: $fa-var-user;
+		}
+
+		&.two:before {
+			content: $fa-var-trophy;
+		}
+
+		&.three:before {
+			content: $fa-var-book;
+		}
+
+		&.four:before {
+			content: $fa-var-lightbulb-o;
+		}
 
 		&:hover {
 			color: lighten( $grey, 5% );
+
+			&:before {
+				color: lighten( $grey, 5% );
+			}
 		}
 	}
 }
