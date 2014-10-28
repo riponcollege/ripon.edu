@@ -185,5 +185,9 @@ function page_metaboxes( $meta_boxes ) {
 add_filter( 'cmb_meta_boxes', 'page_metaboxes' );
 
 
+function get_cmb_value( $field ) {
+    return get_post_meta( get_the_ID(), CMB_PREFIX . $field, 1 );
+}
+
 
 ?>

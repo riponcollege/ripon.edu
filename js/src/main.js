@@ -22,14 +22,21 @@ jQuery.fn.wrapStart = function ( numWords, tag ) {
 
 
 
-// onload
+// onload responsive footer and menu stuff
 jQuery(document).ready(function($){
 
+	// select some things we'll use to make things responsive
 	var menu = $( 'header nav' ),
 		menu_toggle = menu.find( 'button.menu-toggle' ),
-		menu_ul = menu.find( '.nav-menu' );
+		menu_ul = menu.find( '.nav-menu' ),
+		fluid_images = $( '.faculty-info img' );
 
 
+	// remove height and width from images inside
+	fluid_images.removeAttr( 'width' ).removeAttr( 'height' );
+
+
+	// show/hide menus when they click the toggler
 	menu_toggle.click(function(){
 
 		if ( menu_ul.is( ':visible' ) ) {
@@ -48,13 +55,16 @@ jQuery(document).ready(function($){
 
 	});
 
+
+	// fluid width videos that maintain aspect ratio
 	$( '.spotlight' ).fitVids();
 	$( '.content' ).fitVids();
 
+
+	// footer navigation text wrap
 	$( 'footer nav li a' ).each(function(){
 		$( this ).wrapStart( 1 );
 	});
-
 
 
 	// select the footer and colophon only once
@@ -62,13 +72,16 @@ jQuery(document).ready(function($){
 	var footer = $( 'footer.footer' );
 	var footer_badge = $( '.footer-badge' );
 
-	// if the window is wide enough, tack a margin onto the colophon
-	if ( $(window).width() > 1099 ) {
-		
-		colophon.css( 'margin-top', footer.height() + parseInt( footer.css( 'padding-top' ) ) + parseInt( footer.css( 'padding-bottom' ) ) );
 
-		$( window ).scroll(function(){
+	// set the colophon margin based on footer height and padding
+	colophon.css( 'margin-top', footer.height() + parseInt( footer.css( 'padding-top' ) ) + parseInt( footer.css( 'padding-bottom' ) ) );
 
+
+	// when the viewport scrolls
+	$( window ).scroll(function(){
+
+		// if the window is wide enough, tack a margin onto the colophon
+		if ( $(window).width() > 1099 ) {
 			// get the document and window heights
 			var doc_height = $( document ).height();
 			var win_height = $( window ).height();
@@ -97,9 +110,10 @@ jQuery(document).ready(function($){
 				footer.addClass( 'fixed' );
 				$( "div.colophon" ).css( 'margin-top', footer_height );
 			}
-		});
 
-	}
+		}
+
+	});
 
 });
 

@@ -23,6 +23,7 @@ function get_all_menus(){
 }
 
 
+
 if ( function_exists('register_sidebar') ) {
  	register_sidebar(array(
 		'name'=> 'Academics',
@@ -41,6 +42,8 @@ if ( function_exists('register_sidebar') ) {
         'after_title' => '',
     ));
 }
+
+
 
 
 function left_menu_display( $position = 'primary' ) {

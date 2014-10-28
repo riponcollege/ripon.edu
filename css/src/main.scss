@@ -20,17 +20,22 @@ $link-color: $red-light;
 @import "base";
 
 
-// then we'll include the section-specific styles
+// general styles
 @import "header";
 @import "showcase";
 @import "menus";
 @import "content";
 @import "widgets";
+@import "tabs";
 @import "footer";
 
 
 // home-specific styles
 @import "home";
+
+
+// faculty post type styles
+@import "faculty";
 
 
 // magnific stuff
