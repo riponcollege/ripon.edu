@@ -30,8 +30,7 @@ module.exports = function(grunt) {
                 files: {
                     'js/main.js': [
                         'js/lib/fitvids/jquery.fitvids.js',
-                        'js/src/showcase.js',
-                        'js/src/main.js',
+                        'js/src/*.js',
                     ]
                 }
             }
