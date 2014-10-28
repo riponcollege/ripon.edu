@@ -74,8 +74,10 @@ jQuery(document).ready(function($){
 
 
 	// set the colophon margin based on footer height and padding
-	colophon.css( 'margin-top', footer.height() + parseInt( footer.css( 'padding-top' ) ) + parseInt( footer.css( 'padding-bottom' ) ) );
-
+	if ( $(window).width() > 1099 ) {
+		colophon.css( 'margin-top', footer.height() + parseInt( footer.css( 'padding-top' ) ) + parseInt( footer.css( 'padding-bottom' ) ) );
+	}
+	
 
 	// when the viewport scrolls
 	$( window ).scroll(function(){
