@@ -4,3 +4,6 @@
 [submodule "library/twitter"]
 	path = library/twitter
 	url = git@github.com:abraham/twitteroauth.git
+[submodule "css/lib/font-awesome-sass"]
+	path = css/lib/font-awesome-sass
+	url = git@github.com:FortAwesome/font-awesome-sass.git
