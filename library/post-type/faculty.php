@@ -132,4 +132,58 @@ function list_faculty_category( $category ) {
 }
 
 
+
+
+// Creating the widget 
+class faculty_search_widget extends WP_Widget {
+
+	function __construct() {
+		parent::__construct(
+		// Base ID of your widget
+		'wpb_widget', 
+
+			// Widget name will appear in UI
+			__('Faculty Search', 'wpb_widget_domain'), 
+
+			// Widget description
+		 	array( 'description' => __( 'Simple widget with a search form for the faculty directory.', 'wpb_widget_domain' ), ) 
+
+		);
+	}
+
+	// Creating widget front-end
+	// This is where the action happens
+	public function widget( $args, $instance ) {
+		?>
+		<div class="faculty-search-widget">
+			<form role="search" method="get" id="searchform" class="searchform" action="/faculty" _lpchecked="1">
+				<input type="hidden" name="post_type" value="faculty" />
+				<input type="text" value="" name="s" id="s" placeholder="Search Faculty">
+				<input type="hidden" name="post_type" value="faculty" />
+				<input type="submit" id="searchsubmit" value="Search">
+			</form>
+			<p class="directory-link"><a href="/faculty">Browse Directory &raquo;</a></p>
+		</div>
+		<?php
+	}
+			
+	// Widget Backend 
+	public function form( $instance ) {
+		?>
+		<p>This widget doesn't require any configuration.</p>
+		<?php 
+	}
+
+} // Class wpb_widget ends here
+
+
+// Register and load the widget
+function faculty_search_load_widget() {
+	register_widget( 'faculty_search_widget' );
+}
+add_action( 'widgets_init', 'faculty_search_load_widget' );
+
+
+
+
 ?>
