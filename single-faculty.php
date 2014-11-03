@@ -38,7 +38,7 @@ $areas = get_cmb_value( "faculty_areas" );
 				</ul>
 			</div>
 		</div><!-- #content -->
-		<div class="two-third">
+		<div class="two-third tab-container">
 
 			<div class="tab-content one">
 				<h1>Basic Information</h1>
