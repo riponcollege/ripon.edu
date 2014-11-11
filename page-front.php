@@ -19,7 +19,6 @@ get_header();
 					<li><a href="#">Accepted Student</a></li>
 					<li><a href="#">Alumna/us</a></li>
 					<li><a href="#">Current Student</a></li>
-					<li><a href="#">Faculty/Staff</a></li>
 					<li><a href="#">Interested Student</a></li>
 					<li><a href="#">Parent/Family</a></li>
 					<li><a href="#">Employer</a></li>
