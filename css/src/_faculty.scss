@@ -35,25 +35,25 @@
 
 .faculty-search-widget {
 	position: relative;
-	padding-top: 20px;
+	padding-top: 15px;
 	border-top: 4px double #ddd;
 
 	&:before {
 		display: block;
 		content: "\f002";
 		font-family: "FontAwesome";
-		font-size: 25px;
-		line-height: 50px;
+		font-size: 22px;
+		line-height: 40px;
 		text-align: center;
 		background: $teal;
 		color: white;
-		width: 50px;
-		height: 50px;
+		width: 40px;
+		height: 40px;
 		border-radius: 50%;
 		position: absolute;
-		top: -27px;
+		top: -22px;
 		left: 50%;
-		margin-left: -25px;
+		margin-left: -20px;
 	}
 
 	.faculty-search-widget-container {
@@ -120,8 +120,11 @@
 		@include clearfix;
 
 		.info {
-			float: left;
+			float: right;
 			width: 77%;
+
+			@include respond-to( 768px ) { width: 82%; }
+			@include respond-to( 1099px ) { width: 87%; }
 
 			h4, p {
 				padding: 2px 0;
