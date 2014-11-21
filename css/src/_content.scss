@@ -24,7 +24,6 @@
 }
 
 
-
 .quarter, .third, .half, .two-third, .three-quarter {
 	padding: 20px;
 	
@@ -32,6 +31,16 @@
 		padding: 20px 15px;
 		float: left;
 	}
+
+	&.no-pad {
+		padding: 0;
+		@include respond-to( 768px ) { padding: 0; }
+	}
+}
+
+.full-width {
+	padding: 20px;
+	@include respond-to( 768px ) { padding: 20px 15px; }
 }
 
 @include respond-to( 768px ) {

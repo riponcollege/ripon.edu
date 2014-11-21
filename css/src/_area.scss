@@ -1,0 +1,58 @@
+
+.area-tabs {
+	.area-tab-navigation {
+		position: relative;
+		z-index: 10;
+
+		li {
+			float: left;
+			width: 48%;
+			margin-left: 2%;
+			padding: 15px;
+			@include font-medium;
+			font-size: 21px;
+			line-height: 19px;
+			background: $red-dark;
+			border: 6px solid $red-dark;
+			border-bottom: 0;
+			color: white;
+
+			span { display: none; }
+
+			&:first-child { 
+				background: white;
+				border: 6px solid $grey;
+				border-bottom: 0;
+				margin-left: 0;
+				color: $grey;
+				line-height: 25px;
+			}
+
+			@include respond-to( 768px ) {
+				width: 32%;
+				margin-left: 1%;
+
+				span { display: inline; }
+
+				&:first-child { 
+					width: 67%;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.area-tab-content {
+		@include clearfix;
+		border: 6px solid $grey;
+		padding: 15px;
+		display: none;
+		position: relative;
+		z-index: 1;
+		top: -6px;
+
+		&.majors {
+			display: block;
+		}
+	}
+}
