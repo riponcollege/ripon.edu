@@ -132,46 +132,34 @@ function the_area_lists() {
 
 function list_area_category( $category ) {
 
-	// set up some args
-	$args = array( 
-		'post_type' => 'area', 
-		'posts_per_page' => 999, 
-		'orderby' => 'title', 
-		'order' => 'ASC', 
-		'tax_query' => array( 
-			array(
-				'taxonomy' => 'area_cat',
-				'field' => 'slug',
-				'terms' => $category
-			) 
-		) 
-	);
+	// select the areas of interest in the category
+	$areas = get_area_category( $category );
 
-	$show_links = true;
+	// count em
+	$area_count = count( $areas );
 
-	// check if it's the beyond ripon page
-	if ( is_page( 'beyond-ripon' ) ) {
-		// don't link the items if it's that
-		$show_links = false;
-	}
+	// determine what a quarter of the total records is so we can make columns
+	$quarter = ceil( $area_count / 4 );
 
-	// grab category information
-	$category_info = get_term_by( 'slug', $category, 'area_cat' );
-
-	// start up a loop
-	$loop = new WP_Query( $args );
-
-	?>
-	<ul>
-	<?php
 	// loop through the post results
-	while ( $loop->have_posts() ) : $loop->the_post();
+	$num = 1;
+	foreach ( $areas as $area ) {
+		if ( $num == 1 || $num == $quarter+1 || $num == ( $quarter * 2 )+1 || $num == ( $quarter * 3 )+1 ) {
+			?>
+	<ul class="column<?php print ( $num == 1 ? ' one' : '' ); print ( $num == $quarter+1 ? ' two' : '' ); print ( $num == ($quarter*2)+1 ? ' three' : '' ); print ( $num == ($quarter*3)+1 ? ' four' : '' ); ?>">
+			<?php
+		}
 		?>
-		<li><?php if ( $show_links ) { ?><a href="<?php the_permalink() ?>"><?php } ?><?php the_title(); ?><?php if ( $show_links ) { ?></a><?php } ?></li>
-		<?php
-	endwhile;
-	?>
+		<li><a href="/area/<?php print $area->post_name ?>"><?php print $area->post_title; ?></a></li>
+		<?php 
+		if ( $num == $quarter || $num == ( $quarter * 2 ) || $num == ( $quarter * 3 ) || $num == $area_count ) {
+			?>
 	</ul>
+			<?php
+		}
+		$num++;
+	}
+	?>
 	<?php
 	
 	// reset the post data
@@ -179,5 +167,22 @@ function list_area_category( $category ) {
 
 }
 
+
+function get_area_category( $category ) {
+	global $wpdb;
+
+	// Count custom post type by custom taxonomy
+	$sql = "SELECT * FROM $wpdb->posts p
+	JOIN $wpdb->term_relationships tr ON (p.ID = tr.object_id)
+	JOIN $wpdb->term_taxonomy tt ON (tr.term_taxonomy_id = tt.term_taxonomy_id AND tt.taxonomy = 'area_cat')
+	JOIN $wpdb->terms t ON (tt.term_id = t.term_id AND t.slug = '$category' )
+	WHERE p.post_type = 'area'
+	AND (p.post_status = 'publish')
+	AND p.post_date < NOW();";
+
+	$rows = $wpdb->get_results( $sql );
+
+	return $rows;
+}
 
 ?>

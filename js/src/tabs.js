@@ -19,5 +19,25 @@ jQuery(document).ready(function($){
 		});
 	}
 
+	if ( $( '.area-tabs' ).length ) {
+
+		// clicks of the majors tab
+		$( '.area-tab-navigation li:first-child' ).click(function(){
+			$( '.area-tab-navigation li.active' ).removeClass( 'active' );
+			$( this ).addClass( 'active' );
+			$( '.area-tab-content.minors' ).removeClass( 'active' ).hide();
+			$( '.area-tab-content.majors' ).addClass( 'active' ).show();
+		});
+
+		// clicks of the minors tab
+		$( '.area-tab-navigation li:nth-child(2)' ).click(function(){
+			$( '.area-tab-navigation li.active' ).removeClass( 'active' );
+			$( this ).addClass( 'active' );
+			$( '.area-tab-content.majors' ).removeClass( 'active' ).hide();
+			$( '.area-tab-content.minors' ).addClass( 'active' ).show();
+		});
+
+	}
+
 });
 
