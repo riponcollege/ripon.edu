@@ -149,6 +149,39 @@ function page_metaboxes( $meta_boxes ) {
     );
 
 
+    // footer quote
+    $meta_boxes['area_info'] = array(
+        'id' => 'area_info',
+        'title' => 'Area of Interest Details',
+        'pages' => array( 'area' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+            array(
+                'name' => 'Overview Document URL',
+                'id' => CMB_PREFIX . 'area_facebook',
+                'type' => 'text_url'
+            ),
+            array(
+                'name' => 'Faculty',
+                'id' => CMB_PREFIX . 'area_faculty',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Career Tracks',
+                'id' => CMB_PREFIX . 'area_tracks',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Off-Campus Study',
+                'id' => CMB_PREFIX . 'area_off_campus',
+                'type' => 'wysiwyg'
+            ),
+        ),
+    );
+
+
     $all_menus = get_all_menus();
 
     // second blockquote
