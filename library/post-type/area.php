@@ -178,7 +178,7 @@ function get_area_category( $category ) {
 	JOIN $wpdb->terms t ON (tt.term_id = t.term_id AND t.slug = '$category' )
 	WHERE p.post_type = 'area'
 	AND (p.post_status = 'publish')
-	AND p.post_date < NOW();";
+	AND p.post_date < NOW() ORDER BY p.post_title;";
 
 	$rows = $wpdb->get_results( $sql );
 
