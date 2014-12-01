@@ -12,7 +12,7 @@ get_header();
 
 		<div class="showcase">
 			
-			<?php the_showcase(); ?>
+			<?php the_stat_showcase(); ?>
 
 		</div>
 
@@ -45,8 +45,8 @@ get_header();
 
 			<div class="third sidebar">
 
-				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('academics')) : ?>
-				[ please add some widgets to the academics sidebar ]
+				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic')) : ?>
+				[ please add some widgets to this sidebar ]
 				<?php endif; ?>
 
 			</div>

@@ -26,8 +26,8 @@ function get_all_menus(){
 
 if ( function_exists('register_sidebar') ) {
  	register_sidebar(array(
-		'name'=> 'Academics',
-		'id' => 'academics',
+		'name'=> 'General Sidebar',
+		'id' => 'sidebar-generic',
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
         'before_title' => '',
