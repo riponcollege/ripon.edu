@@ -2,6 +2,29 @@
 
 
 function the_showcase() {
+	// grab the selected showcase type
+	$type = get_post_meta( get_the_ID(), CMB_PREFIX . "showcase-type", 1 );
+
+	// display the right showcase, defaulting to the medium photo showcase
+	switch ( $type ) {
+		case 'photo-large':
+			the_photo_showcase();
+		break;
+		case 'photo-small':
+			the_photo_showcase( 200 );
+		break;
+		case 'two-column':
+			the_stat_showcase();
+		break;
+		default:
+			the_photo_showcase( 400 );
+		break;
+	}
+}
+
+
+
+function the_photo_showcase( $height = 600 ) {
 
 	// get the slides
 	$slides = get_post_meta( get_the_ID(), CMB_PREFIX . "showcase", 1 );
@@ -22,7 +45,7 @@ function the_showcase() {
 				// check if it's an image or video
 				if ( p_is_image( $slide["image"] ) ) {
 					// it's an image, so resize it and generate an img tag.
-					$image = '<img src="' . p_image_resize( $slide["image"], 1220, 600, true ) . '">';
+					$image = '<img src="' . p_image_resize( $slide["image"], 1220, $height, true ) . '">';
 				} else {
 					// it's a video, so oEmbed that stuffs, yo
 					$image = apply_filter( 'the_content', $slide["image"] );
@@ -35,7 +58,7 @@ function the_showcase() {
 				<?php if ( !empty( $link ) ) { ?></a><?php } ?>
 				
 				<?php if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
-				<div class="slide-content<?php print ( $slide["color"] == 'black' ? ' black' : '' ) ?>">
+				<div class="slide-content">
 					<?php if ( !empty( $title ) ) { ?><h1><?php print $title; ?></h1><?php } ?>
 					<?php if ( !empty( $subtitle ) ) { ?><h2><?php print $subtitle; ?></h2><?php } ?>
 				</div>
@@ -59,6 +82,7 @@ function the_showcase() {
 		<?php
 	}
 }
+
 
 
 function the_stat_showcase() {
@@ -96,7 +120,7 @@ function the_stat_showcase() {
 					<?php if ( !empty( $link ) ) { ?></a><?php } ?>
 					
 					<?php if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
-					<div class="slide-content<?php print ( $slide["color"] == 'black' ? ' black' : '' ) ?>">
+					<div class="slide-content">
 						<?php if ( !empty( $title ) ) { ?><h1><?php print $title; ?></h1><?php } ?>
 						<?php if ( !empty( $subtitle ) ) { ?><h2><?php print $subtitle; ?></h2><?php } ?>
 					</div>
@@ -122,15 +146,6 @@ function the_stat_showcase() {
 	}
 }
 
-
-function the_showcase_subtitle() {
-	$slides = get_post_meta( get_the_ID(), CMB_PREFIX . "showcase", 1 );
-
-	$subtitle = ( isset( $slides[0]["subtitle"] ) ? $slides[0]["subtitle"] : '' );
-	if ( !empty( $subtitle ) ) {
-		print $subtitle;
-	}
-}
 
 
 ?>

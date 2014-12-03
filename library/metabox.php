@@ -26,6 +26,19 @@ function page_metaboxes( $meta_boxes ) {
 		'show_names' => false, // Show field names on the left
         'fields' => array(
             array(
+                'name'    => 'Slider Type',
+                'description' => "Select the type of slider to display.",
+                'id'      => CMB_PREFIX . 'showcase-type',
+                'type'    => 'radio_inline',
+                'options' => array(
+                    'photo-large'   => __( 'Large Photo', 'cmb' ),
+                    'photo-medium'  => __( 'Medium Photo', 'cmb' ),
+                    'photo-small'   => __( 'Small Photo', 'cmb' ),
+                    'two-column'    => __( 'Two Column', 'cmb' ),
+                ),
+                'default' => 'photo-medium',
+            ),
+            array(
                 'id' => CMB_PREFIX . 'showcase',
                 'type' => 'group',
                 'description' => __('Add images/videos into a slider on any page.', 'cmb'),
@@ -60,16 +73,6 @@ function page_metaboxes( $meta_boxes ) {
 						'type' => 'file',
 						'preview_size' => array( 350, 150 )
 					),
-                    array(
-                        'name'    => 'Text Color',
-                        'description' => "Set to dark when you have a bright image.",
-                        'id'      => 'color',
-                        'type'    => 'select',
-                        'options' => array(
-                            'white' => __( 'White', 'cmb' ),
-                            'black' => __( 'Black', 'cmb' ),
-                        ),
-                    ),
 				),
             ),
         )

@@ -8,7 +8,7 @@ get_header();
 
 ?>
 
-	<?php the_stat_showcase(); ?>
+	<?php the_showcase(); ?>
 	
 	<div class="wrap group academics three-column">
 
