@@ -83,7 +83,16 @@ jQuery(document).ready(function($){
 		var showcase_height = function(){
 			var current_slide = get_current_slide(),
 				current_slide_img = current_slide.find( 'img' );
-			showcase.height( current_slide_img.height() );
+			if ( showcase.find( '.slide-wrapper' ).length ) {
+				var slide_wrapper_margin = showcase.find( '.slide-wrapper' ).css( 'margin-top' ).replace( 'px', '' ) * 2;
+			} else {
+				var slide_wrapper_margin = 0;
+			}
+			if ( $( window ).width() >= 768 ) {				
+				showcase.height( current_slide_img.height() + slide_wrapper_margin );
+			} else {
+				showcase.height( current_slide.height() );
+			}
 		}
 
 

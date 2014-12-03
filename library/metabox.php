@@ -43,9 +43,9 @@ function page_metaboxes( $meta_boxes ) {
 					),
 					array(
 						'name' => 'Subtitle',
-						'description' => 'Enter a slide subtitle.',
+						'description' => 'Enter the slide content.',
 						'id'   => 'subtitle',
-						'type' => 'text',
+						'type' => 'wysiwyg',
 					),
 					array(
 						'name' => 'Link',

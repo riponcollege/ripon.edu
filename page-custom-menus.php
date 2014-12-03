@@ -8,13 +8,9 @@ get_header();
 
 ?>
 
+	<?php the_showcase(); ?>
+
 	<div class="wrap group academics three-column">
-
-		<div class="showcase">
-			
-			<?php the_showcase(); ?>
-
-		</div>
 
 		<div class="quarter left-menu">
 
