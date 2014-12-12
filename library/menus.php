@@ -30,8 +30,8 @@ if ( function_exists('register_sidebar') ) {
 		'id' => 'sidebar-generic',
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
-        'before_title' => '',
-        'after_title' => '',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
     ));
  	register_sidebar(array(
 		'name'=> 'Tumblr Feed',
