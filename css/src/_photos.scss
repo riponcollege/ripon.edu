@@ -4,17 +4,37 @@
 	@include clearfix;
 	padding: 20px 0;
 
-	h2 {
-		padding: 15px;
-		color: $red-dark;
+	.photo-grid-title-icon {
+		float: left;
+		width: 15%;
+		text-align: right;
+		padding: 15px 0 0 10px;
+
+		@include respond-to( 500px ) {
+			padding: 0;
+		}
 	}
 
-	.description {
-		padding: 0 15px 15px;
+	.photo-grid-title-text {
+		float: left;
+		width: 85%;
+
+		h2 {
+			padding: 15px;
+			color: $red-dark;
+		}
+
+		.description {
+			padding: 0 15px 15px;
+		}
 	}
 
 	.photo {
 		position: relative;
+
+		&.one {
+			clear: left;
+		}
 
 		img {
 			width: 100%;

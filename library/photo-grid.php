@@ -13,9 +13,14 @@ function the_photo_grid( $post_id = 0 ) {
     if ( !empty( $photos ) ) {
         ?>
         <div class="photo-grid">
-            <h2><?php print $title; ?></h2>
-            <div class="description">
-                <?php print $description; ?>
+            <div class="photo-grid-title-icon">
+                <img src="<?php bloginfo( 'template_url' ); ?>/img/icon-photos.png" class="photo-icon">
+            </div>
+            <div class="photo-grid-title-text">
+                <h2><?php print $title; ?></h2>
+                <div class="description">
+                    <?php print $description; ?>
+                </div>
             </div>
         <?php
         $num = 1;
