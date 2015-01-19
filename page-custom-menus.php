@@ -45,4 +45,8 @@ get_header();
 
 	</div>
 
+	<div class="wrap">
+		<?php the_photo_grid(); ?>
+	</div>
+
 <?php get_footer(); ?>
