@@ -215,6 +215,59 @@ function page_metaboxes( $meta_boxes ) {
     );
 
 
+
+    // photo grid that can be used on any page
+    $meta_boxes['photo_grid'] = array(
+        'id' => 'photo_grid',
+        'title' => 'Photo Grid',
+        'pages' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+            array(
+                'name' => 'Title',
+                'id'   => CMB_PREFIX . 'photo_grid_title',
+                'type' => 'text',
+            ),
+            array(
+                'name' => 'Description',
+                'id'   => CMB_PREFIX . 'photo_grid_description',
+                'type' => 'textarea_small',
+            ),
+            array(
+                'id' => CMB_PREFIX . 'photo_grid',
+                'type' => 'group',
+                'description' => __('Add photos to the photo grid component.', 'cmb'),
+                'options' => array(
+                    'add_button' => __('Add Another Photo', 'cmb'),
+                    'remove_button' => __('Remove Photo', 'cmb'),
+                    'sortable' => true, // beta
+                ),
+                'fields'      => array(
+                    array(
+                        'name' => 'Title',
+                        'id'   => 'title',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Link URL',
+                        'description' => "The address you'd like this photo and title to link to.",
+                        'id'   => 'link',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Image',
+                        'id'   => 'image',
+                        'type' => 'file',
+                        'preview_size' => array( 250, 250 )
+                    ),
+                ),
+            ),
+        )
+    );
+
+
     return $meta_boxes;
 
 }

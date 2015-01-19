@@ -31,6 +31,7 @@ include( "library/metabox.php" );
 include( "library/showcase.php" );
 include( "library/content.php" );
 include( "library/social.php" );
+include( "library/photo-grid.php" );
 
 
 ?>

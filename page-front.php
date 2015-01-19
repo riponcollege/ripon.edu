@@ -47,6 +47,8 @@ get_header();
 					$num++;
 				} // end while
 			} // end if
+
+			wp_reset_postdata();
 			?>
 			<p><a href="/news/" class="more">Read more news stories</a></p>
 		</div>
@@ -120,6 +122,10 @@ get_header();
 				</div>
 			</div>
 		</div>
+	</div>
+	
+	<div class="wrap">
+		<?php the_photo_grid( 18 ); ?>
 	</div>
 
 <?php get_footer(); ?>
