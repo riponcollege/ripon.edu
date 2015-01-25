@@ -48,7 +48,7 @@ get_header();
 				} // end while
 			} // end if
 
-			wp_reset_postdata();
+			wp_reset_query();
 			?>
 			<p><a href="/news/" class="more">Read more news stories</a></p>
 		</div>
@@ -88,6 +88,8 @@ get_header();
 		</div>
 
 	</div>
+
+	<?php the_infographic(); ?>
 
 	<div class="social">
 	 	<div class="wrap group">

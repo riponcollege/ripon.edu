@@ -152,6 +152,79 @@ function page_metaboxes( $meta_boxes ) {
     );
 
 
+    // showcase metabox
+    $meta_boxes['infographic_metabox'] = array(
+        'id' => 'infographic_metabox',
+        'title' => 'Infographic',
+        'pages' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => false, // Show field names on the left
+        'fields' => array(
+            array(
+                'id'   => CMB_PREFIX . 'infographic_image',
+                'name' => 'Infographic Image',
+                'description' => 'Select a square-shaped, blurry image so that it can be used on all screen sizes as a background for the infographic.',
+                'type' => 'file',
+                'preview_size' => array( 400, 400 )
+            ),
+            array(
+                'id' => CMB_PREFIX . 'infographic',
+                'type' => 'group',
+                'description' => __('Add data points into the infographic.', 'cmb'),
+                'options' => array(
+                    'add_button' => __('Add Datapoint', 'cmb'),
+                    'remove_button' => __('Remove Datapoint', 'cmb'),
+                    'sortable' => true, // beta
+                ),
+                'fields' => array(
+                    array(
+                        'name' => 'Icon',
+                        'description' => 'Select an icon image.',
+                        'id'   => 'image',
+                        'type' => 'file',
+                        'preview_size' => array( 100, 100 )
+                    ),
+                    array(
+                        'name' => 'Percentage',
+                        'description' => 'Enter a percentage for this datapoint.',
+                        'id'   => 'title',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Subtitle',
+                        'description' => 'Enter the percentage label.',
+                        'id'   => 'subtitle',
+                        'type' => 'text',
+                    ),
+                ),
+            ),
+            array(
+                'id' => CMB_PREFIX . 'infographic_buttons',
+                'type' => 'group',
+                'description' => __('Add buttons under the infographic.', 'cmb'),
+                'options' => array(
+                    'add_button' => __('Add Button', 'cmb'),
+                    'remove_button' => __('Remove Button', 'cmb'),
+                    'sortable' => true, // beta
+                ),
+                'fields' => array(
+                    array(
+                        'name' => 'Button Text',
+                        'id'   => 'text',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Button Link',
+                        'id'   => 'link',
+                        'type' => 'text',
+                    ),
+                ),
+            ),
+        )
+    );
+
+
     // footer quote
     $meta_boxes['area_info'] = array(
         'id' => 'area_info',
