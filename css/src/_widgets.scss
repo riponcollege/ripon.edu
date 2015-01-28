@@ -1,26 +1,28 @@
 
-.widget {
-	margin-top: 40px;
-	position: relative;
-	padding-top: 15px;
-	border-top: 4px double #ddd;
+.sidebar {
+	.widget {
+		margin-top: 40px;
+		position: relative;
+		padding-top: 25px;
+		border-top: 4px double #ddd;
 
-	&:before {
-		display: block;
-		content: "\f02d";
-		font-family: "FontAwesome";
-		font-size: 22px;
-		line-height: 40px;
-		text-align: center;
-		background: $teal;
-		color: white;
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		position: absolute;
-		top: -22px;
-		left: 50%;
-		margin-left: -20px;
+		&:before {
+			display: block;
+			content: "\f02d";
+			font-family: "FontAwesome";
+			font-size: 22px;
+			line-height: 40px;
+			text-align: center;
+			background: $teal;
+			color: white;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			position: absolute;
+			top: -22px;
+			left: 50%;
+			margin-left: -20px;
+		}
 	}
 }
 

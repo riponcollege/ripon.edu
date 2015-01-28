@@ -83,7 +83,9 @@ get_header();
 		<div class="spotlight">
 
 			<h3>Ripon <span>Spotlight</span></h3>
-			<iframe src="//player.vimeo.com/video/9953368" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('spotlight')) : ?>
+			[ PLEASE ADD THE SPOTLIGHT VIDEO WIDGET HERE ]
+			<?php endif; ?>
 		
 		</div>
 
