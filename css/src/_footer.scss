@@ -128,6 +128,10 @@
 	.fold {
 		display: block;
 	}
+
+	.electronic img {
+		max-width: 10%;
+	}
 	
 	@include respond-to( 768px ) {
 		.addresses {
