@@ -17,7 +17,13 @@
 
 			<?php include( "searchform-faculty.php" ); ?>
 
-			<?php if ( have_posts() ) : ?>
+			<?php 
+
+			global $wp_query;
+			$wp_query->query_vars["posts_per_page"] = 20;
+			$wp_query->get_posts();
+
+			if ( have_posts() ) : ?>
 
 			<div class="faculty-directory">
 			<?php
