@@ -54,6 +54,8 @@ get_header();
 
 				endwhile;
 
+				echo paginate_links();
+
 			else :
 				
 				?>
