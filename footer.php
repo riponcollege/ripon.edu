@@ -15,12 +15,9 @@
 	</section>
 	
 	<footer class="footer fixed">
-			
+
 		<nav role="navigation">
-			<?php wp_nav_menu( array( 
-				'theme_location' => 'footer-menu', 
-				'menu_class' => 'nav-menu' ) 
-			); ?>
+			<?php footer_menu_display(); ?>
 		</nav>
 
 	</footer><!-- #colophon -->
@@ -36,7 +33,7 @@
 			<strong>Mailing Address:</strong> <span class="fold">PO Box 248 Ripon, WI 54971-0248</span>
 		</div>
 		<div class="electronic">
-			<strong>Email:</strong> <span class="fold"><a href="adminfo@ripon.edu">adminfo@ripon.edu</a></span> | 
+			<strong>Email:</strong> <span class="fold"><a href="adminfo@ripon.edu">adminfo@ripon.edu</a></span><br>
 			<strong>Phone:</strong> <span class="fold">800-947-4766</span><br>
 			<a href="http://www.facebook.com/ripon.college"><img src="<?php bloginfo('template_url') ?>/img/social-facebook.png"></a>
 			<a href="https://www.flickr.com/photos/ripon_college/"><img src="<?php bloginfo('template_url') ?>/img/social-flickr.png"></a>

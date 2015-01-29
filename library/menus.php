@@ -4,7 +4,6 @@
 // register a couple nav menus
 register_nav_menus( array(
 	'main-menu' => 'Main Menu',
-	'footer-menu' => 'Footer Menu',
 	'academics-primary' => 'Academics Menu',
 	'academics-buttons' => 'Academics Buttons'
 ) );
@@ -53,27 +52,72 @@ if ( function_exists('register_sidebar') ) {
 
 
 
-
-function left_menu_display( $position = 'primary' ) {
+function left_menu_display() {
 
 	// grab the menu the user selected in the menus metabox.
-	$menu_name = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_" . $position, 1 );
+	$menu_title = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_title", 1 );
+
+	// primary menu
+	$menu_primary = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_primary", 1 );
+	$menu_primary_info = wp_get_nav_menu_object( $menu_primary );
+
+	// buttons menu
+	$menu_buttons = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_buttons", 1 );
+
 
 	// verify that the menu exists by checking the menu name to see if it's empty
-	if ( !empty( $menu_name ) ) {
+	if ( !empty( $menu_primary ) ) {
+		print '<div class="menu-primary">';
+
+		// display the menu title
+		if ( !empty( $menu_name ) ) {
+			print '<h5 class="menu-title">' . $menu_name . '</h5>';
+		} else {
+			print '<h5 class="menu-title">' . $menu_primary_info->name . '</h5>';
+		}
 
 		// display the menu
 		wp_nav_menu( array( 
-			'menu' => $menu_name, 
+			'menu' => $menu_primary, 
 			'menu_class' => 'nav-menu' )
 		);
+
+		print '</div>';
+	}
+
+	if ( !empty( $menu_buttons ) ) {
+		print '<div class="menu-button">';
+
+		// display the button menu
+		wp_nav_menu( array( 
+			'menu' => $menu_buttons, 
+			'menu_class' => 'nav-menu' )
+		);
+
+		print '</div>';
 	}
 
 }
 
 
 
+function footer_menu_display() {
 
+	// grab the menu the user selected in the menus metabox.
+	$menu_name = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_footer", 1 );
+
+	// verify that the menu exists by checking the menu name to see if it's empty
+	if ( empty( $menu_name ) ) {
+		$menu_name = 3;
+	}
+
+	// display the menu
+	wp_nav_menu( array( 
+		'menu' => $menu_name, 
+		'menu_class' => 'nav-menu' )
+	);
+
+}
 
 
 ?>

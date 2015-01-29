@@ -271,6 +271,12 @@ function page_metaboxes( $meta_boxes ) {
         'show_names' => false, // Show field names on the left
         'fields' => array(
             array(
+                'name' => 'Title',
+                'desc'    => 'The title above the left menu.',
+                'id'   => CMB_PREFIX . 'menu_title',
+                'type' => 'text',
+            ),
+            array(
                 'name'    => 'Primary Menu',
                 'desc'    => 'The left column top menu.',
                 'id'      => CMB_PREFIX . 'menu_primary',
@@ -283,6 +289,14 @@ function page_metaboxes( $meta_boxes ) {
                 'id'      => CMB_PREFIX . 'menu_buttons',
                 'type'    => 'select',
                 'options' => $all_menus,
+            ),
+            array(
+                'name'    => 'Footer Menu',
+                'desc'    => 'Select the menu that shows in the "take action" nav.',
+                'id'      => CMB_PREFIX . 'menu_footer',
+                'type'    => 'select',
+                'options' => $all_menus,
+                'default' => 'footer-navigation',
             ),
         ),
     );

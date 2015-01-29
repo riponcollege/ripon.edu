@@ -14,8 +14,7 @@ get_header();
 
 		<div class="quarter left-menu">
 
-			<div class="menu-primary"><?php left_menu_display( 'primary' ); ?></div>
-			<div class="menu-buttons"><?php left_menu_display( 'buttons' ); ?></div>
+			<?php left_menu_display(); ?>
 
 		</div>
 
