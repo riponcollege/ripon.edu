@@ -21,6 +21,9 @@
 
 			global $wp_query;
 			$wp_query->query_vars["posts_per_page"] = 20;
+			$wp_query->query_vars["post_type"] = 'faculty';
+			$wp_query->query_vars["orderby"] = 'title';
+			$wp_query->query_vars["order"] = 'ASC';
 			$wp_query->get_posts();
 
 			if ( have_posts() ) : ?>
