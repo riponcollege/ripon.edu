@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
 	var menu = $( 'header nav' ),
 		menu_toggle = menu.find( 'button.menu-toggle' ),
 		menu_ul = menu.find( '.nav-menu' ),
-		fluid_images = $( '.faculty-info img, .content-area img' );
+		fluid_images = $( '.faculty-info img, .content-area img, .faculty-directory img' );
 
 
 	// remove height and width from images inside
