@@ -47,22 +47,22 @@ get_header();
 
 			</div>
 
+			<div class="area-tabs full-width group">
+				<ul class="area-tab-navigation">
+					<li class="active">Majors<span> &amp; Pre-Professional Tracks</span></li>
+					<li>Minors</li>
+				</ul>
+				<div class="area-tab-content majors active">
+					<p>Below is a comprehensive listing of majors offered at Ripon College.</p>
+					<?php list_area_category( "major" ) ?>
+				</div>
+				<div class="area-tab-content minors">
+					<p>Below is a comprehensive listing of minors offered at Ripon College.</p>
+					<?php list_area_category( "minor" ) ?>
+				</div>
+			</div>
 		</div>
 
-		<div class="area-tabs full-width group">
-			<ul class="area-tab-navigation">
-				<li class="active">Majors<span> &amp; Pre-Professional Tracks</span></li>
-				<li>Minors</li>
-			</ul>
-			<div class="area-tab-content majors active">
-				<p>Below is a comprehensive listing of majors offered at Ripon College.</p>
-				<?php list_area_category( "major" ) ?>
-			</div>
-			<div class="area-tab-content minors">
-				<p>Below is a comprehensive listing of minors offered at Ripon College.</p>
-				<?php list_area_category( "minor" ) ?>
-			</div>
-		</div>
 
 	</div>
 
