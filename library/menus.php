@@ -86,7 +86,7 @@ function left_menu_display() {
 	}
 
 	if ( !empty( $menu_buttons ) ) {
-		print '<div class="menu-button">';
+		print '<div class="menu-buttons">';
 
 		// display the button menu
 		wp_nav_menu( array( 
