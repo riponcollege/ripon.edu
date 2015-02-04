@@ -61,6 +61,7 @@
 				font-size: 1.8em;
 				line-height: 1.2em;
 				text-transform: uppercase;
+				@include font-medium;
 			}
 
 			&:hover {
