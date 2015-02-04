@@ -72,7 +72,7 @@ function left_menu_display() {
 		// display the menu title
 		if ( !empty( $menu_name ) ) {
 			print '<h5 class="menu-title">' . $menu_name . '</h5>';
-		} else {
+		} else if ( !empty( $menu_primary_info ) ) {
 			print '<h5 class="menu-title">' . $menu_primary_info->name . '</h5>';
 		}
 
