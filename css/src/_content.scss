@@ -53,6 +53,15 @@
 
 
 
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.alignleft { float: left; margin: 0 15px 15px 0; }
+.alignright { float: right; margin: 0 0 15px 15px; }
+
+
+
 .three-column {
 	padding: 0 0 30px;
 }
