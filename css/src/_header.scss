@@ -82,8 +82,8 @@ header {
 				}
 
 				&.current-menu-item > a {
-					color: lighten( $red-light, 40% );
-					@include font-medium;
+					color: white;
+					background-color: $red-light;
 				}
 
 				ul {
