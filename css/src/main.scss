@@ -7,6 +7,7 @@ $red-dark: #6a0a1b;
 $red-light: #a91c3a;
 $black: #25252A;
 $blue: #015e83;
+$blue-light: lighten( $blue, 10% );
 $teal: #00a0df;
 
 $link-color: $red-light;

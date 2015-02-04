@@ -54,10 +54,14 @@ header {
 			}
 
 			li {
+				&.menu-item-1031 a {
+					color: $blue-light;
+				}
+
 				a {
 					@include font-bold;
 					display: block;
-					padding: 10px 12px;
+					padding: 10px 18px;
 					text-decoration: none;
 					color: white;
 					font-size: 10pt;
@@ -68,8 +72,8 @@ header {
 						color: white;
 					}
 
-					@include respond-to( 1040px ) { padding: 10px 20px; }
-					@include respond-to( 1220px ) { padding: 10px 30px; }
+					@include respond-to( 1040px ) { padding: 10px 28px; }
+					@include respond-to( 1220px ) { padding: 10px 40px; }
 				}
 
 				@include respond-to( $menu-breakpoint ) {
