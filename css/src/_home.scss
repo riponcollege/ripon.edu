@@ -172,6 +172,10 @@
 			float: left;
 			margin: 1%;
 			max-width: 12.2%;
+
+			&:hover {
+				opacity: .9;
+			}
 		}
 	}
 	
