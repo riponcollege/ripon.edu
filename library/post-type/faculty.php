@@ -162,7 +162,7 @@ class faculty_search_widget extends WP_Widget {
 					<input type="hidden" name="post_type" value="faculty" />
 					<input type="text" value="" name="s" id="s" placeholder="Search Faculty">
 					<input type="hidden" name="post_type" value="faculty" />
-					<input type="submit" id="searchsubmit" value="Search">
+					<button type="submit" id="searchsubmit"><i class="fa fa-lg fa-search"></i></button>
 				</form>
 				<p class="directory-link"><a href="/faculty">Browse Directory &raquo;</a></p>
 			</div>
