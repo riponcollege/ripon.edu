@@ -115,6 +115,7 @@
 .showcase.stats {
 	background: #ebeae9;
 	margin-bottom: 30px;
+	border-bottom: 1px solid #ccc;
 	@include clearfix;
 	@include respond-to( 768px ) {
 		height: 0;
@@ -122,6 +123,10 @@
 		overflow: hidden;
 		transition: height 300ms ease-in-out;
 		z-index: 0;
+	}
+
+	@include respond-to( 1024px ) {
+		border-bottom: 0;
 	}
 	
 	.slide-wrapper {
