@@ -11,15 +11,21 @@
 			text-transform: uppercase;
 		}
 
-		a {
-			display: block;
-			text-decoration: none;
-			padding: 4px 10px;
-			color: $grey;
-			border-bottom: 2px solid lighten( $grey, 55% );
+		li {
+			&.current-menu-item a {
+				color: $red-light;
+			}
 
-			&:hover {
-				background: lighten( $grey, 58% );
+			a {
+				display: block;
+				text-decoration: none;
+				padding: 4px 10px;
+				color: $grey;
+				border-bottom: 2px solid lighten( $grey, 55% );
+
+				&:hover {
+					background: lighten( $grey, 58% );
+				}
 			}
 		}
 	}
