@@ -15,14 +15,7 @@ get_header();
 		<nav class="iam">
 			<div class="wrap">
 				<h3>I Am A(n):</h3>
-				<ul>
-					<li><a href="#">Accepted Student</a></li>
-					<li><a href="#">Alumna/us</a></li>
-					<li><a href="#">Current Student</a></li>
-					<li><a href="#">Interested Student</a></li>
-					<li><a href="#">Parent/Family</a></li>
-					<li><a href="#">Employer</a></li>
-				</ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'constituent', 'menu_class' => 'nav-menu' ) ); ?>
 			</div>
 		</nav>
 
