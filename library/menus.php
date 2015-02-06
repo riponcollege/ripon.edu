@@ -61,7 +61,7 @@ function left_menu_display() {
 	// primary menu
 	$menu_primary = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_primary", 1 );
 	$menu_primary_info = wp_get_nav_menu_object( $menu_primary );
-	print_r( $menu_primary_info );
+
 	// buttons menu
 	$menu_buttons = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_buttons", 1 );
 
