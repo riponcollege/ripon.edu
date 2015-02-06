@@ -1,5 +1,7 @@
 <?php
-
+/*
+Template Name: Generic 1-column
+*/
 get_header();
 
 ?>
