@@ -42,8 +42,8 @@ if ( function_exists('register_sidebar') ) {
 		'after_title' => '</h4>',
 	));
 	register_sidebar(array(
-		'name'=> 'Tumblr Feed',
-		'id' => 'tumblr',
+		'name'=> 'Home Social',
+		'id' => 'social',
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '',

@@ -11,12 +11,12 @@ function twitter_posts() {
 	$connection = new TwitterOAuth( '1atjbG2VbZSdIWZYSyOKeRPCS', 'zP4ELLpMNblCqBN0e0eoUmMEjinJww0w6ldMxM7OtxsGZGntKS' );
 
 	// get the posts
-	$posts = $connection->get( 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=riponredhawks&count=2' );
+	$posts = $connection->get( 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=riponcollege&count=8&exclude_replies=true' );
 
 	// loop through them
 	foreach ( $posts as $post ) { ?>
 		<div class="post-twitter">
-			<?php print $post->text; ?>
+			<?php print make_clickable( $post->text ); ?>
 		</div>
 		<?php
 	}

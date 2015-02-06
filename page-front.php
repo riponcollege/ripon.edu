@@ -102,7 +102,7 @@ get_header();
 
 			<div class="feeds">
 				<div class="twitter group">
-					<h4>@RIPONREDHAWKS</h4>
+					<h4>@riponcollege</h4>
 					<div class="feed">
 						<?php twitter_posts() ?>
 					</div>
@@ -112,9 +112,9 @@ get_header();
 					<?php facebook_feed() ?>
 				</div>
 
-				<div class="tumblr">
-					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('tumblr')) : ?>
-					[ PLEASE ADD THE TUMBLR WIDGET HERE ]
+				<div class="instagram">
+					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('social')) : ?>
+					[ add social widgets ]
 					<?php endif; ?>
 				</div>
 			</div>
