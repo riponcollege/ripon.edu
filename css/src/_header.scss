@@ -3,13 +3,12 @@ $menu-breakpoint: 900px;
 
 header {
 	position: relative;
+	z-index: 1000;
 	background: $red-dark;
-	z-index: 100;
 	@include clearfix;
 	
 	.wrap {
 		@include clearfix;
-		position: relative;
 	}
 	
 	.logo {

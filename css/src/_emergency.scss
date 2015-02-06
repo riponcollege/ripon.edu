@@ -3,6 +3,7 @@
 .emergency-bar-container {
 	.wrap {
 		position: relative;
+		z-index: 900;
 
 		.emergency-bar {
 			background: $grey;
@@ -15,7 +16,6 @@
 				top: 0;
 				right: 4%;
 				left: 55%;
-				z-index: 1000;
 			}
 
 			.emergency-bar-icon {
