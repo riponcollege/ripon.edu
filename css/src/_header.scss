@@ -73,7 +73,7 @@ header {
 					}
 
 					@include respond-to( 1040px ) { padding: 10px 28px; }
-					@include respond-to( 1220px ) { padding: 10px 40px; }
+					@include respond-to( 1220px ) { padding: 10px 32px; }
 				}
 
 				@include respond-to( $menu-breakpoint ) {
