@@ -182,26 +182,48 @@
 		&:before {
 			position: absolute;
 			font-family: "FontAwesome", sans-serif;
-			left: 15px;
-			top: 22px;
+			left: 10px;
+			top: 19px;
+			width: 30px;
+			text-align: center;
 			font-size: 30px;
 			color: lighten( $grey, 20% );
 		}
 
-		&.one:before {
+		&.basic:before {
 			content: $fa-var-user;
 		}
 
-		&.two:before {
+		&.faculty-awards:before {
 			content: $fa-var-trophy;
 		}
 
-		&.three:before {
+		&.faculty-publications:before {
 			content: $fa-var-book;
 		}
 
-		&.four:before {
+		&.faculty-areas:before {
 			content: $fa-var-lightbulb-o;
+		}
+
+		&.faculty-affiliations:before {
+			content: $fa-var-university;
+		}
+
+		&.faculty-presentations:before {
+			content: $fa-var-file-powerpoint-o;
+		}
+
+		&.faculty-pedagogy:before {
+			content: $fa-var-group;
+		}
+
+		&.faculty-credits:before {
+			content: $fa-var-star;
+		}
+
+		&.faculty-experience:before {
+			content: $fa-var-briefcase;
 		}
 
 		&:hover {
