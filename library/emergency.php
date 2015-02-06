@@ -10,8 +10,9 @@ function the_emergency_bar() {
 		?>
 	<div class="emergency-bar-container">
 		<div class="wrap">
-			<?php if ( !empty( $emergency_link ) ) { ?><a href="<?php print $emergency_link ?>"><?php } ?>
 			<div class="emergency-bar">
+				<i class="fa fa-close"></i>
+				<?php if ( !empty( $emergency_link ) ) { ?><a href="<?php print $emergency_link ?>"><?php } ?>
 				<div class="emergency-bar-icon">
 					<i class="fa fa-lg fa-exclamation-triangle"></i>
 				</div>
@@ -19,8 +20,8 @@ function the_emergency_bar() {
 					<strong>ALERT:</strong> 
 					<?php print do_shortcode( $emergency_text ) ?>
 				</div>
+				<?php if ( !empty( $emergency_link ) ) { ?></a><?php } ?>
 			</div>
-			<?php if ( !empty( $emergency_link ) ) { ?></a><?php } ?>
 		</div>
 	</div>
 		<?php
