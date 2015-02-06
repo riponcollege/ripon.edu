@@ -155,7 +155,7 @@ class faculty_search_widget extends WP_Widget {
 	// This is where the action happens
 	public function widget( $args, $instance ) {
 		?>
-		<div class="faculty-search-widget">
+		<div class="ripon-widget faculty">
 			<h4>Faculty Directory</h4>
 			<div class="faculty-search-widget-container">
 				<form role="search" method="get" id="searchform" class="searchform" action="/faculty" _lpchecked="1">
