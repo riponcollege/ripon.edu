@@ -1,11 +1,12 @@
 
 
-.home-showcase {
+.iam {
 	position: relative;
+	background: $red-light;
+	@include clearfix;
 
-	nav.iam {
-		background: $red-dark;
-		padding: 10px 20px 20px;
+	nav {
+		padding: 0 20px;
 		text-align: center;
 	
 		h3 {
@@ -30,14 +31,7 @@
 			}
 		}
 
-		@include respond-to( 900px ) {
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
-			padding: 0;
-			background: $red-light;
-			
+		@include respond-to( 900px ) {			
 			h3 {
 				float: left;
 				font-size: 14px;

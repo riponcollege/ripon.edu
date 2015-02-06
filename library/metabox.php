@@ -11,10 +11,72 @@ function p_init_cmb_meta_boxes() {
 
 
 
+/**
+ * Include metabox on front page
+ * @author Ed Townend
+ * @link https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress/wiki/Adding-your-own-show_on-filters
+ *
+ * @param bool $display
+ * @param array $meta_box
+ * @return bool display metabox
+ */
+function p_metabox_include_front_page( $display, $meta_box ) {
+    if ( 'front-page' !== $meta_box['show_on']['key'] )
+        return $display;
+
+    // Get the current ID
+    if ( isset( $_GET['post'] ) ) {
+        $post_id = $_GET['post'];
+    } elseif ( isset( $_POST['post_ID'] ) ) {
+        $post_id = $_POST['post_ID'];
+    }
+
+    //return false early if there is no ID
+    if( !isset( $post_id ) ) return false;
+
+    //Get ID of page set as front page, 0 if there isn't one
+    $front_page = get_option('page_on_front');
+
+    if ( $post_id == $front_page ) {
+        //there is a front page set and we're on it!
+        return $display;
+    }
+
+}
+add_filter( 'cmb_show_on', 'p_metabox_include_front_page', 10, 2 );
+
+
 
 
 // add metabox(es)
 function page_metaboxes( $meta_boxes ) {
+
+    // footer quote
+    $meta_boxes['emergency'] = array(
+        'id' => 'emergency',
+        'title' => 'Emergency Bar',
+        'pages' => array( 'page' ), // post type
+        'show_on' => array( 
+            'key' => 'front-page', 
+            'value' => '' 
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+            array(
+                'name' => 'Emergency Text',
+                'id' => CMB_PREFIX . 'emergency_text',
+                'type' => 'textarea'
+            ),
+            array(
+                'name' => 'Link',
+                'id' => CMB_PREFIX . 'emergency_link',
+                'type' => 'text_url'
+            ),
+        ),
+    );
+
 
 	// showcase metabox
 	$meta_boxes['showcase_metabox'] = array(
@@ -364,6 +426,7 @@ add_filter( 'cmb_meta_boxes', 'page_metaboxes' );
 function get_cmb_value( $field ) {
     return get_post_meta( get_the_ID(), CMB_PREFIX . $field, 1 );
 }
+
 
 
 ?>

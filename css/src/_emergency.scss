@@ -1,0 +1,33 @@
+
+
+.emergency-bar-container {
+	.wrap {
+		position: relative;
+
+		.emergency-bar {
+			background: $grey;
+			padding: 10px;
+			color: $orange;
+			@include clearfix;
+
+			@include respond-to( 768px ) {
+				position: absolute;
+				top: 0;
+				right: 4%;
+				left: 55%;
+				z-index: 1000;
+			}
+
+			.emergency-bar-icon {
+				float: left;
+				width: 5%;
+			}
+
+			.emergency-bar-text {
+				float: right;
+				width: 92%;
+			}
+		}
+	}
+}
+

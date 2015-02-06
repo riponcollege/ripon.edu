@@ -9,6 +9,7 @@ $black: #25252A;
 $blue: #015e83;
 $blue-light: lighten( $blue, 10% );
 $teal: #00a0df;
+$orange: #fecb00;
 
 $link-color: $red-light;
 
@@ -33,6 +34,7 @@ $link-color: $red-light;
 @import "photos";
 @import "tabs";
 @import "footer";
+@import "emergency";
 
 
 // home-specific styles
@@ -49,4 +51,5 @@ $link-color: $red-light;
 
 // magnific stuff
 @import "lightbox";
+
 

@@ -33,6 +33,7 @@ include( "library/infographic.php" );
 include( "library/content.php" );
 include( "library/social.php" );
 include( "library/photo-grid.php" );
+include( "library/emergency.php" );
 
 
 ?>
