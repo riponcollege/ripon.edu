@@ -44,7 +44,7 @@ get_header();
 					<div class="faculty-entry">
 						<?php the_post_thumbnail(); ?>
 						<div class="info">
-							<a href="<?php the_permalink(); ?>" class="btn">View Profile &raquo;</a>
+							<a href="<?php the_permalink(); ?>" class="btn"><i class="fa fa-lg fa-search"></i></a>
 							<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
 							<p class="faculty-title"><?php print get_cmb_value( "faculty_title" ); ?></p>
 							<a href="mailto:<?php print get_cmb_value( "faculty_email" ); ?>"><?php print get_cmb_value( "faculty_email" ); ?></a>
