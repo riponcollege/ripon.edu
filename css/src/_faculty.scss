@@ -215,6 +215,14 @@
 }
 
 
+button.back-to-faculty-list {
+	float: left;
+	position: relative;
+	left: 20px;
+	top: -20px;
+}
+
+
 .faculty .tab-content ul li {
 	padding: 2px 0 4px 35px;
 	color: lighten( $grey, 10% );

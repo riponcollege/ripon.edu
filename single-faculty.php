@@ -5,12 +5,6 @@
 
 get_header();
 
-$education = get_cmb_value( "faculty_education" );
-$courses = get_cmb_value( "faculty_courses" );
-$awards = get_cmb_value( "faculty_awards" );
-$publications = get_cmb_value( "faculty_publications" );
-$areas = get_cmb_value( "faculty_areas" );
-
 ?>
 	<div id="primary" class="faculty wrap group" role="main">
 
@@ -19,6 +13,7 @@ $areas = get_cmb_value( "faculty_areas" );
 			while ( have_posts() ) : the_post(); 
 				?>
 		<div class="third">
+			<button class="back-to-faculty-list">&laquo; Back to Directory</button>
 			<div class="faculty-info">
 				<?php the_post_thumbnail() ?>
 				<h2><?php the_title(); ?></h2>
@@ -31,16 +26,21 @@ $areas = get_cmb_value( "faculty_areas" );
 			</div>
 			<div class="tab-nav">
 				<ul>
-					<li class="one">Basic Information</li>
-					<li class="two">Awards &amp; Honors</li>
-					<li class="three">Publications</li>
-					<li class="four">Areas of Interest &amp; Research</li>
+					<li class="basic">Basic Information</li>
+					<?php do_faculty_tab_nav( "Awards &amp; Honors", "awards" ) ?>
+					<?php do_faculty_tab_nav( "Publications", "publications" ) ?>
+					<?php do_faculty_tab_nav( "Areas of Interest", "areas" ) ?>
+					<?php do_faculty_tab_nav( "Professional Affiliations", "affiliations" ) ?>
+					<?php do_faculty_tab_nav( "Presentations", "presentations" ) ?>
+					<?php do_faculty_tab_nav( "Pedagogy", "pedagogy" ) ?>
+					<?php do_faculty_tab_nav( "Production Credits", "credits" ) ?>
+					<?php do_faculty_tab_nav( "Professional Experience", "experience" ) ?>
 				</ul>
 			</div>
 		</div><!-- #content -->
 		<div class="two-third tab-container">
 
-			<div class="tab-content one">
+			<div class="tab-content basic first">
 				<h1>Basic Information</h1>
 				<?php 
 				if ( !empty( $education ) ) { 
@@ -60,38 +60,14 @@ $areas = get_cmb_value( "faculty_areas" );
 				?>
 			</div>
 
-			<div class="tab-content two">
-				<h1>Awards &amp; Honors</h1>
-				<?php 
-				if ( !empty( $awards ) ) { 
-					?>
-					<?php 
-					print wpautop( $awards );
-				} 
-				?>
-			</div>
-
-			<div class="tab-content three">
-				<h1>Publications</h1>
-				<?php 
-				if ( !empty( $publications ) ) { 
-					?>
-					<?php 
-					print wpautop( $publications );
-				} 
-				?>
-			</div>
-
-			<div class="tab-content four">
-				<h1>Areas of Interest &amp; Research</h1>
-				<?php 
-				if ( !empty( $areas ) ) { 
-					?>
-					<?php 
-					print wpautop( $areas );
-				} 
-				?>
-			</div>
+			<?php do_faculty_tab_content( "Awards &amp; Honors", "awards" ); ?>
+			<?php do_faculty_tab_content( "Publications", "publications" ); ?>
+			<?php do_faculty_tab_content( "Areas of Interest", "areas" ); ?>
+			<?php do_faculty_tab_content( "Professional/Scholarly Affiliations", "affiliations" ) ?>
+			<?php do_faculty_tab_content( "Presentations", "presentations" ) ?>
+			<?php do_faculty_tab_content( "Pedagogy", "pedagogy" ) ?>
+			<?php do_faculty_tab_content( "Production/Performance Credits", "credits" ) ?>
+			<?php do_faculty_tab_content( "Professional Experience", "experience" ) ?>
 
 		</div>
 			<?php

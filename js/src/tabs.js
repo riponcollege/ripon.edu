@@ -3,7 +3,7 @@
 // tab controls
 jQuery(document).ready(function($){
 
-	if ( $( '.tab-content:first' ).length ) {
+	if ( $( '.tab-content.first' ).length ) {
 
 		$( '.tab-nav li' ).click(function(){
 			
@@ -18,6 +18,10 @@ jQuery(document).ready(function($){
 
 		});
 	}
+
+	$( '.back-to-faculty-list' ).click(function(){
+		location.href = "/faculty";
+	});
 
 	if ( $( '.area-tabs' ).length ) {
 

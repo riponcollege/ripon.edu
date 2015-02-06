@@ -180,6 +180,33 @@ class faculty_search_widget extends WP_Widget {
 } // Class wpb_widget ends here
 
 
+
+function do_faculty_tab_nav( $title, $key ) {
+	$content = get_cmb_value( "faculty_" . $key );
+	if ( !empty( $content ) ) { 
+	?>
+					<li class="faculty-<?php print $key; ?>"><?php print $title ?></li>
+	<?php
+	} 
+}
+
+
+
+function do_faculty_tab_content( $title, $key ) {
+	$content = get_cmb_value( "faculty_" . $key );
+	if ( !empty( $content ) ) { 
+	?>
+			<div class="tab-content faculty-<?php print $key; ?>">
+				<h1><?php print $title ?></h1>
+				<?php print wpautop( $content ); ?>
+			</div>
+	<?php
+	} 
+}
+
+
+
+
 // Register and load the widget
 function faculty_search_load_widget() {
 	register_widget( 'faculty_search_widget' );

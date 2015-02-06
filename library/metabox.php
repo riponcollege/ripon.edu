@@ -210,6 +210,31 @@ function page_metaboxes( $meta_boxes ) {
                 'id' => CMB_PREFIX . 'faculty_areas',
                 'type' => 'wysiwyg'
             ),
+            array(
+                'name' => 'Professional/Scholarly Affiliations',
+                'id' => CMB_PREFIX . 'faculty_affiliations',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Presentations',
+                'id' => CMB_PREFIX . 'faculty_presentations',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Pedagogy',
+                'id' => CMB_PREFIX . 'faculty_pedagogy',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Production Credits',
+                'id' => CMB_PREFIX . 'faculty_credits',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Professional Experience',
+                'id' => CMB_PREFIX . 'faculty_experience',
+                'type' => 'wysiwyg'
+            ),
         ),
     );
 
