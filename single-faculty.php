@@ -5,6 +5,9 @@
 
 get_header();
 
+$education = get_cmb_value( "faculty_education" );
+$courses = get_cmb_value( "faculty_courses" );
+
 ?>
 	<div id="primary" class="faculty wrap group" role="main">
 
@@ -43,7 +46,7 @@ get_header();
 			<div class="tab-content basic first">
 				<h1>Basic Information</h1>
 				<?php 
-				if ( !empty( $education ) ) { 
+				if ( !empty( $education ) ) {
 					?>
 				<h3>Education</h3>
 					<?php 
@@ -51,7 +54,7 @@ get_header();
 				} 
 				?>
 				<?php 
-				if ( !empty( $courses ) ) { 
+				if ( !empty( $courses ) ) {
 					?>
 				<h3>Courses Taught</h3>
 					<?php 
