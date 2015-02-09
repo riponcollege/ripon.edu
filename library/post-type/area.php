@@ -85,7 +85,6 @@ register_taxonomy( 'area_cat',
 
 
 
-
 function the_area_lists() {
 
 	$interests_col_1 = get_post_meta( get_the_ID(), CMB_PREFIX . "interests_col_1", 1 );
@@ -130,6 +129,8 @@ function the_area_lists() {
 
 }
 
+
+
 function list_area_category( $category ) {
 
 	// select the areas of interest in the category
@@ -168,6 +169,7 @@ function list_area_category( $category ) {
 }
 
 
+
 function get_area_category( $category ) {
 	global $wpdb;
 
@@ -184,5 +186,32 @@ function get_area_category( $category ) {
 
 	return $rows;
 }
+
+
+
+function do_area_tab_nav( $title, $key ) {
+	$content = get_cmb_value( "area_" . $key );
+	if ( !empty( $content ) ) { 
+	?>
+					<li class="area-<?php print $key; ?>"><?php print $title ?></li>
+	<?php
+	} 
+}
+
+
+
+function do_area_tab_content( $title, $key ) {
+	$content = get_cmb_value( "area_" . $key );
+	if ( !empty( $content ) ) { 
+	?>
+			<div class="tab-content area-<?php print $key; ?>">
+				<h2><?php print $title ?></h2>
+				<?php print wpautop( $content ); ?>
+			</div>
+	<?php
+	} 
+}
+
+
 
 ?>

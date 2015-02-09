@@ -206,7 +206,6 @@ function do_faculty_tab_content( $title, $key ) {
 
 
 
-
 // Register and load the widget
 function faculty_search_load_widget() {
 	register_widget( 'faculty_search_widget' );

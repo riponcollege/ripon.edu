@@ -7,11 +7,9 @@ get_header();
 
 $overview_url = get_cmb_value( "area_url" );
 $faculty = get_cmb_value( "area_faculty" );
-$tracks = get_cmb_value( "area_tracks" );
-$off_campus = get_cmb_value( "area_off_campus" );
 
 ?>
-	<div id="primary" class="faculty wrap group" role="main">
+	<div id="primary" class="area wrap group" role="main">
 
 		<?php 
 		if ( have_posts() ) :
@@ -20,24 +18,30 @@ $off_campus = get_cmb_value( "area_off_campus" );
 		<div class="third">
 			<div class="tab-nav">
 				<ul>
-					<li class="one">Overview</li>
-					<li class="two">Faculty</li>
-					<li class="three">Career Tracks</li>
-					<li class="four">Off-Campus Study</li>
+					<li class="area-overview">Overview</li>
+					<li class="area-faculty">Faculty</li>
+					<?php do_area_tab_nav( "Career Tracks", "tracks" ) ?>
+					<?php do_area_tab_nav( "Off-Campus Study", "off_campus" ) ?>
+					<?php do_area_tab_nav( "Unique Opportunities", "opportunities" ) ?>
+					<?php do_area_tab_nav( "Ensembles", "ensembles" ) ?>
+					<?php do_area_tab_nav( "Facilities", "facilities" ) ?>
+					<?php do_area_tab_nav( "Events Schedule", "events" ) ?>
+					<?php do_area_tab_nav( "Past Productions", "productions" ) ?>
+					<?php do_area_tab_nav( "Alumni Profiles", "alumni" ) ?>
+					<?php do_area_tab_nav( "Graduate Success", "success" ) ?>
+					<?php do_area_tab_nav( "Clinical Supervisors", "supervisors" ) ?>
+					<?php do_area_tab_nav( "Be a Teacher", "teacher" ) ?>
 				</ul>
 			</div>
 		</div><!-- #content -->
 		<div class="two-third tab-container">
 
 			<h1><?php the_title(); ?></h1>
-			<div class="tab-content one">
+			<div class="tab-content first area-overview">
 				<?php 
 					?>
 				<h2>Overview</h2>
-				<?php 
-				the_content();
-				
-				?>
+				<?php the_content(); ?>
 
 				<div class="two-third no-pad">
 					<h2>Advising</h2>
@@ -55,7 +59,7 @@ $off_campus = get_cmb_value( "area_off_campus" );
 				</div>
 			</div>
 
-			<div class="tab-content two">
+			<div class="tab-content area-faculty">
 				<h2>Faculty</h2>
 				<?php 
 				if ( !empty( $faculty ) ) { 
@@ -66,27 +70,17 @@ $off_campus = get_cmb_value( "area_off_campus" );
 				?>
 			</div>
 
-			<div class="tab-content three">
-				<h2>Career Tracks</h2>
-				<?php 
-				if ( !empty( $tracks ) ) { 
-					?>
-					<?php 
-					print wpautop( $tracks );
-				} 
-				?>
-			</div>
-
-			<div class="tab-content four">
-				<h2>Off-Campus Study</h2>
-				<?php 
-				if ( !empty( $off_campus ) ) { 
-					?>
-					<?php 
-					print wpautop( $off_campus );
-				} 
-				?>
-			</div>
+			<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>
+			<?php do_area_tab_content( "Off-Campus Study", "off_campus" ) ?>
+			<?php do_area_tab_content( "Unique Opportunities", "opportunities" ) ?>
+			<?php do_area_tab_content( "Ensembles", "ensembles" ) ?>
+			<?php do_area_tab_content( "Facilities", "facilities" ) ?>
+			<?php do_area_tab_content( "Events Schedule", "events" ) ?>
+			<?php do_area_tab_content( "Past Productions", "productions" ) ?>
+			<?php do_area_tab_content( "Alumni Profiles", "alumni" ) ?>
+			<?php do_area_tab_content( "Graduate Success", "success" ) ?>
+			<?php do_area_tab_content( "Clinical Supervisors", "supervisors" ) ?>
+			<?php do_area_tab_content( "Be a Teacher", "teacher" ) ?>
 
 		</div>
 			<?php

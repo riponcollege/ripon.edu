@@ -84,3 +84,88 @@
 		}
 	}
 }
+
+.area {
+	.tab-nav {
+		ul li {
+			padding: 20px 15px 20px 50px;
+			font-size: 20px;
+			line-height: 25px;
+			color: lighten( $grey, 20% );
+			cursor: pointer;
+			border-bottom: 1px solid lighten( $grey, 50% );
+			position: relative;
+
+			&:before {
+				position: absolute;
+				font-family: "FontAwesome", sans-serif;
+				left: 10px;
+				top: 19px;
+				width: 30px;
+				text-align: center;
+				font-size: 30px;
+				color: lighten( $grey, 20% );
+			}
+
+			&.area-overview:before {
+				content: $fa-var-info-circle;
+			}
+
+			&.area-faculty:before {
+				content: $fa-var-users;
+			}
+
+			&.area-off_campus:before {
+				content: $fa-var-globe;
+			}
+
+			&.area-tracks:before {
+				content: $fa-var-briefcase;
+			}
+
+			&.area-opportunities:before {
+				content: $fa-var-lightbulb-o;
+			}
+
+			&.area-ensembles:before {
+				content: $fa-var-music;
+			}
+
+			&.area-facilities:before {
+				content: $fa-var-building;
+			}
+
+			&.area-events:before {
+				content: $fa-var-calendar;
+			}
+
+			&.area-productions:before {
+				content: $fa-var-star;
+			}
+
+			&.area-alumni:before {
+				content: $fa-var-user;
+			}
+
+			&.area-success:before {
+				content: $fa-var-mortar-board;
+			}
+
+			&.area-supervisors:before {
+				content: $fa-var-check-square;
+			}
+
+			&.area-teacher:before {
+				content: $fa-var-edit;
+			}
+
+			&:hover {
+				color: lighten( $grey, 5% );
+
+				&:before {
+					color: lighten( $grey, 5% );
+				}
+			}
+		}
+	}
+}

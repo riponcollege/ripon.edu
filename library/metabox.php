@@ -362,7 +362,7 @@ function page_metaboxes( $meta_boxes ) {
     );
 
 
-    // footer quote
+    // area of interest information
     $meta_boxes['area_info'] = array(
         'id' => 'area_info',
         'title' => 'Area of Interest Details',
@@ -389,6 +389,51 @@ function page_metaboxes( $meta_boxes ) {
             array(
                 'name' => 'Off-Campus Study',
                 'id' => CMB_PREFIX . 'area_off_campus',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Unique Opportunities',
+                'id' => CMB_PREFIX . 'area_opportunities',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Ensembles',
+                'id' => CMB_PREFIX . 'area_ensembles',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Facilities',
+                'id' => CMB_PREFIX . 'area_facilities',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Events',
+                'id' => CMB_PREFIX . 'area_events',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Past Productions',
+                'id' => CMB_PREFIX . 'area_productions',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Alumni Profiles',
+                'id' => CMB_PREFIX . 'area_alumni',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Graduate Success',
+                'id' => CMB_PREFIX . 'area_success',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Clinical Supervisors',
+                'id' => CMB_PREFIX . 'area_supervisors',
+                'type' => 'wysiwyg'
+            ),
+            array(
+                'name' => 'Be a Teacher',
+                'id' => CMB_PREFIX . 'area_teacher',
                 'type' => 'wysiwyg'
             ),
         ),
