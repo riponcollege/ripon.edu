@@ -30,6 +30,8 @@ module.exports = function(grunt) {
                 files: {
                     'js/main.js': [
                         'js/lib/fitvids/jquery.fitvids.js',
+                        'js/lib/map/map-library.js',
+                        'js/lib/map/map-usa.js',
                         'js/src/*.js',
                     ]
                 }

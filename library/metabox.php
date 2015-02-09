@@ -88,6 +88,8 @@ function page_metaboxes( $meta_boxes ) {
         'show_on' => array( 
             'key' => 'page-template', 
             'value' => array(
+                'page-campus-map.php',
+                'page-counselor-map.php',
                 'page-3-column.php',
                 'page-2-column.php'
             )
