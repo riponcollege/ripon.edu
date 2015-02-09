@@ -6,7 +6,7 @@
 get_header();
 
 $overview_url = get_cmb_value( "area_url" );
-$faculty = get_cmb_value( "area_faculty" );
+$faculty = get_cmb_value( "area_faculty_list" );
 
 ?>
 	<div id="primary" class="area wrap group" role="main">
@@ -61,12 +61,50 @@ $faculty = get_cmb_value( "area_faculty" );
 
 			<div class="tab-content area-faculty">
 				<h2>Faculty</h2>
+
 				<?php 
+				$faculty_query = new WP_Query( array(
+					"post_in" => $faculty,
+					"post_type" => 'faculty'
+				) );
+
+				if ( $faculty_query->have_posts() ) : 
+					?>
+
+				<div class="faculty-directory">
+				<?php
+
+					// Start the Loop.
+					while ( $faculty_query->have_posts() ) : $faculty_query->the_post(); 
+						?>
+						<div class="faculty-entry">
+							<?php the_post_thumbnail(); ?>
+							<div class="info">
+								<a href="<?php the_permalink(); ?>" class="btn"><i class="fa fa-lg fa-search"></i></a>
+								<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+								<p class="faculty-title"><?php print get_cmb_value( "faculty_title" ); ?></p>
+								<a href="mailto:<?php print get_cmb_value( "faculty_email" ); ?>"><?php print get_cmb_value( "faculty_email" ); ?></a>
+							</div>
+						</div>
+						<?php
+
+					endwhile;
+
+				endif;
+
+				wp_reset_query();
+				
+				?>
+				</div>
+
+				<?php 
+				/*
 				if ( !empty( $faculty ) ) { 
 					?>
 					<?php 
 					print wpautop( $faculty );
 				} 
+				*/
 				?>
 			</div>
 

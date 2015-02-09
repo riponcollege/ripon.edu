@@ -362,6 +362,15 @@ function page_metaboxes( $meta_boxes ) {
     );
 
 
+    $args = array( 'post_type' => 'faculty', 'posts_per_page' => -1 );
+    $loop = new WP_Query( $args );
+    $faculty = array();
+    while ( $loop->have_posts() ) : $loop->the_post();
+        $faculty[get_the_ID()] = get_the_title();
+    endwhile;
+    wp_reset_query();
+
+
     // area of interest information
     $meta_boxes['area_info'] = array(
         'id' => 'area_info',
@@ -376,6 +385,13 @@ function page_metaboxes( $meta_boxes ) {
                 'id' => CMB_PREFIX . 'area_facebook',
                 'type' => 'text_url'
             ),
+            array(
+                'name' => 'Faculty',
+                'desc' => 'Select the faculty related to this area of interest.',
+                'id' => CMB_PREFIX . 'area_faculty_list',
+                'type' => 'multicheck',
+                'options' => $faculty,
+            ),            
             array(
                 'name' => 'Faculty',
                 'id' => CMB_PREFIX . 'area_faculty',
