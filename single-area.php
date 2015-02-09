@@ -97,15 +97,6 @@ $faculty = get_cmb_value( "area_faculty_list" );
 				?>
 				</div>
 
-				<?php 
-				/*
-				if ( !empty( $faculty ) ) { 
-					?>
-					<?php 
-					print wpautop( $faculty );
-				} 
-				*/
-				?>
 			</div>
 
 			<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>
