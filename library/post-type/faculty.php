@@ -198,7 +198,7 @@ function do_faculty_tab_content( $title, $key ) {
 	?>
 			<div class="tab-content faculty-<?php print $key; ?>">
 				<h1><?php print $title ?></h1>
-				<?php print wpautop( $content ); ?>
+				<?php print wpautop( do_shortcode( $content ) ); ?>
 			</div>
 	<?php
 	} 
