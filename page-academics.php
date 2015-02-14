@@ -41,9 +41,7 @@ get_header();
 
 			<div class="third sidebar">
 
-				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic')) : ?>
-				[ please add some widgets to this sidebar ]
-				<?php endif; ?>
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif; ?>
 
 			</div>
 
