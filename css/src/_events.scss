@@ -1,8 +1,14 @@
 
-.tribe-mini-calendar-event .list-info {
-	line-height: 1.6em;
+.tribe-mini-calendar-event {
+	border-bottom: 1px solid $red-dark;
+	padding: 5px 0 10px;
 
-	h2 {
-		padding: 0;
-	}	
+	.list-info {
+		line-height: 1.6em;
+
+		h2 {
+			padding: 0;
+		}	
+	}
 }
+
