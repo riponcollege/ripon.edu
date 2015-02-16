@@ -12,6 +12,8 @@
 		}
 
 		li {
+			position: relative;
+
 			&.current-menu-item a {
 				color: $red-light;
 			}
@@ -25,6 +27,41 @@
 
 				&:hover {
 					background: lighten( $grey, 58% );
+				}
+			}
+
+			&.menu-item-has-children {
+				&:before {
+					content: $fa-var-chevron-down;
+					position: absolute;
+					right: 3px;
+					top: 5px;
+					width: 15px;
+					height: 15px;
+					font-family: "FontAwesome", sans-serif;
+					font-size: 15px;
+					text-align: center;
+				}
+
+				&.open:before {
+					content: $fa-var-chevron-up;
+				}
+			}
+
+
+			ul.sub-menu { 
+				display: none;
+
+				&.open {
+					display: block;
+				}
+				
+				li a {
+					padding: 3px 5px 3px 30px;
+				}
+
+				ul.sub-menu li a {
+					padding: 3px 5px 3px 50px;
 				}
 			}
 		}

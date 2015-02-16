@@ -29,7 +29,8 @@ jQuery(document).ready(function($){
 	var menu = $( 'header nav' ),
 		menu_toggle = menu.find( 'button.menu-toggle' ),
 		menu_ul = menu.find( '.nav-menu' ),
-		fluid_images = $( '.faculty-info img, .content-area img, .faculty-directory img' );
+		fluid_images = $( '.faculty-info img, .content-area img, .faculty-directory img' ),
+		left_menu = $( '.left-menu' );
 
 
 	// remove height and width from images inside
@@ -53,6 +54,17 @@ jQuery(document).ready(function($){
 			}
 		});
 
+	});
+
+
+	left_menu.find( 'li.menu-item-has-children > a' ).click(function(){
+		var menu_item = $( this ).parent( 'li' );
+		var submenu = $( this ).next( 'ul.sub-menu' );
+		if ( !submenu.hasClass( 'open' ) ) {
+			event.preventDefault();
+			menu_item.addClass( 'open' );
+			submenu.addClass( 'open' );
+		}
 	});
 
 
