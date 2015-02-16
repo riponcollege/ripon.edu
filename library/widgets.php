@@ -90,7 +90,7 @@ $this->ripon_icon_option_value( "fa-tree", $icon );
 		$instance = array();
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		$instance['icon'] = ( ! empty( $new_instance['icon'] ) ) ? strip_tags( $new_instance['icon'] ) : '';
-		$instance['content'] = ( ! empty( $new_instance['content'] ) ) ? strip_tags( $new_instance['content'] ) : '';
+		$instance['content'] = ( ! empty( $new_instance['content'] ) ) ? $new_instance['content'] : '';
 		return $instance;
 	}
 
