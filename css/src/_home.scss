@@ -3,10 +3,11 @@
 .iam {
 	position: relative;
 	background: $red-light;
+	border-top: 1px solid lighten( $red-light, 20% );
 	@include clearfix;
 
 	nav {
-		padding: 0 20px;
+		padding: 0 20px 20px;
 		text-align: center;
 	
 		h3 {
