@@ -52,37 +52,16 @@ get_header();
 
 		<div class="events">
 			<h3>Ripon <span>Events</span></h3>
-			Testing!
-			<article class="first">
-				<div class="date">
-					Jul <span>20</span>
-				</div>
-				<h4><a href="#">An Event Title</a></h4>
-				<p>Fusce ullamcorper risus tortor, imperdiet ultricies tellus lacinia et. Sed non nulla metus... <a href="">Read More...</a></p>
-			</article>
-			<article>
-				<div class="date">
-					Aug <span>1</span>
-				</div>
-				<h4><a href="#">Another Event Title</a></h4>
-				<p>Curabitur tempus vel risus sed elementum. Praesent nec blandit nunc, id consequat enim. Nullam cursus ex nec viverra mattis... <a href="">Read More...</a></p>
-			</article>
-			<article>
-				<div class="date">
-					Aug <span>15</span>
-				</div>
-				<h4><a href="#">Yet Another Event Title</a></h4>
-				<p>Quisque id ligula venenatis, venenatis nibh vel, aliquet nisi... <a href="">Read More...</a></p>
-			</article>
-			<p><a href="#" class="more">See more events</a></p>
+			<div class="events-widget">
+			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('home-events')) : ?>[events widget]<?php endif; ?>
+			</div>
+			<p><a href="/events" class="more">See more events</a></p>
 		</div>
 
 		<div class="spotlight">
 
 			<h3>Ripon <span>Spotlight</span></h3>
-			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('spotlight')) : ?>
-			[ PLEASE ADD THE SPOTLIGHT VIDEO WIDGET HERE ]
-			<?php endif; ?>
+			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('spotlight')) : ?>[spotlight widgets]<?php endif; ?>
 		
 		</div>
 
