@@ -37,4 +37,11 @@ include( "library/photo-grid.php" );
 include( "library/emergency.php" );
 
 
+// make excerpts shorter
+function ripon_excerpt_length( $length ) {
+	return 25;
+}
+add_filter( 'excerpt_length', 'ripon_excerpt_length', 999 );
+
+
 ?>
