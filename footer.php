@@ -33,8 +33,8 @@
 			<strong>Mailing Address:</strong> <span class="fold">PO Box 248 Ripon, WI 54971-0248</span>
 		</div>
 		<div class="electronic">
-			<strong>Email:</strong> <span class="fold"><a href="adminfo@ripon.edu">adminfo@ripon.edu</a></span><br>
-			<strong>Phone:</strong> <span class="fold">800-947-4766</span><br>
+			<strong>Email:</strong> <span class="fold"><a href="mailto:adminfo@ripon.edu">adminfo@ripon.edu</a></span><br>
+			<strong>Phone:</strong> <span class="fold"><a href="tel:800-947-4766">800-947-4766</a></span><br>
 			<a href="http://www.facebook.com/ripon.college"><img src="<?php bloginfo('template_url') ?>/img/social-facebook.png"></a>
 			<a href="https://www.flickr.com/photos/ripon_college/"><img src="<?php bloginfo('template_url') ?>/img/social-flickr.png"></a>
 			<a href="http://www.linkedin.com/groups?home=&gid=4646327&trk=anet_ug_hm"><img src="<?php bloginfo('template_url') ?>/img/social-linkedin.png"></a>
@@ -44,7 +44,7 @@
 			<a href="http://instagram.com/riponcollege"><img src="<?php bloginfo('template_url') ?>/img/social-instagram.png"></a>
 		</div>
 		
-		<a href="#" class="campus-map">Campus Map</a>
+		<a href="/map" class="campus-map">Campus Map</a>
 
 	</div>
 
