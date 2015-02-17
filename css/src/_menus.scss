@@ -14,7 +14,7 @@
 		li {
 			position: relative;
 
-			&.current-menu-item a {
+			&.current-menu-item > a {
 				color: $red-light;
 			}
 
@@ -41,6 +41,7 @@
 					font-family: "FontAwesome", sans-serif;
 					font-size: 15px;
 					text-align: center;
+					pointer-events: none;
 				}
 
 				&.open:before {
