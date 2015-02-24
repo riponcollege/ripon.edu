@@ -5,8 +5,11 @@
 
 get_header();
 
-$overview_url = get_cmb_value( "area_url" );
+$advising = get_cmb_value( "area_advising" );
 $faculty = get_cmb_value( "area_faculty_list" );
+
+// mis-named - already populated in test, leaving to prevent forcing re-entry.
+$overview_url = get_cmb_value( "area_facebook" );
 
 the_showcase();
 
@@ -45,15 +48,13 @@ the_showcase();
 
 				<div class="two-third no-pad advising">
 					<h2>Advising</h2>
-					<p>Ripon College encourages all students to embrace a Four-Year Career Development Plan.</p>
-					<p>This plan is based on the premise that career planning is a development process that involves learning and decision-making over an extended period of time.</p>
-					<p><a href="#" class="btn-red-full">Advising</a></p>
+					<?php print wpautop( $advising ); ?>
 				</div>
 				<div class="third sidebar">
 					<div class="widget-book">
 						<h4>Course &amp; Requirements</h4>
 						<ul>
-							<li><a href="<?php  ?>"><?php the_title(); ?> Course Overview</a></li>
+							<li><a href="<?php print $overview_url ?>"><?php the_title(); ?> Course Overview</a></li>
 						</ul>
 					</div>
 				</div>

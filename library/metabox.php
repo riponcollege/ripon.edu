@@ -383,9 +383,14 @@ function page_metaboxes( $meta_boxes ) {
         'show_names' => true, // Show field names on the left
         'fields' => array(
             array(
+                'name' => 'Advising',
+                'id' => CMB_PREFIX . 'area_advising',
+                'type' => 'wysiwyg'
+            ),
+            array(
                 'name' => 'Overview Document URL',
                 'id' => CMB_PREFIX . 'area_facebook',
-                'type' => 'text_url'
+                'type' => 'file'
             ),
             array(
                 'name' => 'Faculty',
