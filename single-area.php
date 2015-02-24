@@ -45,7 +45,7 @@ the_showcase();
 				<h2>Overview</h2>
 				<?php the_content(); ?>
 
-				<div class="two-third no-pad">
+				<div class="two-third no-pad advising">
 					<h2>Advising</h2>
 					<p>Ripon College encourages all students to embrace a Four-Year Career Development Plan.</p>
 					<p>This plan is based on the premise that career planning is a development process that involves learning and decision-making over an extended period of time.</p>
