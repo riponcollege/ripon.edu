@@ -134,7 +134,7 @@ function page_metaboxes( $meta_boxes ) {
 	$meta_boxes['showcase_metabox'] = array(
 		'id' => 'showcase_metabox',
 		'title' => 'Showcase',
-		'pages' => array( 'page' ), // post type
+		'pages' => array( 'page', 'area' ), // post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => false, // Show field names on the left

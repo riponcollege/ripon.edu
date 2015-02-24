@@ -8,6 +8,8 @@ get_header();
 $overview_url = get_cmb_value( "area_url" );
 $faculty = get_cmb_value( "area_faculty_list" );
 
+the_showcase();
+
 ?>
 	<div id="primary" class="area wrap group" role="main">
 
