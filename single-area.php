@@ -64,7 +64,7 @@ $faculty = get_cmb_value( "area_faculty_list" );
 
 				<?php 
 				$faculty_query = new WP_Query( array(
-					"post_in" => $faculty,
+					"post__in" => $faculty,
 					"post_type" => 'faculty'
 				) );
 
@@ -75,7 +75,7 @@ $faculty = get_cmb_value( "area_faculty_list" );
 				<?php
 
 					// Start the Loop.
-					while ( $faculty_query->have_posts() ) : $faculty_query->the_post(); 
+					while ( $faculty_query->have_posts() ) : $faculty_query->the_post();
 						?>
 						<div class="faculty-entry">
 							<?php the_post_thumbnail(); ?>
@@ -90,12 +90,14 @@ $faculty = get_cmb_value( "area_faculty_list" );
 
 					endwhile;
 
+					?>
+				</div>
+				<?php
 				endif;
 
 				wp_reset_query();
 				
 				?>
-				</div>
 
 			</div>
 
