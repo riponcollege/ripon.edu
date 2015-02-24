@@ -40,8 +40,6 @@ the_showcase();
 
 			<h1><?php the_title(); ?></h1>
 			<div class="tab-content first area-overview">
-				<?php 
-					?>
 				<h2>Overview</h2>
 				<?php the_content(); ?>
 
