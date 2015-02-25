@@ -13,3 +13,29 @@
 	}
 }
 
+
+.tribe-events-list-widget {
+	ol li {
+		margin-bottom: 4px;
+	}
+
+	h4.entry-title {
+		font-size: 16px;
+		padding-bottom: 0;
+		
+		a {
+			color: $red-dark;
+		}
+	}
+
+	.duration {
+		@include font;
+		font-size: 13px;
+	}
+
+	.tribe-events-widget-link a {
+		margin-top: 8px;
+		color: $red-dark;
+	}
+}
+
