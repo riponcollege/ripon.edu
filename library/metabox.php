@@ -393,7 +393,7 @@ function page_metaboxes( $meta_boxes ) {
                         'name' => 'Content',
                         'description' => 'Enter the content of the tab.',
                         'id'   => 'content',
-                        'type' => 'textarea',
+                        'type' => 'textarea_code',
                     ),
                 ),
             )
@@ -436,7 +436,7 @@ function page_metaboxes( $meta_boxes ) {
                         'name' => 'Content',
                         'description' => 'Enter the content of the box.',
                         'id'   => 'content',
-                        'type' => 'textarea',
+                        'type' => 'textarea_code',
                     ),
                 ),
             )
