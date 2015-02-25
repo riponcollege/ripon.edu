@@ -384,14 +384,57 @@ function page_metaboxes( $meta_boxes ) {
                 ),
                 'fields' => array(
                     array(
-                        'name' => 'Tab Title',
+                        'name' => 'Title',
                         'description' => 'Set a 1-2 word (if possible) title for the tab.',
                         'id'   => 'title',
                         'type' => 'text',
                     ),
                     array(
-                        'name' => 'Tab Content',
+                        'name' => 'Content',
                         'description' => 'Enter the content of the tab.',
+                        'id'   => 'content',
+                        'type' => 'textarea',
+                    ),
+                ),
+            )
+        )
+    );
+
+
+    // accordions
+    $meta_boxes['accordion_metabox'] = array(
+        'id' => 'accordion_metabox',
+        'title' => 'Accordion Boxes',
+        'pages' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => false, // Show field names on the left
+        'fields' => array(
+            array(
+                'id' => CMB_PREFIX . 'accordions',
+                'type' => 'group',
+                'description' => __('Manage accordions.', 'cmb'),
+                'options' => array(
+                    'add_button' => __('Add Accordion Box', 'cmb'),
+                    'remove_button' => __('Remove Accordion Box', 'cmb'),
+                    'sortable' => true, // beta
+                ),
+                'fields' => array(
+                    array(
+                        'name' => 'Title',
+                        'description' => 'Set a title for the box.',
+                        'id'   => 'title',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Open By Default',
+                        'desc' => 'Open by default',
+                        'id' => 'open',
+                        'type' => 'checkbox'
+                    ),
+                    array(
+                        'name' => 'Content',
+                        'description' => 'Enter the content of the box.',
                         'id'   => 'content',
                         'type' => 'textarea',
                     ),

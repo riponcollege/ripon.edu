@@ -79,7 +79,11 @@
 }
 
 @mixin font-title {
-	font-family: "Texgyre Adventor Regular", sans-serif;
+    font-family: "Texgyre Adventor Regular", sans-serif;
+}
+
+@mixin font-awesome {
+    font-family: 'FontAwesome';
 }
 
 @mixin font-title-bold {

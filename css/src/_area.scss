@@ -103,7 +103,7 @@
 
 			&:before {
 				position: absolute;
-				font-family: "FontAwesome", sans-serif;
+				@include font-awesome;
 				left: 10px;
 				top: 19px;
 				width: 30px;

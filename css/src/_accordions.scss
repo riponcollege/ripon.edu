@@ -1,0 +1,57 @@
+
+$accordion-arrow-size: 26px;
+
+.accordions {
+	margin: 0 -20px;
+	padding: 25px 0;
+
+	@include respond-to( 768px ) {
+		margin: 0;
+	}
+
+	.accordion {
+		margin-bottom: 5px;
+
+		.accordion-handle {
+			position: relative;
+			background: $red-dark;
+			color: white;
+			padding: 15px 20px;
+			cursor: pointer;
+
+			&:after {
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				margin-top: -( $accordion-arrow-size / 2 );
+				width: $accordion-arrow-size;
+				height: $accordion-arrow-size;
+				@include font-awesome;
+				content: $fa-var-chevron-down;
+				font-size: $accordion-arrow-size;
+				line-height: $accordion-arrow-size;
+				pointer-events: none;
+			}
+		}
+
+		.accordion-content {
+			display: none;
+		}
+
+		&.open {
+			.accordion-handle:after {
+				content: $fa-var-chevron-up;
+			}
+
+			.accordion-content {
+				display: block;
+				padding: 10px;
+
+				@include respond-to( 480px ) {
+					padding: 20px 30px;
+				}
+			}
+		}
+	}
+}
+

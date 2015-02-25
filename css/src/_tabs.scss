@@ -13,7 +13,7 @@ $tab-border-size: 8px;
 
 .tabs {
 	position: relative;
-	padding: 0 0 30px;
+	padding: 25px 0;
 
 	.tab-nav {
 		display: none;
@@ -47,15 +47,19 @@ $tab-border-size: 8px;
 	}
 
 	.content {
-		display: none;
+		display: block;
 		position: relative;
 		z-index: 2;
-		margin-top: -$tab-border-size;
 		background: $grey-light;
 		border: $tab-border-size solid $red-dark;
-		display: none;
 		padding: 3px 15px;
 		min-height: 120px;
+		margin-bottom: 20px;
+
+		@include respond-to( 768px ) {
+			display: none;
+			margin-top: -$tab-border-size;
+		}
 
 		&.active {
 			display: block;

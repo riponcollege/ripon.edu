@@ -42,6 +42,8 @@ get_header();
 
 		<div class="three-quarter right">
 			<?php the_tab_box(); ?>
+
+			<?php the_accordions(); ?>
 		</div>
 
 	</div>

@@ -34,6 +34,8 @@ get_header();
 			endwhile; 
 
 			the_tab_box();
+
+			the_accordions();
 			?>
 
 		</div>

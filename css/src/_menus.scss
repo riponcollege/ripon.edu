@@ -38,7 +38,7 @@
 					top: 5px;
 					width: 15px;
 					height: 15px;
-					font-family: "FontAwesome", sans-serif;
+					@include font-awesome;
 					font-size: 15px;
 					text-align: center;
 					pointer-events: none;

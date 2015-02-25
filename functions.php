@@ -36,6 +36,7 @@ include( "library/social.php" );
 include( "library/photo-grid.php" );
 include( "library/emergency.php" );
 include( "library/tabs.php" );
+include( "library/accordions.php" );
 
 
 // make excerpts shorter

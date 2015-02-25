@@ -40,8 +40,8 @@
 
 	&:before {
 		display: block;
+		@include font-awesome;
 		content: "\f002";
-		font-family: "FontAwesome";
 		font-size: 22px;
 		line-height: 40px;
 		text-align: center;
@@ -186,7 +186,7 @@
 
 			&:before {
 				position: absolute;
-				font-family: "FontAwesome", sans-serif;
+				@include font-awesome;
 				left: 10px;
 				top: 19px;
 				width: 30px;
