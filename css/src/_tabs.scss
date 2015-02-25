@@ -8,3 +8,64 @@
 	}
 }
 
+
+$tab-border-size: 8px;
+
+.tabs {
+	position: relative;
+	padding: 0 0 30px;
+
+	.tab-nav {
+		display: none;
+
+		@include respond-to( 768px ) {
+			display: block;
+
+			a {
+				display: inline-block;
+				padding: 12px 12px 12px+$tab-border-size;
+				font-size: 20px;
+				color: #444;
+				margin-right: 5px;
+				background: $grey-light;
+				border: $tab-border-size solid white;
+				border-bottom: 0;
+				cursor: pointer;
+				position: relative;
+				z-index: 1;
+
+				&.active {
+					@include font-medium;
+					color: $red-dark;
+					border: $tab-border-size solid $red-dark;
+					border-bottom: 0;
+					z-index: 3;
+					cursor: default;
+				}
+			}
+		}
+	}
+
+	.content {
+		display: none;
+		position: relative;
+		z-index: 2;
+		margin-top: -$tab-border-size;
+		background: $grey-light;
+		border: $tab-border-size solid $red-dark;
+		display: none;
+		padding: 3px 15px;
+		min-height: 120px;
+
+		&.active {
+			display: block;
+		}
+
+		.tab-title-mobile {
+			@include respond-to( 768px ) {
+				display: none;
+			}
+		}
+	}
+}
+

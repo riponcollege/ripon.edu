@@ -36,6 +36,8 @@ get_header();
 
 	        <iframe src="http://map.ripon.edu/" style="width: 100%; height: 600px;"></iframe>
 
+			<?php the_tab_box(); ?>
+
 		</div>
 
 	</div>

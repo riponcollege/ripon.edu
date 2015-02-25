@@ -49,6 +49,7 @@ get_header();
 			<noscript>You must have javascript enabled to use this tool.</noscript>
 			<div id="npc_container"></div>
 
+			<?php the_tab_box(); ?>
 		</div>
 
 	</div>

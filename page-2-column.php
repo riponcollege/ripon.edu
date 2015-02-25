@@ -32,6 +32,8 @@ get_header();
 
 				<?php
 			endwhile; 
+
+			the_tab_box();
 			?>
 
 		</div>

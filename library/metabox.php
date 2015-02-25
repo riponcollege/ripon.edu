@@ -51,7 +51,7 @@ add_filter( 'cmb_show_on', 'p_metabox_include_front_page', 10, 2 );
 // add metabox(es)
 function page_metaboxes( $meta_boxes ) {
 
-    // footer quote
+    // emergency bar
     $meta_boxes['emergency'] = array(
         'id' => 'emergency',
         'title' => 'Emergency Bar',
@@ -80,7 +80,7 @@ function page_metaboxes( $meta_boxes ) {
 
     $all_menus = get_all_menus();
 
-    // second blockquote
+    // menu metabox
     $meta_boxes['menu_box'] = array(
         'id' => 'menu_box',
         'title' => 'Page Menus',
@@ -193,7 +193,7 @@ function page_metaboxes( $meta_boxes ) {
 	);
 
 
-    // footer quote
+    // faculty info
     $meta_boxes['faculty_info'] = array(
         'id' => 'faculty_info',
         'title' => 'Faculty Member Information',
@@ -291,7 +291,7 @@ function page_metaboxes( $meta_boxes ) {
     );
 
 
-    // showcase metabox
+    // infographic metabox
     $meta_boxes['infographic_metabox'] = array(
         'id' => 'infographic_metabox',
         'title' => 'Infographic',
@@ -360,6 +360,43 @@ function page_metaboxes( $meta_boxes ) {
                     ),
                 ),
             ),
+        )
+    );
+
+
+    // tab box
+    $meta_boxes['tab_metabox'] = array(
+        'id' => 'tab_metabox',
+        'title' => 'Tab Box',
+        'pages' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => false, // Show field names on the left
+        'fields' => array(
+            array(
+                'id' => CMB_PREFIX . 'tabs',
+                'type' => 'group',
+                'description' => __('Manage a tab component - please limit to 3 tabs so it fits on larger screens.', 'cmb'),
+                'options' => array(
+                    'add_button' => __('Add Tab', 'cmb'),
+                    'remove_button' => __('Remove Tab', 'cmb'),
+                    'sortable' => true, // beta
+                ),
+                'fields' => array(
+                    array(
+                        'name' => 'Tab Title',
+                        'description' => 'Set a 1-2 word (if possible) title for the tab.',
+                        'id'   => 'title',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Tab Content',
+                        'description' => 'Enter the content of the tab.',
+                        'id'   => 'content',
+                        'type' => 'textarea',
+                    ),
+                ),
+            )
         )
     );
 

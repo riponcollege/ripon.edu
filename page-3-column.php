@@ -40,6 +40,10 @@ get_header();
 
 		</div>
 
+		<div class="three-quarter right">
+			<?php the_tab_box(); ?>
+		</div>
+
 	</div>
 
 	<div class="wrap">

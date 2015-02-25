@@ -43,5 +43,30 @@ jQuery(document).ready(function($){
 
 	}
 
+	if ( $( '.tabs' ).length ) {
+		var tabs = $( '.tabs' );
+
+		tabs.find( '.tab-nav a' ).click(function(){
+			
+			// store the tab
+			var tab = $( this );
+
+			// split out the tab class
+			var target_class = tab.attr( 'class' ).replace( 'tab-title ', '' ).replace( ' active', '' );
+
+			// get the content element
+			var tab_content = tabs.find( '.content.'+target_class );
+
+			// hide all visible tab content and unhighlight tab
+			tabs.find( '.tab-nav a' ).removeClass( 'active' );
+			tabs.find( '.content' ).removeClass( 'active' );
+
+			// set active tab and content.
+			tab.addClass( 'active' );
+			tab_content.addClass( 'active' );
+
+		});
+	}
+
 });
 

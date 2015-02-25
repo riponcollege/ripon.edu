@@ -41,6 +41,8 @@ get_header();
 		        </div>
 	        </div>
 
+			<?php the_tab_box(); ?>
+
 		</div>
 
 	</div>
