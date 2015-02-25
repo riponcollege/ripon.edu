@@ -3,14 +3,14 @@ $accordion-arrow-size: 26px;
 
 .accordions {
 	margin: 0 -20px;
-	padding: 25px 0;
+	padding: 15px 0;
 
 	@include respond-to( 768px ) {
 		margin: 0;
 	}
 
 	.accordion {
-		margin-bottom: 5px;
+		margin-bottom: 7px;
 
 		.accordion-handle {
 			position: relative;
@@ -46,6 +46,7 @@ $accordion-arrow-size: 26px;
 			.accordion-content {
 				display: block;
 				padding: 10px;
+				background: $grey-light;
 
 				@include respond-to( 480px ) {
 					padding: 20px 30px;
