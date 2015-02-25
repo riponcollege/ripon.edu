@@ -20,7 +20,7 @@
 
 
 .sidebar {
-	.ripon-widget, .widget_video, .tribe-events-list-widget, .widget_recent_entries, .postmetavideo {
+	.ripon-widget, .widget_video, .tribe-events-list-widget, .tribe-events-adv-list-widget, .widget_recent_entries, .postmetavideo {
 		margin-top: 50px;
 		position: relative;
 		padding-top: 25px;
@@ -74,7 +74,7 @@
 }
 
 
-.sidebar .tribe-events-list-widget:before {
+.sidebar .tribe-events-list-widget:before, .sidebar .tribe-events-adv-list-widget:before, .sidebar .tribe-events-list-widget:before {
 	content: $fa-var-calendar;
 }
 
