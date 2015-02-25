@@ -67,18 +67,17 @@ video, iframe {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  @include font;
   color: #474a54;
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 21px;
   background: #fff;
 }
 
 @media only screen and (min-width: 768px) {
   body {
-	font-size: 16px;
-	line-height: 24px;
+  	font-size: 16px;
+  	line-height: 24px;
   }
 }
 
@@ -99,12 +98,12 @@ a {
 
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  padding: 10px 0;
+  padding: 9px 0;
 }
 
 @media only screen and (min-width: 768px) {
   p, h1, h2, h3, h4, h5, h6 {
-	padding: 13px 0;
+	 padding: 11px 0;
   }
 }
 
@@ -152,21 +151,19 @@ h3 {
 }
 
 h4 {
+  @include font-medium;
   font-size: 1.2em;
   line-height: 1.1em;
 }
 
-h5, h6 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-}
-
 h5 {
+  @include font-medium;
   font-size: 1.1em;
   line-height: 1.1em;
 }
 
 h6 {
+  @include font-medium;
   font-size: .9em;
   line-height: 1.1em;
 }
@@ -181,18 +178,18 @@ hr {
 
 article {
   ol, ul {
-	padding: 15px 0 15px 30px;
+  	padding: 15px 0 15px 30px;
   }
   ol li, ul li {
-	padding: 0 0 20px;
+  	padding: 0 0 20px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   article {
-	ol, ul {
-	  padding-left: 45px;
-	}
+  	ol, ul {
+  	  padding-left: 45px;
+  	}
   }
 }
 
