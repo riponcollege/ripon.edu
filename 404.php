@@ -3,26 +3,27 @@
  * The template for displaying 404 pages (Not Found)
  */
 
-get_header(); ?>
+get_header(); 
 
+?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<div id="primary" class="wrap group content-narrow">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Not Found', 'twentyfourteen' ); ?></h1>
-			</header>
+		<h1 class="page-title"><?php _e( 'Page Not Found', 'twentyfourteen' ); ?></h1>
 
-			<div class="page-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfourteen' ); ?></p>
+		<div class="page-content">
+			<p>We couldn't find the page you were looking for, it has either moved or the link you have may be incorrect. Perhaps you could try searching for the content you need?</p>
 
+			<div class="search">
 				<?php get_search_form(); ?>
-			</div><!-- .page-content -->
+			</div>
 
-		</div><!-- #content -->
+			<p>If you have any other questions, please feel free to <a href="/contact">contact us</a>, and we'll do all we can to assist you.</p>
+		</div><!-- .page-content -->
+
 	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
 get_footer();
+
+?>
