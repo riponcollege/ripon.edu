@@ -34,20 +34,24 @@
 				// Start the Loop.
 				while ( have_posts() ) : the_post(); 
 					?>
-					<div class="faculty-entry">
-						<?php the_post_thumbnail(); ?>
-						<div class="info">
-							<a href="<?php the_permalink(); ?>" class="btn">View Profile &raquo;</a>
-							<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-							<p class="faculty-title"><?php print get_cmb_value( "faculty_title" ); ?></p>
-							<a href="mailto:<?php print get_cmb_value( "faculty_email" ); ?>"><?php print get_cmb_value( "faculty_email" ); ?></a>
-						</div>
+				<div class="faculty-entry">
+					<?php the_post_thumbnail(); ?>
+					<div class="info">
+						<a href="<?php the_permalink(); ?>" class="btn">View Profile &raquo;</a>
+						<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+						<p class="faculty-title"><?php print get_cmb_value( "faculty_title" ); ?></p>
+						<a href="mailto:<?php print get_cmb_value( "faculty_email" ); ?>"><?php print get_cmb_value( "faculty_email" ); ?></a>
 					</div>
+				</div>
 					<?php
 
 				endwhile;
 
-				echo paginate_links();
+				?>
+				<div class="pagination">
+					<?php print paginate_links(); ?>
+				</div>
+				<?php
 
 			else :
 				
