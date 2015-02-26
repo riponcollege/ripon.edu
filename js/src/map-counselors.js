@@ -16,8 +16,8 @@
             var counselorT3 = "Eliza Stephenson";
             var territory3 = counselorT3.link("http://www.ripon.edu/stephensone");
             // Counselor Territory 4
-            var counselorT4 = "Felicia Rodriguez";
-            var territory4 = counselorT4.link("http://www.ripon.edu/rodriguezf");
+            var counselorT4 = "Leigh Mlodzik";
+            var territory4 = counselorT4.link("http://www.ripon.edu/mlodzikl");
             // Counselor Territory 5
             var counselorT5 = "John Ingemann";
             var territory5 = counselorT5.link("http://www.ripon.edu/ingemannj");
@@ -98,7 +98,7 @@
                         },
                         {
                             id: "US-HI",
-                            info: "Counselor: " + territory8
+                            info: "Counselor: " + territory9
                         },
                         {
                             id: "US-ID",
@@ -106,7 +106,7 @@
                         },
                         {
                             id: "US-IL",
-                            info: "Counselor: " + territory4
+                            info: "North: " + territory6 + "<br>Central and South:" + territory4
                         },
                         {
                             id: "US-IN",
