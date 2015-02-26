@@ -53,9 +53,11 @@ get_header();
 					<?php
 
 				endwhile;
-
-				echo paginate_links();
-
+				?>
+				<div class="pagination">
+					<?php echo paginate_links(); ?>
+				</div>
+				<?php
 			else :
 				
 				?>
