@@ -7,3 +7,6 @@
 [submodule "css/lib/font-awesome-sass"]
 	path = css/lib/font-awesome-sass
 	url = git@github.com:FortAwesome/font-awesome-sass.git
+[submodule "js/lib/magnific"]
+	path = js/lib/magnific
+	url = git@github.com:dimsemenov/Magnific-Popup.git
