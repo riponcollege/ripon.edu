@@ -37,7 +37,7 @@ get_header();
 			<div class="map-container">
 		        <div id="map-counselor" style="width: 100%; background-color:#898989; height: 500px;"></div>
 		        <div id="map-info">
-		        	<p>Click on your state to see your counselor.</p>
+		        	<p>Click on your state to see your counselor or learn about <a href="/visits">upcoming events</a>.</p>
 		        </div>
 	        </div>
 
