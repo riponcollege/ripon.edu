@@ -32,6 +32,7 @@ module.exports = function(grunt) {
                         'js/lib/fitvids/jquery.fitvids.js',
                         'js/lib/map/map-library.js',
                         'js/lib/map/map-usa.js',
+                        'js/lib/magnific/dist/jquery.magnific-popup.js',
                         'js/src/*.js',
                     ]
                 }
