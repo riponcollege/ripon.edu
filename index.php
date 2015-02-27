@@ -6,21 +6,34 @@ Home/catch-all template
 get_header(); ?>
 
 
-	<div id="primary" class="wrap group content-narrow">
-
-		<?php
-		if ( is_search() ) {
-			?><h1>Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1><?php
-		}
-
-		while ( have_posts() ) : the_post();
-			?>
-			<hr>
-			<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-			<?php the_excerpt(); ?>
+	<div id="primary" class="wrap group full-width">
+		
+		<div class="two-third">
+			<h1>Ripon <span>Blog</span></h1>
 			<?php
-		endwhile;
-		?>
+			while ( have_posts() ) : the_post();
+				?>
+				<div class="entry-content">
+					<div class="thumbnail">
+						<?php the_post_thumbnail(); ?>
+					</div>
+					<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+					<?php the_excerpt(); ?>
+				</div>
+				<?php
+			endwhile;
+			?>
+
+			<div class="pagination">
+				<?php print paginate_links(); ?>
+			</div>
+		</div>
+
+		<div class="third sidebar pad-top">
+
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-blog') ) : ?><!-- no sidebar --><?php endif; ?>
+
+		</div>
 
 	</div><!-- #primary -->
 

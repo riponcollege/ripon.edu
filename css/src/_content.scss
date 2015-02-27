@@ -66,6 +66,16 @@
 
 
 
+.sidebar.pad-top {
+	padding-top: 30px;
+	
+	@include respond-to( 768px ) {
+		padding-top: 60px;
+	}
+}
+
+
+
 .three-column {
 	padding: 0 0 30px;
 }

@@ -7,44 +7,48 @@ get_header();
 
 ?>
 
-	<section id="primary" class="content-area wrap group" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-		<h1 class="page-title">
-			<?php
+	<div id="primary" class="wrap group full-width">
+		
+		<div class="two-third">
+			<h1><?php
 			if ( is_day() ) :
-				printf( __( 'Daily Archives: %s', 'twentyfourteen' ), get_the_date() );
+				printf( __( 'Daily Archives: <span>%s</span>', 'twentyfourteen' ), get_the_date() );
 
 			elseif ( is_month() ) :
-				printf( __( 'Monthly Archives: %s', 'twentyfourteen' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyfourteen' ) ) );
+				printf( __( 'Monthly Archives: <span>%s</span>', 'twentyfourteen' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyfourteen' ) ) );
 
 			elseif ( is_year() ) :
-				printf( __( 'Yearly Archives: %s', 'twentyfourteen' ), get_the_date( _x( 'Y', 'yearly archives date format', 'twentyfourteen' ) ) );
+				printf( __( 'Yearly Archives: <span>%s</span>', 'twentyfourteen' ), get_the_date( _x( 'Y', 'yearly archives date format', 'twentyfourteen' ) ) );
 
 			else :
 				_e( 'Archives', 'twentyfourteen' );
 
 			endif;
-			?>
-		</h1>
-
-		<?php
-		
-			// Start the Loop.
-			while ( have_posts() ) : the_post(); 
+			?></h1>
+			<?php
+			while ( have_posts() ) : the_post();
 				?>
-				<h3><?php the_title(); ?></h3>
-				<?php the_excerpt(); ?>
+				<div class="entry-content">
+					<div class="thumbnail">
+						<?php the_post_thumbnail(); ?>
+					</div>
+					<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+					<?php the_excerpt(); ?>
+				</div>
 				<?php
 			endwhile;
+			?>
 
-		else :
-			// If no content, include the "No posts found" template.
-			get_template_part( 'content', 'none' );
+			<div class="pagination">
+				<?php print paginate_links(); ?>
+			</div>
+		</div>
 
-		endif;
-		?>
+		<div class="third sidebar pad-top">
+
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-blog') ) : ?><!-- no sidebar --><?php endif; ?>
+
+		</div>
 
 	</section><!-- #primary -->
 
