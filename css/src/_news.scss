@@ -11,19 +11,20 @@
 		margin: 0 10px 0 0;
 	}
 
-	.post-meta {
-		font-size: .9em;
-		font-style: italic;
+}
+
+
+.post-meta {
+	font-size: .9em;
+	font-style: italic;
+	color: lighten( $grey, 20% );
+	padding: 6px 0;
+
+	a {
 		color: lighten( $grey, 20% );
-		padding: 6px 0;
 
-		a {
-			color: lighten( $grey, 20% );
-
-			&:hover {
-				color: lighten( $grey, 30% );
-			}
+		&:hover {
+			color: lighten( $grey, 30% );
 		}
 	}
 }
-
