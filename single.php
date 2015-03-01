@@ -6,16 +6,19 @@
 get_header();
 
 ?>
-	<div id="primary" class="site-content">
-
-		<div id="content" class="site-content content-narrow" role="main">
+	<div id="primary" class="wrap group">
+		<div id="content" class="content-narrow" role="main">
 		<?php 
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); 
 				?>
 				<h1><?php the_title(); ?></h1>
+				<?php the_post_thumbnail(); ?>
+				<?php the_content(); ?>
+				<p class="post-meta">
+					Posted <?php the_date(); ?> in <?php print get_the_category_list( ", ", "", get_the_ID() ); ?> by <?php the_author_link() ?>.
+				</p>
 				<?php
-				the_content();
 			endwhile;
 		endif;
 		 ?>
