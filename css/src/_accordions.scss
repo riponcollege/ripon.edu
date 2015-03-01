@@ -14,10 +14,11 @@ $accordion-arrow-size: 26px;
 
 		.accordion-handle {
 			position: relative;
-			background: $red-dark;
+			background: $grey;
 			color: white;
 			padding: 15px 20px;
 			cursor: pointer;
+			border-bottom: 5px solid $red-light;
 
 			&:after {
 				position: absolute;
