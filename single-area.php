@@ -67,7 +67,8 @@ the_showcase();
 				<?php 
 				$faculty_query = new WP_Query( array(
 					"post__in" => $faculty,
-					"post_type" => 'faculty'
+					"post_type" => 'faculty',
+					'posts_per_page' => -1,
 				) );
 
 				if ( $faculty_query->have_posts() ) : 
