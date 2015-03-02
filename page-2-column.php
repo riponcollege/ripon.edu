@@ -40,6 +40,8 @@ get_header();
 
 		</div>
 
+		<?php the_wide_content(); ?>
+
 	</div>
 
 	<div class="wrap">
