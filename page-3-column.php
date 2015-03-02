@@ -48,6 +48,8 @@ get_header();
 
 	</div>
 
+	<?php the_infographic(); ?>
+
 	<div class="wrap">
 		<?php the_photo_grid(); ?>
 	</div>
