@@ -21,7 +21,6 @@ jQuery.fn.wrapStart = function ( numWords, tag ) {
 };
 
 
-
 // onload responsive footer and menu stuff
 jQuery(document).ready(function($){
 
@@ -40,10 +39,12 @@ jQuery(document).ready(function($){
 
 	// quick navs
 	quick_nav.change(function(){
-		if ( $( this ).hasClass( 'new-window' ) ) {
-			var new_window = window.open( $(this).val(), "_blank" );
-		} else {
-			window.location.href = $(this).val();
+		if ( $( this ).val() != '' ) {
+			if ( $( this ).hasClass( 'new-window' ) ) {
+				var new_window = window.open( $(this).val(), "_blank" );
+			} else {
+				window.location.href = $(this).val();
+			}
 		}
 	});
 
