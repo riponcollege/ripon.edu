@@ -57,7 +57,7 @@ jQuery(document).ready(function($){
 	});
 
 
-	left_menu.find( 'li.menu-item-has-children > a' ).click(function(){
+	left_menu.find( 'li.menu-item-has-children > a' ).click(function( event ){
 		var menu_item = $( this ).parent( 'li' );
 		var submenu = $( this ).next( 'ul.sub-menu' );
 		if ( !submenu.hasClass( 'open' ) ) {
