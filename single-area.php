@@ -21,6 +21,7 @@ the_showcase();
 			while ( have_posts() ) : the_post(); 
 				?>
 		<div class="third">
+			<button class="back-to-areas">Back to All Areas</button>
 			<div class="tab-nav">
 				<ul>
 					<li class="area-overview">Overview</li>

@@ -19,10 +19,6 @@ jQuery(document).ready(function($){
 		});
 	}
 
-	$( '.back-to-faculty-list' ).click(function(){
-		location.href = "/faculty";
-	});
-
 	if ( $( '.area-tabs' ).length ) {
 
 		// clicks of the majors tab
