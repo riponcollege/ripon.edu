@@ -543,6 +543,24 @@ function page_metaboxes( $meta_boxes ) {
     );
 
 
+    // area of interest information
+    $meta_boxes['wide_column'] = array(
+        'id' => 'wide_column',
+        'title' => 'Wide Column',
+        'pages' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+            array(
+                'name' => 'Wide Content Column',
+                'id' => CMB_PREFIX . 'wide_content',
+                'type' => 'wysiwyg'
+            ),
+        ),
+    );
+
+
     // photo grid that can be used on any page
     $meta_boxes['photo_grid'] = array(
         'id' => 'photo_grid',

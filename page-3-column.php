@@ -46,6 +46,8 @@ get_header();
 			<?php the_accordions(); ?>
 		</div>
 
+		<?php the_wide_content(); ?>
+
 	</div>
 
 	<?php the_infographic(); ?>

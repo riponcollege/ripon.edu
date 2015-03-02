@@ -17,5 +17,20 @@ function the_narrow_content() {
 }
 
 
+function the_wide_content() {
+
+	// narrow content
+    $wide_content = get_post_meta( get_the_ID(), CMB_PREFIX . "wide_content", 1 );
+	if ( !empty( $wide_content ) ) {
+		?>
+	<div class="content-wide">
+		<?php print do_shortcode( $wide_content ) ?>
+	</div>
+		<?php
+	}
+
+}
+
+
 
 ?>
