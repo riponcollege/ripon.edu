@@ -46,7 +46,7 @@ jQuery(document).ready(function($){
 			menu_ul.show();
 		}
 
-		menu_ul.find( 'li.menu-item-has-children > a' ).click(function(){
+		menu_ul.find( 'li.menu-item-has-children > a' ).click(function( event ){
 			var submenu = $( this ).next( 'ul' );
 			if ( !submenu.is( ':visible' ) ) {
 				event.preventDefault();
