@@ -14,48 +14,51 @@ $orange: #fecb00;
 $link-color: $red-light;
 
 
-// mixin library
+// import partials
 @import "mixins";
 
-// font import and mixins
 @import "fonts";
 
-// base styles
 @import "base";
 
-
-// general styles
 @import "header";
+
 @import "showcase";
+
 @import "events";
+
 @import "infographic";
+
 @import "menus";
+
 @import "content";
+
 @import "search";
+
 @import "widgets";
+
 @import "photos";
+
 @import "tabs";
+
 @import "accordions";
+
 @import "footer";
+
 @import "emergency";
 
-
-// home-specific styles
 @import "home";
 
-
-// faculty post type styles
 @import "faculty";
+
 @import "news";
 
+@import "jobs";
 
-
-// area of interest
 @import "area";
 
-
-// magnific stuff
 @import "map";
+
 @import "lightbox";
 
 
