@@ -1,16 +1,17 @@
 
 
-.entry-content {
-	@include clearfix;
-	border-bottom: 1px solid $grey-light;
-	padding: 15px 0;
+.blog, .archive {
+	.entry-content {
+		@include clearfix;
+		border-bottom: 1px solid $grey-light;
+		padding: 15px 0;
 
-	.thumbnail {
-		max-width: 25%;
-		float: left;
-		margin: 0 10px 0 0;
+		.thumbnail {
+			max-width: 25%;
+			float: left;
+			margin: 0 10px 0 0;
+		}
 	}
-
 }
 
 
