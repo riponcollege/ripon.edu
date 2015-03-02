@@ -30,11 +30,22 @@ jQuery(document).ready(function($){
 		menu_toggle = menu.find( 'button.menu-toggle' ),
 		menu_ul = menu.find( '.nav-menu' ),
 		fluid_images = $( '.content img' ),
-		left_menu = $( '.left-menu' );
+		left_menu = $( '.left-menu' ),
+		quick_nav = $( 'select.quick-nav' );
 
 
 	// remove height and width from images inside
 	fluid_images.removeAttr( 'width' ).removeAttr( 'height' );
+
+
+	// quick navs
+	quick_nav.change(function(){
+		if ( $( this ).hasClass( 'new-window' ) ) {
+			var new_window = window.open( $(this).val(), "_blank" );
+		} else {
+			window.location.href = $(this).val();
+		}
+	});
 
 
 	// show/hide menus when they click the toggler
