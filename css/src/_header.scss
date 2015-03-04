@@ -92,7 +92,7 @@ header {
 					@include respond-to( $menu-breakpoint ) {
 						position: absolute;
 						top: 44px;
-						left: -110px;
+						left: 0;
 						width: 220px;
 						z-index: 1000;
 					}
