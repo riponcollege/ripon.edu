@@ -40,7 +40,7 @@ get_header();
 				NPC_CLIENT_HEIGHT		= 700,
 				NPC_CLIENT_WIDTH		= 1100,
 				NPC_CONTAINER_PROTOCOL	= "http:",
-				NPC_EMBEDDED_PROTOCOL	= "https:",
+				NPC_EMBEDDED_PROTOCOL	= "http:",
 				NPC_IGNITION_LOCATION	= "birch";
 
 			(function(){var d=document,s=d.createElement("script");s.type="text/javascript";s.src=NPC_EMBEDDED_PROTOCOL+"//"+NPC_IGNITION_LOCATION+".aidcalculator.com/ignition/key.js";d.getElementsByTagName("head")[0].appendChild(s);})();
