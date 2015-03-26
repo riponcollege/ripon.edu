@@ -254,7 +254,7 @@
                         },
                         {
                             id: "US-WY",
-                            info: "Counselor: " + territory1
+                            info: "Counselor: " + territory2
                         }
                     ]
                 }; 
