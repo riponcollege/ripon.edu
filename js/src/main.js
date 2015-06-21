@@ -69,6 +69,7 @@ jQuery(document).ready(function($){
 	});
 
 
+	// handle the left menu toggling
 	left_menu.find( 'li.menu-item-has-children > a' ).click(function( event ){
 		var menu_item = $( this ).parent( 'li' );
 		var submenu = $( this ).next( 'ul.sub-menu' );
@@ -76,6 +77,17 @@ jQuery(document).ready(function($){
 			event.preventDefault();
 			menu_item.addClass( 'open' );
 			submenu.addClass( 'open' );
+		}
+	});
+
+
+	// auto-open the left submenus if the main menu item 
+	// or one of its children is the current page.
+	left_menu.find( 'li' ).each(function(){
+		var item = $(this);
+		if ( item.hasClass( 'current_page_parent' ) || item.hasClass( 'current-menu-item' ) ) {
+			item.addClass( 'open' );
+			item.find( 'ul.sub-menu' ).addClass( 'open' );
 		}
 	});
 
