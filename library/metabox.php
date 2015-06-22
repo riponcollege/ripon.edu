@@ -203,6 +203,16 @@ function page_metaboxes( $meta_boxes ) {
         'show_names' => true, // Show field names on the left
         'fields' => array(
             array(
+                'name' => 'First Name',
+                'id' => CMB_PREFIX . 'faculty_fname',
+                'type' => 'text'
+            ),
+            array(
+                'name' => 'Last Name',
+                'id' => CMB_PREFIX . 'faculty_lname',
+                'type' => 'text'
+            ),
+            array(
                 'name' => 'Title',
                 'id' => CMB_PREFIX . 'faculty_title',
                 'type' => 'text'
