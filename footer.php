@@ -23,7 +23,7 @@
 	</footer><!-- #colophon -->
 	
 	<div class="footer-badge">
-		Ripon College. Learn more. Do more. Be more. More. Together.
+		Ripon College. Life Well Lived&reg;
 	</div>
 
 	<div class="colophon">
