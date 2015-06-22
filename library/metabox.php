@@ -205,12 +205,12 @@ function page_metaboxes( $meta_boxes ) {
             array(
                 'name' => 'First Name',
                 'id' => CMB_PREFIX . 'faculty_fname',
-                'type' => 'text_small'
+                'type' => 'text_medium'
             ),
             array(
                 'name' => 'Last Name',
                 'id' => CMB_PREFIX . 'faculty_lname',
-                'type' => 'text_small'
+                'type' => 'text_medium'
             ),
             array(
                 'name' => 'Title',
