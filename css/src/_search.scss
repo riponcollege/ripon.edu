@@ -61,6 +61,10 @@
 		font-size: 14px;
 		padding: 0 15px;
 		text-transform: uppercase;
+
+		@media screen and (min-width:0) and (min-resolution: +72dpi) { 
+			height: 40px;
+		}
 	}
 
 	button {
