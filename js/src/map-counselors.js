@@ -10,23 +10,23 @@
             var counselorT1 = "Emily Sheeks";
             var territory1 = counselorT1.link("http://www.ripon.edu/sheekse");
             // Counselor Territory 2
-            var counselorT2 = "Samantha Van Zeeland";
-            var territory2 = counselorT2.link("http://www.ripon.edu/vanzeelands");
+            var counselorT2 = "Sarah Quella";
+            var territory2 = counselorT2.link("http://www.ripon.edu/quellas");
             // Counselor Territory 3
             var counselorT3 = "Eliza Stephenson";
             var territory3 = counselorT3.link("http://www.ripon.edu/stephensone");
             // Counselor Territory 4
-            var counselorT4 = "Leigh Mlodzik";
-            var territory4 = counselorT4.link("http://www.ripon.edu/mlodzikl");
+            var counselorT4 = "John Huegel";
+            var territory4 = counselorT4.link("http://www.ripon.edu/huegelj");
             // Counselor Territory 5
             var counselorT5 = "John Ingemann";
             var territory5 = counselorT5.link("http://www.ripon.edu/ingemannj");
             // Counselor Territory 6
-            var counselorT6 = "Paige Kane";
-            var territory6 = counselorT6.link("http://www.ripon.edu/kanep");
+            var counselorT6 = "Tom Beatty";
+            var territory6 = counselorT6.link("http://www.ripon.edu/beattyt");
             // Counselor Territory 7
-            var counselorT7 = "Thomas Beatty";
-            var territory7 = counselorT7.link("http://www.ripon.edu/beattyt");
+            var counselorT7 = "Lyn McCarthy";
+            var territory7 = counselorT7.link("http://www.ripon.edu/mccarthyl");
             // Counselor Territory 8
             var counselorT8 = "James Bland";
             var territory8 = counselorT8.link("http://www.ripon.edu/blandj");
@@ -142,7 +142,7 @@
                         },
                         {
                             id: "US-MI",
-                            info: "Counselor: " + territory2
+                            info: "Upper: " + territory3 + "<br>Lower: " + territory2
                         },
                         {
                             id: "US-MN",
