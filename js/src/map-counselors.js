@@ -106,7 +106,7 @@
                         },
                         {
                             id: "US-IL",
-                            info: "North: " + territory6 + "<br>Central and South:" + territory4
+                            info: "North: " + territory4 + "<br>Central and South:" + territory2
                         },
                         {
                             id: "US-IN",
