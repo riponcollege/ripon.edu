@@ -28,8 +28,8 @@
             var counselorT7 = "Lyn McCarthy";
             var territory7 = counselorT7.link("http://www.ripon.edu/mccarthyl");
             // Counselor Territory 8
-            var counselorT8 = "James Bland";
-            var territory8 = counselorT8.link("http://www.ripon.edu/blandj");
+            var counselorT8 = "Vacant";
+            var territory8 = counselorT8.link("http://www.ripon.edu/");
             // Counselor Territory 9
             var counselorT9 = "Jennifer Machacek";
             var territory9 = counselorT9.link("http://www.ripon.edu/machacekj");
@@ -106,7 +106,7 @@
                         },
                         {
                             id: "US-IL",
-                            info: "North: " + territory6 + "<br>Central and South:" + territory4
+                            info: "North: " + territory4 + "<br>Central and South:" + territory2
                         },
                         {
                             id: "US-IN",
@@ -238,7 +238,7 @@
                         },
                         {
                             id: "US-VA",
-                            info: "Counselor: " + territory8
+                            info: "Counselor: " + territory7
                         },
                         {
                             id: "US-WA",
