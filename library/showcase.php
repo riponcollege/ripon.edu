@@ -48,7 +48,7 @@ function the_photo_showcase( $height = 600 ) {
 					$image = '<img src="' . p_image_resize( $slide["image"], 1220, $height, true ) . '">';
 				} else {
 					// it's a video, so oEmbed that stuffs, yo
-					$image = apply_filter( 'the_content', $slide["image"] );
+					$image = apply_filters( 'the_content', $slide["image"] );
 				}
 
 				?>
@@ -109,7 +109,7 @@ function the_stat_showcase() {
 					$image = '<img src="' . p_image_resize( $slide["image"], 1150, 600, true ) . '">';
 				} else {
 					// it's a video, so oEmbed that stuffs, yo
-					$image = apply_filter( 'the_content', $slide["image"] );
+					$image = apply_filters( 'the_content', $slide["image"] );
 				}
 
 				?>
