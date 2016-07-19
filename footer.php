@@ -51,5 +51,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script async="async" src="https://apply.ripon.edu/ping"></script>
 </body>
 </html>
