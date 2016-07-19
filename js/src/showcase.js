@@ -7,6 +7,13 @@ jQuery(document).ready(function($){
 	// grab the showcase
 	var showcase = $( '.showcase' );
 
+	// set auto-rotate timer var so that it exists.
+	var auto_rotate = 0;
+
+
+	// count the slides
+	var slide_count = showcase.find( '.slide' ).size();
+
 	// if it exists
 	if ( typeof( showcase ) !== 'undefined' ) {
 
@@ -110,12 +117,30 @@ jQuery(document).ready(function($){
 		});
 
 
+
+		// set showcase initial height when the first image is loaded.
+		setTimeout( function() {
+			showcase_height();
+
+			// once we're loaded up, set a timer to auto-rotate the slides.
+			if ( slide_count > 1 ) {
+				auto_rotate = setInterval( next_slide, 10000 );
+			}
+		}, 500 );
+
+
+
 		// next/previous click
 		$( '.showcase-nav a' ).click(function(){
 			if ( $(this).hasClass( 'previous' ) ) {
 				prev_slide();
 			} else {
 				next_slide();
+			}
+		
+			// stop auto-rotation
+			if ( slide_count > 1 ) {
+				clearInterval( auto_rotate );
 			}
 		});
 
