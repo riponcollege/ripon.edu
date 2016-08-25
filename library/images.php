@@ -27,24 +27,23 @@ if ( function_exists( 'add_image_size' ) ) {
 
 
 // function to resize images
-function p_image_resize( $url, $width, $height = null, $crop = null, $single = true ) {
+function p_image_resize( $url, $width, $height = null, $crop = null ) {
 
 	//validate inputs
     if (!$url OR !$width)
         return false;
+    
+    if ( stristr( $url, 'http' ) ) {
+        $url = str_replace( 'http://' . $_SERVER['HTTP_HOST'], '', $url );
+    }
 
-	//define upload path & dir
-    $upload_info = wp_upload_dir();
-    $upload_dir = $upload_info['basedir'];
-    $upload_url = $upload_info['baseurl'];
+    $rel_path = $url;
 
-	//check if $img_url is local
-    if (strpos($url, $upload_url) === false)
-        return false;
+    $upload_url = get_bloginfo( 'siteurl' ) . '/wp-content/uploads/';
+    $upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/';
 
 	//define path of image
-    $rel_path = str_replace($upload_url, '', $url);
-    $img_path = $upload_dir . $rel_path;
+    $img_path = $_SERVER['DOCUMENT_ROOT'] . $url;
 
 	//check if img path exists, and is an image indeed
     if (!file_exists($img_path) OR !getimagesize($img_path))
@@ -62,7 +61,7 @@ function p_image_resize( $url, $width, $height = null, $crop = null, $single = t
 
 	//use this to check if cropped image already exists, so we can return that instead
     $suffix = "{$dst_w}x{$dst_h}";
-    $dst_rel_path = str_replace('.' . $ext, '', $rel_path);
+    $dst_rel_path = str_replace('.' . $ext, '', $url);
     $destfilename = "{$upload_dir}{$dst_rel_path}-{$suffix}.{$ext}";
 
     if (!$dst_h) {
@@ -90,19 +89,8 @@ function p_image_resize( $url, $width, $height = null, $crop = null, $single = t
         }
   
     }
-
-	//return the output
-    if ($single) {
-	//str return
-        $image = $img_url;
-    } else {
-	//array return
-        $image = array(
-            0 => $img_url,
-            1 => $dst_w,
-            2 => $dst_h
-        );
-    }
+    
+    $image = $img_url;
 
     return $image;
 }
