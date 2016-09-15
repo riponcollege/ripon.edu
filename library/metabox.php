@@ -10,6 +10,15 @@ function p_init_cmb_meta_boxes() {
 }
 
 
+function cmb_select_style() {
+  echo '<style>
+    .cmb_select#_p_fund_form {
+        width: 100% !important;
+    } 
+  </style>';
+}
+add_action('admin_head', 'cmb_select_style');
+
 
 /**
  * Include metabox on front page
@@ -134,7 +143,7 @@ function page_metaboxes( $meta_boxes ) {
 	$meta_boxes['showcase_metabox'] = array(
 		'id' => 'showcase_metabox',
 		'title' => 'Showcase',
-		'pages' => array( 'page', 'area' ), // post type
+		'pages' => array( 'page', 'area', 'fund' ), // post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => false, // Show field names on the left
@@ -298,6 +307,40 @@ function page_metaboxes( $meta_boxes ) {
                 'type' => 'wysiwyg'
             ),
         ),
+    );
+
+
+    // get list of gravity forms
+    $all_forms = GFAPI::get_forms();
+    $forms = array();
+    $forms[0] = '- no form selected -';
+    foreach ( $all_forms as $form ) {
+        $forms[$form['fields'][0]->formId] = $form['title'];
+    }
+
+
+    // accordions
+    $meta_boxes['fund_metabox'] = array(
+        'id' => 'fund_metabox',
+        'title' => 'Fund Information',
+        'pages' => array( 'fund' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+            array(
+                'name' => 'Goal',
+                'id' => CMB_PREFIX . 'fund_goal',
+                'type' => 'text_money'
+            ),
+            array(
+                'name' => 'Form',
+                'id' => CMB_PREFIX . 'fund_form',
+                'type' => 'select',
+                'default' => 0,
+                'options' => $forms
+            ),
+        )
     );
 
 
