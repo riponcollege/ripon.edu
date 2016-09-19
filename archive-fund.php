@@ -43,7 +43,7 @@ get_header();
 							$fund_goal = get_cmb_value( 'fund_goal' );
 							if ( $fund_form_id != 0 && $fund_goal > 0 ) {
 								$fund_donations = get_fund_total( $fund_form_id );
-								print '<h4 class="fund-total">' . round( $fund_totals->donation_total / $fund_goal, 1 ) . '% Funded <span>(' . $fund_totals->donation_count . ' Donors)</span></h4>';
+								print '<h4 class="fund-total">' . round( $fund_totals['total'] / $fund_goal, 1 ) . '% Funded <span>(' . $fund_totals['count'] . ' Donors)</span></h4>';
 							}
 							?>
 						</div>
