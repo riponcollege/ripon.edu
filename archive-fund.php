@@ -36,7 +36,7 @@ get_header();
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
 							} else {
-								print '<img src="http://placehold.it/500x500">';
+								print '<img src="https://placehold.it/500x500">';
 							}
 
 							$fund_form_id = get_cmb_value( 'fund_form' );
