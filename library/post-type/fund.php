@@ -127,4 +127,43 @@ function list_fund_category( $category ) {
 
 
 
+function get_fund_total( $id ) {
+
+	if ( $id != 0 ) {
+
+		// get the form itself.
+		$form = GFAPI::get_form( $id );
+
+		// get the total field from the form information
+		$types = GFAPI::get_fields_by_type( $form, 'total' );
+
+		// if there is a total field
+		if ( !empty( $types ) ) {
+			
+			// set a variable with the total field's ID
+			$total_field_id = $types[0]->id;
+
+			// get the form entries
+			$entries = GFAPI::get_entries( $id );
+
+			// total the donations to date
+			$donation_total = 0;
+			foreach ( $entries as $entry ) {
+				$donation_total += $entry[$types[0]->id];
+			}
+			$donation_total = $donation_total;
+
+			// count the donations
+			$donation_count = count( $entries );
+
+			return array(
+				'count' => $donation_count,
+				'total' => $donation_total
+			);
+		}
+	}
+}
+
+
+
 ?>
