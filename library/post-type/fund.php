@@ -162,6 +162,12 @@ function get_fund_total( $id ) {
 			);
 		}
 	}
+
+	return array(
+		'count' => 0,
+		'total' => 0
+	);
+
 }
 
 
