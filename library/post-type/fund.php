@@ -127,6 +127,15 @@ function list_fund_category( $category ) {
 
 
 
+function get_fund_categories() {
+	$terms = get_terms( 'fund_cat', array(
+	    'hide_empty' => false
+	) );
+	return $terms;
+}
+
+
+
 function get_fund_total( $id ) {
 
 	if ( $id != 0 ) {

@@ -319,7 +319,7 @@ function page_metaboxes( $meta_boxes ) {
     }
 
 
-    // accordions
+    // fund metabox
     $meta_boxes['fund_metabox'] = array(
         'id' => 'fund_metabox',
         'title' => 'Fund Information',
@@ -342,6 +342,31 @@ function page_metaboxes( $meta_boxes ) {
             ),
         )
     );
+
+
+    // fund listing metabox
+    $fund_categories = get_fund_categories();
+    foreach ( $fund_categories as $fundcat ) {
+        $fundcats[$fundcat->term_id] = $fundcat->name;
+    }
+    $meta_boxes['fund_category_metabox'] = array(
+        'id' => 'fund_category_metabox',
+        'title' => 'Fund Categories',
+        'pages' => array( 'page' ), // post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'page-fundlist.php' ),
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => false, // Show field names on the left
+        'fields' => array(
+            array(
+                'name' => 'Fund Categories',
+                'id' => CMB_PREFIX . 'fund_category',
+                'type' => 'multicheck',
+                'options' => $fundcats
+            ),
+        )
+    );
+
 
 
     // infographic metabox
@@ -672,9 +697,42 @@ function page_metaboxes( $meta_boxes ) {
 add_filter( 'cmb_meta_boxes', 'page_metaboxes' );
 
 
+
 function get_cmb_value( $field ) {
     return get_post_meta( get_the_ID(), CMB_PREFIX . $field, 1 );
 }
+
+
+
+/**
+ * Metabox for Page Template
+ * @author Kenneth White 
+ * @link https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress/wiki/Adding-your-own-show_on-filters
+ *
+ * @param bool $display
+ * @param array $meta_box
+ * @return bool display metabox
+ */
+function be_metabox_show_on_template( $display, $meta_box ) {
+
+    if( 'template' !== $meta_box['show_on']['key'] )
+        return $display;
+
+    // Get the current ID
+    if( isset( $_GET['post'] ) ) $post_id = $_GET['post'];
+    elseif( isset( $_POST['post_ID'] ) ) $post_id = $_POST['post_ID'];
+    if( !isset( $post_id ) ) return false;
+
+    $template_name = get_page_template_slug( $post_id );
+    $template_name = substr($template_name, 0, -4);
+
+    // If value isn't an array, turn it into one
+    $meta_box['show_on']['value'] = !is_array( $meta_box['show_on']['value'] ) ? array( $meta_box['show_on']['value'] ) : $meta_box['show_on']['value'];
+
+    // See if there's a match
+    return in_array( $template_name, $meta_box['show_on']['value'] );
+}
+add_filter( 'cmb_show_on', 'be_metabox_show_on_template', 10, 2 );
 
 
 
