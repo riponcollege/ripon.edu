@@ -144,6 +144,7 @@ function get_fund_info() {
 	$fund_offline_count = get_cmb_value( 'fund_offline_count' );
 
 	$info = array(
+		'fund_form' => $fund_form_id,
 		'goal' => floatval( str_replace( ",", "", $fund_goal ) ),
 		'offline_total' => floatval( str_replace( ",", "", $fund_offline_total ) ),
 		'offline_count' => $fund_offline_count,
@@ -167,7 +168,7 @@ function get_fund_info() {
 			$total_field_id = $types[0]->id;
 
 			// get the form entries
-			$entries = GFAPI::get_entries( $id );
+			$entries = GFAPI::get_entries( $fund_form_id );
 
 			// loop through the entries and add them to the total.
 			foreach ( $entries as $entry ) {

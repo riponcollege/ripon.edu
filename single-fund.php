@@ -25,10 +25,9 @@ the_showcase();
 				the_content();
 
 				// grab the form ID and get info and display if a form has been set.
-				$fund_form_id = get_cmb_value( 'fund_form' );
-				if ( $fund_form_id != 0 ) {
+				if ( $fund_info['fund_form'] != 0 ) {
 					// display the actual form
-					print do_shortcode("[gravityform id=" . $fund_form_id . " title=false description=false]");
+					print do_shortcode("[gravityform id=" . $fund_info['fund_form'] . " title=false description=false]");
 				} else {
 					print "<p class='no-form quiet'>No form has been selected for this crowdfunding campaign, please click 'Edit' in the top bar and select the form that should show up in this section.</p>";
 				}
