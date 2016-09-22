@@ -180,6 +180,8 @@ function get_fund_info() {
 
 		$info['count'] += $info['offline_count'];
 		$info['total'] += $info['offline_total'];
+		$info['total_formatted'] = number_format( $info['total'], 2 );
+		$info['goal_formatted'] = number_format( $info['goal'], 2 );
 	}
 
 	$info['percent'] = round( ( $info['total'] / $info['goal'] ) * 100, 1 );

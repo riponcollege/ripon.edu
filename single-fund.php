@@ -19,13 +19,13 @@ the_showcase();
 
 				$fund_info = get_fund_info();
 				if ( $fund_info['total'] > 0 ) {
-					print '<h4 class="fund-total"><span>Goal Progress:</span> $' . $fund_info['total'] . " / $" .  $fund_info['goal'] . ' (' . $fund_info[
-				'percent'] . '%)</h4>';
+					print '<h4 class="fund-total"><span>Goal Progress:</span> $' . $fund_info['total_formatted'] . " / $" .  $fund_info['goal_formatted'] . ' (' . $fund_info['percent'] . '%)</h4>';
 				}
-				
+
 				the_content();
 
 				// grab the form ID and get info and display if a form has been set.
+				$fund_form_id = get_cmb_value( 'fund_form' );
 				if ( $fund_form_id != 0 ) {
 					// display the actual form
 					print do_shortcode("[gravityform id=" . $fund_form_id . " title=false description=false]");
