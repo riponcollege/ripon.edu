@@ -136,12 +136,26 @@ function get_fund_categories() {
 
 
 
-function get_fund_total( $id ) {
+function get_fund_info() {
 
-	if ( $id != 0 ) {
+	$fund_form_id = get_cmb_value( 'fund_form' );
+	$fund_goal = get_cmb_value( 'fund_goal' );
+	$fund_offline_total = get_cmb_value( 'fund_offline_total' );
+	$fund_offline_count = get_cmb_value( 'fund_offline_count' );
+
+	$info = array(
+		'goal' => floatval( str_replace( ",", "", $fund_goal ) ),
+		'offline_total' => floatval( str_replace( ",", "", $fund_offline_total ) ),
+		'offline_count' => $fund_offline_count,
+		'count' => 0,
+		'total' => 0
+	);
+
+
+	if ( $fund_form_id != 0 && $info['goal'] > 0 ) {
 
 		// get the form itself.
-		$form = GFAPI::get_form( $id );
+		$form = GFAPI::get_form( $fund_form_id );
 
 		// get the total field from the form information
 		$types = GFAPI::get_fields_by_type( $form, 'total' );
@@ -155,28 +169,22 @@ function get_fund_total( $id ) {
 			// get the form entries
 			$entries = GFAPI::get_entries( $id );
 
-			// total the donations to date
-			$donation_total = 0;
+			// loop through the entries and add them to the total.
 			foreach ( $entries as $entry ) {
-				$donation_total += $entry[$types[0]->id];
+				$info['total'] += $entry[$types[0]->id];
 			}
-			$donation_total = $donation_total;
 
 			// count the donations
-			$donation_count = count( $entries );
-
-			return array(
-				'count' => $donation_count,
-				'total' => $donation_total
-			);
+			$info['count'] = count( $entries );
 		}
+
+		$info['count'] += $info['offline_count'];
+		$info['total'] += $info['offline_total'];
 	}
 
-	return array(
-		'count' => 0,
-		'total' => 0
-	);
+	$info['percent'] = round( ( $info['total'] / $info['goal'] ) * 100, 1 );
 
+	return $info;
 }
 
 

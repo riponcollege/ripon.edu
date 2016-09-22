@@ -39,11 +39,9 @@ get_header();
 								print '<img src="https://placehold.it/500x500">';
 							}
 
-							$fund_form_id = get_cmb_value( 'fund_form' );
-							$fund_goal = get_cmb_value( 'fund_goal' );
-							if ( $fund_form_id != 0 && $fund_goal > 0 ) {
-								$fund_totals = get_fund_total( $fund_form_id );
-								print '<h4 class="fund-total">' . round( $fund_totals['total'] / $fund_goal, 1 ) . '% Funded <span>(' . $fund_totals['count'] . ' Donors)</span></h4>';
+							$fund_info = get_fund_info();
+							if ( $fund_info['total'] > 0 ) {
+								print '<h4 class="fund-total">' . $fund_info['percent'] . '% Funded <span>(' . $fund_info['count'] . ' Donors)</span></h4>';
 							}
 							?>
 						</div>

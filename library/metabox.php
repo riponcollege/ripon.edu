@@ -334,6 +334,16 @@ function page_metaboxes( $meta_boxes ) {
                 'type' => 'text_money'
             ),
             array(
+                'name' => 'Offline Donation Total',
+                'id' => CMB_PREFIX . 'fund_offline_total',
+                'type' => 'text_money'
+            ),
+            array(
+                'name' => 'Offline Donation Count',
+                'id' => CMB_PREFIX . 'fund_offline_count',
+                'type' => 'text_small'
+            ),
+            array(
                 'name' => 'Form',
                 'id' => CMB_PREFIX . 'fund_form',
                 'type' => 'select',

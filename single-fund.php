@@ -17,15 +17,12 @@ the_showcase();
 				<h1><?php the_title(); ?></h1>
 				<?php
 
-				$fund_form_id = get_cmb_value( 'fund_form' );
-				$fund_goal = get_cmb_value( 'fund_goal' );
-				if ( $fund_form_id != 0 ) {
-					$fund_donations = get_fund_total( $fund_form_id );
-					print '<h4 class="fund-total"><span>Goal Progress:</span> $' . $fund_donations['total'] . " / $" .  $fund_goal . ' (' . round( $fund_totals->donation_total / $fund_goal, 1 ) . '%)</h4>';
+				$fund_info = get_fund_info();
+				if ( $fund_info['total'] > 0 ) {
+					print '<h4 class="fund-total"><span>Goal Progress:</span> $' . $fund_info['total'] . " / $" .  $fund_info['goal'] . ' (' . $fund_info[
+				'percent'] . '%)</h4>';
 				}
-
-				// the_post_thumbnail();
-
+				
 				the_content();
 
 				// grab the form ID and get info and display if a form has been set.
