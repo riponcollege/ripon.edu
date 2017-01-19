@@ -85,7 +85,7 @@ jQuery(document).ready(function($){
 	// or one of its children is the current page.
 	left_menu.find( 'li' ).each(function(){
 		var item = $(this);
-		if ( item.hasClass( 'current_page_parent' ) || item.hasClass( 'current-menu-item' ) ) {
+		if ( item.hasClass( 'current_page_parent' ) || item.hasClass( 'current-menu-item' ) || item.hasClass( 'current-menu-ancestor' ) ) {
 			item.addClass( 'open' );
 			item.find( 'ul.sub-menu' ).addClass( 'open' );
 		}
