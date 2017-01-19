@@ -117,7 +117,6 @@ function the_stat_showcase() {
 				<div class="slide-wrapper">
 					<?php if ( !empty( $link ) ) { ?><a href="<?php print $link ?>" class="<?php print ( stristr( $link, 'vimeo' ) || stristr( $link, 'youtube' ) || stristr( $link, 'google.com/maps' ) ? 'lightbox-iframe' : '' ) ?>"><?php } ?>
 					<?php print $image; ?>
-					<?php if ( !empty( $link ) ) { ?></a><?php } ?>
 					
 					<?php if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
 					<div class="slide-content">
@@ -125,6 +124,7 @@ function the_stat_showcase() {
 						<?php if ( !empty( $subtitle ) ) { ?><h2><?php print $subtitle; ?></h2><?php } ?>
 					</div>
 					<?php } ?>
+					<?php if ( !empty( $link ) ) { ?></a><?php } ?>
 				</div>
 			</div>
 				<?php
