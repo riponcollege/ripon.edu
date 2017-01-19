@@ -86,7 +86,6 @@ header {
 				}
 
 				ul {
-					background: white;
 					display: none;
 
 					@include respond-to( $menu-breakpoint ) {
@@ -100,7 +99,7 @@ header {
 					a {
 						@include font;
 						color: darken( $grey, 5% );
-						background-color: white;
+						background: lighten( $grey, 55% );
 						padding: 6px 10px;
 
 						&:hover {
@@ -128,7 +127,6 @@ header {
 
 									&:hover {
 										color: darken( $grey, 3% );
-										background-color: lighten( $grey, 50% );
 									}
 								}
 
@@ -141,10 +139,6 @@ header {
 								}
 
 								&:hover {
-									& > a {
-										background-color: lighten( $grey, 45% );
-									}
-
 									ul {
 										display: block;
 
