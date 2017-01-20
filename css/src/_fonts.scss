@@ -35,7 +35,7 @@
 }
 
 @mixin font-title {
-    font-family: Texta, "Open Sans", Arial, san-serif;
+    font-family: "Open Sans", Arial, san-serif;
 }
 
 @mixin font-awesome {
@@ -43,17 +43,17 @@
 }
 
 @mixin font-title-bold {
-	font-family: Texta, "Open Sans", Arial, san-serif;
+	font-family: "Open Sans", Arial, san-serif;
     font-weight: bold;
 }
 
 @mixin font-title-italic {
-    font-family: Texta, "Open Sans", Arial, san-serif;
+    font-family: "Open Sans", Arial, san-serif;
     font-style: italic;
 }
 
 @mixin font-title-bold-italic {
-    font-family: Texta, "Open Sans", Arial, san-serif;
+    font-family: "Open Sans", Arial, san-serif;
     font-weight: bold;
     font-style: italic;
 }
