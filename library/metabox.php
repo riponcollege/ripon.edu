@@ -196,6 +196,12 @@ function page_metaboxes( $meta_boxes ) {
 						'type' => 'file',
 						'preview_size' => array( 350, 150 )
 					),
+                    array(
+                        'name' => 'Button Text',
+                        'description' => 'Enter button text for the call to action button. Leave empty for no button.',
+                        'id'   => 'button',
+                        'type' => 'text',
+                    ),
 				),
             ),
         )
