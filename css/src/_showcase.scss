@@ -117,7 +117,7 @@
 		}
 
 		.slide-button {
-			padding: 3px 6px;
+			padding: 6px;
 			box-shadow: 0 0 20px rgba( black, .5 );
 			transition: 400ms background ease-in-out;
 			margin-top: 3px;
@@ -131,7 +131,7 @@
 
 			@include respond-to( 600px ) {
 				max-width: 70%;
-				padding: 7px 10px;
+				padding: 6px 10px;
 				font-size: 15px; 
 				display: inline-block;
 				position: static;
