@@ -50,7 +50,7 @@
 			color: white;
 			pointer-events: none;
 
-			@include respond-to( 1024px ) {
+			@include respond-to( 1220px ) {
 				top: 60px;
 			}
 
@@ -97,7 +97,7 @@
 			padding: 0;
 			font-size: 12px;
 			line-height: 1.3em;
-			text-shadow: 0 0 20px rgba( black, .5 );
+			text-shadow: 0 0 20px rgba( black, .7 );
 			padding: 3px 0;
 
 			@include respond-to( 600px ) {
