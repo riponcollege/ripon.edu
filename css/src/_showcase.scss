@@ -55,7 +55,13 @@
 
 			.wrap {
 				@include respond-to( 768px ) {
-					padding-right: 40%;
+					padding-right: 280px;
+				}
+				@include respond-to( 1024px ) {
+					padding-right: 380px;
+				}
+				@include respond-to( 1220px ) {
+					padding-right: 580px;
 				}
 			}
 		}
@@ -81,6 +87,7 @@
 
 			@include respond-to( 1024px ) {
 				margin-bottom: 2%;
+				font-size: 50px; 
 			}
 		}
 
