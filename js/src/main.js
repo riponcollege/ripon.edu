@@ -50,22 +50,12 @@ jQuery(document).ready(function($){
 
 
 	// show/hide menus when they click the toggler
-	menu_toggle.click(function(){
-
-		if ( menu_ul.is( ':visible' ) ) {
-			menu_ul.hide();
-		} else {
-			menu_ul.show();
+	menu_ul.find( 'li.menu-item-has-children > a' ).click(function( event ){
+		var submenu = $( this ).next( 'ul' );
+		if ( !submenu.is( ':visible' ) && $(window).width() < 965 ) {
+			event.preventDefault();
+			submenu.show();
 		}
-
-		menu_ul.find( 'li.menu-item-has-children > a' ).click(function( event ){
-			var submenu = $( this ).next( 'ul' );
-			if ( !submenu.is( ':visible' ) ) {
-				event.preventDefault();
-				submenu.show();
-			}
-		});
-
 	});
 
 

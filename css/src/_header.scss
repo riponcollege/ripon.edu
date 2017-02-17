@@ -52,6 +52,10 @@ header {
 				background-color: $red-light;
 				opacity: 1;
 			}
+
+			ul.nav-menu {
+				display: block;
+			}
 		}
 
 		ul.nav-menu {
@@ -99,9 +103,7 @@ header {
 				}
 
 				ul {
-					opacity: 0;
-					pointer-events: none;
-					transition: 400ms opacity ease-in-out;
+					display: none;
 
 					@include respond-to( $menu-breakpoint ) {
 						position: absolute;
@@ -109,6 +111,10 @@ header {
 						left: 0;
 						width: 250px;
 						z-index: 1000;
+						display: block;
+						opacity: 0;
+						pointer-events: none;
+						transition: 400ms opacity ease-in-out;
 					}
 
 					@include respond-to( 1220px ) {
