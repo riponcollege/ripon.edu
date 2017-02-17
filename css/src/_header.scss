@@ -99,7 +99,9 @@ header {
 				}
 
 				ul {
-					display: none;
+					opacity: 0;
+					pointer-events: none;
+					transition: 400ms opacity ease-in-out;
 
 					@include respond-to( $menu-breakpoint ) {
 						position: absolute;
@@ -130,9 +132,19 @@ header {
 							color: darken( $grey, 10% );
 							opacity: 1;
 						}
+
+						@include respond-to( $menu-breakpoint ) {
+							width: 250px;
+						}
 						
-						@include respond-to( 1040px ) { padding: 6px 24px; }
-						@include respond-to( 1220px ) { padding: 7px 32px; }
+						@include respond-to( 1040px ) { 
+							padding: 6px 24px; 
+						}
+
+						@include respond-to( 1220px ) { 
+							padding: 7px 32px;
+							width: 320px;
+						}
 					}
 				}
 				
@@ -143,7 +155,8 @@ header {
 						}
 
 						ul {
-							display: block;
+							opacity: 1;
+							pointer-events: auto;
 
 							li {
 								float: none;
