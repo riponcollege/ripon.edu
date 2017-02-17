@@ -49,6 +49,14 @@ jQuery(document).ready(function($){
 	});
 
 
+	// hide main menu when clicked outside.
+	$( 'body *:not(.nav-main)' ).click(function(){
+		if ( !menu_ul.is( ':visible' ) && ( $(window).width() < 965 || Modernizr.pointerevents ) ) {
+			menu_ul.hide();
+		}
+	})
+
+
 	// show/hide menus when they click the toggler
 	menu_ul.find( 'li.menu-item-has-children > a' ).click(function( event ){
 		var submenu = $( this ).next( 'ul' );
