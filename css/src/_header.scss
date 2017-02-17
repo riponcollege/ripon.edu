@@ -114,7 +114,7 @@ header {
 						display: block;
 						padding: 5px 20px;
 						text-decoration: none;
-						opacity: .85;
+						opacity: .9;
 						@include font-medium;
 						font-size: .8em;
 						transition: 400ms background-color ease-in-out, 400ms color ease-in-out, 400ms opacity ease-in-out;
@@ -225,7 +225,7 @@ header {
 					text-decoration: none;
 					opacity: .85;
 					@include font-medium;
-					font-size: .8em;
+					font-size: .9em;
 					transition: 400ms background-color ease-in-out, 400ms color ease-in-out, 400ms opacity ease-in-out;
 					color: lighten( $grey, 5% );
 					text-transform: uppercase;
