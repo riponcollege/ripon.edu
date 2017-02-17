@@ -8,15 +8,6 @@ get_header();
 
 ?>
 
-	<div class="iam">
-		<div class="wrap">
-			<nav>
-				<h3>I Am A(n):</h3>
-				<?php wp_nav_menu( array( 'theme_location' => 'constituent', 'menu_class' => 'nav-menu' ) ); ?>
-			</nav>
-		</div>
-	</div>
-
 	<?php the_emergency_bar(); ?>
 
 	<div class="home-showcase">
