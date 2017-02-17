@@ -226,16 +226,19 @@ header {
 			}
 
 			ul {
-				display: block;
+				opacity: 1;
+				pointer-events: auto;
 			}
 		}
 
 		ul {
-			display: none;
 			position: absolute;
 			right: 0;
 			top: 44px;
 			width: 250px;
+			transition: 400ms opacity ease-in-out;
+			opacity: 0;
+			pointer-events: none;
 
 			li {
 				a {
