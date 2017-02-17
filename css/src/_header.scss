@@ -109,10 +109,14 @@ header {
 						z-index: 1000;
 					}
 
+					@include respond-to( 1220px ) {
+						width: 280px;
+					}
+
 					a {
 						background-color: lighten( $grey, 50% );
 						display: block;
-						padding: 5px 20px;
+						padding: 5px 15px;
 						text-decoration: none;
 						opacity: .9;
 						@include font-medium;
@@ -126,6 +130,9 @@ header {
 							color: darken( $grey, 10% );
 							opacity: 1;
 						}
+						
+						@include respond-to( 1040px ) { padding: 5px 24px; }
+						@include respond-to( 1220px ) { padding: 5px 32px; }
 					}
 				}
 				
@@ -225,7 +232,7 @@ header {
 					text-decoration: none;
 					opacity: .85;
 					@include font-medium;
-					font-size: .9em;
+					font-size: .8em;
 					transition: 400ms background-color ease-in-out, 400ms color ease-in-out, 400ms opacity ease-in-out;
 					color: lighten( $grey, 5% );
 					text-transform: uppercase;
