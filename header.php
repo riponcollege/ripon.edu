@@ -16,7 +16,7 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=1" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=2" rel="stylesheet" type="text/css">
 
 </head>
 <body <?php body_class(); ?>>
@@ -31,15 +31,27 @@
 			</a>
 		</div>
 
-		<nav role="navigation">
+		<nav class="nav-main" role="navigation">
 			<button class="menu-toggle">show/hide menu</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav>
-	
-	</div>
 
-	<div class="search">
-		<?php get_search_form(); ?>
+		<nav class="nav-links nav-icon">
+			<span class="handle"></span>
+			<?php wp_nav_menu( array( 'theme_location' => 'links', 'menu_class' => 'nav-menu' ) ); ?>
+		</nav>
+
+		<nav class="nav-constituent nav-icon">
+			<span class="handle"></span>
+			<?php wp_nav_menu( array( 'theme_location' => 'constituent', 'menu_class' => 'nav-menu' ) ); ?>
+		</nav>
+		
+		<a href="/events" class="calendar">Events</a>
+
+		<div class="search">
+			<?php get_search_form(); ?>
+		</div>
+
 	</div>
 
 </header>

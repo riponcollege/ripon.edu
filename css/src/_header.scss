@@ -9,47 +9,64 @@ header {
 	
 	.wrap {
 		@include clearfix;
+		position: relative;
 	}
 	
 	.logo {
-
-		img {		
-			height: 80px;
-			float: left;
-		}
+		text-align: center;
+		padding: 10px 0;
 
 		@include respond-to( $menu-breakpoint ) {
-			img {
-				float: none;
-				height: auto;
-			}
+			text-align: left;
 		}
 	}
 
-	nav {
+	nav.nav-main {
+		position: relative;
+
 		button.menu-toggle {
-			float: right;
+			float: left;
 			background: $red-dark url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMAsfS51A2+6cnu0ds/UQcva7D7E8RTPvJoAAAAW0lEQVQY063POQKAIAwF0W+ComwqkPtfVWsSOl453SATeYUoo4qpwovJI7lwKsElLFXslLgfSucEEhNBJpBDDG7wpwyUtiutYKWb+d0GL/ONKKY4/3iELoXk+QCXmhAnR7E6TAAAAABJRU5ErkJggg==) center center no-repeat;
 			text-indent: -300px;
-			width: 70px;
-			height: 80px;
+			width: 35px;
+			height: 44px;
 			padding: 0;
 			overflow: hidden;
 			cursor: pointer;
 			border: 0;
 			box-shadow: none;
+			opacity: .7;
+			transition: 500ms background-color ease-in-out, 500ms opacity ease-in-out;
+
+			@include respond-to( 400px ) {
+				width: 50px;
+			}
 
 			@include respond-to( $menu-breakpoint ) {
 				display: none;
 			}
 		}
 
-		ul {
+		&:hover {
+			button.menu-toggle {
+				background-color: $red-light;
+				opacity: 1;
+			}
+		}
+
+		ul.nav-menu {
+			position: absolute;
+			top: 44px;
+			left: 0;
+			right: 0;
 			@include clearfix;
 			display: none;
+			background-color: lighten( $red-dark, 10% );
 
 			@include respond-to( $menu-breakpoint ) {
+				position: static;
 				display: block;
+				background-color: transparent;
 			}
 
 			li {
@@ -65,7 +82,7 @@ header {
 					color: white;
 					font-size: 10pt;
 					text-transform: uppercase;
-					transition: background-color 300ms ease-in-out;
+					transition: background-color 500ms ease-in-out;
 
 					&:hover {
 						color: white;
@@ -100,7 +117,7 @@ header {
 						@include font;
 						color: darken( $grey, 5% );
 						background: lighten( $grey, 55% );
-						padding: 6px 10px;
+						padding: 6px 15px;
 
 						&:hover {
 							color: $grey;
@@ -160,13 +177,116 @@ header {
 		}
   	}
 
+	nav.nav-icon {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		.handle {
+			background: $red-dark url(../img/icon-link.png) center center no-repeat;
+			width: 35px;
+			height: 44px;
+			display: block;
+			opacity: .7;
+			transition: 500ms background-color ease-in-out, 500ms opacity ease-in-out;
+			cursor: pointer;
+
+			@include respond-to( 400px ) {
+				width: 50px;
+			}
+		}
+
+		&:hover, &.open {
+			.handle {
+				background-color: $red-light;
+				opacity: 1;
+			}
+
+			ul {
+				display: block;
+			}
+		}
+
+		ul {
+			display: none;
+			position: absolute;
+			right: 0;
+			top: 44px;
+			width: 200px;
+
+			li {
+				a {
+					background-color: lighten( $grey, 50% );
+					display: block;
+					padding: 5px 10px;
+					text-decoration: none;
+					opacity: .95;
+					@include font-medium;
+					font-size: .8em;
+					transition: 500ms background-color ease-in-out;
+					color: lighten( $grey, 10% );
+					text-transform: uppercase;
+
+					&:hover {
+						background-color: lighten( $grey, 57% );
+					}
+				}
+			}
+		}
+	}
+
+	nav.nav-links {
+		right: 35px;
+
+		@include respond-to( 400px ) {
+			right: 50px;
+		}
+
+		.handle {
+			background: url(../img/icon-people.png) center center no-repeat;
+		}
+	}
+
+	a.calendar {
+		position: absolute;
+		bottom: 0;
+		right: 70px;
+		width: 35px;
+		height: 44px;
+		background: url(../img/icon-calendar.png) center center no-repeat;
+		color: transparent;
+		text-indent: 200px;
+		overflow: hidden;
+		opacity: .7;
+		transition: 500ms background-color ease-in-out, 500ms opacity ease-in-out;
+		
+		@include respond-to( 400px ) {
+			right: 100px;
+			width: 50px;
+		}
+
+		&:hover {
+			background-color: $red-light;
+			opacity: 1;
+		}
+	}
+
   	.search {
-  		position: relative;
+  		position: absolute;
+		right: 110px;
+		bottom: 4px;
+		left: 40px;
   		height: 40px;
   		border-bottom: 1px solid lighten( $grey, 50% );
 
+		@include respond-to( 400px ) {
+			left: 60px;
+			right: 160px;
+		}
+
   		@include respond-to( $menu-breakpoint ) {
-			position: absolute;
+			bottom: auto;
+			left: auto;
 			right: 5%;
 			top: 50%;
 			margin: -20px 0 0;
