@@ -131,8 +131,8 @@ header {
 							opacity: 1;
 						}
 						
-						@include respond-to( 1040px ) { padding: 5px 24px; }
-						@include respond-to( 1220px ) { padding: 5px 32px; }
+						@include respond-to( 1040px ) { padding: 6px 24px; }
+						@include respond-to( 1220px ) { padding: 7px 32px; }
 					}
 				}
 				
@@ -193,7 +193,7 @@ header {
 		right: 0;
 
 		.handle {
-			background: $red-dark url(../img/icon-link.png) center center no-repeat;
+			background: $red-dark url(../img/icon-people.png) center center no-repeat;
 			width: 35px;
 			height: 44px;
 			display: block;
@@ -228,7 +228,7 @@ header {
 				a {
 					background-color: lighten( $grey, 50% );
 					display: block;
-					padding: 5px 20px;
+					padding: 5px 15px;
 					text-decoration: none;
 					opacity: .85;
 					@include font-medium;
@@ -242,6 +242,9 @@ header {
 						color: darken( $grey, 10% );
 						opacity: 1;
 					}
+
+					@include respond-to( 1040px ) { padding: 6px 24px; }
+					@include respond-to( 1220px ) { padding: 7px 32px; }
 				}
 			}
 		}
@@ -255,7 +258,7 @@ header {
 		}
 
 		.handle {
-			background: url(../img/icon-people.png) center center no-repeat;
+			background: url(../img/icon-link.png) center center no-repeat;
 		}
 	}
 
