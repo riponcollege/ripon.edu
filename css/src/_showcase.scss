@@ -43,69 +43,160 @@
 		
 		.slide-content {
 			position: absolute;
-			top: 10%;
+			top: 5%;
 			right: 60px;
 			left: 60px;
-			background: white;
-			opacity: .8;
-			padding: 12px;
-			border-radius: 15px;
-			border-top-left-radius: 0;
+			bottom: 0;
+			color: white;
+			pointer-events: none;
 
-			@include respond-to( 768px ) {
-				top: 15%;
-				left: 10%;
-				right: 50%;
-				padding: 25px;
+			@include respond-to( 1220px ) {
+				top: 60px;
+			}
+
+			.wrap {
+				@include respond-to( 768px ) {
+					padding-right: 280px;
+				}
+				@include respond-to( 1024px ) {
+					padding-right: 380px;
+				}
+				@include respond-to( 1220px ) {
+					padding-right: 580px;
+				}
 			}
 		}
 		
 		h1 {
 			font-weight: 700;
 			padding: 0;
-			color: $red-dark;
-
+			color: white;
 			font-size: 18px;
-			@include respond-to( 768px ) { font-size: 22px; }
+			line-height: 1.2em;
+			text-shadow: 0 0 20px rgba( black, .5 );
+			text-transform: uppercase;
+			padding: 3px 0;
+
+			@include respond-to( 600px ) {
+				font-size: 25px; 
+			}
+
+			@include respond-to( 768px ) {
+				margin-bottom: 1%;
+				font-size: 40px; 
+			}
+
+			@include respond-to( 1024px ) {
+				margin-bottom: 2%;
+				font-size: 50px; 
+			}
 		}
 
 		h2 {
 			font-weight: 400;
 			padding: 0;
-			font-size: 13px;
-			line-height: 20px;
+			font-size: 12px;
+			line-height: 1.3em;
+			text-shadow: 0 0 20px rgba( black, .7 );
+			padding: 3px 0;
+
+			@include respond-to( 600px ) {
+				font-size: 15px; 
+			}
+
+			@include respond-to( 768px ) {
+				margin-bottom: 2%;
+				font-size: 20px; 
+				line-height: 1.4em;
+			}
+
+			@include respond-to( 1024px ) {
+				margin-bottom: 4%;
+				line-height: 1.5em;
+			}
+		}
+
+		.slide-button {
+			padding: 6px;
+			box-shadow: 0 0 20px rgba( black, .5 );
+			transition: 400ms background ease-in-out;
+			margin-top: 3px;
+			text-transform: uppercase;
+			background: $teal;
+			position: absolute;	
+			bottom: 0;
+			right: -60px;
+			left: -60px;
+			text-align: center;
+
+			@include respond-to( 600px ) {
+				max-width: 70%;
+				padding: 6px 10px;
+				font-size: 15px; 
+				display: inline-block;
+				position: static;
+				border: 2px solid white;
+				text-shadow: 0 0 20px rgba( black, .5 );
+				background: transparent;
+			}
+
+			@include respond-to( 768px ) {
+				max-width: 100%;
+				padding: 10px 15px;
+				font-size: 20px; 
+				background: transparent;
+			}
+		}
+		
+		&:hover .slide-button {
+			text-shadow: none;
+			background: $teal;
 		}
 	}
 
 	.showcase-nav a {
 		position: absolute;
 		top: 50%;
-		margin-top: -40px;
 		cursor: pointer;
 		border-radius: 50%;
 		background: $red-dark;
-		width: 80px;
-		height: 80px;
+		width: 50px;
+		height: 50px;
+		margin-top: -25px;
 		text-indent: -300px;
 		overflow: hidden;
 		opacity: .7;
+	
+		@include respond-to( 768px ) {
+			width: 80px;
+			height: 80px;
+			margin-top: -40px;
+		}
 
 		&:hover {
 			opacity: 1;
 		}
 
 		&.previous {
-			left: -30px;
+			left: -5px;
 			background: $red-dark url(../img/slider-arrow-left.png) right center no-repeat;
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
+
+			@include respond-to( 768px ) {
+				left: -30px;
+			}
 		}
 
 		&.next {
-			right: -30px;
+			right: -5px;
 			background: $red-dark url(../img/slider-arrow-right.png) left center no-repeat;
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
+
+			@include respond-to( 768px ) {
+				right: -30px;
+			}
 		}
 	}
 }

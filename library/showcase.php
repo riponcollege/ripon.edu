@@ -41,6 +41,7 @@ function the_photo_showcase( $height = 600 ) {
 				$title = ( isset( $slide["title"] ) ? $slide["title"] : '' );
 				$subtitle = ( isset( $slide["subtitle"] ) ? $slide["subtitle"] : '' );
 				$link = ( isset( $slide["link"] ) ? $slide["link"] : '' );
+				$button = ( isset( $slide["button"] ) ? $slide["button"] : '' );
 
 				// check if it's an image or video
 				if ( p_is_image( $slide["image"] ) ) {
@@ -59,8 +60,11 @@ function the_photo_showcase( $height = 600 ) {
 				
 				<?php if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
 				<div class="slide-content">
+					<div class="wrap">
 					<?php if ( !empty( $title ) ) { ?><h1><?php print $title; ?></h1><?php } ?>
 					<?php if ( !empty( $subtitle ) ) { ?><h2><?php print $subtitle; ?></h2><?php } ?>
+					<?php if ( !empty( $button ) ) { ?><div class="slide-button"><?php print $button ?></div><?php } ?>
+					</div>
 				</div>
 				<?php } ?>
 			</div>
