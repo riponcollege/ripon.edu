@@ -70,10 +70,6 @@ header {
 			}
 
 			li {
-				&.menu-item-2258 > a {
-					color: $blue-light;
-				}
-
 				a {
 					@include font-bold;
 					display: block;
