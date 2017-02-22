@@ -224,6 +224,7 @@
 		max-width: 1100px;
 		margin: 0 auto;
 		background: white;
+		box-shadow: 0 0 20px rgba( black, .3 );
 		@include clearfix;
 
 		@include respond-to( 1024px ) {
@@ -303,6 +304,7 @@
 			font-weight: 700;
 			padding: 0;
 			color: $red-dark;
+			text-shadow: none;
 
 			font-size: 18px;
 			@include respond-to( 768px ) { font-size: 22px; }
@@ -314,6 +316,7 @@
 			font-size: 13px;
 			line-height: 20px;
 			color: $grey;
+			text-shadow: none;
 		}
 	}
 
