@@ -23,7 +23,7 @@ function twitter_posts() {
 	}
 	*/
 	?>
-	<a class="twitter-timeline" href="https://twitter.com/riponcollege" data-chrome="nofooter noborders" height="400">Tweets by riponcollege</a>
+	<a class="twitter-timeline" href="https://twitter.com/riponcollege" data-chrome="nofooter noborders" height="500">Tweets by riponcollege</a>
 	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	<?php
 }
