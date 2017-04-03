@@ -7,6 +7,7 @@ require_once( 'twitter/twitteroauth/twitteroauth.php' );
 
 function twitter_posts() {
 
+	/*
 	// authenticate to Twitter
 	$connection = new TwitterOAuth( '1atjbG2VbZSdIWZYSyOKeRPCS', 'zP4ELLpMNblCqBN0e0eoUmMEjinJww0w6ldMxM7OtxsGZGntKS' );
 
@@ -20,7 +21,10 @@ function twitter_posts() {
 		</div>
 		<?php
 	}
-
+	*/
+	?>
+	<a class="twitter-timeline" href="https://twitter.com/riponcollege" data-chrome="nofooter noborders">Tweets by @RiponCollege</a>
+	<?php
 }
 
 
