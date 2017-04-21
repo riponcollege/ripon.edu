@@ -21,9 +21,6 @@
             // Counselor Territory 5
             var counselorT5 = "John Ingemann";
             var territory5 = counselorT5.link("http://www.ripon.edu/ingemannj");
-            // Counselor Territory 6
-            var counselorT6 = "Tom Beatty";
-            var territory6 = counselorT6.link("http://www.ripon.edu/beattyt");
             // Counselor Territory 7
             var counselorT7 = "Lyn McCarthy";
             var territory7 = counselorT7.link("http://www.ripon.edu/mccarthyl");
@@ -110,7 +107,7 @@
                         },
                         {
                             id: "US-IN",
-                            info: "Counselor: " + territory6
+                            info: "Counselor: " + territory10
                         },
                         {
                             id: "US-IA",
@@ -194,7 +191,7 @@
                         },
                         {
                             id: "US-OH",
-                            info: "Counselor: " + territory6
+                            info: "Counselor: " + territory10
                         },
                         {
                             id: "US-OK",
