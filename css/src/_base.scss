@@ -172,6 +172,7 @@ hr {
   border: 0;
   border-bottom: 1px solid #e5e5e8;
   margin: 25px 0;
+  @include clearfix;
 }
 
 blockquote {
