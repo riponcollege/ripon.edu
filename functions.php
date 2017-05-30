@@ -1,5 +1,10 @@
 <?php
 
+$host = $_SERVER['HTTP_HOST'];
+if ( stristr( $host, 'jpederson.net' ) ) {
+	wp_redirect( 'http://www.ripon.edu' . $_SERVER['REQUEST_URI'] );
+}
+
 
 // set a custom field prefix
 define( "CMB_PREFIX", "_p_" );
