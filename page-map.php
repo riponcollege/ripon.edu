@@ -9,7 +9,8 @@ get_header();
 ?>
 
 	<?php the_showcase(); ?>
-
+	
+	<?php if ( ( has_cmb2_value( 'map-button-1-text' ) && has_cmb2_value( 'map-button-1-url' ) ) || ( has_cmb2_value( 'map-button-2-text' ) && has_cmb2_value( 'map-button-2-url' ) ) || ( has_cmb2_value( 'map-button-3-text' ) && has_cmb2_value( 'map-button-3-url' ) ) ) { ?>
 	<div class="bg-grey-light">
 		<div class="wrap group two-column map-buttons">
 			<?php
@@ -25,6 +26,7 @@ get_header();
 			?>
 		</div>
 	</div>
+	<?php } ?>
 
 	<div class="map">
 	    <iframe src="<?php show_cmb2_value( 'map-url' ); ?>" class="map-frame"></iframe>
