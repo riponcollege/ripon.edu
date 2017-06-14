@@ -15,52 +15,6 @@ $link-color: $red-light;
 
 
 // import partials
-@import "mixins";
-
-@import "fonts";
-
-@import "base";
-
-@import "header";
-
-@import "showcase";
-
-@import "events";
-
-@import "infographic";
-
-@import "menus";
-
-@import "content";
-
-@import "search";
-
-@import "widgets";
-
-@import "photos";
-
-@import "tabs";
-
-@import "accordions";
-
-@import "footer";
-
-@import "emergency";
-
-@import "home";
-
-@import "faculty";
-
-@import "news";
-
-@import "jobs";
-
-@import "area";
-
-@import "map";
-
-@import "fund";
-
-@import "lightbox";
+@import "mixins", "fonts", "base", "colors", "header", "showcase", "events", "infographic", "menus", "content", "search", "widgets", "photos", "tabs", "accordions", "footer", "emergency", "home", "faculty", "news", "jobs", "area", "map", "fund", "lightbox";
 
 

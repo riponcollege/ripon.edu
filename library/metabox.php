@@ -316,6 +316,34 @@ function page_metaboxes( $meta_boxes ) {
     );
 
 
+    // faculty info
+    $meta_boxes['faculty_info'] = array(
+        'id' => 'faculty_info',
+        'title' => 'Faculty Member Information',
+        'pages' => array( 'faculty' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+            array(
+                'name' => 'First Name',
+                'id' => CMB_PREFIX . 'faculty_fname',
+                'type' => 'text_medium'
+            ),
+            array(
+                'name' => 'Last Name',
+                'id' => CMB_PREFIX . 'faculty_lname',
+                'type' => 'text_medium'
+            ),
+            array(
+                'name' => 'Facebook',
+                'id' => CMB_PREFIX . 'faculty_facebook',
+                'type' => 'text_url'
+            ),
+        ),
+    );
+
+
     // get list of gravity forms
     $all_forms = GFAPI::get_forms();
     $forms = array();

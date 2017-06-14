@@ -10,3 +10,6 @@
 [submodule "js/lib/magnific"]
 	path = js/lib/magnific
 	url = git@github.com:dimsemenov/Magnific-Popup.git
+[submodule "library/cmb2"]
+	path = library/cmb2
+	url = https://github.com/CMB2/CMB2.git

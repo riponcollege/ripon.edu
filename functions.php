@@ -22,6 +22,7 @@ include( "library/images.php" );
 
 
 // include our metaboxes library
+include( "library/metabox2.php" );
 include( "library/metabox.php" );
 
 

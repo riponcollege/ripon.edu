@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Campus Map
+Template Name: Map - Campus
 */
 
 get_header();

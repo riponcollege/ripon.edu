@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Counselor Map
+Template Name: Map - Counselor
 */
 
 get_header();

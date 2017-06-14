@@ -1,4 +1,56 @@
 
+
+.map {
+	iframe {
+		width: 100%;
+		height: 240px;
+
+		@include respond-to( 600px ) {
+			height: 350px;
+		}
+
+		@include respond-to( 768px ) {
+			height: 400px;
+		}
+
+		@include respond-to( 840px ) {
+			height: 500px;
+		}
+
+		@include respond-to( 1000px ) {
+			height: 700px;
+		}
+	}
+}
+
+.map-buttons {
+	padding: 10px 20px;
+
+	a {
+		display: block;
+		width: 100%;
+		padding: 10px 20px;
+		background-color: $red-light;
+		color: white;
+		text-decoration: none;
+		margin-bottom: 5px;
+		text-align: center;
+		transition: background-color 400ms ease-in-out;
+
+		&:hover {
+			background-color: lighten( $red-light, 5% );
+		}
+
+		@include respond-to( 768px ) {
+			float: left;
+			width: 31.3333%;
+			margin: 0 1%;
+			padding: 15px 20px;
+		}
+	}
+}
+
+
 .map-container {
 	position: relative;
 }
@@ -104,3 +156,4 @@
 {
 
 }
+
