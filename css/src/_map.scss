@@ -3,18 +3,14 @@
 .map {
 	iframe {
 		width: 100%;
-		height: 240px;
+		height: 400px;
 
 		@include respond-to( 600px ) {
-			height: 350px;
-		}
-
-		@include respond-to( 768px ) {
-			height: 400px;
-		}
-
-		@include respond-to( 840px ) {
 			height: 500px;
+		}
+
+		@include respond-to( 800px ) {
+			height: 600px;
 		}
 
 		@include respond-to( 1000px ) {
