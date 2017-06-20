@@ -317,6 +317,7 @@ function page_metaboxes( $meta_boxes ) {
 
 
     // faculty info
+    /*
     $meta_boxes['faculty_info'] = array(
         'id' => 'faculty_info',
         'title' => 'Faculty Member Information',
@@ -342,6 +343,7 @@ function page_metaboxes( $meta_boxes ) {
             ),
         ),
     );
+    */
 
 
     // get list of gravity forms
