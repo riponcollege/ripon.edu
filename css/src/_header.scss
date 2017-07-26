@@ -330,5 +330,16 @@ header {
 			width: 400px;
   		}
   	}
+
+  	.translate {
+  		display: none;
+
+  		@include respond-to( $menu-breakpoint ) {
+  			display: block;
+	  		position: absolute;
+			top: 15px;
+			right: 5%;
+  		}
+  	}
 }
 
