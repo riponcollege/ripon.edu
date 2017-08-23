@@ -37,6 +37,10 @@ $accordion-arrow-size: 26px;
 
 		.accordion-content {
 			display: none;
+
+			h4 {
+				padding: 11px 0 4px;
+			}
 		}
 
 		&.open {
