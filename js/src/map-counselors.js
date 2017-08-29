@@ -33,12 +33,15 @@
             // Counselor Territory 10
             var counselorT10 = "Leigh Mlodzik";
             var territory10 = counselorT10.link("http://www.ripon.edu/mlodzikl");
-            // Counselor Territory 10
+            // Counselor Territory 11
             var counselorT11 = "Hannah Erdman";
             var territory11 = counselorT11.link("http://www.ripon.edu/erdmanh");
-            // Counselor Territory 10
+            // Counselor Territory 12
             var counselorT12 = "Maddie Vandenhouten";
             var territory12 = counselorT12.link("http://www.ripon.edu/vandenhoutenm");
+            // Counselor Territory 13
+            var counselorT13 = "Jill Cardinal";
+            var territory13 = counselorT12.link("http://www.ripon.edu/cardinalj");
 
             // set path to images
             map.pathToImages = "/wp-content/themes/ripon/img/map/";
@@ -113,7 +116,7 @@
                         },
                         {
                             id: "US-IN",
-                            info: "Counselor: " + territory10
+                            info: "Counselor: " + territory13
                         },
                         {
                             id: "US-IA",
@@ -197,7 +200,7 @@
                         },
                         {
                             id: "US-OH",
-                            info: "Counselor: " + territory10
+                            info: "Counselor: " + territory13
                         },
                         {
                             id: "US-OK",
