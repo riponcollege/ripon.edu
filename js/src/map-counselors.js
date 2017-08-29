@@ -33,6 +33,12 @@
             // Counselor Territory 10
             var counselorT10 = "Leigh Mlodzik";
             var territory10 = counselorT10.link("http://www.ripon.edu/mlodzikl");
+            // Counselor Territory 10
+            var counselorT11 = "Hannah Erdman";
+            var territory11 = counselorT11.link("http://www.ripon.edu/erdmanh");
+            // Counselor Territory 10
+            var counselorT12 = "Maddie Vandenhouten";
+            var territory12 = counselorT12.link("http://www.ripon.edu/vandenhoutenm");
 
             // set path to images
             map.pathToImages = "/wp-content/themes/ripon/img/map/";
@@ -139,7 +145,7 @@
                         },
                         {
                             id: "US-MI",
-                            info: "Upper: " + territory3 + "<br>Lower: " + territory2
+                            info: "Upper: " + territory11 + "<br>Lower: " + territory11
                         },
                         {
                             id: "US-MN",
@@ -247,7 +253,7 @@
                         },
                         {
                             id: "US-WI",
-                            info: "North: " + territory3 + "<br>North East: " + territory2 + "<br>North West: " + territory5 + "<br>Central: " + territory10 + "<br>South East: " + territory7 + "<br>South West: " + territory1
+                            info: "North: " + territory3 + "<br>North East: " + territory12 + "<br>North West: " + territory12 + "<br>Central: " + territory10 + "<br>South East: " + territory7 + "<br>South West: " + territory1
                         },
                         {
                             id: "US-WY",
