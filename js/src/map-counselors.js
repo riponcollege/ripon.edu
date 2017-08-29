@@ -41,7 +41,7 @@
             var territory12 = counselorT12.link("http://www.ripon.edu/vandenhoutenm");
             // Counselor Territory 13
             var counselorT13 = "Jill Cardinal";
-            var territory13 = counselorT12.link("http://www.ripon.edu/cardinalj");
+            var territory13 = counselorT13.link("http://www.ripon.edu/cardinalj");
 
             // set path to images
             map.pathToImages = "/wp-content/themes/ripon/img/map/";
