@@ -166,7 +166,7 @@
 		img {
 			float: left;
 			margin: 1%;
-			max-width: 12.2%;
+			max-width: 16.5%;
 
 			&:hover {
 				opacity: .9;
@@ -212,14 +212,14 @@
 
 	@include respond-to( 768px ) {
 		.wrap > h3 {
-			width: 54%;
+			width: 59%;
 			float: left;
 			padding: 2%;
 			margin-top: 10px;
 		}
 
 		.icons {
-			width: 50%;
+			width: 45%;
 			margin-left: -4%;
 			float: left;
 			background: lighten( $grey, 55% );
