@@ -69,7 +69,6 @@ get_header();
 				<a href="https://twitter.com/riponcollege"><img src="<?php print get_template_directory_uri() ?>/img/social-twitter.png"></a>
 				<a href="http://www.youtube.com/riponcollegevideo"><img src="<?php print get_template_directory_uri() ?>/img/social-youtube.png"></a>
 				<a href="http://instagram.com/riponcollege"><img src="<?php print get_template_directory_uri() ?>/img/social-instagram.png"></a>
-				<a href="http://riponcollegeadmission.tumblr.com/"><img src="<?php print get_template_directory_uri() ?>/img/social-tumblr.png"></a>
 				<a href="https://www.flickr.com/photos/ripon_college/"><img src="<?php print get_template_directory_uri() ?>/img/social-flickr.png"></a>
 				<a href="http://www.linkedin.com/groups?home=&gid=4646327&trk=anet_ug_hm"><img src="<?php print get_template_directory_uri() ?>/img/social-linkedin.png"></a>
 			</div>
