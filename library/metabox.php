@@ -425,6 +425,12 @@ function page_metaboxes( $meta_boxes ) {
         'show_names' => false, // Show field names on the left
         'fields' => array(
             array(
+                'id'   => CMB_PREFIX . 'infographic_title',
+                'name' => 'Infographic title',
+                'description' => 'Set a title for the infographic',
+                'type' => 'text',
+            ),
+            array(
                 'id'   => CMB_PREFIX . 'infographic_image',
                 'name' => 'Infographic Image',
                 'description' => 'Select a square-shaped, blurry image so that it can be used on all screen sizes as a background for the infographic.',

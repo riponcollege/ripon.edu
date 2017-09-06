@@ -3,6 +3,9 @@
 
 function the_infographic() {
 
+	// get the title
+	$title = get_post_meta( get_the_ID(), CMB_PREFIX . "infographic_title", 1 );
+
 	// get the iamge
     $photo = get_post_meta( get_the_ID(), CMB_PREFIX . "infographic_image", 1 );
 
@@ -26,6 +29,7 @@ function the_infographic() {
 
 	if ( !empty( $stats ) ) {
 		?>
+		<h2 class="infographic-title"><?php print $title; ?></h2>
 		<div class="infographic" style="background-image: url(<?php print $photo ?>);">
 			<div class="wrap <?php print $class; ?>">
 			<?php
