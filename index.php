@@ -9,7 +9,7 @@ get_header(); ?>
 	<div id="primary" class="wrap group full-width">
 		
 		<div class="two-third">
-			<h1>Ripon <span>Blog</span></h1>
+			<h1>Ripon <span>News</span></h1>
 			<?php
 			while ( have_posts() ) : the_post();
 				?>
