@@ -147,7 +147,6 @@ header {
 
 					@include respond-to( 1220px ) { 
 						padding: 7px 32px;
-						width: 320px;
 					}
 				}
 			}
@@ -216,6 +215,14 @@ header {
 					a {
 						text-transform: none;
 						opacity: .7;
+						
+						@include respond-to( 1040px ) { 
+							padding: 6px 15px; 
+						}
+
+						@include respond-to( 1220px ) { 
+							padding: 7px 20px;
+						}
 
 						&:hover {
 							background: none;
@@ -429,7 +436,7 @@ header {
   			display: block;
 	  		position: absolute;
 			top: 15px;
-			right: 5%;
+			right: 15px;
   		}
   	}
 }
