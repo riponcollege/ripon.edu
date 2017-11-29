@@ -1,5 +1,5 @@
 
-$menu-breakpoint: 965px;
+$menu-breakpoint: 950px;
 
 header {
 	position: relative;
@@ -14,37 +14,44 @@ header {
 	
 	.logo {
 		text-align: center;
-		padding: 10px 0;
+		padding: 10px 0 30px;
+
+		@include respond-to( 600px ) {
+			padding: 10px 0;
+		}
 
 		@include respond-to( $menu-breakpoint ) {
 			text-align: left;
+			padding: 15px 0 0 15px;
 		}
 	}
 
-	nav.nav-main {
-		position: relative;
+	button.menu-toggle {
+		position: absolute;
+		top: 100px;
+		left: 0;
+		background: $red-dark url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMAsfS51A2+6cnu0ds/UQcva7D7E8RTPvJoAAAAW0lEQVQY063POQKAIAwF0W+ComwqkPtfVWsSOl453SATeYUoo4qpwovJI7lwKsElLFXslLgfSucEEhNBJpBDDG7wpwyUtiutYKWb+d0GL/ONKKY4/3iELoXk+QCXmhAnR7E6TAAAAABJRU5ErkJggg==) center center no-repeat;
+		text-indent: -300px;
+		width: 35px;
+		height: 44px;
+		padding: 0;
+		overflow: hidden;
+		cursor: pointer;
+		border: 0;
+		box-shadow: none;
+		opacity: .7;
+		transition: 400ms background-color ease-in-out;
 
-		button.menu-toggle {
-			float: left;
-			background: $red-dark url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMAsfS51A2+6cnu0ds/UQcva7D7E8RTPvJoAAAAW0lEQVQY063POQKAIAwF0W+ComwqkPtfVWsSOl453SATeYUoo4qpwovJI7lwKsElLFXslLgfSucEEhNBJpBDDG7wpwyUtiutYKWb+d0GL/ONKKY4/3iELoXk+QCXmhAnR7E6TAAAAABJRU5ErkJggg==) center center no-repeat;
-			text-indent: -300px;
-			width: 35px;
-			height: 44px;
-			padding: 0;
-			overflow: hidden;
-			cursor: pointer;
-			border: 0;
-			box-shadow: none;
-			opacity: .7;
-			transition: 400ms background-color ease-in-out;
+		@include respond-to( 400px ) {
+			width: 50px;
+		}
 
-			@include respond-to( 400px ) {
-				width: 50px;
-			}
+		@include respond-to( 600px ) {
+			top: 80px;
+		}
 
-			@include respond-to( $menu-breakpoint ) {
-				display: none;
-			}
+		@include respond-to( $menu-breakpoint ) {
+			display: none;
 		}
 
 		&:hover {
@@ -52,153 +59,167 @@ header {
 				background-color: $red-light;
 				opacity: 1;
 			}
+		}
+	}
 
-			ul.nav-menu {
-				display: block;
-			}
+	.main-menus {
+		@include clearfix;
+		display: none;
+
+		@include respond-to( $menu-breakpoint ) {
+			position: relative;
+			display: block;
 		}
 
-		ul.nav-menu {
-			position: absolute;
-			top: 44px;
-			left: 0;
-			right: 0;
-			@include clearfix;
-			display: none;
-			background-color: lighten( $red-dark, 10% );
-
-			@include respond-to( $menu-breakpoint ) {
-				position: static;
+		li {
+			a {
+				@include font-bold;
 				display: block;
-				background-color: transparent;
+				padding: 10px 15px;
+				text-decoration: none;
+				color: white;
+				font-size: 10pt;
+				text-transform: uppercase;
+				transition: background-color 400ms ease-in-out;
+
+				&:hover {
+					color: white;
+				}
+
+				@include respond-to( 1040px ) { padding: 10px 24px; }
+				@include respond-to( 1220px ) { padding: 10px 32px; }
 			}
 
-			li {
-				a {
-					@include font-bold;
-					display: block;
-					padding: 10px 15px;
-					text-decoration: none;
-					color: white;
-					font-size: 10pt;
-					text-transform: uppercase;
-					transition: background-color 400ms ease-in-out;
+			@include respond-to( $menu-breakpoint ) {
+				float: left;
+				position: relative;
+			}
 
-					&:hover {
-						color: white;
-					}
+			&.current-menu-item > a {
+				color: white;
+				background-color: $red-light;
+			}
 
-					@include respond-to( 1040px ) { padding: 10px 24px; }
-					@include respond-to( 1220px ) { padding: 10px 32px; }
-				}
+			ul {
+				display: none;
 
 				@include respond-to( $menu-breakpoint ) {
-					float: left;
-					position: relative;
+					position: absolute;
+					top: 44px;
+					left: 0;
+					width: 250px;
+					z-index: 1000;
+					display: block;
+					opacity: 0;
+					pointer-events: none;
+					transition: 400ms opacity ease-in-out;
 				}
 
-				&.current-menu-item > a {
-					color: white;
-					background-color: $red-light;
+				@include respond-to( 1220px ) {
+					width: 320px;
 				}
 
-				ul {
-					display: none;
+				a {
+					background-color: lighten( $grey, 50% );
+					display: block;
+					padding: 5px 15px;
+					text-decoration: none;
+					opacity: .9;
+					@include font-medium;
+					font-size: .8em;
+					transition: 400ms background-color ease-in-out, 400ms color ease-in-out, 400ms opacity ease-in-out;
+					color: lighten( $grey, 10% );
+					text-transform: uppercase;
+
+					&:hover {
+						background-color: lighten( $grey, 57% );
+						color: darken( $grey, 10% );
+						opacity: 1;
+					}
 
 					@include respond-to( $menu-breakpoint ) {
-						position: absolute;
-						top: 44px;
-						left: 0;
 						width: 250px;
-						z-index: 1000;
-						display: block;
-						opacity: 0;
-						pointer-events: none;
-						transition: 400ms opacity ease-in-out;
+					}
+					
+					@include respond-to( 1040px ) { 
+						padding: 6px 24px; 
 					}
 
-					@include respond-to( 1220px ) {
+					@include respond-to( 1220px ) { 
+						padding: 7px 32px;
 						width: 320px;
 					}
-
-					a {
-						background-color: lighten( $grey, 50% );
-						display: block;
-						padding: 5px 15px;
-						text-decoration: none;
-						opacity: .9;
-						@include font-medium;
-						font-size: .8em;
-						transition: 400ms background-color ease-in-out, 400ms color ease-in-out, 400ms opacity ease-in-out;
-						color: lighten( $grey, 10% );
-						text-transform: uppercase;
-
-						&:hover {
-							background-color: lighten( $grey, 57% );
-							color: darken( $grey, 10% );
-							opacity: 1;
-						}
-
-						@include respond-to( $menu-breakpoint ) {
-							width: 250px;
-						}
-						
-						@include respond-to( 1040px ) { 
-							padding: 6px 24px; 
-						}
-
-						@include respond-to( 1220px ) { 
-							padding: 7px 32px;
-							width: 320px;
-						}
-					}
 				}
-				
-				@include respond-to( $menu-breakpoint ) {
-					&:hover {
-						& > a {
-							background-color: darken( $red-light, 2% );
-						}
+			}
+			
+			@include respond-to( $menu-breakpoint ) {
+				&:hover {
+					& > a {
+						background-color: darken( $red-light, 2% );
+					}
 
-						ul {
-							opacity: 1;
-							pointer-events: auto;
+					ul {
+						opacity: 1;
+						pointer-events: auto;
 
-							li {
-								float: none;
-								display: block;
+						li {
+							float: none;
+							display: block;
 
-								a {
-									@include font-medium;
-
-									&:hover {
-										color: darken( $grey, 3% );
-									}
-								}
-
-								ul {
-									display: none;
-									position: absolute;
-									top: 0;
-									left: 220px;
-									width: 220px;
-								}
+							a {
+								@include font-medium;
 
 								&:hover {
-									ul {
-										display: block;
+									color: darken( $grey, 3% );
+								}
+							}
 
-										a {
-											background-color: white;
+							ul {
+								display: none;
+								position: absolute;
+								top: 0;
+								left: 220px;
+								width: 220px;
+							}
 
-											&:hover {
-												color: darken( $grey, 3% );
-												background-color: lighten( $grey, 50% );
-											}
+							&:hover {
+								ul {
+									display: block;
+
+									a {
+										background-color: white;
+
+										&:hover {
+											color: darken( $grey, 3% );
+											background-color: lighten( $grey, 50% );
 										}
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+
+		.menu-footer-navigation-container {
+			position: static;
+
+			@include respond-to( $menu-breakpoint ) {
+				position: absolute;
+				right: 0;
+				top: -50px;
+			}
+
+			ul {
+				li {		
+					a {
+						text-transform: none;
+						opacity: .7;
+
+						&:hover {
+							background: none;
+							opacity: 1;
 						}
 					}
 				}
@@ -227,7 +248,7 @@ header {
 
 		&:hover, &.open {
 			.handle {
-				background-color: $red-light;
+				background-color: $red-dark;
 				opacity: 1;
 			}
 
@@ -235,6 +256,10 @@ header {
 				opacity: 1;
 				pointer-events: auto;
 			}
+		}
+
+		&:hover {
+			opacity: 1;
 		}
 
 		ul {
@@ -297,38 +322,104 @@ header {
 		opacity: .7;
 		transition: 400ms background-color ease-in-out, 400ms opacity ease-in-out;
 		
+		&:hover {
+			opacity: 1;
+		}
+
 		@include respond-to( 400px ) {
 			right: 100px;
 			width: 50px;
 		}
+	}
+
+	.search-toggle {
+		color: white;
+		position: absolute;
+		right: 105px;
+		bottom: 0;
+		padding: 10px;
+		opacity: .7;
+		cursor: pointer;
 
 		&:hover {
-			background-color: $red-light;
 			opacity: 1;
+		}
+
+		@include respond-to( 400px ) {
+			right: 160px;
 		}
 	}
 
   	.search {
-  		position: absolute;
-		right: 110px;
-		bottom: 4px;
-		left: 40px;
-  		height: 40px;
-  		border-bottom: 1px solid lighten( $grey, 50% );
+  		display: none;
 
-		@include respond-to( 400px ) {
-			left: 60px;
-			right: 160px;
+  		&.open {
+  			@include clearfix;
+  			display: block;
+	  		position: absolute;
+			right: 0;
+			bottom: -40px;
+	  		height: 40px;
+	  		width: 320px;
+			padding-bottom: 1px;
+  			border-bottom: 1px solid $grey;
+
+	  		button[type=submit] {
+	  			border-radius: 0;
+	  		}
+
+	  		@include respond-to( 768px ) {
+				height: 60px;
+				width: 340px;
+				bottom: -60px;
+	  			background: $red-light;
+	  		}
+  		}
+
+		input[type=text] {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 40px;
+			display: block;
+			margin: 0;
+			width: 100%;
+			border: 0;
+			line-height: 40px;
+			font-size: 14px;
+			padding: 0 15px;
+			text-transform: uppercase;
+
+			@media screen and (min-width:0) and (min-resolution: +72dpi) { 
+				height: 40px;
+			}
+
+			@include respond-to( 768px ) {
+				width: 280px;
+				left: 10px;
+				top: 10px;
+			}
 		}
 
-  		@include respond-to( $menu-breakpoint ) {
-			bottom: auto;
-			left: auto;
-			right: 5%;
-			top: 50%;
-			margin: -20px 0 0;
-			width: 400px;
-  		}
+		button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 40px;
+			height: 40px;
+			background: $red-light;
+			color: white;
+			margin: 0;
+			border: 0;
+			box-shadow: none;
+			text-align: center;
+			vertical-align: middle;
+
+			@include respond-to( 768px ) {
+				right: 10px;
+				top: 10px;
+			}
+		}
   	}
 
   	.translate {

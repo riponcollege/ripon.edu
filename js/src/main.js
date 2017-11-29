@@ -25,9 +25,9 @@ jQuery.fn.wrapStart = function ( numWords, tag ) {
 jQuery(document).ready(function($){
 
 	// select some things we'll use to make things responsive
-	var menu = $( 'header nav' ),
-		menu_toggle = menu.find( 'button.menu-toggle' ),
-		menu_ul = menu.find( '.nav-menu' ),
+	var menu = $( 'header .main-menus' ),
+		menu_toggle = $( 'header button.menu-toggle' ),
+		menu_ul = menu.find( 'ul' ),
 		fluid_images = $( '.content img' ),
 		left_menu = $( '.left-menu' ),
 		quick_nav = $( 'select.quick-nav' );
@@ -35,6 +35,13 @@ jQuery(document).ready(function($){
 
 	// remove height and width from images inside
 	fluid_images.removeAttr( 'width' ).removeAttr( 'height' );
+
+
+
+	// search toggle
+	$('.search-toggle').click(function(){
+		$('.search').toggleClass( 'open' );
+	});
 
 
 	// quick navs
@@ -50,11 +57,16 @@ jQuery(document).ready(function($){
 
 
 	// hide main menu when clicked outside.
-	$( 'body *:not(.nav-main)' ).click(function(){
+	$( 'body *:not(.nav-main):not(.menu-toggle)' ).click(function(){
 		if ( !menu_ul.is( ':visible' ) && ( $(window).width() < 965 || Modernizr.pointerevents ) ) {
 			menu_ul.hide();
 		}
 	})
+
+
+	menu_toggle.click(function(){
+		menu.slideToggle();
+	});
 
 
 	// show/hide menus when they click the toggler

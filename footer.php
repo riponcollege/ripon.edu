@@ -14,13 +14,15 @@
 
 	</section>
 	
+	<!--
 	<footer class="footer fixed">
 
 		<nav role="navigation">
 			<?php footer_menu_display(); ?>
 		</nav>
 
-	</footer><!-- #colophon -->
+	</footer>
+	-->
 	
 	<div class="footer-badge">
 		Ripon College. Life Well Lived&reg;

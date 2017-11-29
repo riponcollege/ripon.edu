@@ -31,10 +31,11 @@
 			</a>
 		</div>
 
-		<nav class="nav-main" role="navigation">
-			<button class="menu-toggle">show/hide menu</button>
+		<button class="menu-toggle">show/hide menu</button>
+		<div class="main-menus">
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
-		</nav>
+			<?php footer_menu_display(); ?>
+		</div>
 
 		<nav class="nav-links nav-icon">
 			<span class="handle"></span>
@@ -48,6 +49,7 @@
 		
 		<a href="/events" class="calendar">Events</a>
 
+		<a class="search-toggle"><i class="fa fa-lg fa-search"></i></a>
 		<div class="search">
 			<?php get_search_form(); ?>
 		</div>
