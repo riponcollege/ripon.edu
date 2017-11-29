@@ -94,15 +94,6 @@ function page_metaboxes( $meta_boxes ) {
         'id' => 'menu_box',
         'title' => 'Page Menus',
         'pages' => array( 'page' ), // post type
-        'show_on' => array( 
-            'key' => 'page-template', 
-            'value' => array(
-                'page-campus-map.php',
-                'page-counselor-map.php',
-                'page-3-column.php',
-                'page-2-column.php'
-            )
-        ),
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => false, // Show field names on the left

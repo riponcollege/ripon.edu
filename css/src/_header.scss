@@ -201,7 +201,7 @@ header {
 			}
 		}
 
-		.menu-footer-navigation-container, .menu-admission-footer-container {
+		.aux-menu {
 			position: static;
 
 			@include respond-to( $menu-breakpoint ) {

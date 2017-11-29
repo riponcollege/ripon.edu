@@ -132,7 +132,8 @@ function footer_menu_display() {
 	// display the menu
 	wp_nav_menu( array( 
 		'menu' => $menu_name, 
-		'menu_class' => 'nav-menu' )
+		'menu_class' => 'nav-menu',
+		'container_class' => 'aux-menu' )
 	);
 
 }
