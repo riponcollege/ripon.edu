@@ -201,7 +201,7 @@ header {
 			}
 		}
 
-		.menu-footer-navigation-container {
+		.menu-footer-navigation-container, .menu-admission-footer-container {
 			position: static;
 
 			@include respond-to( $menu-breakpoint ) {
@@ -369,7 +369,7 @@ header {
 	  		height: 40px;
 	  		width: 320px;
 			padding-bottom: 1px;
-  			border-bottom: 1px solid $grey;
+  			border: 1px solid $grey;
 
 	  		button[type=submit] {
 	  			border-radius: 0;
