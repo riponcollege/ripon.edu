@@ -229,6 +229,12 @@ header {
 							opacity: 1;
 						}
 					}
+
+					&.current-menu-item > a {
+						color: white;
+						background-color: transparent;
+						opacity: .9;
+					}
 				}
 			}
 		}
