@@ -82,6 +82,92 @@ function cmb2_sample_metaboxes() {
 		'type' => 'text_url',
 	) );
 
+
+
+
+	// showcase metabox
+	$showcase = new_cmb2_box( array(
+		'id' => 'showcase_metabox',
+		'title' => 'Showcase',
+		'object_type' => 'page',
+		'context' => 'normal',
+		'priority' => 'high',
+		'show_names' => false // Show field names on the left
+	) );
+
+    $showcase->add_field( 
+        array(
+            'name'    => 'Slider Type',
+            'description' => "Select the type of slider to display.",
+            'id'      => $prefix . 'showcase-type',
+            'type'    => 'radio_inline',
+            'options' => array(
+                'photo-large'   => __( 'Large Photo', 'cmb' ),
+                'photo-medium'  => __( 'Medium Photo', 'cmb' ),
+                'photo-small'   => __( 'Small Photo', 'cmb' ),
+                'two-column'    => __( 'Two Column', 'cmb' ),
+            ),
+            'default' => 'photo-medium'
+        )
+    );
+    
+    $showcase_group = $cmb->add_field( array(
+        'id' => $prefix . 'showcase',
+        'type' => 'group',
+        'description' => __('Add images/videos into a slider on any page.', 'cmb'),
+        'options' => array(
+            'add_button' => __('Add Slide', 'cmb'),
+            'remove_button' => __('Remove Slide', 'cmb'),
+            'sortable' => true, // beta
+        )
+    ) );
+
+	$showcase->add_group_field( $showcase_group, 
+		array(
+			'name' => 'Title',
+			'description' => 'Enter a slide title.',
+			'id'   => 'title',
+			'type' => 'text',
+		)
+	);
+
+	$showcase->add_group_field( $showcase_group, 
+		array(
+			'name' => 'Subtitle',
+			'description' => 'Enter the slide content.',
+			'id'   => 'subtitle',
+			'type' => 'wysiwyg',
+		)
+	);
+
+	$showcase->add_group_field( $showcase_group, 
+		array(
+			'name' => 'Link',
+			'description' => 'Enter a slide link.',
+			'id'   => 'link',
+			'type' => 'text',
+		)
+	);
+
+	$showcase->add_group_field( $showcase_group, 
+		array(
+			'name' => 'Image/Video',
+			'description' => 'Select an image or paste in a video URL.',
+			'id'   => 'image',
+			'type' => 'file',
+			'preview_size' => array( 350, 150 )
+		)
+	);
+
+	$showcase->add_group_field( $showcase_group, 
+        array(
+            'name' => 'Button Text',
+            'description' => 'Enter button text for the call to action button. Leave empty for no button.',
+            'id'   => 'button',
+            'type' => 'text',
+        )
+	);
+
 }
 
 

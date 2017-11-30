@@ -213,8 +213,9 @@ header {
 			ul {
 				li {		
 					a {
-						text-transform: none;
+						text-transform: uppercase;
 						opacity: .7;
+						font-weight: 600;
 						
 						@include respond-to( 1040px ) { 
 							padding: 6px 15px; 

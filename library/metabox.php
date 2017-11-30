@@ -131,6 +131,7 @@ function page_metaboxes( $meta_boxes ) {
 
 
 	// showcase metabox
+    /*
 	$meta_boxes['showcase_metabox'] = array(
 		'id' => 'showcase_metabox',
 		'title' => 'Showcase',
@@ -197,6 +198,7 @@ function page_metaboxes( $meta_boxes ) {
             ),
         )
 	);
+    */
 
 
     // faculty info
