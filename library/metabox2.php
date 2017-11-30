@@ -84,7 +84,7 @@ function cmb2_sample_metaboxes() {
 
 
 
-
+	/*
 	// showcase metabox
 	$showcase = new_cmb2_box( array(
 		'id' => 'showcase_metabox',
@@ -167,6 +167,7 @@ function cmb2_sample_metaboxes() {
             'type' => 'text',
         )
 	);
+	*/
 
 }
 
