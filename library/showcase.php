@@ -42,6 +42,10 @@ function the_photo_showcase( $height = 600 ) {
 				$subtitle = ( isset( $slide["subtitle"] ) ? $slide["subtitle"] : '' );
 				$link = ( isset( $slide["link"] ) ? $slide["link"] : '' );
 				$button = ( isset( $slide["button"] ) ? $slide["button"] : '' );
+				$video = ( isset( $slide["video_mp4"] ) && isset( $slide["video_webm"] ) ? '<video playsinline autoplay muted loop poster="' . $slide["image"] . '" class="bgvid">
+    <source src="' . $slide["video_webm"] . '" type="video/webm">
+    <source src="' . $slide["video_mp4"] . '" type="video/mp4">
+</video>' : '' );
 
 				// check if it's an image or video
 				if ( p_is_image( $slide["image"] ) ) {
@@ -54,11 +58,20 @@ function the_photo_showcase( $height = 600 ) {
 
 				?>
 			<div class="slide<?php print ( $key == 0 ? ' visible' : '' ); ?>">
-				<?php if ( !empty( $link ) ) { ?><a href="<?php print $link ?>" class="<?php print ( stristr( $link, 'vimeo' ) || stristr( $link, 'youtube' ) || stristr( $link, 'google.com/maps' ) ? 'lightbox-iframe' : '' ) ?>"><?php } ?>
-				<?php print $image; ?>
-				<?php if ( !empty( $link ) ) { ?></a><?php } ?>
-				
-				<?php if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
+				<?php 
+				if ( !empty( $link ) ) { 
+					?><a href="<?php print $link ?>" class="<?php print ( stristr( $link, 'vimeo' ) || stristr( $link, 'youtube' ) || stristr( $link, 'google.com/maps' ) ? 'lightbox-iframe' : '' ) ?>"><?php 
+				} 
+
+				print $image;
+
+				if ( !empty( $video ) ) {
+					print $video;
+				}
+
+				if ( !empty( $link ) ) { ?></a><?php } 
+
+				if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
 				<div class="slide-content">
 					<div class="wrap">
 					<?php if ( !empty( $title ) ) { ?><h1><?php print $title; ?></h1><?php } ?>

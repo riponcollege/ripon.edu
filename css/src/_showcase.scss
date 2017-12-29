@@ -49,6 +49,7 @@
 			bottom: 0;
 			color: white;
 			pointer-events: none;
+			z-index: 200;
 
 			@include respond-to( 1220px ) {
 				top: 60px;
@@ -64,6 +65,20 @@
 				@include respond-to( 1220px ) {
 					padding-right: 580px;
 				}
+			}
+		}
+
+		video {
+			display: none;
+
+			@include respond-to( 768px ) {
+				display: block;				
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: 100;
+				background-size: cover; 
 			}
 		}
 		

@@ -188,6 +188,18 @@ function page_metaboxes( $meta_boxes ) {
 						'preview_size' => array( 350, 150 )
 					),
                     array(
+                        'name' => 'Video URL (mp4)',
+                        'description' => 'Select a video in mp4 format for the background of the slide.',
+                        'id'   => 'video_mp4',
+                        'type' => 'file',
+                    ),
+                    array(
+                        'name' => 'Video URL (webm)',
+                        'description' => 'Select a video in webm format for the background of the slide.',
+                        'id'   => 'video_webm',
+                        'type' => 'file',
+                    ),
+                    array(
                         'name' => 'Button Text',
                         'description' => 'Enter button text for the call to action button. Leave empty for no button.',
                         'id'   => 'button',
