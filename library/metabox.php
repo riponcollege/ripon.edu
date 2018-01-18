@@ -678,6 +678,24 @@ function page_metaboxes( $meta_boxes ) {
 
 
     // area of interest information
+    $meta_boxes['left_column'] = array(
+        'id' => 'left_column',
+        'title' => 'Left Column',
+        'pages' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+        'fields' => array(
+            array(
+                'name' => 'Left Content Column',
+                'id' => CMB_PREFIX . 'left_content',
+                'type' => 'wysiwyg'
+            ),
+        ),
+    );
+
+
+    // area of interest information
     $meta_boxes['wide_column'] = array(
         'id' => 'wide_column',
         'title' => 'Wide Column',

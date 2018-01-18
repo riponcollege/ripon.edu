@@ -12,14 +12,6 @@ get_header();
 
 	<div class="wrap group two-column">
 
-		<div class="quarter left-menu">
-
-			<?php left_menu_display(); ?>
-
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif; ?>
-
-		</div>
-
 		<div class="three-quarter">
 
 			<?php 
@@ -40,7 +32,19 @@ get_header();
 
 		</div>
 
-		<?php the_wide_content(); ?>
+		<div class="quarter left-menu">
+
+			<?php
+			if ( has_cmb2_value('left_content') ) {
+				show_cmb2_wysiwyg_value('left_content');
+			}
+			?>
+
+		</div>
+
+		<div class="content-wide">
+			<?php the_wide_content(); ?>
+		</div>
 
 	</div>
 

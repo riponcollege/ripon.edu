@@ -76,8 +76,8 @@
 }
 
 .full-width, .content-wide {
-	padding: 20px;
-	@include respond-to( 768px ) { padding: 20px 15px; }
+	@include clearfix;
+	padding: 10px;
 }
 
 @include respond-to( 768px ) {
