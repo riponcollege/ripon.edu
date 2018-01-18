@@ -682,6 +682,7 @@ function page_metaboxes( $meta_boxes ) {
         'id' => 'left_column',
         'title' => 'Left Column',
         'pages' => array( 'page' ), // post type
+        'show_on' => array( 'key' => 'page-template', 'value' => 'page-2-column.php' ),
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left
