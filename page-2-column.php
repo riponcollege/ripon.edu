@@ -38,8 +38,13 @@ get_header();
 			if ( has_cmb2_value('left_content') ) {
 				show_cmb2_wysiwyg_value('left_content');
 			}
+
 			?>
 
+			<?php left_menu_display(); ?>
+
+ 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif; ?>
+ 			
 		</div>
 
 		<div class="content-wide">
