@@ -94,13 +94,7 @@ function cmb2_sample_metaboxes() {
     wp_reset_query();
 
 
-    $post_categories = get_terms();
-    //print_r( $post_categories );
-    $cats = array();
-    foreach ( $post_categories as $post_cat ) {
-    	print_r( $post_cats );
-    }
-
+    $categories = get_categories();
 
     // area of interest information
     $area_box = new_cmb2_box( array(
@@ -147,6 +141,14 @@ function cmb2_sample_metaboxes() {
         'id' => CMB_PREFIX . 'area_sidebar_video',
         'type' => 'text_url'
     ) );
+    $area_box->add_field( array (
+        'name'      => 'Post Tag',
+        'id'        => CMB_PREFIX . 'area_post_tag',
+        'type'      => 'taxonomy_select',
+        'taxonomy'  => 'post_tag'
+    ));
+
+
     $area_box->add_field( array(
         'name' => 'Overview Document URL',
         'id' => CMB_PREFIX . 'area_facebook',

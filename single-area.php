@@ -14,6 +14,7 @@ $overview_url = get_cmb_value( "area_facebook" );
 // get video URL
 $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 
+
 the_showcase();
 
 ?>
@@ -29,6 +30,7 @@ the_showcase();
 				<ul>
 					<li class="area-overview active">Overview</li>
 					<li class="area-faculty">Faculty</li>
+					<?php do_area_tab_nav( "Advising", "advising" ) ?>
 					<?php do_area_tab_nav( "Career Tracks", "tracks" ) ?>
 					<?php do_area_tab_nav( "Off-Campus Study", "off_campus" ) ?>
 					<?php do_area_tab_nav( "Unique Opportunities", "opportunities" ) ?>
@@ -43,13 +45,6 @@ the_showcase();
 					<?php do_area_tabs_nav(); ?>
 				</ul>
 			</div>
-			<?php
-			if ( !empty( $sidebar_video_url ) ) {
-				?>
-				<iframe width="560" height="315" src="<?php print $sidebar_video_url; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				<?php
-			}
-			?>
 		</div><!-- #content -->
 		<div class="two-third tab-container">
 
@@ -57,18 +52,27 @@ the_showcase();
 			<div class="tab-content first area-overview">
 				<h2>Overview</h2>
 				<?php the_content(); ?>
+				<hr />
 
-				<div class="two-third no-pad advising">
-					<h2>Advising</h2>
-					<?php print wpautop( $advising ); ?>
+				<div class="half video">
+					<h3>Program Spotlight</h3>
+					<?php
+					if ( !empty( $sidebar_video_url ) ) {
+						?>
+						<iframe width="560" height="315" src="<?php print $sidebar_video_url; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						<?php
+					}
+					?>
 				</div>
-				<div class="third sidebar">
-					<div class="widget-book">
-						<h4>Course &amp; Requirements</h4>
-						<ul>
-							<li><a href="<?php print $overview_url ?>"><?php the_title(); ?> Course Overview</a></li>
-						</ul>
-					</div>
+				<div class="half">
+					<h3>Featured Article</h3>
+					<?php
+					print get_cmb2_value( 'area_post_tag' );
+					$post = get_post( array(
+						'tag' => get_cmb2_value( 'area_post_tag' )
+					) );
+					print_r( $post );
+					?>
 				</div>
 			</div>
 
@@ -117,6 +121,7 @@ the_showcase();
 
 			</div>
 
+			<?php do_area_tab_content( "Advising", "advising" ) ?>
 			<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>
 			<?php do_area_tab_content( "Off-Campus Study", "off_campus" ) ?>
 			<?php do_area_tab_content( "Unique Opportunities", "opportunities" ) ?>
