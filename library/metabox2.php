@@ -265,9 +265,9 @@ function cmb2_sample_metaboxes() {
         'id' => CMB_PREFIX . 'tab',
         'type' => 'group',
         'options' => array(
-            'add_button' => __('Add Box', 'cmb'),
-            'remove_button' => __('Remove Box', 'cmb'),
-            'group_title'   => __( 'Content Box {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'add_button' => __('Add Tab', 'cmb'),
+            'remove_button' => __('Remove Tab', 'cmb'),
+            'group_title'   => __( 'Tab {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
             'sortable' => true, // beta
         )
     ) );
