@@ -173,6 +173,9 @@ function page_metaboxes( $meta_boxes ) {
 						'description' => 'Enter the slide content.',
 						'id'   => 'subtitle',
 						'type' => 'wysiwyg',
+                        'options' => array (
+                            'textarea_rows' => 8
+                        )
 					),
 					array(
 						'name' => 'Link',
@@ -269,52 +272,82 @@ function page_metaboxes( $meta_boxes ) {
             array(
                 'name' => 'Education',
                 'id' => CMB_PREFIX . 'faculty_education',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
             array(
                 'name' => 'Courses Taught',
                 'id' => CMB_PREFIX . 'faculty_courses',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
             array(
                 'name' => 'Awards/Honors',
                 'id' => CMB_PREFIX . 'faculty_awards',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
             array(
                 'name' => 'Publications',
                 'id' => CMB_PREFIX . 'faculty_publications',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
             array(
                 'name' => 'Areas of Interest',
                 'id' => CMB_PREFIX . 'faculty_areas',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
             array(
                 'name' => 'Professional/Scholarly Affiliations',
                 'id' => CMB_PREFIX . 'faculty_affiliations',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
             array(
                 'name' => 'Presentations',
                 'id' => CMB_PREFIX . 'faculty_presentations',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
             array(
                 'name' => 'Pedagogy',
                 'id' => CMB_PREFIX . 'faculty_pedagogy',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
             array(
                 'name' => 'Production Credits',
                 'id' => CMB_PREFIX . 'faculty_credits',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
             array(
                 'name' => 'Professional Experience',
                 'id' => CMB_PREFIX . 'faculty_experience',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'options' => array (
+                    'textarea_rows' => 8
+                )
             ),
         ),
     );
