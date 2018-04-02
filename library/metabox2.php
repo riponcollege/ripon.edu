@@ -84,6 +84,214 @@ function cmb2_sample_metaboxes() {
 
 
 
+
+    $args = array( 'post_type' => 'faculty', 'posts_per_page' => -1 );
+    $loop = new WP_Query( $args );
+    $faculty = array();
+    while ( $loop->have_posts() ) : $loop->the_post();
+        $faculty[get_the_ID()] = get_the_title();
+    endwhile;
+    wp_reset_query();
+
+
+    $post_categories = get_terms();
+    //print_r( $post_categories );
+    $cats = array();
+    foreach ( $post_categories as $post_cat ) {
+    	print_r( $post_cats );
+    }
+
+
+    // area of interest information
+    $area_box = new_cmb2_box( array(
+        'id' => 'area_info',
+        'title' => 'Area of Interest Details',
+        'object_types' => array( 'area' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Advising',
+        'id' => CMB_PREFIX . 'area_advising',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 10
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Faculty',
+        'desc' => 'Select the faculty related to this area of interest.',
+        'id' => CMB_PREFIX . 'area_faculty_list',
+        'type' => 'multicheck_inline',
+        'options' => $faculty,
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Requirements',
+        'id' => CMB_PREFIX . 'area_requirements',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 10
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Sample Schedule',
+        'id' => CMB_PREFIX . 'area_schedule',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 10
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Sidebar Video',
+        'id' => CMB_PREFIX . 'area_sidebar_video',
+        'type' => 'text_url'
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Overview Document URL',
+        'id' => CMB_PREFIX . 'area_facebook',
+        'type' => 'file'
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Faculty',
+        'id' => CMB_PREFIX . 'area_faculty',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Career Tracks',
+        'id' => CMB_PREFIX . 'area_tracks',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Off-Campus Study',
+        'id' => CMB_PREFIX . 'area_off_campus',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Unique Opportunities',
+        'id' => CMB_PREFIX . 'area_opportunities',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Ensembles',
+        'id' => CMB_PREFIX . 'area_ensembles',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Facilities',
+        'id' => CMB_PREFIX . 'area_facilities',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Events',
+        'id' => CMB_PREFIX . 'area_events',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Past Productions',
+        'id' => CMB_PREFIX . 'area_productions',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Alumni Profiles',
+        'id' => CMB_PREFIX . 'area_alumni',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Graduate Success',
+        'id' => CMB_PREFIX . 'area_success',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Clinical Supervisors',
+        'id' => CMB_PREFIX . 'area_supervisors',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+    $area_box->add_field( array(
+        'name' => 'Be a Teacher',
+        'id' => CMB_PREFIX . 'area_teacher',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
+
+    
+
+    // accordion metabox
+    $tab_metabox = new_cmb2_box( array(
+        'id' => 'tab_metabox',
+        'title' => 'Tab Boxes',
+        'desc' => 'Boxes of content that are accessed via tabs on the left column.',
+        'object_types' => array( 'area' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $tab_metabox_group = $tab_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'tab',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Box', 'cmb'),
+            'remove_button' => __('Remove Box', 'cmb'),
+            'group_title'   => __( 'Content Box {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $tab_metabox->add_group_field( $tab_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tab_metabox->add_group_field( $tab_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+        'show_names' => false,
+        'options' => array(
+        	'textarea_rows' => 10
+        )
+    ) );
+
+
+
+
 	/*
 	// showcase metabox
 	$showcase = new_cmb2_box( array(

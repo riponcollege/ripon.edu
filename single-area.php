@@ -11,6 +11,9 @@ $faculty = get_cmb_value( "area_faculty_list" );
 // mis-named - already populated in test, leaving to prevent forcing re-entry.
 $overview_url = get_cmb_value( "area_facebook" );
 
+// get video URL
+$sidebar_video_url = get_cmb_value( "area_sidebar_video" );
+
 the_showcase();
 
 ?>
@@ -24,7 +27,7 @@ the_showcase();
 			<button class="back-to-areas">Back to All Areas</button>
 			<div class="tab-nav">
 				<ul>
-					<li class="area-overview">Overview</li>
+					<li class="area-overview active">Overview</li>
 					<li class="area-faculty">Faculty</li>
 					<?php do_area_tab_nav( "Career Tracks", "tracks" ) ?>
 					<?php do_area_tab_nav( "Off-Campus Study", "off_campus" ) ?>
@@ -37,8 +40,16 @@ the_showcase();
 					<?php do_area_tab_nav( "Graduate Success", "success" ) ?>
 					<?php do_area_tab_nav( "Clinical Supervisors", "supervisors" ) ?>
 					<?php do_area_tab_nav( "Be a Teacher", "teacher" ) ?>
+					<?php do_area_tabs_nav(); ?>
 				</ul>
 			</div>
+			<?php
+			if ( !empty( $sidebar_video_url ) ) {
+				?>
+				<iframe width="560" height="315" src="<?php print $sidebar_video_url; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<?php
+			}
+			?>
 		</div><!-- #content -->
 		<div class="two-third tab-container">
 
@@ -117,6 +128,7 @@ the_showcase();
 			<?php do_area_tab_content( "Graduate Success", "success" ) ?>
 			<?php do_area_tab_content( "Clinical Supervisors", "supervisors" ) ?>
 			<?php do_area_tab_content( "Be a Teacher", "teacher" ) ?>
+			<?php do_area_tabs_content(); ?>
 
 		</div>
 			<?php

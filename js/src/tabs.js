@@ -7,14 +7,17 @@ jQuery(document).ready(function($){
 
 		$( '.tab-nav li' ).click(function(){
 			
-			var target_class = $( this ).attr( 'class' );
+			var target_class = $( this ).attr( 'class' ).replace( 'active', '' );
 			var content_top = $( '.tab-container' ).offset().top;
 
 			$( '.tab-content:not(.'+target_class+'):visible' ).slideUp( 'slow' );
 			$( '.tab-content.'+target_class+':hidden' ).slideDown( 'slow' );
 
+			$( '.tab-nav li' ).removeClass( 'active' );
+			$(this).addClass( 'active' );
+
 			// scroll up if we're past the top of the content
-			$( 'html,body' ).animate({ scrollTop: content_top }, 700 );
+			$( 'html,body' ).animate({ scrollTop: content_top - 30 }, 700 );
 
 		});
 	}

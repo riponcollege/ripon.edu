@@ -499,8 +499,8 @@ function page_metaboxes( $meta_boxes ) {
 
 
     // tab box
-    $meta_boxes['tab_metabox'] = array(
-        'id' => 'tab_metabox',
+    $meta_boxes['tabs_metabox'] = array(
+        'id' => 'tabs_metabox',
         'title' => 'Tab Box',
         'pages' => array( 'page' ), // post type
         'context' => 'normal',
@@ -575,105 +575,6 @@ function page_metaboxes( $meta_boxes ) {
                 ),
             )
         )
-    );
-
-
-    $args = array( 'post_type' => 'faculty', 'posts_per_page' => -1 );
-    $loop = new WP_Query( $args );
-    $faculty = array();
-    while ( $loop->have_posts() ) : $loop->the_post();
-        $faculty[get_the_ID()] = get_the_title();
-    endwhile;
-    wp_reset_query();
-
-
-    // area of interest information
-    $meta_boxes['area_info'] = array(
-        'id' => 'area_info',
-        'title' => 'Area of Interest Details',
-        'pages' => array( 'area' ), // post type
-        'context' => 'normal',
-        'priority' => 'high',
-        'show_names' => true, // Show field names on the left
-        'fields' => array(
-            array(
-                'name' => 'Advising',
-                'id' => CMB_PREFIX . 'area_advising',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Overview Document URL',
-                'id' => CMB_PREFIX . 'area_facebook',
-                'type' => 'file'
-            ),
-            array(
-                'name' => 'Faculty',
-                'desc' => 'Select the faculty related to this area of interest.',
-                'id' => CMB_PREFIX . 'area_faculty_list',
-                'type' => 'multicheck',
-                'options' => $faculty,
-            ),            
-            array(
-                'name' => 'Faculty',
-                'id' => CMB_PREFIX . 'area_faculty',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Career Tracks',
-                'id' => CMB_PREFIX . 'area_tracks',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Off-Campus Study',
-                'id' => CMB_PREFIX . 'area_off_campus',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Unique Opportunities',
-                'id' => CMB_PREFIX . 'area_opportunities',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Ensembles',
-                'id' => CMB_PREFIX . 'area_ensembles',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Facilities',
-                'id' => CMB_PREFIX . 'area_facilities',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Events',
-                'id' => CMB_PREFIX . 'area_events',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Past Productions',
-                'id' => CMB_PREFIX . 'area_productions',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Alumni Profiles',
-                'id' => CMB_PREFIX . 'area_alumni',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Graduate Success',
-                'id' => CMB_PREFIX . 'area_success',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Clinical Supervisors',
-                'id' => CMB_PREFIX . 'area_supervisors',
-                'type' => 'wysiwyg'
-            ),
-            array(
-                'name' => 'Be a Teacher',
-                'id' => CMB_PREFIX . 'area_teacher',
-                'type' => 'wysiwyg'
-            ),
-        ),
     );
 
 
