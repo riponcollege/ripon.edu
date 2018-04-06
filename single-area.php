@@ -55,7 +55,8 @@ the_showcase();
 				<h2>Overview</h2>
 				<?php the_content(); ?>
 				<hr />
-
+				
+				<!--
 				<div class="half video">
 					<h3>Program Spotlight</h3>
 					<?php
@@ -75,6 +76,7 @@ the_showcase();
 					) );
 					?>
 				</div>
+				-->
 			</div>
 
 			<div class="tab-content area-faculty">
