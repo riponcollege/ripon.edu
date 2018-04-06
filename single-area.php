@@ -30,6 +30,8 @@ the_showcase();
 				<ul>
 					<li class="area-overview active">Overview</li>
 					<li class="area-faculty">Faculty</li>
+					<?php do_area_tab_nav( "Requirements", "requirements" ) ?>
+					<?php do_area_tab_nav( "Sample Schedule", "schedule" ) ?>
 					<?php do_area_tab_nav( "Advising", "advising" ) ?>
 					<?php do_area_tab_nav( "Career Tracks", "tracks" ) ?>
 					<?php do_area_tab_nav( "Off-Campus Study", "off_campus" ) ?>
@@ -71,7 +73,6 @@ the_showcase();
 					$post = get_post( array(
 						'tag' => get_cmb2_value( 'area_post_tag' )
 					) );
-					print_r( $post );
 					?>
 				</div>
 			</div>
@@ -121,6 +122,8 @@ the_showcase();
 
 			</div>
 
+			<?php do_area_tab_content( "Requirements", "requirements" ) ?>
+			<?php do_area_tab_content( "Sample Schedule", "schedule" ) ?>
 			<?php do_area_tab_content( "Advising", "advising" ) ?>
 			<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>
 			<?php do_area_tab_content( "Off-Campus Study", "off_campus" ) ?>
