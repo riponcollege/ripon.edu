@@ -56,27 +56,21 @@ the_showcase();
 				<?php the_content(); ?>
 				<hr />
 				
-				<!--
 				<div class="half video">
 					<h3>Program Spotlight</h3>
 					<?php
 					if ( !empty( $sidebar_video_url ) ) {
-						?>
-						<iframe width="560" height="315" src="<?php print $sidebar_video_url; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						<?php
+						print apply_filters( 'the_content', $sidebar_video_url );
 					}
 					?>
 				</div>
 				<div class="half">
-					<h3>Featured Article</h3>
+					<h3>Featured Articles</h3>
 					<?php
-					print get_cmb2_value( 'area_post_tag' );
-					$post = get_post( array(
-						'tag' => get_cmb2_value( 'area_post_tag' )
-					) );
+					print do_shortcode( '[display-posts tag="' . get_cmb2_value( 'area_post_tag' ) . '" posts_per_page="5"]' )
 					?>
 				</div>
-				-->
+
 			</div>
 
 			<div class="tab-content area-faculty">
