@@ -64,11 +64,13 @@ the_showcase();
 					}
 					?>
 				</div>
-				<?php if ( !empty( get_cmb_value( 'area_post_tag' ) ) ) { ?>
+				<?php
+				?>
+				<?php if ( !empty( get_cmb2_value( 'area_post_tag' ) ) ) { ?>
 				<div class="half">
 					<h3>Featured Articles</h3>
 					<?php
-					print do_shortcode( '[display-posts tag="' . get_cmb_value( 'area_post_tag' ) . '" posts_per_page="5"]' )
+					print do_shortcode( '[display-posts tag="' . get_cmb2_value( 'area_post_tag' ) . '" posts_per_page="5"]' );
 					?>
 				</div>
 				<?php } ?>

@@ -141,11 +141,20 @@ function cmb2_sample_metaboxes() {
         'id' => CMB_PREFIX . 'area_sidebar_video',
         'type' => 'text_url'
     ) );
-    $area_box->add_field( array (
-        'name'      => 'Post Tag',
-        'id'        => CMB_PREFIX . 'area_post_tag',
-        'type'      => 'taxonomy_select',
-        'taxonomy'  => 'post_tag'
+
+    $all_tags = get_tags();
+    $tag_options = array(
+        '' => '-- None --'
+    );
+    foreach ( $all_tags as $tag ) {
+        $tag_options[$tag->slug] = $tag->name;
+    }
+    $area_box->add_field( array(
+        'name' => 'Post Tag',
+        'id' => CMB_PREFIX . 'area_post_tag',
+        'type' => 'select',
+        'options' => $tag_options,
+        'default' => get_cmb2_value( 'area_post_tag' )
     ));
 
 
