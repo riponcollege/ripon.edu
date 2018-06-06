@@ -64,8 +64,6 @@ the_showcase();
 					}
 					?>
 				</div>
-				<?php
-				?>
 				<?php if ( !empty( get_cmb2_value( 'area_post_tag' ) ) ) { ?>
 				<div class="half">
 					<h3>Featured Articles</h3>

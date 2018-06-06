@@ -38,6 +38,16 @@ src="https://www.facebook.com/tr?id=737054459766387&ev=PageView
 </noscript>
 <!-- End Facebook Pixel Code -->
 
+<!-- Start Google Analytics Universal Tracking Code -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37190446-2"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-37190446-2');
+</script>
+<!-- End Analytics Code -->
+
 </head>
 <body <?php body_class(); ?>>
 
