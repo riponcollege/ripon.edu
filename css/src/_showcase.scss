@@ -35,21 +35,41 @@
 			@include clearfix;
 		}
 
-		img {
+		img.slide-image-small {
 			width: 100%;
 			height: auto !important;
 			display: block;
+
+			@include respond-to( 768px ) {
+				display: none;
+			}
+		}
+
+		img.slide-image-large {
+			display: none;
+
+			width: 100%;
+			height: auto !important;
+			display: none;
+
+			@include respond-to( 768px ) {
+				display: block;
+			}
 		}
 		
 		.slide-content {
 			position: absolute;
-			top: 5%;
+			top: 10%;
 			right: 60px;
 			left: 60px;
 			bottom: 0;
 			color: white;
 			pointer-events: none;
 			z-index: 200;
+
+			@include respond-to( 768px ) {
+				top: 5%;
+			}
 
 			@include respond-to( 1220px ) {
 				top: 60px;
