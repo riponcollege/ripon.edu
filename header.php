@@ -40,12 +40,22 @@ src="https://www.facebook.com/tr?id=737054459766387&ev=PageView
 </noscript>
 <!-- End Facebook Pixel Code -->
 
+<style>.async-hide { opacity: 0 !important} </style>
+
+<!-- Google async code -->
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-WT6LM9H':true});</script> 
+<!-- End Google async code -->
+
 <!-- Start Google Analytics Universal Tracking Code -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37190446-2"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+gtag('require', 'GTM-WT6LM9H');
 gtag('config', 'UA-37190446-2');
 </script>
 <!-- End Analytics Code -->
