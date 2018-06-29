@@ -50,7 +50,7 @@ function the_photo_showcase( $height = 600 ) {
 				// check if it's an image or video
 				if ( p_is_image( $slide["image"] ) ) {
 					// it's an image, so resize it and generate an img tag.
-					$image = '<img src="' . p_image_resize( $slide["image"], 1220, $height, true ) . '">';
+					$image = '<img src="' . p_image_resize( $slide["image"], 1220, $height, true ) . '" class="slide-image">';
 				} else {
 					// it's a video, so oEmbed that stuffs, yo
 					$image = apply_filters( 'the_content', $slide["image"] );

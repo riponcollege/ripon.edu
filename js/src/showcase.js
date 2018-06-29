@@ -2,7 +2,6 @@
 
 // onload
 jQuery(document).ready(function($){
-	
 
 	// grab the showcase
 	var showcase = $( '.showcase' );
@@ -108,14 +107,12 @@ jQuery(document).ready(function($){
 			showcase_height();
 		}, 500 );
 
-		
 
 		// update the showcase height on resize
 		$( window ).resize(function(){
 			var current_slide = get_current_slide();
 			showcase_height();
 		});
-
 
 
 		// set showcase initial height when the first image is loaded.
@@ -127,7 +124,6 @@ jQuery(document).ready(function($){
 				auto_rotate = setInterval( next_slide, 10000 );
 			}
 		}, 500 );
-
 
 
 		// next/previous click
@@ -144,11 +140,13 @@ jQuery(document).ready(function($){
 			}
 		});
 
+
 		// move slides to left if they mouse over the previous nav
 		// gives the illusion of infinite scrolling
 		$( '.showcase-nav a.previous' ).hover(function(){
 			$( '.showcase .slide:not(.visible)' ).attr( 'class', 'slide hide-left' );
 		});
+
 
 		// move slides to right (default) if they mouse over the next nav
 		// gives the illusion of infinite scrolling
@@ -156,9 +154,7 @@ jQuery(document).ready(function($){
 			$( '.showcase .slide:not(.visible)' ).attr( 'class', 'slide' );
 		});
 
-
 	}
-
 
 });
 
