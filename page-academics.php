@@ -10,7 +10,7 @@ get_header();
 
 	<?php the_showcase(); ?>
 	
-	<div class="wrap group academics three-column">
+	<div class="wrap group two-column academics">
 
 		<div class="quarter left-menu">
 
@@ -22,43 +22,25 @@ get_header();
 
 		</div>
 	
-		<div class="three-quarter no-pad">
-			<div class="two-third">
+		<div class="three-quarter">
 
-				<?php 
-				while ( have_posts() ) : the_post(); ?>
-				
-				<h1><?php the_title() ?></h1>
-				<div class="entry-content">
-					<?php the_content(); ?>
-				</div>
-
-					<?php
-				endwhile; 
-				?>
-
+			<?php 
+			while ( have_posts() ) : the_post(); ?>
+			
+			<h1><?php the_title() ?></h1>
+			<div class="entry-content">
+				<?php the_content(); ?>
 			</div>
 
-			<div class="third sidebar">
-
-				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif; ?>
-
+				<?php
+			endwhile; 
+			?>
+			
+			<div class="bg-grey-light" style="padding: 5px 10px; border: 1px solid #888; margin: 10px 0;">MA = Major &nbsp; &nbsp; MI = Minor &nbsp; &nbsp; PA = Pre-Professional Advising &nbsp; &nbsp; T = Teaching Certification</div>
+			<div class="group area-tabs">
+				<?php list_area_category() ?>
 			</div>
 
-			<div class="area-tabs full-width group">
-				<ul class="area-tab-navigation">
-					<li class="active">Majors<span> &amp; Pre-Professional Tracks</span></li>
-					<li>Minors</li>
-				</ul>
-				<div class="area-tab-content majors active">
-					<p>Below is a comprehensive listing of majors offered at Ripon College.</p>
-					<?php list_area_category( "major" ) ?>
-				</div>
-				<div class="area-tab-content minors">
-					<p>Below is a comprehensive listing of minors offered at Ripon College.</p>
-					<?php list_area_category( "minor" ) ?>
-				</div>
-			</div>
 		</div>
 
 

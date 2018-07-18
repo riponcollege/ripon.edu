@@ -131,27 +131,51 @@ function the_area_lists() {
 
 
 
-function list_area_category( $category ) {
+function list_area_category() {
 
 	// select the areas of interest in the category
-	$areas = get_area_category( $category );
+	$areas = get_areas();
 
 	// count em
 	$area_count = count( $areas );
 
 	// determine what a quarter of the total records is so we can make columns
-	$quarter = ceil( $area_count / 4 );
+	$quarter = ceil( $area_count / 2 );
 
 	// loop through the post results
 	$num = 1;
 	foreach ( $areas as $area ) {
+		$categories = wp_get_object_terms( $area->ID, 'area_cat' );
 		if ( $num == 1 || $num == $quarter+1 || $num == ( $quarter * 2 )+1 || $num == ( $quarter * 3 )+1 ) {
 			?>
 	<ul class="column<?php print ( $num == 1 ? ' one' : '' ); print ( $num == $quarter+1 ? ' two' : '' ); print ( $num == ($quarter*2)+1 ? ' three' : '' ); print ( $num == ($quarter*3)+1 ? ' four' : '' ); ?>">
 			<?php
 		}
 		?>
-		<li><a href="/area/<?php print $area->post_name ?>"><?php print $area->post_title; ?></a></li>
+		<li><a href="/area/<?php print $area->post_name ?>"><?php print $area->post_title; ?></a> <?php
+		if ( !empty( $categories ) ) {
+			?>(<?php
+			$cats = array();
+			foreach ( $categories as $cat ) {
+	 			switch ( $cat->slug ) {
+	 				case "major":
+	 					$cats[] = 'MA';
+	 				break;
+	 				case "minor":
+	 					$cats[] = 'MI';
+	 				break;
+	 				case "pre-professional-advising":
+	 					$cats[] = 'PA';
+	 				break;
+	 				case "teaching-certification":
+	 					$cats[] = 'T';
+	 				break;
+	 			}
+			}
+			print implode( ', ', $cats );
+			?>)<?php
+		}
+		?></li>
 		<?php 
 		if ( $num == $quarter || $num == ( $quarter * 2 ) || $num == ( $quarter * 3 ) || $num == $area_count ) {
 			?>
@@ -166,6 +190,22 @@ function list_area_category( $category ) {
 	// reset the post data
 	wp_reset_postdata();
 
+}
+
+
+
+function get_areas() {
+	global $wpdb;
+
+	// Count custom post type by custom taxonomy
+	$sql = "SELECT * FROM $wpdb->posts p
+	WHERE p.post_type = 'area'
+	AND ( p.post_status = 'publish' )
+	AND p.post_date < NOW() ORDER BY p.post_title;";
+
+	$rows = $wpdb->get_results( $sql );
+
+	return $rows;
 }
 
 

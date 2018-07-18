@@ -1,5 +1,7 @@
 
 .area-tabs {
+	padding-top: 10px;
+
 	.area-tab-navigation {
 		position: relative;
 		z-index: 10;
@@ -43,46 +45,13 @@
 		}
 	}
 
-	.area-tab-content {
-		@include clearfix;
-		background: lighten( $grey, 55% );
-		border: 6px solid $grey;
-		padding: 15px;
-		display: none;
-		position: relative;
-		z-index: 1;
-		top: -6px;
-	
-		p {
-			@include font-medium;
-			padding: 0 0 12px;
+	.column {
+		@include respond-to( 768px ) {
+			width: 50%;
+			display: inline;
+			padding-right: 20px;
+			float: left;
 		}
-
-		&.majors {
-			display: block;
-		}
-
-		.column {
-			@include respond-to( 768px ) {
-				width: 50%;
-				display: inline;
-
-				&.one, &.two {
-					float: left;
-					clear: left;
-				}
-			}
-
-			@include respond-to( 1024px ) {
-				float: left;
-				width: 25%;
-
-				&.one, &.two {
-					clear: none;
-				}
-			}
-		}
-
 	}
 }
 
