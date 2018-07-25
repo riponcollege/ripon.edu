@@ -7,8 +7,8 @@
 
             // Counselors and Links
             // Counselor Territory 1
-            var counselorT1 = "Emily Sheeks";
-            var territory1 = counselorT1.link("http://www.ripon.edu/sheekse");
+            var counselorT1 = "Emily Ingemann";
+            var territory1 = counselorT1.link("http://www.ripon.edu/ingemanne");
             // Counselor Territory 2
             var counselorT2 = "Sarah Quella";
             var territory2 = counselorT2.link("http://www.ripon.edu/quellas");
