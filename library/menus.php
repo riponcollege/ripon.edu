@@ -70,7 +70,7 @@ if ( function_exists('register_sidebar') ) {
 
 
 
-function left_menu_display() {
+function left_menu_display( $mode = 'both' ) {
 
 	// grab the menu the user selected in the menus metabox.
 	$menu_title = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_title", 1 );
@@ -84,7 +84,7 @@ function left_menu_display() {
 
 
 	// verify that the menu exists by checking the menu name to see if it's empty
-	if ( !empty( $menu_primary ) ) {
+	if ( !empty( $menu_primary ) && ( $mode == 'both' || $mode == 'primary' ) ) {
 		print '<div class="menu-primary">';
 
 		// display the menu title
@@ -103,7 +103,7 @@ function left_menu_display() {
 		print '</div>';
 	}
 
-	if ( !empty( $menu_buttons ) ) {
+	if ( !empty( $menu_buttons ) && ( $mode == 'both' || $mode == 'secondary' ) ) {
 		print '<div class="menu-buttons">';
 
 		// display the button menu
