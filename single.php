@@ -7,7 +7,7 @@ get_header();
 
 ?>
 	<div id="primary" class="wrap group">
-		<div id="content" class="content" role="main">
+		<div id="content" class="content-wide" role="main">
 		<?php 
 		if ( have_posts() ) : ?>
 			<div class="two-third">
