@@ -10,7 +10,7 @@ get_header();
 		<div id="content" class="content-wide" role="main">
 		<?php 
 		if ( have_posts() ) : ?>
-			<div class="two-third">
+			<div class="two-third entry-content">
 			<?php
 			while ( have_posts() ) : the_post(); 
 				?>
