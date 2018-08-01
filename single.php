@@ -7,9 +7,11 @@ get_header();
 
 ?>
 	<div id="primary" class="wrap group">
-		<div id="content" class="content-narrow" role="main">
+		<div id="content" class="content" role="main">
 		<?php 
-		if ( have_posts() ) :
+		if ( have_posts() ) : ?>
+			<div class="two-third">
+			<?php
 			while ( have_posts() ) : the_post(); 
 				?>
 				<h1><?php the_title(); ?></h1>
@@ -18,12 +20,25 @@ get_header();
 				<p class="post-meta">
 					Posted <?php the_date(); ?> in <?php print get_the_category_list( ", ", "", get_the_ID() ); ?> by <?php the_author_link() ?>.
 				</p>
+		 	</div>
+		 	<div class="third">
+		 		<p>&nbsp;</p>
+		 		<p>&nbsp;</p>
 				<?php
 				$cat_list = get_the_category_list( ",", "", get_the_ID() );
-				do_shortcode('[display-posts category="' . $cat_list . '" /]');
+				if ( !empty( $cat_list ) ) {
+					print "<h3>Related Posts</h3>";
+					print do_shortcode('[display-posts category="' . $cat_list . '" posts_per_page=5 /]');
+				}
+				?>
+				<!-- here -->
+				<?php
 			endwhile;
+			?>
+		 	</div>
+		 	<?php
 		endif;
-		 ?>
+		?>
 		</div><!-- #content -->
 
 	</div><!-- #primary -->
