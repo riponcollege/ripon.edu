@@ -19,6 +19,8 @@ get_header();
 					Posted <?php the_date(); ?> in <?php print get_the_category_list( ", ", "", get_the_ID() ); ?> by <?php the_author_link() ?>.
 				</p>
 				<?php
+				$cat_list = get_the_category_list( ",", "", get_the_ID() );
+				do_shortcode('[display-posts category="' . $cat_list . '" /]');
 			endwhile;
 		endif;
 		 ?>
