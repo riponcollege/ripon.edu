@@ -34,8 +34,6 @@ get_header();
 
 		<div class="third left-menu sidebar">
 
-			<?php left_menu_display( 'secondary' ); ?>
-
 			<?php
 			if ( has_cmb2_value('left_content') ) {
 				show_cmb2_wysiwyg_value('left_content');
