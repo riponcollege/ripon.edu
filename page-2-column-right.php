@@ -32,7 +32,9 @@ get_header();
 
 		</div>
 
-		<div class="third left-menu">
+		<div class="third left-menu sidebar">
+
+			<?php left_menu_display( 'secondary' ); ?>
 
 			<?php
 			if ( has_cmb2_value('left_content') ) {
