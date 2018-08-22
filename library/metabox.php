@@ -384,47 +384,49 @@ function page_metaboxes( $meta_boxes ) {
 
 
     // get list of gravity forms
-    $all_forms = GFAPI::get_forms();
-    $forms = array();
-    $forms[0] = '- no form selected -';
-    foreach ( $all_forms as $form ) {
-        $forms[$form['fields'][0]->formId] = $form['title'];
+    if ( class_exists( 'GFAPI' ) ) {      
+        $all_forms = GFAPI::get_forms();
+        $forms = array();
+        $forms[0] = '- no form selected -';
+        foreach ( $all_forms as $form ) {
+            $forms[$form['fields'][0]->formId] = $form['title'];
+        }
+
+
+        // fund metabox
+        $meta_boxes['fund_metabox'] = array(
+            'id' => 'fund_metabox',
+            'title' => 'Fund Information',
+            'pages' => array( 'fund' ), // post type
+            'context' => 'normal',
+            'priority' => 'high',
+            'show_names' => true, // Show field names on the left
+            'fields' => array(
+                array(
+                    'name' => 'Goal',
+                    'id' => CMB_PREFIX . 'fund_goal',
+                    'type' => 'text_money'
+                ),
+                array(
+                    'name' => 'Offline Donation Total',
+                    'id' => CMB_PREFIX . 'fund_offline_total',
+                    'type' => 'text_money'
+                ),
+                array(
+                    'name' => 'Offline Donation Count',
+                    'id' => CMB_PREFIX . 'fund_offline_count',
+                    'type' => 'text_small'
+                ),
+                array(
+                    'name' => 'Form',
+                    'id' => CMB_PREFIX . 'fund_form',
+                    'type' => 'select',
+                    'default' => 0,
+                    'options' => $forms
+                ),
+            )
+        );
     }
-
-
-    // fund metabox
-    $meta_boxes['fund_metabox'] = array(
-        'id' => 'fund_metabox',
-        'title' => 'Fund Information',
-        'pages' => array( 'fund' ), // post type
-        'context' => 'normal',
-        'priority' => 'high',
-        'show_names' => true, // Show field names on the left
-        'fields' => array(
-            array(
-                'name' => 'Goal',
-                'id' => CMB_PREFIX . 'fund_goal',
-                'type' => 'text_money'
-            ),
-            array(
-                'name' => 'Offline Donation Total',
-                'id' => CMB_PREFIX . 'fund_offline_total',
-                'type' => 'text_money'
-            ),
-            array(
-                'name' => 'Offline Donation Count',
-                'id' => CMB_PREFIX . 'fund_offline_count',
-                'type' => 'text_small'
-            ),
-            array(
-                'name' => 'Form',
-                'id' => CMB_PREFIX . 'fund_form',
-                'type' => 'select',
-                'default' => 0,
-                'options' => $forms
-            ),
-        )
-    );
 
 
     // fund listing metabox
