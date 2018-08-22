@@ -31,7 +31,7 @@ get_header();
 					$cat_list = get_the_category_list( ",", "", get_the_ID() );
 					if ( !empty( $cat_list ) ) {
 						print "<h3>Related Posts</h3>";
-						print do_shortcode('[display-posts category="' . $cat_list . '" posts_per_page=5 exclude="' . $post_id . '" /]');
+						print do_shortcode('[display-posts category="' . $cat_list . '" posts_per_page=5 exclude_current="true" /]');
 					}
 
 					$tags = wp_get_post_tags( $post->ID );
