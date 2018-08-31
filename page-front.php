@@ -72,17 +72,18 @@ get_header();
 				<a href="https://www.flickr.com/photos/ripon_college/"><img src="<?php print get_template_directory_uri() ?>/img/social-flickr.png"></a>
 				<a href="http://www.linkedin.com/groups?home=&gid=4646327&trk=anet_ug_hm"><img src="<?php print get_template_directory_uri() ?>/img/social-linkedin.png"></a>
 			</div>
-
+			
+			<!--
 			<div class="feeds">
 				<div class="twitter group">
 					<h4>@riponcollege</h4>
 					<div class="feed">
-						<?php twitter_posts() ?>
+						<?php //twitter_posts() ?>
 					</div>
 				</div>
 
 				<div class="facebook">
-					<?php facebook_feed() ?>
+					<?php //facebook_feed() ?>
 				</div>
 
 				<div class="instagram">
@@ -91,6 +92,8 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</div>
+			-->
+
 		</div>
 	</div>
 	
