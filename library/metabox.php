@@ -255,6 +255,11 @@ function page_metaboxes( $meta_boxes ) {
                 'type' => 'text_email'
             ),
             array(
+                'name' => 'Website',
+                'id' => CMB_PREFIX . 'faculty_website',
+                'type' => 'text'
+            ),
+            array(
                 'name' => 'Facebook',
                 'id' => CMB_PREFIX . 'faculty_facebook',
                 'type' => 'text_url'
