@@ -25,7 +25,11 @@ $courses = get_cmb_value( "faculty_courses" );
 					<a href="mailto:<?php print get_cmb_value( "faculty_email" ); ?>"><?php print get_cmb_value( "faculty_email" ); ?></a><br>
 					<?php print get_cmb_value( "faculty_phone" ); ?><br>
 					Office: <?php print get_cmb_value( "faculty_office" ); ?>
-					<!--<?php print ( has_cmb_value('faculty_website') ? "<br><a href='" . get_cmb_value( "faculty_website" ) . "' target='_blank'>Website</a>" : '' ); ?>-->
+					<?php 
+					if ( !empty( get_cmb_value( "faculty_website" ) ) ) {
+						print "<br><a href='" . get_cmb_value( "faculty_website" ) . "' target='_blank'>Website</a>";
+					}
+					?>
 				</p>
 			</div>
 			<div class="tab-nav">
