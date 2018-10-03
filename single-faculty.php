@@ -27,7 +27,7 @@ $courses = get_cmb_value( "faculty_courses" );
 					Office: <?php print get_cmb_value( "faculty_office" ); ?>
 					<?php 
 					if ( !empty( get_cmb_value( "faculty_website" ) ) ) {
-						print "<br><a href='" . get_cmb_value( "faculty_website" ) . "' target='_blank'>Personal Website</a>";
+						print "<br><a href='" . get_cmb_value( "faculty_website" ) . "' target='_blank'>Website</a>";
 					}
 					?>
 				</p>

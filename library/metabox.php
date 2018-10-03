@@ -255,10 +255,10 @@ function page_metaboxes( $meta_boxes ) {
                 'type' => 'text_email'
             ),
             array(
-                'name' => 'Personal Website',
+                'name' => 'Website',
                 'id' => CMB_PREFIX . 'faculty_website',
                 'type' => 'text',
-                'desc' => 'Include the Full URL (including "http(s)") to this faculty members personal website.'
+                'desc' => 'Include the Full URL (including "http(s)") to this faculty members website.'
             ),
             array(
                 'name' => 'Facebook',
