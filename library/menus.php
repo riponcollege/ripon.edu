@@ -115,7 +115,7 @@ function left_menu_display( $mode = 'both' ) {
 		print '</div>';
 	}
 
-}
+ }
 
 
 

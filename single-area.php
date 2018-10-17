@@ -24,7 +24,7 @@ the_showcase();
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); 
 				?>
-		<div class="third">
+		<div class="third left-menu">
 			<button class="back-to-areas">Back to All Areas</button>
 			<div class="tab-nav">
 				<ul>
@@ -47,6 +47,17 @@ the_showcase();
 					<?php do_area_tabs_nav(); ?>
 				</ul>
 			</div>
+
+			<div class="menu-buttons">
+				<?php
+				// display the button menu
+				wp_nav_menu( array( 
+					'menu' => 'academics-buttons', 
+					'menu_class' => 'nav-menu' )
+				);
+				?>
+			</div>
+
 		</div><!-- #content -->
 		<div class="two-third tab-container">
 
