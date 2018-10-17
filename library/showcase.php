@@ -76,7 +76,6 @@ function the_photo_showcase( $height = 600 ) {
 				<div class="slide-content">
 					<div class="wrap">
 					<?php if ( !empty( $title ) ) { ?><h1><?php print $title; ?></h1><?php } ?>
-					<?php if ( !empty( $subtitle ) ) { ?><h2><?php print $subtitle; ?></h2><?php } ?>
 					<?php if ( !empty( $button ) ) { ?><div class="slide-button"><?php print $button ?></div><?php } ?>
 					</div>
 				</div>

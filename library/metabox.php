@@ -169,15 +169,6 @@ function page_metaboxes( $meta_boxes ) {
 						'type' => 'text',
 					),
 					array(
-						'name' => 'Subtitle',
-						'description' => 'Enter the slide content.',
-						'id'   => 'subtitle',
-						'type' => 'wysiwyg',
-                        'options' => array (
-                            'textarea_rows' => 8
-                        )
-					),
-					array(
 						'name' => 'Link',
 						'description' => 'Enter a slide link.',
 						'id'   => 'link',

@@ -66,25 +66,18 @@
 			color: white;
 			pointer-events: none;
 			z-index: 200;
+			text-align: center;
 
 			@include respond-to( 768px ) {
-				top: 5%;
+				top: 15%;
+			}
+
+			@include respond-to( 1024px ) {
+				top: 20%;
 			}
 
 			@include respond-to( 1220px ) {
-				top: 60px;
-			}
-
-			.wrap {
-				@include respond-to( 768px ) {
-					padding-right: 280px;
-				}
-				@include respond-to( 1024px ) {
-					padding-right: 380px;
-				}
-				@include respond-to( 1220px ) {
-					padding-right: 580px;
-				}
+				top: 25%;
 			}
 		}
 
@@ -113,41 +106,17 @@
 			padding: 3px 0;
 
 			@include respond-to( 600px ) {
-				font-size: 25px; 
+				font-size: 30px; 
 			}
 
 			@include respond-to( 768px ) {
 				margin-bottom: 1%;
-				font-size: 40px; 
-			}
-
-			@include respond-to( 1024px ) {
-				margin-bottom: 2%;
 				font-size: 50px; 
 			}
-		}
-
-		h2 {
-			font-weight: 400;
-			padding: 0;
-			font-size: 12px;
-			line-height: 1.3em;
-			text-shadow: 0 0 20px rgba( black, .7 );
-			padding: 3px 0;
-
-			@include respond-to( 600px ) {
-				font-size: 15px; 
-			}
-
-			@include respond-to( 768px ) {
-				margin-bottom: 2%;
-				font-size: 20px; 
-				line-height: 1.4em;
-			}
 
 			@include respond-to( 1024px ) {
-				margin-bottom: 4%;
-				line-height: 1.5em;
+				margin-bottom: 2%;
+				font-size: 70px; 
 			}
 		}
 
@@ -173,6 +142,7 @@
 				border: 2px solid white;
 				text-shadow: 0 0 20px rgba( black, .5 );
 				background: transparent;
+				margin-top: 10px;
 			}
 
 			@include respond-to( 768px ) {
@@ -180,6 +150,7 @@
 				padding: 10px 15px;
 				font-size: 20px; 
 				background: transparent;
+				margin-top: 20px;
 			}
 		}
 		
