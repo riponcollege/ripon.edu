@@ -258,3 +258,11 @@ button, input[type=submit], input[type=reset] {
   margin: 0 auto;
 }
 
+
+.no-mobile {
+  display: none;
+
+  @include respond-to( 768px ) {
+    display: initial;
+  }
+}
