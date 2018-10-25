@@ -25,6 +25,7 @@ function the_photo_grid( $post_id = 0 ) {
         <?php
         $num = 1;
         foreach ( $photos as $key => $photo ) {
+            /*
             if ( $num == 1 ) {
                 $class = "one";
                 $height = 608;
@@ -34,13 +35,16 @@ function the_photo_grid( $post_id = 0 ) {
                 $height = 300;
                 $width = 600;                
             } else {
+                */
                 $class = "generic";
                 $height = 300;
                 $width = 300;
+                /*
             }
             if ( $num == 5 ) {
                 $class = "generic fifth";
             }
+            */
             ?>
             <div class="photo <?php print $class ?>">
                 <?php if ( !empty( $photo["link"] ) ) { ?><a href="<?php print $photo["link"] ?>"><?php } ?>
