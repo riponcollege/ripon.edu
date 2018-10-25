@@ -21,7 +21,7 @@ get_header();
 		<div class="news">
 			<h3>Ripon <span>News</span></h3>
 			<?php
-			query_posts( 'posts_per_page=3' );
+			query_posts( 'posts_per_page=2' );
 			if ( have_posts() ) {
 				$num = 1;
 				while ( have_posts() ) {
