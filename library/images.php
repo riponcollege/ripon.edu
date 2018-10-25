@@ -33,8 +33,8 @@ function p_image_resize( $url, $width, $height = null, $crop = null ) {
     if (!$url OR !$width)
         return false;
     
-    if ( stristr( $url, 'http' ) ) {
-        $url = str_replace( 'http://' . $_SERVER['HTTP_HOST'], '', $url );
+    if ( stristr( $url, 'https' ) ) {
+        $url = str_replace( 'https://' . $_SERVER['HTTP_HOST'], '', $url );
     }
 
     $rel_path = $url;
