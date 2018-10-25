@@ -62,6 +62,7 @@ the_showcase();
 		<div class="two-third tab-container">
 
 			<h1><?php the_title(); ?></h1>
+			<h3><?php print get_the_category_list( ", ", "", get_the_ID() ); ?></h3>
 			<div class="tab-content first area-overview">
 				<h2>Overview</h2>
 				<?php the_content(); ?>
