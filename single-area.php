@@ -62,7 +62,15 @@ the_showcase();
 		<div class="two-third tab-container">
 
 			<h1><?php the_title(); ?></h1>
-			<h3><?php print get_the_category_list( ", ", "", get_the_ID() ); ?></h3>
+			<h3><?php 
+			$terms = wp_get_post_terms( get_the_ID(), 'area_cat' );
+			$terms_array = array();
+			foreach ( $terms as $term ) {
+				$terms_array[] = str_replace( 'Minors', 'Minor', str_replace( 'Majors', 'Major', $term->name ) );
+			}
+			// print_r( $terms_array );
+			print implode( ', ', $terms_array );
+			?></h3>
 			<div class="tab-content first area-overview">
 				<h2>Overview</h2>
 				<?php the_content(); ?>
