@@ -88,6 +88,20 @@
 	.three-quarter { width: 75%; }
 }
 
+.quarter-always { 
+	float: left; 
+	padding: 5px; width: 25%; 
+	
+	img {
+		width: 100%;
+	}
+}
+.third-always { float: left; padding: 5px; width: 33.33%; }
+.half-always { float: left; padding: 5px; width: 50%; }
+.two-third-always { float: left; padding: 5px; width: 66.6%; }
+.three-quarter-always { float: left; padding: 5px; width: 75%; }
+
+
 
 
 .text-center { text-align: center; }
