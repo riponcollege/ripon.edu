@@ -43,7 +43,7 @@ get_header();
 
 			print $doc;
 			?>
-			<h2>Officers</h2>
+			<h2>Honorary Life Trustees</h2>
 			<?php
 			// get the file contents
 			$doc = file_get_contents( "https://my.ripon.edu/trustees/trustee_directory_external_Honorary_partial.php" );
