@@ -46,18 +46,20 @@ get_header();
 					*/
 
 					//print "<br><br>";
-					$areas = get_posts( array(
-						'post_type' => 'area',
-						'post_name__in' => $tag_array
-					) );
+					if ( !empty( $tag_array ) ) {
+						$areas = get_posts( array(
+							'post_type' => 'area',
+							'post_name__in' => $tag_array
+						) );
 
-					print "<hr />";
-					print "<h3>Related Areas of Study</h3>";
-					print "<ul class='display-posts-listing'>";
-					foreach ( $areas as $a ) {
-						print "<li><a href='/area/" . $a->post_name . "/'>" . $a->post_title . "</a></li>";
+						print "<hr />";
+						print "<h3>Related Areas of Study</h3>";
+						print "<ul class='display-posts-listing'>";
+						foreach ( $areas as $a ) {
+							print "<li><a href='/area/" . $a->post_name . "/'>" . $a->post_title . "</a></li>";
+						}
+						print "</ul>";
 					}
-					print "</ul>";
 					
 				}
 				?>
