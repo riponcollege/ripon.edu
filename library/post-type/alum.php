@@ -46,7 +46,7 @@ function alum_post_type() {
 
 
 // adding the function to the Wordpress init
-add_action( 'init', 'alum_post_type');
+// add_action( 'init', 'alum_post_type');
 
 
 

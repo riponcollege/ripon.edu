@@ -46,7 +46,7 @@ function year_post_type() {
 
 
 // adding the function to the Wordpress init
-add_action( 'init', 'year_post_type');
+// add_action( 'init', 'year_post_type');
 
 
 
