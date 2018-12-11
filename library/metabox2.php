@@ -1,6 +1,75 @@
 <?php
 
 
+$states = array(
+    '0' =>'State',
+    'AL'=>'Alabama',
+    'AK'=>'Alaska',
+    'AZ'=>'Arizona',
+    'AR'=>'Arkansas',
+    'CA'=>'California',
+    'CO'=>'Colorado',
+    'CT'=>'Connecticut',
+    'DE'=>'Delaware',
+    'DC'=>'District of Columbia',
+    'FL'=>'Florida',
+    'FM'=>'Federated States of Micronesia',
+    'GA'=>'Georgia',
+    'HI'=>'Hawaii',
+    'ID'=>'Idaho',
+    'IL'=>'Illinois',
+    'IN'=>'Indiana',
+    'IA'=>'Iowa',
+    'KS'=>'Kansas',
+    'KY'=>'Kentucky',
+    'LA'=>'Louisiana',
+    'ME'=>'Maine',
+    'MD'=>'Maryland',
+    'MA'=>'Massachusetts',
+    'MI'=>'Michigan',
+    'MN'=>'Minnesota',
+    'MS'=>'Mississippi',
+    'MO'=>'Missouri',
+    'MT'=>'Montana',
+    'NE'=>'Nebraska',
+    'NV'=>'Nevada',
+    'NH'=>'New Hampshire',
+    'NJ'=>'New Jersey',
+    'NM'=>'New Mexico',
+    'NY'=>'New York',
+    'NC'=>'North Carolina',
+    'ND'=>'North Dakota',
+    'OH'=>'Ohio',
+    'OK'=>'Oklahoma',
+    'OR'=>'Oregon',
+    'PA'=>'Pennsylvania',
+    'RI'=>'Rhode Island',
+    'SC'=>'South Carolina',
+    'SD'=>'South Dakota',
+    'TN'=>'Tennessee',
+    'TX'=>'Texas',
+    'UT'=>'Utah',
+    'VT'=>'Vermont',
+    'VA'=>'Virginia',
+    'WA'=>'Washington',
+    'WV'=>'West Virginia',
+    'WI'=>'Wisconsin',
+    'WY'=>'Wyoming',
+    'AE'=>'Armed Forces Africa \ Canada \ Europe \ Middle East',
+    'AA'=>'Armed Forces America (Except Canada)',
+    'AP'=>'Armed Forces Pacific'
+);
+
+
+// set up an array of years from 1940 to current
+$years = array();
+$n = 1960;
+while ( $n < ( date( 'Y' ) + 1 ) ) {
+    $years[$n] = $n;
+    $n++;
+}
+
+
 if ( file_exists( __DIR__ . '/cmb2/init.php' ) ) {
   require_once __DIR__ . '/cmb2/init.php';
 } elseif ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) {
@@ -387,6 +456,199 @@ function cmb2_sample_metaboxes() {
         )
 	);
 	*/
+
+
+
+    global $states, $years;
+
+    // area of interest information
+    $alum_box = new_cmb2_box( array(
+        'id' => 'alum_info',
+        'title' => 'Alumnus Details',
+        'object_types' => array( 'alum' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+    ) );
+    $alum_box->add_field( array(
+        'name' => 'First Name',
+        'id'   => $prefix . 'alum_name_first',
+        'type' => 'text',
+    ) );
+    $alum_box->add_field( array(
+        'name' => 'Last Name',
+        'id'   => $prefix . 'alum_name_last',
+        'type' => 'text',
+    ) );
+    $alum_box->add_field( array(
+        'name' => 'Maiden Name',
+        'id'   => $prefix . 'alum_name_maiden',
+        'type' => 'text',
+    ) );
+    $alum_box->add_field( array(
+        'name' => 'City',
+        'id'   => $prefix . 'alum_city',
+        'type' => 'text',
+    ) );
+    $alum_box->add_field( array(
+        'name' => 'State',
+        'id'   => $prefix . 'alum_state',
+        'type' => 'select',
+        'options' => $states,
+        'default' => 0
+    ) );
+    $alum_box->add_field( array(
+        'name' => 'Email',
+        'id'   => $prefix . 'alum_email',
+        'type' => 'text_email',
+    ) );
+    $alum_box->add_field( array(
+        'name' => 'Type of Update',
+        'id'   => $prefix . 'alum_category',
+        'type' => 'select',
+        'options' => array(
+            'class-letter' => 'Class Letter',
+            'obituary' => 'Obituary',
+            'news' => 'News',
+            'sightings' => 'Sightings'
+        ),
+        'default' => 'personal'
+    ) );
+    $alum_box->add_field( array(
+        'name' => 'Status',
+        'id'   => $prefix . 'alum_status',
+        'type' => 'select',
+        'options' => array(
+            'alive' => 'Alive',
+            'deceased' => 'Deceased',
+        ),
+        'default' => 'alive'
+    ) );
+    $alum_box->add_field( array(
+        'name' => 'Class Year',
+        'id'   => $prefix . 'alum_year',
+        'type' => 'select',
+        'options' => $years,
+        'default' => date( 'Y' )
+    ) );
+
+
+
+    // year information
+    $year_box = new_cmb2_box( array(
+        'id' => 'year_info',
+        'title' => 'Class Year Details',
+        'object_types' => array( 'year' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+    ) );
+    $year_box->add_field( array(
+        'name' => 'President',
+        'id'   => $prefix . 'year_president',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Graduation Date',
+        'id'   => $prefix . 'year_grad_date',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Graduatiing Seniors',
+        'id'   => $prefix . 'year_grad_seniors',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Commencement Theme',
+        'id'   => $prefix . 'year_commencement_theme',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Commencement Speakers',
+        'id'   => $prefix . 'year_commencement_speakers',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Honorary Degree Recipient(s)',
+        'id'   => $prefix . 'year_honorary_degrees',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Current Class Agent',
+        'id'   => $prefix . 'year_agent_current_name',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Current Class Agent Email',
+        'id'   => $prefix . 'year_agent_current_email',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Former Class Agent',
+        'id'   => $prefix . 'year_agent_former_name',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Reunion Memory Book PDF (50th)',
+        'id' => $prefix . 'year_memory_50',
+        'type' => 'file',
+        'query_args' => array(
+            'type' => 'application/pdf',
+        ),
+        'preview_size' => 'small',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Reunion Memory Book PDF (40th)',
+        'id' => $prefix . 'year_memory_40',
+        'type' => 'file',
+        'query_args' => array(
+            'type' => 'application/pdf',
+        ),
+        'preview_size' => 'small',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Reunion Memory Book PDF (35th)',
+        'id' => $prefix . 'year_memory_35',
+        'type' => 'file',
+        'query_args' => array(
+            'type' => 'application/pdf',
+        ),
+        'preview_size' => 'small',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Reunion Memory Book PDF (25th)',
+        'id' => $prefix . 'year_memory_25',
+        'type' => 'file',
+        'query_args' => array(
+            'type' => 'application/pdf',
+        ),
+        'preview_size' => 'small',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Reunion Memory Book PDF (10th)',
+        'id' => $prefix . 'year_memory_10',
+        'type' => 'file',
+        'query_args' => array(
+            'type' => 'application/pdf',
+        ),
+        'preview_size' => 'small',
+    ) );
+    /*
+    $year_box->add_field( array(
+        'name' => 'Archived Class Letters PDF (10th)',
+        'id' => $prefix . 'year_letters',
+        'type' => 'file',
+        'query_args' => array(
+            'type' => 'application/pdf',
+        ),
+        'preview_size' => 'small',
+    ) );
+    */
+    $year_box->add_field( array(
+        'name' => 'Facebook Page',
+        'id'   => $prefix . 'year_facebook',
+        'type' => 'text',
+    ) );
 
 }
 

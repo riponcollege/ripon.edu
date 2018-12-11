@@ -1,0 +1,82 @@
+
+
+.alum {
+	border: 1px solid #888;
+	background: white;
+	padding: 10px;
+
+	@include respond-to( 550px ) {
+		width: 47%;
+		float: left;
+		margin: 0 3% 10px 0;
+		min-height: 375px;
+	}
+
+	@include respond-to( 768px ) {
+		width: 30%;
+	}
+
+	@include respond-to( 1024px ) {
+		width: 23%;
+		margin: 0 2% 10px 0;
+	}
+
+	& > a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	h5 {
+		font-weight: bold;
+		color: $red-dark;
+	}
+
+	.info {
+		font-size: .85em;
+	}
+}
+
+
+.alum-details {
+	position: relative;
+	background: white;
+	padding: 20px;
+	width: auto;
+	max-width: 500px;
+	margin: 40px auto;
+
+	.details-photo {
+		float: left;
+		width: 40%;
+		margin: 0 15px 15px 0;
+	}
+}
+
+.alum-filter {
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	margin: 0 0 10px 0;
+
+	input[type=text], select {
+		font-size: 14px;
+		padding: 5px;
+	}
+}
+
+.alum-add-story {
+	float: right;
+}
+
+.alum-add-story-form {
+	display: none;
+	border: 1px solid #ccc;
+	background: #eee;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+}
+
+
+.year-more-details {
+	display: none;
+}
