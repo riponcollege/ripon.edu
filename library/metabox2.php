@@ -538,7 +538,7 @@ function cmb2_sample_metaboxes() {
     $year_box = new_cmb2_box( array(
         'id' => 'year_info',
         'title' => 'Class Year Details',
-        'object_types' => array( 'year' ), // post type
+        'object_types' => array( 'yr' ), // post type
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left

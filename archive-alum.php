@@ -12,9 +12,9 @@ $current_search = ( isset( $_REQUEST['t'] ) ? $_REQUEST['t'] : '' );
 if ( $current_yr > 0 ) {
 	// get year
 	$args = array(
-		'posts_per_page'   => 1,
-		'post_type'        => 'year',
-		'fields'           => '',
+		'posts_per_page' => 1,
+		'post_type' => 'yr',
+		'name' => $current_yr,
 	);
 	query_posts( $args );
 	while ( have_posts() ) : 
@@ -128,7 +128,7 @@ if ( $current_yr != 0 || $current_search != '' ) {
 					<?php print do_shortcode( '[gravityform id="153" title="false" description="false" /]' ); ?>
 				</div>
 				<div class="alum-filter">
-					<form name="alum-filters" action="/alum/" method="get">
+					<form name="alum-filters" action="/alums/" method="get">
 					Browse by year: <select name="y" class="alum-year">
 						<option value="0">- select year -</option>
 						<?php

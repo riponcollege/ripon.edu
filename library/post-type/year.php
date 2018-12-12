@@ -7,9 +7,9 @@ add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
 
 // let's create the function for the custom type
-function year_post_type() { 
+function yr_post_type() { 
 	// creating (registering) the custom type 
-	register_post_type( 'year', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	register_post_type( 'yr', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array(
 			'labels' => array(
@@ -33,7 +33,7 @@ function year_post_type() {
 			'exclude_from_search' => false,
 			'show_ui' => true,
 			'query_var' => true,
-			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
+			'menu_position' => 9, /* this is what order you want it to appear in on the left hand side menu */ 
 			'menu_icon' => 'dashicons-groups', /* the icon for the custom post type menu */
 			'has_archive' => false, /* you can rename the slug here */
 			'capability_type' => 'post',
@@ -46,7 +46,7 @@ function year_post_type() {
 
 
 // adding the function to the Wordpress init
-// add_action( 'init', 'year_post_type');
+add_action( 'init', 'yr_post_type');
 
 
 
