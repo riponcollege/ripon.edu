@@ -13,6 +13,10 @@ jQuery(document).ready(function($){
 		$('.alum-add-story-form').show();
 	});
 
+	$('.alum-back').on( 'click', function(){
+		location.href = '/alums/';
+	});
+
 	$('.year-more').on( 'click', function(){
 		$('.year-more-details').show();
 		$('.year-more').hide();

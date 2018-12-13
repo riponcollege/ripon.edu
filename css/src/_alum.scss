@@ -60,12 +60,18 @@
 
 	input[type=text], select {
 		font-size: 14px;
-		padding: 5px;
+		padding: 7px 12px;
 	}
 }
 
 .alum-add-story {
 	float: right;
+}
+
+.alum-back {
+	float: right;
+	margin-right: 5px;
+	color: #666;
 }
 
 .alum-add-story-form {
@@ -76,7 +82,25 @@
 	margin-bottom: 20px;
 }
 
-
 .year-more-details {
 	display: none;
+}
+
+.class-title {
+	color: $red-dark;
+	font-weight: 700;
+	opacity: 1;
+}
+
+.class-information {
+
+	@include respond-to( 768px ) {
+		.third {
+			padding-top: 0;
+		}
+
+		.third:first-child {
+			padding-left: 0;
+		}
+	}
 }

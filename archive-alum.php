@@ -99,29 +99,35 @@ if ( $current_yr != 0 || $current_search != '' ) {
 			
 			<div class="alum-title">
 				<button class="alum-add-story">Add My Story</button>
-				<h1 class="page-title">Ripon Alumni Portal<?php print ( $current_yr != 0 ? ' &raquo; Class of ' . $current_yr : '' ); ?></h1>
+				<?php if ( $current_yr > 0 || !empty( $current_search ) ) { ?><button class="alum-back">&laquo; Home</button><?php } ?>
+				<h1 class="page-title">Ripon Alumni Portal<?php print ( $current_yr != 0 ? '<span class="class-title"> &raquo; Class of ' . $current_yr : '</span>' ); ?></h1>
 				<?php if ( !empty( $current_yr ) ) { ?>
-				<p>
-					<?php if ( !empty( $year_info['president'] ) ) { ?><strong>Class President:</strong> <?php print $year_info['president'] ?><br /><?php } ?>
-					<?php if ( !empty( $year_info['grad_date'] ) ) { ?><strong>Graduation Date:</strong> <?php print $year_info['grad_date'] ?><br /><?php } ?>
-					<?php if ( !empty( $year_info['commencement_theme'] ) ) { ?><strong>Commencement Theme:</strong> <?php print $year_info['commencement_theme'] ?><br /><?php } ?>
-					<span class="year-more-details">
-					<?php if ( !empty( $year_info['grad_seniors'] ) ) { ?><strong>Graduating Seniors:</strong> <?php print $year_info['grad_seniors'] ?><br /><?php } ?>
-					<?php if ( !empty( $year_info['commencement_speakers'] ) ) { ?><strong>Commencement Speakers:</strong> <?php print $year_info['commencement_speakers'] ?><br /><?php } ?>
-					<?php if ( !empty( $year_info['honorary_degrees'] ) ) { ?><strong>Honorary Degrees:</strong> <?php print $year_info['honorary_degrees'] ?><br /><?php } ?>
-					<?php if ( !empty( $year_info['agent_current_name'] ) ) { ?><strong>Current Class Agent:</strong> <?php if ( !empty( $year_info['agent_current_email'] ) ) { ?><a href="mailto:<?php print $year_info['agent_current_email'] ?>"><?php } ?><?php print $year_info['agent_current_name'] ?><?php if ( !empty( $year_info['agent_current_email'] ) ) { ?></a><?php } ?><br /><?php } ?>
-					<?php if ( !empty( $year_info['agent_former_name'] ) ) { ?><strong>Former Class Agent:</strong> <?php print $year_info['agent_former_name'] ?><br /><?php } ?>
-					<?php 
-					if ( !empty( $year_info['memories'] ) ) { 
-						$memories_output = implode(' | ', array_map(
-						    function ( $v, $k ) { return "<a href='" . $v . "'>" . $k . "th</a>"; },
-						    $year_info['memories'],
-						    array_keys( $year_info['memories'] )
-						));
-						?><strong>Memory Books (by Reunion):</strong> <?php print $memories_output ?><br /><?php } ?>
-					</span>
-				</p>
-				<p><a class="year-more">View all class information</a></p>
+				<div class="class-information group">
+					<div class="third">
+						<?php if ( !empty( $year_info['president'] ) ) { ?><p><strong>Class President:</strong><br><?php print $year_info['president'] ?></p><?php } ?>
+						<?php if ( !empty( $year_info['grad_date'] ) ) { ?><p><strong>Graduation Date:</strong><br><?php print $year_info['grad_date'] ?></p><?php } ?>
+						<?php if ( !empty( $year_info['commencement_theme'] ) ) { ?><p><strong>Commencement Theme:</strong><br><?php print $year_info['commencement_theme'] ?></p><?php } ?>
+					</div>
+					<div class="third">
+						<!--<span class="year-more-details">-->
+						<?php if ( !empty( $year_info['grad_seniors'] ) ) { ?><p><strong>Graduating Seniors:</strong><br><?php print $year_info['grad_seniors'] ?></p><?php } ?>
+						<?php if ( !empty( $year_info['commencement_speakers'] ) ) { ?><p><strong>Commencement Speakers:</strong><br><?php print $year_info['commencement_speakers'] ?></p><?php } ?>
+						<?php if ( !empty( $year_info['honorary_degrees'] ) ) { ?><p><strong>Honorary Degrees:</strong><br><?php print $year_info['honorary_degrees'] ?></p><?php } ?>
+					</div>
+					<div class="third">
+						<?php if ( !empty( $year_info['agent_current_name'] ) ) { ?><p><strong>Current Class Agent:</strong><br><?php if ( !empty( $year_info['agent_current_email'] ) ) { ?><a href="mailto:<?php print $year_info['agent_current_email'] ?>"><?php } ?><?php print $year_info['agent_current_name'] ?><?php if ( !empty( $year_info['agent_current_email'] ) ) { ?></a><?php } ?></p><?php } ?>
+						<?php if ( !empty( $year_info['agent_former_name'] ) ) { ?><p><strong>Former Class Agent:</strong><br><?php print $year_info['agent_former_name'] ?></p><?php } ?>
+						<?php 
+						if ( !empty( $year_info['memories'] ) ) { 
+							$memories_output = implode(' | ', array_map(
+							    function ( $v, $k ) { return "<a href='" . $v . "'>" . $k . "th</a>"; },
+							    $year_info['memories'],
+							    array_keys( $year_info['memories'] )
+							));
+							?><p><strong>Memory Books (by Reunion):</strong><br><?php print $memories_output ?></p><?php } ?>
+						<!--</span>-->
+					</div>
+				</div>
 				<?php } ?>
 				<div class="alum-add-story-form">
 					<h5>Add My Story</h5>
