@@ -93,6 +93,13 @@
 }
 
 .class-information {
+	position: relative;
+
+	.alum-facebook {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
 
 	@include respond-to( 768px ) {
 		.third {

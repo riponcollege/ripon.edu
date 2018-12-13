@@ -130,6 +130,7 @@ if ( $current_yr != 0 || $current_search != '' ) {
 							?><p><strong>Memory Books (by Reunion):</strong><br><?php print $memories_output ?></p><?php } ?>
 						<!--</span>-->
 					</div>
+					<?php if ( !empty( $year_info['facebook'] ) ) { ?><a href="<?php print $year_info['facebook']; ?>"><img src="<?php bloginfo('template_url') ?>/img/social-facebook.png" class="alum-facebook"></a><?php } ?>
 				</div>
 				<?php } ?>
 				<div class="alum-add-story-form">
