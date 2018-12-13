@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
 	});
 
 	$('.alum-back').on( 'click', function(){
-		location.href = '/alums/';
+		location.href = '/alumni/';
 	});
 
 	$('.year-more').on( 'click', function(){
