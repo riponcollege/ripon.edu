@@ -131,7 +131,7 @@ if ( $current_yr != 0 || $current_search != '' ) {
 				<?php } ?>
 				<div class="alum-add-story-form">
 					<h5>Add My Story</h5>
-					<?php print do_shortcode( '[gravityform id="153" title="false" description="false" /]' ); ?>
+					<?php print do_shortcode( '[gravityform id="174" title="false" description="false" /]' ); ?>
 				</div>
 				<div class="alum-filter">
 					<form name="alum-filters" action="/alums/" method="get">
