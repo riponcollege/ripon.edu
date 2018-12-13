@@ -514,6 +514,7 @@ function cmb2_sample_metaboxes() {
         ),
         'default' => 'personal'
     ) );
+    /*
     $alum_box->add_field( array(
         'name' => 'Status',
         'id'   => $prefix . 'alum_status',
@@ -524,6 +525,7 @@ function cmb2_sample_metaboxes() {
         ),
         'default' => 'alive'
     ) );
+    */
     $alum_box->add_field( array(
         'name' => 'Class Year',
         'id'   => $prefix . 'alum_year',

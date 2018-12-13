@@ -10,7 +10,12 @@ jQuery(document).ready(function($){
 
 
 	$('.alum-add-story').on( 'click', function(){
-		$('.alum-add-story-form').show();
+		$('.alum-add-story-form').toggle();
+		if ( $('.alum-add-story-form').is(':visible') ) {
+			$('.alum-add-story').html('Hide Form');
+		} else {
+			$('.alum-add-story').html('Add My Story');
+		}
 	});
 
 	$('.alum-back').on( 'click', function(){

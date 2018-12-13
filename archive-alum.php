@@ -99,8 +99,8 @@ if ( $current_yr != 0 || $current_search != '' ) {
 			
 			<div class="alum-title">
 				<button class="alum-add-story">Add My Story</button>
-				<?php if ( $current_yr > 0 || !empty( $current_search ) ) { ?><button class="alum-back">&laquo; Home</button><?php } ?>
-				<h1 class="page-title">Ripon Alumni Portal<?php print ( $current_yr != 0 ? '<span class="class-title"> &raquo; Class of ' . $current_yr : '</span>' ); ?></h1>
+				<?php if ( $current_yr > 0 || !empty( $current_search ) ) { ?><button class="alum-back">&laquo; Alumni Home</button><?php } ?>
+				<h1 class="page-title">R Connections<?php print ( $current_yr != 0 ? '<span class="class-title"> &raquo; Class of ' . $current_yr : '</span>' ); ?></h1>
 				<?php if ( !empty( $current_yr ) ) { ?>
 				<div class="class-information group">
 					<div class="third">
