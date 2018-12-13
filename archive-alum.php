@@ -92,6 +92,9 @@ if ( $current_yr != 0 || $current_search != '' ) {
 }
 	
 ?>
+	<div class="alum-banner-container">
+		<?php print do_shortcode( "[snippet slug='alum-showcase' /]" ); ?>
+	</div>
 
 	<section id="primary" class="content-area wrap group" role="main">
 
