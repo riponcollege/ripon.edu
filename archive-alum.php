@@ -49,6 +49,11 @@ if ( $current_yr > 0 ) {
 }
 
 
+function show_alum_category_image( $category ) {
+	print '<img src="' . get_bloginfo( 'template_url' ) . '/img/alum-' . $category . '.png">';
+}
+
+
 function remove_img_attr ( $html ) {
     return preg_replace('/(width|height)="\d+"\s/', "", $html);
 }
@@ -210,7 +215,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
 							} else {
-								print '<img src="https://placehold.it/500x500">';
+								show_alum_category_image( get_cmb2_value( 'alum_category' ) );
 							}
 							?>
 						</div>
@@ -231,7 +236,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
 							} else {
-								print '<img src="https://placehold.it/500x500">';
+								show_alum_category_image( get_cmb2_value( 'alum_category' ) );
 							}
 							?>
 						</div>
