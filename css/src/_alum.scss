@@ -288,10 +288,12 @@
 }
 
 .alum-add-story-form {
+	clear: both;
 	display: none;
 	border: 1px solid #ccc;
 	background: #eee;
 	padding: 5px 10px;
+	margin-top: 5px;
 	margin-bottom: 20px;
 }
 
@@ -331,6 +333,64 @@
 	@include respond-to( 768px ) {
 		.third {
 			padding: 0 20px 0 0;
+		}
+	}
+
+	.class-photo {
+		float: left;
+		width: 60%;
+		padding-left: 30px;
+		position: relative;
+		margin: 15px 0;
+		text-transform: uppercase;
+		font-weight: 700;
+
+		@include respond-to( 768px ) {
+			margin: 25px 0;
+		}
+
+		a {
+			color: $red-dark;
+			text-decoration: none;
+		}
+
+		&:before {
+			position: absolute;
+			content: $fa-var-map-marker;
+			font-family: "FontAwesome";
+			color: $red-dark;
+			top: 0;
+			left: 4px;
+			font-size: 30px;
+		}
+	}
+
+	.class-facebook {
+		float: left;
+		width: 60%;
+		padding-left: 30px;
+		position: relative;
+		margin: 15px 0;
+		text-transform: uppercase;
+		font-weight: 700;
+
+		@include respond-to( 768px ) {
+			margin: 25px 0;
+		}
+
+		a {
+			color: $red-dark;
+			text-decoration: none;
+		}
+
+		&:before {
+			position: absolute;
+			content: $fa-var-facebook;
+			font-family: "FontAwesome";
+			color: $red-dark;
+			top: 0;
+			left: 4px;
+			font-size: 30px;
 		}
 	}
 }

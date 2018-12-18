@@ -21,6 +21,7 @@ if ( $current_yr > 0 ) {
 	query_posts( $args );
 	while ( have_posts() ) : 
 		the_post();
+		global $post;
 		$year_info = array();
 		$year_info['president'] = get_cmb2_value( 'year_president' );
 		$year_info['grad_date'] = get_cmb2_value( 'year_grad_date' );
@@ -43,6 +44,8 @@ if ( $current_yr > 0 ) {
 		$year_info['facebook'] = get_cmb2_value( 'year_facebook' );
 		$year_info['news'] = get_cmb2_value( 'year_news' );
 		$year_info['sightings'] = get_cmb2_value( 'year_sightings' );
+
+		$year_info['photo'] = get_the_post_thumbnail_url( $post, 'full' );
 	endwhile;
 	wp_reset_query();
 	// print_r( $year_info );
@@ -134,16 +137,16 @@ if ( $query_yr || $query_cat || $query_search ) {
 						<?php if ( !empty( $year_info['president'] ) ) { ?><p><strong>President:</strong><br><?php print $year_info['president'] ?></p><?php } ?>
 						<?php if ( !empty( $year_info['grad_date'] ) ) { ?><p><strong>Graduation Date:</strong><br><?php print $year_info['grad_date'] ?></p><?php } ?>
 						<?php if ( !empty( $year_info['commencement_theme'] ) ) { ?><p><strong>Commencement Theme:</strong><br><?php print $year_info['commencement_theme'] ?></p><?php } ?>
+						<?php if ( !empty( $year_info['commencement_speakers'] ) ) { ?><p><strong>Commencement Speakers:</strong><br><?php print $year_info['commencement_speakers'] ?></p><?php } ?>
 					</div>
 					<div class="third">
 						<!--<span class="year-more-details">-->
 						<?php if ( !empty( $year_info['grad_seniors'] ) ) { ?><p><strong>Graduating Seniors:</strong><br><?php print $year_info['grad_seniors'] ?></p><?php } ?>
-						<?php if ( !empty( $year_info['commencement_speakers'] ) ) { ?><p><strong>Commencement Speakers:</strong><br><?php print $year_info['commencement_speakers'] ?></p><?php } ?>
 						<?php if ( !empty( $year_info['honorary_degrees'] ) ) { ?><p><strong>Honorary Degrees:</strong><br><?php print $year_info['honorary_degrees'] ?></p><?php } ?>
-					</div>
-					<div class="third">
 						<?php if ( !empty( $year_info['agent_current_name'] ) ) { ?><p><strong>Current Class Agent:</strong><br><?php if ( !empty( $year_info['agent_current_email'] ) ) { ?><a href="mailto:<?php print $year_info['agent_current_email'] ?>"><?php } ?><?php print $year_info['agent_current_name'] ?><?php if ( !empty( $year_info['agent_current_email'] ) ) { ?></a><?php } ?></p><?php } ?>
 						<?php if ( !empty( $year_info['agent_former_name'] ) ) { ?><p><strong>Former Class Agent:</strong><br><?php print $year_info['agent_former_name'] ?></p><?php } ?>
+					</div>
+					<div class="third">
 						<?php 
 						if ( !empty( $year_info['memories'] ) ) { 
 							$memories_output = implode(' | ', array_map(
@@ -152,9 +155,9 @@ if ( $query_yr || $query_cat || $query_search ) {
 							    array_keys( $year_info['memories'] )
 							));
 							?><p><strong>Memory Books (by Reunion):</strong><br><?php print $memories_output ?></p><?php } ?>
-						<!--</span>-->
+						<?php if ( !empty( $year_info['photo'] ) ) { ?><div class="class-photo"><a href="<?php print $year_info['photo']; ?>" class="lightbox-photo">Class Photo</a></div><?php } ?>
+						<?php if ( !empty( $year_info['facebook'] ) ) { ?><div class="class-facebook"><a href="<?php print $year_info['facebook']; ?>">Class Facebook</a></div><?php } ?>
 					</div>
-					<?php if ( !empty( $year_info['facebook'] ) ) { ?><a href="<?php print $year_info['facebook']; ?>"><img src="<?php bloginfo('template_url') ?>/img/social-facebook.png" class="alum-facebook"></a><?php } ?>
 				</div>
 				<?php } ?>
 				<div class="alum-add-story-form">
