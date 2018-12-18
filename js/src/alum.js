@@ -8,7 +8,6 @@ jQuery(document).ready(function($){
 		midClick: true
 	});
 
-
 	$('.alum-add-story').on( 'click', function(){
 		$('.alum-add-story-form').toggle();
 		if ( $('.alum-add-story-form').is(':visible') ) {
@@ -20,6 +19,10 @@ jQuery(document).ready(function($){
 
 	$('.alum-back').on( 'click', function(){
 		location.href = '/alumni/';
+	});
+
+	$('.alum-reset').on( 'click', function(){
+		location.href = '/rconnections';
 	});
 
 	$('.year-more').on( 'click', function(){

@@ -63,7 +63,7 @@ $states = array(
 
 // set up an array of years from 1940 to current
 $years = array();
-$n = 1960;
+$n = 1950;
 while ( $n < ( date( 'Y' ) + 1 ) ) {
     $years[$n] = $n;
     $n++;
@@ -533,6 +533,12 @@ function cmb2_sample_metaboxes() {
         'options' => $years,
         'default' => date( 'Y' )
     ) );
+    $alum_box->add_field( array(
+        'name' => 'Submitted By',
+        'id'   => $prefix . 'alum_submitter',
+        'type' => 'text',
+    ) );
+
 
 
 
