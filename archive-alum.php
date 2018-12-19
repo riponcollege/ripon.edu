@@ -177,10 +177,10 @@ if ( $query_yr || $query_cat || $query_search ) {
 					</select> &nbsp; 
 					Category: <select name="c" class="alum-category">
 						<option value="0">- select category -</option>
-						<option value='class-letter'<?php print ( $current_cat == 'class-letter' ? ' selected="selected"' : '' ); ?>>Class Letter</option>
-						<option value='obituary'<?php print ( $current_cat == 'obituary' ? ' selected="selected"' : '' ); ?>>Obituary</option>
-						<option value='news'<?php print ( $current_cat == 'news' ? ' selected="selected"' : '' ); ?>>News</option>
-						<option value='sightings'<?php print ( $current_cat == 'sightings' ? ' selected="selected"' : '' ); ?>>Sightings</option>
+						<option value='class-letter'<?php print ( $current_cat === 'class-letter' ? ' selected="selected"' : '' ); ?>>Class Letter</option>
+						<option value='obituary'<?php print ( $current_cat === 'obituary' ? ' selected="selected"' : '' ); ?>>Obituary</option>
+						<option value='news'<?php print ( $current_cat === 'news' ? ' selected="selected"' : '' ); ?>>News</option>
+						<option value='sightings'<?php print ( $current_cat === 'sightings' ? ' selected="selected"' : '' ); ?>>Sightings</option>
 					</select> &nbsp; 
 					Name: <input type="text" name="t" class="alum-search" value="<?php print $current_search; ?>" />
 					<input type="submit" value="Filter" />
@@ -232,7 +232,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 					</div>
 				</a>
 				<div class="alum-details mfp-hide" id="alum-<?php the_ID(); ?>">
-					<h3><?php the_title() ?></h3>
+					<h3><?php print substr( get_the_title(), 0, 60 ); print ( strlen( get_the_title() ) > 60 ? '...' : '' ); ?></h3>
 					<div class="details">
 						<div class="details-photo">
 							<?php 
