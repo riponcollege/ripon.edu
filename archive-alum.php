@@ -223,7 +223,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 							?>
 						</div>
 						<div class="info group">
-							<h5><?php print substr( get_the_title(), 0, 60 ); print ( strlen( get_the_title() ) > 60 ? '...' : '' ); ?></h5>
+							<h5><?php print substr( get_the_title(), 0, 50 ); print ( strlen( get_the_title() ) > 50 ? '...' : '' ); ?></h5>
 							<?php if ( has_cmb2_value( 'alum_submitter' ) ) { ?><div class="quiet">Submitted by: <?php show_cmb2_value( 'alum_submitter' ) ?></div><?php } ?>
 							<div class="alum-year"><?php show_cmb2_value( 'alum_year' ) ?></div>
 							<div class="alum-location"><?php show_cmb2_value( 'alum_city' ); ?>, <?php show_cmb2_value( 'alum_state' ) ?></div>
