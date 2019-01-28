@@ -31,6 +31,12 @@ if ( $current_yr > 0 ) {
 		$year_info['honorary_degrees'] = get_cmb2_value( 'year_honorary_degrees' );
 		$year_info['agent_current_name'] = get_cmb2_value( 'year_agent_current_name' );
 		$year_info['agent_current_email'] = get_cmb2_value( 'year_agent_current_email' );
+		$year_info['agent_current_name_2'] = get_cmb2_value( 'year_agent_current_name_2' );
+		$year_info['agent_current_email_2'] = get_cmb2_value( 'year_agent_current_email_2' );
+		$year_info['agent_current_name_3'] = get_cmb2_value( 'year_agent_current_name_3' );
+		$year_info['agent_current_email_3'] = get_cmb2_value( 'year_agent_current_email_3' );
+		$year_info['agent_current_name_4'] = get_cmb2_value( 'year_agent_current_name_4' );
+		$year_info['agent_current_email_4'] = get_cmb2_value( 'year_agent_current_email_4' );
 		$year_info['agent_former_name'] = get_cmb2_value( 'year_agent_former_name' );
 
 		$year_info['memories'] = array();
@@ -143,7 +149,10 @@ if ( $query_yr || $query_cat || $query_search ) {
 						<!--<span class="year-more-details">-->
 						<?php if ( !empty( $year_info['grad_seniors'] ) ) { ?><p><strong>Graduating Seniors:</strong><br><?php print $year_info['grad_seniors'] ?></p><?php } ?>
 						<?php if ( !empty( $year_info['honorary_degrees'] ) ) { ?><p><strong>Honorary Degrees:</strong><br><?php print $year_info['honorary_degrees'] ?></p><?php } ?>
-						<?php if ( !empty( $year_info['agent_current_name'] ) ) { ?><p><strong>Current Class Agent:</strong><br><?php if ( !empty( $year_info['agent_current_email'] ) ) { ?><a href="mailto:<?php print $year_info['agent_current_email'] ?>"><?php } ?><?php print $year_info['agent_current_name'] ?><?php if ( !empty( $year_info['agent_current_email'] ) ) { ?></a><?php } ?></p><?php } ?>
+						<?php if ( !empty( $year_info['agent_current_name'] ) ) { ?>
+						<p><strong>Current Class Agent(s):</strong><br>
+						<?php if ( !empty( $year_info['agent_current_email'] ) ) { ?><a href="mailto:<?php print $year_info['agent_current_email'] ?>"><?php } ?><?php print $year_info['agent_current_name'] ?><?php if ( !empty( $year_info['agent_current_email'] ) ) { ?></a><?php } ?><?php if ( !empty( $year_info['agent_current_name_2'] ) ) { ?><?php if ( !empty( $year_info['agent_current_email_2'] ) ) { ?>, <a href="mailto:<?php print $year_info['agent_current_email_2'] ?>"><?php } ?><?php print $year_info['agent_current_name_2'] ?><?php if ( !empty( $year_info['agent_current_email_2'] ) ) { ?></a><?php } ?><?php if ( !empty( $year_info['agent_current_email_3'] ) ) { ?>, <a href="mailto:<?php print $year_info['agent_current_email_3'] ?>"><?php } ?><?php print $year_info['agent_current_name_3'] ?><?php if ( !empty( $year_info['agent_current_email_3'] ) ) { ?></a><?php } ?><?php if ( !empty( $year_info['agent_current_email_4'] ) ) { ?>, <a href="mailto:<?php print $year_info['agent_current_email_4'] ?>"><?php } ?><?php print $year_info['agent_current_name_4'] ?><?php if ( !empty( $year_info['agent_current_email_4'] ) ) { ?></a><?php } ?>
+						</p><?php } ?><?php } ?>
 						<?php if ( !empty( $year_info['agent_former_name'] ) ) { ?><p><strong>Former Class Agent:</strong><br><?php print $year_info['agent_former_name'] ?></p><?php } ?>
 					</div>
 					<div class="third">

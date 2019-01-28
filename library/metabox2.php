@@ -582,13 +582,43 @@ function cmb2_sample_metaboxes() {
         'type' => 'text',
     ) );
     $year_box->add_field( array(
-        'name' => 'Current Class Agent',
+        'name' => 'Current Class Agent (1)',
         'id'   => $prefix . 'year_agent_current_name',
         'type' => 'text',
     ) );
     $year_box->add_field( array(
-        'name' => 'Current Class Agent Email',
+        'name' => 'Current Class Agent Email (1)',
         'id'   => $prefix . 'year_agent_current_email',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Current Class Agent (2)',
+        'id'   => $prefix . 'year_agent_current_name_2',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Current Class Agent Email (2)',
+        'id'   => $prefix . 'year_agent_current_email_2',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Current Class Agent (3)',
+        'id'   => $prefix . 'year_agent_current_name_3',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Current Class Agent Email (3)',
+        'id'   => $prefix . 'year_agent_current_email_3',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Current Class Agent (4)',
+        'id'   => $prefix . 'year_agent_current_name_4',
+        'type' => 'text',
+    ) );
+    $year_box->add_field( array(
+        'name' => 'Current Class Agent Email (4)',
+        'id'   => $prefix . 'year_agent_current_email_4',
         'type' => 'text',
     ) );
     $year_box->add_field( array(
