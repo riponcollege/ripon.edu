@@ -562,7 +562,7 @@ function cmb2_sample_metaboxes() {
         'type' => 'text',
     ) );
     $year_box->add_field( array(
-        'name' => 'Graduatiing Seniors',
+        'name' => 'Graduating Seniors',
         'id'   => $prefix . 'year_grad_seniors',
         'type' => 'text',
     ) );
