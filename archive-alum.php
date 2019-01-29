@@ -52,6 +52,7 @@ if ( $current_yr > 0 ) {
 		$year_info['sightings'] = get_cmb2_value( 'year_sightings' );
 
 		$year_info['photo'] = get_the_post_thumbnail_url( $post, 'full' );
+		$year_info['photo_reunion'] = get_cmb2_value( 'year_photo_reunion' );
 	endwhile;
 	wp_reset_query();
 	// print_r( $year_info );
@@ -165,6 +166,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 							));
 							?><p><strong>Memory Books (by Reunion):</strong><br><?php print $memories_output ?></p><?php } ?>
 						<?php if ( !empty( $year_info['photo'] ) ) { ?><div class="class-photo"><a href="<?php print $year_info['photo']; ?>" class="lightbox-photo">Class Photo</a></div><?php } ?>
+						<?php if ( !empty( $year_info['photo_reunion'] ) ) { ?><div class="reunion-photo"><a href="<?php print $year_info['photo_reunion']; ?>" class="lightbox-photo">Reunion Photo</a></div><?php } ?>
 						<?php if ( !empty( $year_info['facebook'] ) ) { ?><div class="class-facebook"><a href="<?php print $year_info['facebook']; ?>">Class Facebook</a></div><?php } ?>
 					</div>
 				</div>

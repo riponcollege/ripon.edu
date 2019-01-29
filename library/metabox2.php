@@ -671,6 +671,15 @@ function cmb2_sample_metaboxes() {
         ),
         'preview_size' => 'small',
     ) );
+    $year_box->add_field( array(
+        'name' => 'Reunion Photo',
+        'id' => $prefix . 'year_photo_reunion',
+        'type' => 'file',
+        'query_args' => array(
+            'type' => 'image/jpeg',
+        ),
+        'preview_size' => 'small',
+    ) );
     /*
     $year_box->add_field( array(
         'name' => 'Archived Class Letters PDF (10th)',

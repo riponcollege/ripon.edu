@@ -338,10 +338,10 @@
 		}
 	}
 
-	.class-photo {
+	.reunion-photo, .class-photo {
 		float: left;
 		width: 60%;
-		padding-left: 30px;
+		padding-left: 40px;
 		position: relative;
 		margin: 15px 0;
 		text-transform: uppercase;
@@ -358,11 +358,11 @@
 
 		&:before {
 			position: absolute;
-			content: $fa-var-map-marker;
+			content: $fa-var-picture-o;
 			font-family: "FontAwesome";
 			color: $red-dark;
 			top: 0;
-			left: 4px;
+			left: 0;
 			font-size: 30px;
 		}
 	}
@@ -370,7 +370,7 @@
 	.class-facebook {
 		float: left;
 		width: 60%;
-		padding-left: 30px;
+		padding-left: 40px;
 		position: relative;
 		margin: 15px 0;
 		text-transform: uppercase;
