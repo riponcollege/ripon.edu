@@ -157,14 +157,15 @@ if ( $query_yr || $query_cat || $query_search ) {
 						<?php if ( !empty( $year_info['agent_former_name'] ) ) { ?><p><strong>Former Class Agent:</strong><br><?php print $year_info['agent_former_name'] ?></p><?php } ?>
 					</div>
 					<div class="third">
-						<?php 
+						<!--<?php 
 						if ( !empty( $year_info['memories'] ) ) { 
 							$memories_output = implode(' | ', array_map(
 							    function ( $v, $k ) { return "<a href='" . $v . "'>" . $k . "th</a>"; },
 							    $year_info['memories'],
 							    array_keys( $year_info['memories'] )
 							));
-							?><p><strong>Memory Books (by Reunion):</strong><br><?php print $memories_output ?></p><?php } ?>
+							?><p><strong>Memory Books (by Reunion):</strong><br><?php print $memories_output ?></p><?php } ?>-->
+						<div class="class-memory-book"><a href="mailto:alumni@ripon.edu">Request Memory Book</a></div>
 						<?php if ( !empty( $year_info['photo'] ) ) { ?><div class="class-photo"><a href="<?php print $year_info['photo']; ?>" class="lightbox-photo">Class Photo</a></div><?php } ?>
 						<?php if ( !empty( $year_info['photo_reunion'] ) ) { ?><div class="reunion-photo"><a href="<?php print $year_info['photo_reunion']; ?>" class="lightbox-photo">Reunion Photo</a></div><?php } ?>
 						<?php if ( !empty( $year_info['facebook'] ) ) { ?><div class="class-facebook"><a href="<?php print $year_info['facebook']; ?>">Class Facebook</a></div><?php } ?>
