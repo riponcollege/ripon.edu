@@ -632,6 +632,12 @@ function cmb2_sample_metaboxes() {
         'type' => 'text',
     ) );
     $year_box->add_field( array(
+        'name' => 'Has Memory Book',
+        'id' => $prefix . 'year_memory',
+        'type' => 'checkbox'
+    ) );
+    /*
+    $year_box->add_field( array(
         'name' => 'Reunion Memory Book PDF (50th)',
         'id' => $prefix . 'year_memory_50',
         'type' => 'file',
@@ -685,7 +691,6 @@ function cmb2_sample_metaboxes() {
         ),
         'preview_size' => 'small',
     ) );
-    /*
     $year_box->add_field( array(
         'name' => 'Archived Class Letters PDF (10th)',
         'id' => $prefix . 'year_letters',

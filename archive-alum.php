@@ -39,6 +39,7 @@ if ( $current_yr > 0 ) {
 		$year_info['agent_current_name_4'] = get_cmb2_value( 'year_agent_current_name_4' );
 		$year_info['agent_current_email_4'] = get_cmb2_value( 'year_agent_current_email_4' );
 		$year_info['agent_former_name'] = get_cmb2_value( 'year_agent_former_name' );
+		$year_info['has_memory'] = get_cmb2_value( 'year_memory' );
 
 		$year_info['memories'] = array();
 		if ( has_cmb2_value( 'year_memory_50' ) ) $year_info['memories'][50] = get_cmb2_value( 'year_memory_50' );
@@ -46,6 +47,7 @@ if ( $current_yr > 0 ) {
 		if ( has_cmb2_value( 'year_memory_35' ) ) $year_info['memories'][35] = get_cmb2_value( 'year_memory_35' );
 		if ( has_cmb2_value( 'year_memory_25' ) ) $year_info['memories'][25] = get_cmb2_value( 'year_memory_25' );
 		if ( has_cmb2_value( 'year_memory_10' ) ) $year_info['memories'][10] = get_cmb2_value( 'year_memory_10' );
+		
 
 		$year_info['letters'] = get_cmb2_value( 'year_letters' );
 		$year_info['facebook'] = get_cmb2_value( 'year_facebook' );
@@ -167,7 +169,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 							    array_keys( $year_info['memories'] )
 							));
 							?><p><strong>Memory Books (by Reunion):</strong><br><?php print $memories_output ?></p><?php } ?>-->
-						<div class="class-memory-book"><a href="mailto:alumni@ripon.edu">Request Memory Book</a></div>
+						<?php if ( !empty( $year_info['has_memory'] ) ) { ?><div class="class-memory-book"><a href="mailto:alumni@ripon.edu">Request Memory Book</a></div><?php } ?>
 						<?php if ( !empty( $year_info['photo'] ) ) { ?><div class="class-photo"><a href="<?php print $year_info['photo']; ?>" class="lightbox-photo">Class Photo</a></div><?php } ?>
 						<?php if ( !empty( $year_info['photo_reunion'] ) ) { ?><div class="reunion-photo"><a href="<?php print $year_info['photo_reunion']; ?>" class="lightbox-photo">Reunion Photo</a></div><?php } ?>
 						<?php if ( !empty( $year_info['facebook'] ) ) { ?><div class="class-facebook"><a href="<?php print $year_info['facebook']; ?>">Class Facebook</a></div><?php } ?>
