@@ -37,6 +37,7 @@ include( "library/photo-grid.php" );
 include( "library/emergency.php" );
 include( "library/tabs.php" );
 include( "library/accordions.php" );
+include( "library/search.php" );
 
 
 // make excerpts shorter
