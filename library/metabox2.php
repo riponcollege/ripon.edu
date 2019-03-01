@@ -637,6 +637,11 @@ function cmb2_sample_metaboxes() {
         'id' => $prefix . 'year_memory',
         'type' => 'checkbox'
     ) );
+    $year_box->add_field( array(
+        'name' => 'Has Green List',
+        'id' => $prefix . 'year_green',
+        'type' => 'checkbox'
+    ) );
     /*
     $year_box->add_field( array(
         'name' => 'Reunion Memory Book PDF (50th)',
