@@ -418,13 +418,20 @@
 			text-decoration: none;
 		}
 
+		span {
+			display: block;
+			color: lighten( $grey, 10% );
+			font-size: .8em;
+			line-height: 1em;
+		}
+
 		&:before {
 			position: absolute;
 			content: $fa-var-book;
 			font-family: "FontAwesome";
 			color: $red-dark;
-			top: 0;
-			left: 4px;
+			top: 9px;
+			left: 2px;
 			font-size: 30px;
 		}
 	}
@@ -447,13 +454,20 @@
 			text-decoration: none;
 		}
 
+		span {
+			display: block;
+			color: lighten( $grey, 10% );
+			font-size: .8em;
+			line-height: 1em;
+		}
+
 		&:before {
 			position: absolute;
 			content: $fa-var-bars;
 			font-family: "FontAwesome";
 			color: $red-dark;
-			top: 0;
-			left: 4px;
+			top: 9px;
+			left: 2px;
 			font-size: 30px;
 		}
 	}
