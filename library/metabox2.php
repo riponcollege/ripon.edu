@@ -57,7 +57,8 @@ $states = array(
     'WY'=>'Wyoming',
     'AE'=>'Armed Forces Africa \ Canada \ Europe \ Middle East',
     'AA'=>'Armed Forces America (Except Canada)',
-    'AP'=>'Armed Forces Pacific'
+    'AP'=>'Armed Forces Pacific',
+    'UK'=>'United Kingdom'
 );
 
 
