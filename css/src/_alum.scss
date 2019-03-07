@@ -336,6 +336,10 @@
 		padding: 0;
 	}
 
+	.year-buttons {
+		margin-top: -20px;
+	}
+
 	@include respond-to( 768px ) {
 		.third {
 			padding: 0 20px 0 0;

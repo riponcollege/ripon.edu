@@ -55,7 +55,8 @@ if ( $current_yr > 0 ) {
 		$year_info['news'] = get_cmb2_value( 'year_news' );
 		$year_info['sightings'] = get_cmb2_value( 'year_sightings' );
 
-		$year_info['photo'] = get_the_post_thumbnail_url( $post, array( 400, 400 ) );
+		$year_info['photo'] = get_the_post_thumbnail_url( $post );
+		$year_info['photo_thumb'] = get_the_post_thumbnail_url( $post, array( 400, 400 ) );
 		$year_info['photo_reunion'] = get_cmb2_value( 'year_photo_reunion' );
 	endwhile;
 	wp_reset_query();
@@ -161,7 +162,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 						</p><?php } ?><?php } ?>
 						<?php if ( !empty( $year_info['agent_former_name'] ) ) { ?><p><strong>Former Class Agent:</strong><br><?php print $year_info['agent_former_name'] ?></p><?php } ?>
 					</div>
-					<div class="third">
+					<div class="third year-buttons">
 						<!--<?php 
 						if ( !empty( $year_info['memories'] ) ) { 
 							$memories_output = implode(' | ', array_map(
