@@ -55,7 +55,7 @@ if ( $current_yr > 0 ) {
 		$year_info['news'] = get_cmb2_value( 'year_news' );
 		$year_info['sightings'] = get_cmb2_value( 'year_sightings' );
 
-		$year_info['photo'] = get_the_post_thumbnail_url( $post );
+		$year_info['photo'] = get_the_post_thumbnail_url( $post, 'full' );
 		$year_info['photo_thumb'] = get_the_post_thumbnail_url( $post, array( 400, 400 ) );
 		$year_info['photo_reunion'] = get_cmb2_value( 'year_photo_reunion' );
 	endwhile;
