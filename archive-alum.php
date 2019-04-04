@@ -65,7 +65,7 @@ if ( $current_yr > 0 ) {
 
 
 function show_alum_category_image( $category ) {
-	print '<img src="' . get_bloginfo( 'template_url' ) . '/img/alum-' . $category . '.png">';
+	print '<img src="' . get_bloginfo( 'template_url' ) . '/img/alum-' . $category . '.png?v=2">';
 }
 
 
