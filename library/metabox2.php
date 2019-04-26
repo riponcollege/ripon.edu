@@ -64,6 +64,7 @@ $states = array(
 
 // set up an array of years from 1940 to current
 $years = array();
+$years[0] = '- none -';
 $n = 1950;
 while ( $n < ( date( 'Y' ) + 1 ) ) {
     $years[$n] = $n;
