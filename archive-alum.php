@@ -186,7 +186,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 				<div class="alum-filter">
 					<form name="alum-filters" action="<?php print $base_url; ?>" method="get">
 					Year: <select name="y" class="alum-year">
-						<option value="0">- select year -</option>
+						<option value="0">- any -</option>
 						<?php
 						global $years;
 						foreach ( $years as $yr ) {
