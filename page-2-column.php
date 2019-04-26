@@ -15,15 +15,14 @@ get_header();
 		<div class="quarter left-menu">
 
 			<?php
-			if ( has_cmb2_value('left_content') ) {
-				show_cmb2_wysiwyg_value('left_content');
-			}
+			// show the sidebar menus.
+			left_menu_display();
 
-			?>
-
-			<?php left_menu_display(); ?>
-
- 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif; ?>
+			// only show the widget area of they haven't populated the box.
+			if ( !has_cmb2_value('left_content') ) {
+ 				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif;
+ 			}
+ 			?>
  			
 		</div>
 
@@ -34,7 +33,13 @@ get_header();
 			
 			<h1><?php the_title() ?></h1>
 			<div class="entry-content">
-				<?php the_content(); ?>
+				<?php if ( has_cmb2_value('left_content') ) { ?>
+				<div class="aux-box">
+					<?php show_cmb2_wysiwyg_value('left_content'); ?>
+				</div>
+				<?php } ?>
+
+	 			<?php the_content(); ?>
 			</div>
 
 				<?php

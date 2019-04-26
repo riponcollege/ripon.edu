@@ -615,15 +615,22 @@ function page_metaboxes( $meta_boxes ) {
         'id' => 'left_column',
         'title' => 'Left Column',
         'pages' => array( 'page' ), // post type
-        'show_on' => array( 'key' => 'page-template', 'value' => 'page-2-column.php' ),
+        'show_on' => array( 
+            'key' => 'page-template', 
+            'value' => array( 
+                'page-2-column.php',
+                'page-2-column-right.php'
+            )
+        ),
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left
         'fields' => array(
             array(
-                'name' => 'Left Content Column',
+                'name' => 'Sidebar Content',
                 'id' => CMB_PREFIX . 'left_content',
-                'type' => 'wysiwyg'
+                'type' => 'wysiwyg',
+                'desc' => 'Populating this content will replace the sidebar widgets on two-column templates.'
             ),
         ),
     );

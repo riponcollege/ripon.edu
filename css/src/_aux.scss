@@ -1,0 +1,16 @@
+
+
+.aux-box {
+	border: 1px solid #ddd;
+	padding: 0 15px;
+	margin-bottom: 15px;
+	font-size: .85em;
+
+	@include respond-to( 768px ) {
+		float: right;
+		width: 30%;
+		margin: 0 0 15px 15px;
+		min-height: 250px;
+	}
+}
+
