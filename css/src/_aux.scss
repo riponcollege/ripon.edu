@@ -3,13 +3,14 @@
 .aux-box {
 	border: 1px solid #ddd;
 	padding: 0 15px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	font-size: .85em;
+	box-shadow: 5px 5px 20px rgba( $grey, 20% );
 
 	@include respond-to( 768px ) {
 		float: right;
 		width: 30%;
-		margin: 0 0 15px 15px;
+		margin: 0 0 20px 20px;
 		min-height: 250px;
 	}
 }
