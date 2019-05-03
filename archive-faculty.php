@@ -11,11 +11,14 @@ get_header();
 
 		<div class="quarter left-menu">
 			
-			<div class="menu-primary">
-				<h5 class="menu-title">Academics</h5>
-				<?php wp_nav_menu( array( 'theme_location' => 'academics-primary', 'menu_class' => 'nav-menu' ) ); ?>
+			<button class="toggle-sidebar-menu">Section Navigation</button>
+			<div class="sidebar-menu-container">
+				<div class="menu-primary">
+					<h5 class="menu-title">Academics</h5>
+					<?php wp_nav_menu( array( 'theme_location' => 'academics-primary', 'menu_class' => 'nav-menu' ) ); ?>
+				</div>
+				<div class="menu-buttons"><?php wp_nav_menu( array( 'theme_location' => 'academics-buttons', 'menu_class' => 'nav-menu' ) ); ?></div>
 			</div>
-			<div class="menu-buttons"><?php wp_nav_menu( array( 'theme_location' => 'academics-buttons', 'menu_class' => 'nav-menu' ) ); ?></div>
 
 		</div>
 
