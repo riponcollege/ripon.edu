@@ -28,12 +28,12 @@ header {
 
 	button.menu-toggle {
 		position: absolute;
-		top: 100px;
+		top: 82px;
 		left: 0;
 		background: $red-dark url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMAsfS51A2+6cnu0ds/UQcva7D7E8RTPvJoAAAAW0lEQVQY063POQKAIAwF0W+ComwqkPtfVWsSOl453SATeYUoo4qpwovJI7lwKsElLFXslLgfSucEEhNBJpBDDG7wpwyUtiutYKWb+d0GL/ONKKY4/3iELoXk+QCXmhAnR7E6TAAAAABJRU5ErkJggg==) center center no-repeat;
 		text-indent: -300px;
 		width: 35px;
-		height: 44px;
+		height: 35px;
 		padding: 0;
 		overflow: hidden;
 		cursor: pointer;
@@ -42,12 +42,8 @@ header {
 		opacity: .7;
 		transition: 400ms background-color ease-in-out;
 
-		@include respond-to( 400px ) {
-			width: 50px;
-		}
-
 		@include respond-to( 600px ) {
-			top: 80px;
+			top: 65px;
 		}
 
 		@include respond-to( $menu-breakpoint ) {
