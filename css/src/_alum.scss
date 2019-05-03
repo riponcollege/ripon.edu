@@ -283,6 +283,10 @@
 }
 
 .alum-buttons {
+	button {
+		margin: 10px 0;
+	}
+
 	@include respond-to( 1024px ) {
 		float: right;
 		padding-top: 10px;

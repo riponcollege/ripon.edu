@@ -244,7 +244,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 						<div class="info group">
 							<h5><?php print substr( get_the_title(), 0, 50 ); print ( strlen( get_the_title() ) > 50 ? '...' : '' ); ?></h5>
 							<?php if ( has_cmb2_value( 'alum_submitter' ) ) { ?><div class="quiet">Submitted by: <?php show_cmb2_value( 'alum_submitter' ) ?></div><?php } ?>
-							<div class="alum-year"><?php show_cmb2_value( 'alum_year' ) ?></div>
+							<?php if ( get_cmb2_value( 'alum_year' ) > 0 ) { ?><div class="alum-year"><?php show_cmb2_value( 'alum_year' ) ?></div><?php } ?>
 							<div class="alum-location"><?php show_cmb2_value( 'alum_city' ); ?>, <?php show_cmb2_value( 'alum_state' ) ?></div>
 						</div>
 						<div class="alum-category alum-category-<?php show_cmb2_value( 'alum_category' ) ?>"><?php print ucwords( str_replace( '-', ' ', get_cmb2_value( 'alum_category' ) ) ); ?></div>
