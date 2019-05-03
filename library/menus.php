@@ -82,6 +82,8 @@ function left_menu_display( $mode = 'both' ) {
 	// buttons menu
 	$menu_buttons = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_buttons", 1 );
 
+	print '<button class="toggle-sidebar-menu">Section Navigation</button>';
+	print '<div class="sidebar-menu-container">';
 
 	// verify that the menu exists by checking the menu name to see if it's empty
 	if ( !empty( $menu_primary ) && ( $mode == 'both' || $mode == 'primary' ) ) {
@@ -114,6 +116,8 @@ function left_menu_display( $mode = 'both' ) {
 
 		print '</div>';
 	}
+
+	print '</div>';
 
  }
 

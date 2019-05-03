@@ -1,7 +1,27 @@
 
 
+.toggle-sidebar-menu {
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+
+	@include respond-to( $menu-breakpoint ) {
+		display: none;
+	}
+}
+
+
+.sidebar-menu-container {
+	display: none;
+
+	@include respond-to( $menu-breakpoint ) {
+		display: block !important;
+	}
+}
+
+
 .left-menu, .sidebar {
-	
+
 	.menu-primary {
 		h5 {
 			background: $grey;

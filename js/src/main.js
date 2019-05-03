@@ -167,7 +167,13 @@ jQuery(document).ready(function($){
 	// add lightbox to any link with that class.
 	$( '.lightbox-iframe' ).magnificPopup({ 'type': 'iframe' });
 
+	// photo lightbox
 	$( '.lightbox-photo' ).magnificPopup({ 'type': 'image' });
+
+	// show/hide sidebar menu.
+	$( '.toggle-sidebar-menu' ).on( 'click', function(){
+		$( '.sidebar-menu-container' ).slideToggle( 500 );
+	});
 
 });
 
