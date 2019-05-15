@@ -37,13 +37,13 @@ caption, th, td {
 
 blockquote {
   &:before, &:after {
-	content: "";
+    content: "";
   }
 }
 
 q {
   &:before, &:after {
-	content: "";
+    content: "";
   }
 }
 
@@ -75,8 +75,8 @@ body {
 
 @media only screen and (min-width: 768px) {
   body {
-  	font-size: 16px;
-  	line-height: 24px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -85,13 +85,13 @@ a {
   -webkit-transition: opacity 400ms ease-in-out;
   transition: opacity 400ms ease-in-out;
   &:hover {
-	color: #e40a47;
+    color: #e40a47;
   }
   &.meta {
-	opacity: 0.5;
-	&:hover {
-	  opacity: 1;
-	}
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -106,7 +106,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @media only screen and (min-width: 768px) {
   p, h1, h2, h3, h4, h5, h6 {
-	 padding: 11px 0;
+     padding: 11px 0;
   }
 }
 
@@ -189,18 +189,18 @@ blockquote {
 
 article {
   ol, ul {
-  	padding: 15px 0 15px 30px;
+    padding: 15px 0 15px 30px;
   }
   ol li, ul li {
-  	padding: 0 0 20px;
+    padding: 0 0 20px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   article {
-  	ol, ul {
-  	  padding-left: 45px;
-  	}
+    ol, ul {
+      padding-left: 45px;
+    }
   }
 }
 
@@ -213,14 +213,17 @@ button, input[type=submit], input[type=reset], .btn {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-size: 1em;
-  color: #b30838;
+  color: $red-dark;
   text-decoration: none;
   background: white;
-  border: 1px solid #b30838;
+  border: 1px solid $red-dark;
   text-transform: uppercase;
-  -webkit-box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
-  box-shadow: 0 0 10px rgba(37, 37, 42, 0.2);
   cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+    color: lighten( $red-dark, 10% );
+  }
 }
 
 

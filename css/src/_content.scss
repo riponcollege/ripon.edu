@@ -153,20 +153,6 @@
 }
 
 
-.btn {
-	padding: 12px 16px;
-	background: lighten( $grey, 50% );
-	color: $blue;
-	font-size: 12px;
-	text-transform: uppercase;
-	text-decoration: none;
-
-	&:hover {
-		background: lighten( $grey, 45% );
-	}
-}
-
-
 a.button {
 	background: $grey-light url(../img/more-arrow.png) right center no-repeat;
 	border: 0;
