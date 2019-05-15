@@ -222,7 +222,44 @@ button, input[type=submit], input[type=reset], .btn {
   display: inline-block;
 
   &:hover {
-    color: lighten( $red-dark, 10% );
+    color: $red-dark;
+    opacity: .8;
+  }
+
+  &.teal {
+    background-color: $teal;
+    color: white;
+    border-color: $teal;
+  }
+
+  &.red-dark {
+    background-color: $red-dark;
+    color: white;
+    border-color: $red-dark;
+  }
+
+  &.red-light {
+    background-color: $red-light;
+    color: white;
+    border-color: $red-light;
+  }
+
+  &.blue {
+    background-color: $blue;
+    color: white;
+    border-color: $blue;
+  }
+
+  &.orange {
+    background-color: $orange;
+    color: black;
+    border-color: $orange;
+  }
+
+  &.grey {
+    background-color: $grey;
+    color: white;
+    border-color: $grey;
   }
 }
 
