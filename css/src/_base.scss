@@ -220,6 +220,7 @@ button, input[type=submit], input[type=reset], .btn {
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
+  margin-bottom: 4px;
 
   &:hover {
     color: $red-dark;
