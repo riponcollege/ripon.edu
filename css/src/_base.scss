@@ -184,7 +184,22 @@ blockquote {
   line-height: 1.5em;
   font-style: italic;
   color: lighten( $grey, 10% );
-  padding: 3px 30px;
+  padding: 10px 30px;
+  position: relative;
+
+  @include respond-to( 768px ) {
+    padding: 20px 50px;
+
+    &:before {
+      content: '"';
+      position: absolute;
+      font-family: "Times New Roman", sans-serif;
+      left: 5px;
+      top: 37px;
+      font-size: 70px;
+      opacity: .2;
+    }
+  }
 }
 
 article {
