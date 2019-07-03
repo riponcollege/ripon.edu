@@ -10,6 +10,14 @@ get_header();
 
 	<?php the_showcase(); ?>
 
+	<div class="page-title group">
+		<div class="wrap">
+			<div class="quarter">&nbsp;</div>
+			<div class="three-quarter">
+				<h1><?php the_title() ?></h1>
+			</div>
+		</div>
+	</div>
 	<div class="wrap group two-column">
 
 		<div class="quarter left-menu">
@@ -25,7 +33,6 @@ get_header();
 			<?php 
 			while ( have_posts() ) : the_post(); ?>
 			
-			<h1><?php the_title() ?></h1>
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
