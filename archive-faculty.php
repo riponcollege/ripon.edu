@@ -7,6 +7,14 @@ get_header();
 	
 ?>
 
+	<div class="page-title group">
+		<div class="wrap">
+			<div class="quarter">&nbsp;</div>
+			<div class="three-quarter">
+				<h1>Faculty Directory</h1>
+			</div>
+		</div>
+	</div>
 	<section id="primary" class="content-area wrap group" role="main">
 
 		<div class="quarter left-menu">
@@ -23,8 +31,6 @@ get_header();
 		</div>
 
 		<div class="three-quarter">
-
-			<h1 class="page-title">Faculty Directory</h1>
 
 			<?php include( "searchform-faculty.php" ); ?>
 
