@@ -1,5 +1,19 @@
 
 
+.page-title {
+	background: #eee;
+	border-bottom: 1px solid #ccc;
+
+	.quarter {
+		display: none;
+
+		@include respond-to( 768px ) {
+			display: block;
+		}
+	}
+}
+
+
 .content-area {
 	padding: 20px 0;
 

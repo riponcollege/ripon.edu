@@ -5,7 +5,7 @@
 	width: 100%;
 	margin: 10px 0;
 
-	@include respond-to( $menu-breakpoint ) {
+	@include respond-to( 768px ) {
 		display: none;
 	}
 }
@@ -14,8 +14,11 @@
 .sidebar-menu-container {
 	display: none;
 
-	@include respond-to( $menu-breakpoint ) {
+	@include respond-to( 768px ) {
 		display: block !important;
+		border: 1px solid #ddd;
+		margin-top: -90px;
+		box-shadow: 0 0 20px #eee;
 	}
 }
 
@@ -23,6 +26,8 @@
 .left-menu, .sidebar {
 
 	.menu-primary {
+		background: white;
+
 		h5 {
 			background: $grey;
 			color: white;
