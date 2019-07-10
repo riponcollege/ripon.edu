@@ -38,11 +38,19 @@ get_header();
 			</div>
 		</div>
 
+
+		<?php 
+		$category = get_queried_object();
+		if ( $category->term_id == 5508 ) {
+			print '<div class="aux-box" style="margin-top: 80px;">' . apply_filters( 'the_content', get_post_meta( 120, CMB_PREFIX . 'left_content', 1 ) ) . '</div>';
+		} else {
+			?>
 		<div class="third sidebar pad-top">
-
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-blog') ) : ?><!-- no sidebar --><?php endif; ?>
-
 		</div>
+			<?php
+		}
+		?>
 
 	</div>
 
