@@ -3,7 +3,22 @@
 Home/catch-all template
 */
 
-get_header(); ?>
+get_header(); 
+
+
+function alter_query($query) {
+
+	//gets the global query var object
+	global $wp_query;
+	$query->set( 'category__not_in', array( '5508' ) );
+
+	//we remove the actions hooked on the '__after_loop' (post navigation)
+	remove_all_actions( '__after_loop');
+
+}
+add_action('pre_get_posts','alter_query');
+
+?>
 
 
 	<div id="primary" class="wrap group full-width">
