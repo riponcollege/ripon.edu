@@ -15,8 +15,23 @@ $courses = get_cmb_value( "faculty_courses" );
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); 
 				?>
-		<div class="third">
-			<button class="back-to-faculty-list">&laquo; Back to Directory</button>
+		<div class="quarter">
+			<div class="tab-nav">
+				<button class="back-to-faculty-list">&laquo; Back to Directory</button>
+				<ul>
+					<li class="basic">Basic Information</li>
+					<?php do_faculty_tab_nav( "Awards &amp; Honors", "awards" ) ?>
+					<?php do_faculty_tab_nav( "Publications", "publications" ) ?>
+					<?php do_faculty_tab_nav( "Areas of Interest", "areas" ) ?>
+					<?php do_faculty_tab_nav( "Professional Affiliations", "affiliations" ) ?>
+					<?php do_faculty_tab_nav( "Presentations", "presentations" ) ?>
+					<?php do_faculty_tab_nav( "Pedagogy", "pedagogy" ) ?>
+					<?php do_faculty_tab_nav( "Production Credits", "credits" ) ?>
+					<?php do_faculty_tab_nav( "Professional Experience", "experience" ) ?>
+				</ul>
+			</div>
+		</div><!-- #content -->
+		<div class="quarter right">
 			<div class="faculty-info">
 				<?php the_post_thumbnail() ?>
 				<h2><?php the_title(); ?></h2>
@@ -32,21 +47,8 @@ $courses = get_cmb_value( "faculty_courses" );
 					?>
 				</p>
 			</div>
-			<div class="tab-nav">
-				<ul>
-					<li class="basic">Basic Information</li>
-					<?php do_faculty_tab_nav( "Awards &amp; Honors", "awards" ) ?>
-					<?php do_faculty_tab_nav( "Publications", "publications" ) ?>
-					<?php do_faculty_tab_nav( "Areas of Interest", "areas" ) ?>
-					<?php do_faculty_tab_nav( "Professional Affiliations", "affiliations" ) ?>
-					<?php do_faculty_tab_nav( "Presentations", "presentations" ) ?>
-					<?php do_faculty_tab_nav( "Pedagogy", "pedagogy" ) ?>
-					<?php do_faculty_tab_nav( "Production Credits", "credits" ) ?>
-					<?php do_faculty_tab_nav( "Professional Experience", "experience" ) ?>
-				</ul>
-			</div>
-		</div><!-- #content -->
-		<div class="two-third tab-container">
+		</div>
+		<div class="half tab-container">
 
 			<div class="tab-content basic first">
 				<h1>Basic Information</h1>
