@@ -60,7 +60,12 @@ the_showcase();
 
 		</div><!-- #content -->
 		<div class="two-third tab-container">
-
+			
+			<?php
+			if ( has_cmb2_value( 'area_facebook' ) ) {
+				?><a href="<?php show_cmb2_value( 'area_facebook' ); ?>" class="btn" style="float: right; font-size: .9em; text-align: center;">View Sample<br> Course Schedule</a><?php
+			}
+			?>
 			<h1><?php the_title(); ?></h1>
 			<h3><?php 
 			$terms = wp_get_post_terms( get_the_ID(), 'area_cat' );
