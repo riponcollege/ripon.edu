@@ -16,9 +16,6 @@
 
 	@include respond-to( 768px ) {
 		display: block !important;
-		border: 1px solid #ddd;
-		margin-top: -90px;
-		box-shadow: 0 0 20px #eee;
 	}
 }
 

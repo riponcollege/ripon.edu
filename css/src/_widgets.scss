@@ -20,8 +20,8 @@
 
 
 .sidebar {
-	.ripon-widget, .widget_video, .tribe-events-list-widget, .tribe-events-adv-list-widget, .tribe_mini_calendar_widget, .widget_recent_entries, .postmetavideo, .cat-post-widget, .widget_categories, .widget_text {
-		margin-top: 50px;
+	.ripon-widget, .widget_video, .tribe-events-list-widget, .tribe-events-adv-list-widget, .tribe_mini_calendar_widget, .widget_recent_entries, .postmetavideo, .cat-post-widget, .widget_categories {
+		margin-bottom: 30px;
 		position: relative;
 		padding-top: 25px;
 		border-top: 4px double #ddd;
@@ -65,6 +65,11 @@
 		&.fa-map-marker:before {
 			content: $fa-var-map-marker;
 		}
+	}
+
+	.widget_text {
+		margin-bottom: 30px;
+		position: relative;
 	}
 }
 
