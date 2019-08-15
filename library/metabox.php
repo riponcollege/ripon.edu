@@ -619,7 +619,8 @@ function page_metaboxes( $meta_boxes ) {
             'key' => 'page-template', 
             'value' => array( 
                 'page-2-column.php',
-                'page-2-column-right.php'
+                'page-2-column-right.php',
+                'page-2-column-right-programs.php'
             )
         ),
         'context' => 'normal',
