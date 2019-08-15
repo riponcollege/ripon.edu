@@ -20,6 +20,20 @@ get_header();
 	</div>
 	<div class="wrap group two-column">
 
+		<div class="third left-menu sidebar right">
+
+			<?php
+			// show the sidebar menus.
+			left_menu_display();
+
+			// only show the widget area of they haven't populated the box.
+			if ( !has_cmb2_value('left_content') ) {
+ 				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif;
+ 			}
+ 			?>
+ 			
+		</div>
+
 		<div class="two-third">
 
 			<?php 
@@ -43,20 +57,6 @@ get_header();
 			the_accordions();
 			?>
 
-		</div>
-
-		<div class="third left-menu sidebar">
-
-			<?php
-			// show the sidebar menus.
-			left_menu_display();
-
-			// only show the widget area of they haven't populated the box.
-			if ( !has_cmb2_value('left_content') ) {
- 				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif;
- 			}
- 			?>
- 			
 		</div>
 
 		<div class="content-wide">
