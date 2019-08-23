@@ -20,7 +20,7 @@ get_header();
 	</div>
 	<div class="wrap group two-column">
 
-		<div class="third left-menu sidebar right">
+		<div class="third sidebar right">
 
 			<?php
 			// show the sidebar menus.
