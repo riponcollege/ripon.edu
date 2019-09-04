@@ -26,7 +26,7 @@ class ripon_widget extends WP_Widget {
 		$content = apply_filters( 'widget_text', $instance['content'] );
 
 		// open the ripon widget
-		echo '<div class="ripon-widget ' . $icon . '">';
+		echo '<div class="ripon-widget">';
 
 		// before and after widget arguments are defined by themes
 		if ( !empty( $title ) && $title != 'none' ) echo $args['before_title'] . $title . $args['after_title'];
