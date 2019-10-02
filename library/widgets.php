@@ -105,5 +105,3 @@ function ripon_load_widget() {
 add_action( 'widgets_init', 'ripon_load_widget' );
 
 
-
-?>

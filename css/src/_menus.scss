@@ -118,10 +118,13 @@
 
 
 .left-menu {
-	position: relative;
-	top: -100px;
-
+	@include respond-to( 768px ) {		
+		position: relative;
+		top: -100px;
+	}
+	
 	.menu-primary {
 		border: 1px solid $grey-light;
 	}
+
 }

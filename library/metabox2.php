@@ -367,14 +367,68 @@ function cmb2_sample_metaboxes() {
         'type' => 'wysiwyg',
         'show_names' => false,
         'options' => array(
-        	'textarea_rows' => 10
+            'textarea_rows' => 10
         )
+    ) );
+
+    
+
+    /*
+    // accordion metabox
+    $phototiles_metabox = new_cmb2_box( array(
+        'id' => 'phototiles_metabox',
+        'title' => 'Photo Tiles',
+        'desc' => 'A 4-column component with background images for each of 4 columns, colors, and text displaying for each.',
+        'object_types' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $phototiles_metabox->add_field( array(
+        'name' => 'Phototile Image',
+        'id'   => CMB_PREFIX . 'tile_photo',
+        'type'    => 'file',
+        // Optional:
+        'options' => array(
+            'url' => false, // Hide the text input for the url
+        ),
+        'text'    => array(
+            'add_upload_file_text' => 'Add Photo' // Change upload button text. Default: "Add or Upload File"
+        ),
+        // query_args are passed to wp.media's library query.
+        'query_args' => array(
+            'type' => array(
+                'image/gif',
+                'image/jpeg',
+                'image/png',
+            ),
+        ),
+        'preview_size' => 'large', // Image size to use when previewing in the admin.
+    ) );
+
+    $phototiles_metabox->add_field( array(
+        'name' => 'Phototile Color',
+        'id'   => CMB_PREFIX . 'tile_color',
+        'type' => 'select',
+        'options' => array(
+            'red-dark' => 'Red (Dark)',
+            'red-light' => 'Red (Light)',
+            'teal' => 'Teal',
+            'grey' => 'Grey (Dark)',
+            'grey-light' => 'Grey (Light)',
+            'orange' => 'Orange'
+        ),
+        'default' => 'red-dark'
+    ) );
+
+    $phototiles_metabox->add_field( array(
+        'name' => 'Phototile Text',
+        'id'   => CMB_PREFIX . 'tile_text',
+        'type' => 'text',
     ) );
 
 
 
-
-	/*
 	// showcase metabox
 	$showcase = new_cmb2_box( array(
 		'id' => 'showcase_metabox',
