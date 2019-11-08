@@ -530,6 +530,78 @@ function page_metaboxes( $meta_boxes ) {
     );
 
 
+
+    // infographic metabox
+    $meta_boxes['phototile_metabox'] = array(
+        'id' => 'phototile_metabox',
+        'title' => 'Phototiles',
+        'pages' => array( 'page' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => false, // Show field names on the left
+        'fields' => array(
+            array(
+                'id' => CMB_PREFIX . 'phototiles',
+                'type' => 'group',
+                'description' => __('Add photo tiles to display on a page.', 'cmb'),
+                'options' => array(
+                    'add_button' => __('Add Tile', 'cmb'),
+                    'remove_button' => __('Remove Tile', 'cmb'),
+                    'sortable' => true, // beta
+                ),
+                'fields' => array(
+                    array(
+                        'name' => 'Background',
+                        'description' => 'Background image for the photo tile',
+                        'id'   => 'background',
+                        'type' => 'file',
+                        'preview_size' => array( 100, 100 )
+                    ),
+                    array(
+                        'name' => 'Title',
+                        'description' => 'Enter a title for this tile',
+                        'id'   => 'title',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Subtitle',
+                        'description' => 'Enter the subtitle.',
+                        'id'   => 'subtitle',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Link',
+                        'description' => 'Enter a URL to link this tile to. (optional)',
+                        'id'   => 'link',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Hover Content',
+                        'description' => 'Enter content to display when users hover on this tile.',
+                        'id'   => 'content',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'name' => 'Hover Color',
+                        'id'   => 'color',
+                        'type' => 'select',
+                        'options' => array(
+                            'red-dark' => 'Red (Dark)',
+                            'red-light' => 'Red (Light)',
+                            'teal' => 'Teal',
+                            'grey' => 'Grey (Dark)',
+                            'grey-light' => 'Grey (Light)',
+                            'orange' => 'Orange'
+                        ),
+                        'default' => 'red-dark'
+                    ),
+                )
+            )
+        )
+    );
+
+
+
     // tab box
     $meta_boxes['tabs_metabox'] = array(
         'id' => 'tabs_metabox',

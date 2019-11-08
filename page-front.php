@@ -60,6 +60,8 @@ get_header();
 
 	<?php the_infographic(); ?>
 
+	<?php the_phototiles(); ?>
+
 	<div class="social">
 	 	<div class="wrap group">
 		

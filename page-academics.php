@@ -53,8 +53,9 @@ get_header();
 
 		</div>
 
-
 	</div>
+	
+	<?php the_phototiles(); ?>
 
 	<div class="wrap">
 		<?php the_photo_grid(); ?>

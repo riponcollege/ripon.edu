@@ -30,6 +30,8 @@ get_header();
 		?>
 
 	</main><!-- #primary -->
+	
+	<?php the_phototiles(); ?>
 
 <?php
 

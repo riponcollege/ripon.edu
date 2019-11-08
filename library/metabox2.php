@@ -375,40 +375,56 @@ function cmb2_sample_metaboxes() {
 
     /*
     // accordion metabox
-    $phototiles_metabox = new_cmb2_box( array(
+    $phototiles = new_cmb2_box( array(
         'id' => 'phototiles_metabox',
         'title' => 'Photo Tiles',
         'desc' => 'A 4-column component with background images for each of 4 columns, colors, and text displaying for each.',
         'object_types' => array( 'page' ), // post type
         'context' => 'normal',
-        'priority' => 'high',
+        'priority' => 'high'
     ) );
 
-    $phototiles_metabox->add_field( array(
-        'name' => 'Phototile Image',
-        'id'   => CMB_PREFIX . 'tile_photo',
-        'type'    => 'file',
-        // Optional:
+    $phototiles_group = $cmb->add_field( array(
+        'id' => CMB_PREFIX . 'phototile',
+        'type' => 'group',
         'options' => array(
-            'url' => false, // Hide the text input for the url
-        ),
-        'text'    => array(
-            'add_upload_file_text' => 'Add Photo' // Change upload button text. Default: "Add or Upload File"
-        ),
-        // query_args are passed to wp.media's library query.
-        'query_args' => array(
-            'type' => array(
-                'image/gif',
-                'image/jpeg',
-                'image/png',
-            ),
-        ),
-        'preview_size' => 'large', // Image size to use when previewing in the admin.
+            'add_button' => __('Add Tile', 'cmb'),
+            'remove_button' => __('Remove Tile', 'cmb'),
+            'group_title'   => __( 'Tile {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
     ) );
 
-    $phototiles_metabox->add_field( array(
-        'name' => 'Phototile Color',
-        'id'   => CMB_PREFIX . 'tile_color',
+    $phototiles->add_group_field( $phototiles_group, array(
+        'name' => 'Background',
+        'desc' => 'Select a photo for the background of this tile.',
+        'id'   => 'background',
+        'type' => 'file',
+        'preview_size' => array( 350, 150 )
+    ) );
+
+    $phototiles->add_group_field( $phototiles_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text'
+    ) );
+
+    $phototiles->add_group_field( $phototiles_group, array(
+        'name' => 'Subtitle',
+        'id'   => 'subtitle',
+        'type' => 'text'
+    ) );
+
+    $phototiles->add_group_field( $phototiles_group, array(
+        'name' => 'Hover Text',
+        'desc' => 'Enter the content that will display when a user mouses over the tile.',
+        'id'   => 'subtitle',
+        'type' => 'wysiwyg'
+    ) );
+
+    $phototiles->add_group_field( $phototiles_group, array(
+        'name' => 'Hover Color',
+        'id'   => 'color',
         'type' => 'select',
         'options' => array(
             'red-dark' => 'Red (Dark)',
@@ -421,11 +437,13 @@ function cmb2_sample_metaboxes() {
         'default' => 'red-dark'
     ) );
 
-    $phototiles_metabox->add_field( array(
-        'name' => 'Phototile Text',
-        'id'   => CMB_PREFIX . 'tile_text',
-        'type' => 'text',
+    $phototiles->add_group_field( $phototiles_group, array(
+        'name' => 'Link',
+        'desc' => 'Enter a URL for where this tile should go.',
+        'id'   => 'link',
+        'type' => 'text'
     ) );
+
 
 
 

@@ -86,6 +86,8 @@ get_header();
 
 	<?php the_infographic(); ?>
 
+	<?php the_phototiles(); ?>
+
 	<div class="wrap">
 		<?php the_photo_grid(); ?>
 	</div>
