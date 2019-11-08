@@ -1,6 +1,7 @@
 
 
 .phototiles {
+	@include clearfix;
 	
 	.phototile {
 		padding: 40px;
