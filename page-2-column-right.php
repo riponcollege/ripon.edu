@@ -65,9 +65,9 @@ get_header();
 
 	</div>
 
-	<?php the_infographic(); ?>
-
 	<?php the_phototiles(); ?>
+
+	<?php the_buttons(); ?>
 
 	<div class="wrap">
 		<?php the_photo_grid(); ?>

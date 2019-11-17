@@ -31,7 +31,6 @@ include( "library/metabox.php" );
 
 // include quote metaboxes/functions
 include( "library/showcase.php" );
-include( "library/infographic.php" );
 include( "library/phototiles.php" );
 include( "library/content.php" );
 include( "library/social.php" );

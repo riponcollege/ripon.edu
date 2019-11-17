@@ -72,18 +72,12 @@ get_header();
 
 			endwhile;
 			?>
+
 			<div class="pagination">
 				<?php echo paginate_links(); ?>
 			</div>
-				<?php
-			else : ?>			if ( have_posts() ) : 
-				?>
-
-			<div class="crowd-funding">
-
-				<p>No results for that search term.</p>
-				<?php
-
+			
+			<?php
 			endif;
 			?>
 
