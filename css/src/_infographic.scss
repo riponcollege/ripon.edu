@@ -8,22 +8,6 @@
 
 	.infographic-buttons {
 		text-align: center;
-
-		a.btn {
-			display: block;
-			text-align: left;
-
-			@include respond-to( 550px ) {
-				display: inline-block;
-				width: 30%;
-				margin: 0 4%;
-			}
-
-			@include respond-to( 768px ) {
-				width: 20%;
-				margin: 0 1%;
-			}
-		}
 	}
 }
 
