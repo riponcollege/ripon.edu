@@ -72,7 +72,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-AZ",
-                    info: "Counselor: " + territory100
+                    info: "Counselor: " + territory10
                 },
                 {
                     id: "US-AR",
