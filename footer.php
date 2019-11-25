@@ -39,7 +39,6 @@
 			<strong>Email:</strong> <span class="fold"><a href="mailto:adminfo@ripon.edu">adminfo@ripon.edu</a></span><br>
 			<strong>Phone:</strong> <span class="fold"><a href="tel:9207488115">920-748-8115</a></span><br>
 			<a href="http://www.facebook.com/ripon.college"><img src="<?php bloginfo('template_url') ?>/img/social-facebook.png"></a>
-			<a href="https://www.flickr.com/photos/ripon_college/"><img src="<?php bloginfo('template_url') ?>/img/social-flickr.png"></a>
 			<a href="http://www.linkedin.com/groups?home=&gid=4646327&trk=anet_ug_hm"><img src="<?php bloginfo('template_url') ?>/img/social-linkedin.png"></a>
 			<a href="https://twitter.com/riponcollege"><img src="<?php bloginfo('template_url') ?>/img/social-twitter.png"></a>
 			<a href="http://www.youtube.com/riponcollegevideo"><img src="<?php bloginfo('template_url') ?>/img/social-youtube.png"></a>

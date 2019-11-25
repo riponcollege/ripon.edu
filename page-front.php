@@ -58,10 +58,6 @@ get_header();
 
 	</div>
 
-	<?php the_phototiles(); ?>
-
-	<?php the_buttons(); ?>
-
 	<div class="social">
 	 	<div class="wrap group">
 		
@@ -97,6 +93,10 @@ get_header();
 
 		</div>
 	</div>
+
+	<?php the_phototiles(); ?>
+
+	<?php the_buttons(); ?>
 	
 	<div class="wrap">
 		<?php the_photo_grid( 18 ); ?>
