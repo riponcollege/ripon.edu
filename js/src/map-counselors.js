@@ -80,7 +80,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-CA",
-                    info: "Counselor: " + territory1
+                    info: "Counselor: " + territory5
                 },
                 {
                     id: "US-CO",
@@ -112,7 +112,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-IL",
-                    info: "North: " + territory4 + "<br>Central and South:" + territory4
+                    info: "Counselor: " + territory11
                 },
                 {
                     id: "US-IN",
@@ -120,11 +120,11 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-IA",
-                    info: "Counselor: " + territory1
+                    info: "Counselor: " + territory5
                 },
                 {
                     id: "US-KS",
-                    info: "Counselor: " + territory1
+                    info: "Counselor: " + territory5
                 },
                 {
                     id: "US-KY",
@@ -160,7 +160,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-MO",
-                    info: "Counselor: " + territory1
+                    info: "Counselor: " + territory5
                 },
                 {
                     id: "US-MT",
@@ -168,7 +168,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-NE",
-                    info: "Counselor: " + territory1
+                    info: "Counselor: " + territory5
                 },
                 {
                     id: "US-NV",
@@ -196,7 +196,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-ND",
-                    info: "Counselor: " + territory1
+                    info: "Counselor: " + territory5
                 },
                 {
                     id: "US-OH",
@@ -224,7 +224,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-SD",
-                    info: "Counselor: " + territory1
+                    info: "Counselor: " + territory5
                 },
                 {
                     id: "US-TN",
@@ -256,7 +256,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-WI",
-                    info: "North: " + territory13 + "<br>North East: " + territory12 + "<br>North West: " + territory12 + "<br>Central: " + territory10 + "<br>South East: " + territory2 + "<br>South West: " + territory1
+                    info: "North: " + territory13 + "<br>North East: " + territory12 + "<br>North West: " + territory12 + "<br>Central: " + territory10 + "<br>South East: " + territory7 + "<br>South West: " + territory13
                 },
                 {
                     id: "US-WY",
