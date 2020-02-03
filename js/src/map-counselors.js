@@ -37,8 +37,8 @@ AmCharts.ready(function() {
     var counselorT11 = "Hannah Erdman";
     var territory11 = counselorT11.link("http://www.ripon.edu/erdmanh");
     // Counselor Territory 12
-    var counselorT12 = "Maddie Vandenhouten";
-    var territory12 = counselorT12.link("http://www.ripon.edu/vandenhoutenm");
+    var counselorT12 = "Maddie McCoy";
+    var territory12 = counselorT12.link("https://www.ripon.edu/mccoym/");
     // Counselor Territory 13
     var counselorT13 = "Jill Cardinal";
     var territory13 = counselorT13.link("http://www.ripon.edu/cardinalj");
