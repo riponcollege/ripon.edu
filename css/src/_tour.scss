@@ -1,0 +1,223 @@
+
+
+.tour {
+	background: url(../img/bg-tour.jpg) center center no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 40px 0;
+	vertical-align: top;
+	transition: 1s all ease-in-out;
+	position: relative;
+
+	.tour-background {
+		display: none;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		min-height: 100%;
+		z-index: 0;
+
+		@include respond-to( 1220px ) {
+			display: block;
+		}
+	}
+
+	@include respond-to( 768px ) {
+		padding: 100px 0 140px;
+	}
+
+	@include respond-to( 1024px ) {
+		padding: 150px 0 250px;
+	}
+
+	@include respond-to( 1220px ) {
+		padding: 200px 0 300px;
+	}
+
+	a.section-close {
+		background: $grey-light;
+		border: 2px solid $grey;
+		color: $grey;
+		@include font-bold;
+		font-size: .8em;
+		text-transform: uppercase;
+		border-radius: 5px;
+		padding: 3px 6px;
+		cursor: pointer;
+
+		@include respond-to( 768px ) {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			z-index: 1010;
+		}
+	}
+	
+	.tour-sections {
+		z-index: 1000;
+		opacity: 1;
+
+		&.hidden {
+			opacity: 0;
+		}
+
+		@include respond-to( 768px ) {
+			height: 220px;
+		}
+	}
+
+	.section {
+		position: relative;
+		display: inline-block;
+		width: 220px;
+		margin: 5px 15px;
+		z-index: 1005;
+
+		@include respond-to( 500px ) {
+			margin: 15px;
+		}
+
+		&.open {
+			.links {
+				display: block;
+				height: 120px;
+			}
+		}
+
+		& > a {
+			@include font-bold;
+			font-size: .9em;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: block;
+			background: $red-dark;
+			padding: 5px 12px;
+			color: white;
+			border: 2px solid white;
+			opacity: .9;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.links {
+			display: none;
+			margin-top: 10px;
+			background: rgba( white, .8 );
+			border: 2px solid $red-dark;
+			padding: 10px;
+			height: 0;
+
+			ul {
+				text-align: left;
+				list-style: disc;
+				padding: 0 0 0 25px;
+
+				li {
+					a {
+						font-size: .85em;
+						color: black;
+						cursor: pointer;
+					}
+				}
+			}
+
+		}
+	}
+
+	.tour-mission {
+		background: rgba( white, .85 );
+		border: 2px solid $red-dark;
+		padding: 20px;
+		margin: 10px 20px 10px 20px;
+		position: relative;
+		z-index: 1002;
+
+		@include respond-to( 1220px ) {
+			position: absolute;
+			bottom: 70px;
+			left: 20%;
+			right: 20%;
+		}
+	}
+
+	.tour-videos {
+		.section-video {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1010;
+			background: rgba( white, .9 );
+			overflow: auto;
+			padding-top: 15px;
+
+			@include respond-to( 768px ) {
+				padding: 20px;
+				overflow: visible;
+			}
+
+			@include respond-to( 1024px ) {
+				top: 10%;
+				left: 10%;
+				right: 10%;
+				bottom: auto;
+				height: 450px;
+				border: 2px solid $red-dark;
+				padding: 0 20px 20px 20px;
+			}
+
+			@include respond-to( 1300px ) {
+				top: 10%;
+				width: 1220px;
+				left: 50%;
+				right: auto;
+				margin-left: -610px;
+				height: 500px;
+			}
+
+			.video {
+				padding-top: 15px;
+
+				@include respond-to( 768px ) {
+					width: 50%;
+					float: left;
+				}
+			}
+
+			.caption {
+				padding: 20px;
+
+				@include respond-to( 768px ) {
+					position: absolute;
+					left: 51%;
+					top: 20px;
+					right: 20px;
+					bottom: 20px;
+					overflow: auto;
+				}
+
+				@include respond-to( 1024px ) {
+					padding: 0 20px 20px 20px;
+				}
+
+				h3 {
+					@include font-bold;
+				}
+
+				.caption-inner {
+					text-align: left;
+					font-size: .9em;
+
+				}
+			}
+		}
+	}
+
+}
+

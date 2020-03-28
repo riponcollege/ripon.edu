@@ -371,6 +371,294 @@ function cmb2_sample_metaboxes() {
         )
     ) );
 
+
+    // area of interest information
+    $tour_info_box = new_cmb2_box( array(
+        'id' => 'tour_info',
+        'title' => 'Main Tour Page Info',
+        'object_types' => array( 'page' ), // Post type
+        'show_on' => array( 
+            'key' => 'page-template', 
+            'value' => 'page-tour.php'
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+    ) );
+    $tour_info_box->add_field( array(
+        'name' => 'Overview Document URL',
+        'id' => CMB_PREFIX . 'tour_info_background_image',
+        'type' => 'file'
+    ) );
+    $tour_info_box->add_field( array(
+        'name' => 'Background Video',
+        'id' => CMB_PREFIX . 'tour_info_background_video',
+        'type' => 'file'
+    ) );
+    $tour_info_box->add_field( array(
+        'name' => 'Mission Statement',
+        'id' => CMB_PREFIX . 'tour_info_mission',
+        'type' => 'wysiwyg',
+        'options' => array (
+            'textarea_rows' => 3
+        )
+    ) );
+
+
+
+    // tour (about) metabox
+    $tour_about_metabox = new_cmb2_box( array(
+        'id' => 'tour_about_metabox',
+        'title' => 'Tour (About)',
+        'object_types' => array( 'page' ), // Post type
+        'show_on' => array( 
+            'key' => 'page-template', 
+            'value' => 'page-tour.php'
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $tour_about_metabox_group = $tour_about_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'tour_about',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Link', 'cmb'),
+            'remove_button' => __('Remove Link', 'cmb'),
+            'group_title'   => __( 'Link {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Video',
+        'id'   => 'video',
+        'desc' => 'Enter the video URL (from Vimeo/Youtube)',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+        'show_names' => false,
+        'options' => array(
+            'textarea_rows' => 10
+        )
+    ) );
+
+
+
+    // tour (academics) metabox
+    $tour_academics_metabox = new_cmb2_box( array(
+        'id' => 'tour_academics_metabox',
+        'title' => 'Tour (Academics)',
+        'object_types' => array( 'page' ), // Post type
+        'show_on' => array( 
+            'key' => 'page-template', 
+            'value' => 'page-tour.php'
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $tour_academics_metabox_group = $tour_academics_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'tour_academics',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Link', 'cmb'),
+            'remove_button' => __('Remove Link', 'cmb'),
+            'group_title'   => __( 'Link {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Video',
+        'id'   => 'video',
+        'desc' => 'Enter the video URL (from Vimeo/Youtube)',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+        'show_names' => false,
+        'options' => array(
+            'textarea_rows' => 10
+        )
+    ) );
+
+
+
+    // tour (student) metabox
+    $tour_student_metabox = new_cmb2_box( array(
+        'id' => 'tour_student_metabox',
+        'title' => 'Tour (Student Life)',
+        'object_types' => array( 'page' ), // Post type
+        'show_on' => array( 
+            'key' => 'page-template', 
+            'value' => 'page-tour.php'
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $tour_student_metabox_group = $tour_student_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'tour_student',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Link', 'cmb'),
+            'remove_button' => __('Remove Link', 'cmb'),
+            'group_title'   => __( 'Link {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Video',
+        'id'   => 'video',
+        'desc' => 'Enter the video URL (from Vimeo/Youtube)',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+        'show_names' => false,
+        'options' => array(
+            'textarea_rows' => 10
+        )
+    ) );
+
+
+
+    // tour (wellness) metabox
+    $tour_wellness_metabox = new_cmb2_box( array(
+        'id' => 'tour_wellness_metabox',
+        'title' => 'Tour (Health & Wellness)',
+        'object_types' => array( 'page' ), // Post type
+        'show_on' => array( 
+            'key' => 'page-template', 
+            'value' => 'page-tour.php'
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $tour_wellness_metabox_group = $tour_wellness_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'tour_wellness',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Link', 'cmb'),
+            'remove_button' => __('Remove Link', 'cmb'),
+            'group_title'   => __( 'Link {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Video',
+        'id'   => 'video',
+        'desc' => 'Enter the video URL (from Vimeo/Youtube)',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+        'show_names' => false,
+        'options' => array(
+            'textarea_rows' => 10
+        )
+    ) );
+
+
+
+    // tour (map) metabox
+    $tour_map_metabox = new_cmb2_box( array(
+        'id' => 'tour_map_metabox',
+        'title' => 'Tour (Campus Map)',
+        'object_types' => array( 'page' ), // Post type
+        'show_on' => array( 
+            'key' => 'page-template', 
+            'value' => 'page-tour.php'
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $tour_map_metabox_group = $tour_map_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'tour_map',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Link', 'cmb'),
+            'remove_button' => __('Remove Link', 'cmb'),
+            'group_title'   => __( 'Link {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Video',
+        'id'   => 'video',
+        'desc' => 'Enter the video URL (from Vimeo/Youtube)',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+        'show_names' => false,
+        'options' => array(
+            'textarea_rows' => 10
+        )
+    ) );
+
     
 
     /*
