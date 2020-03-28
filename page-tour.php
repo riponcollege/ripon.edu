@@ -13,6 +13,9 @@ $tour_student = get_cmb2_value( 'tour_student' );
 $tour_wellness = get_cmb2_value( 'tour_wellness' );
 $tour_map = get_cmb2_value( 'tour_map' );
 
+$tour_background_image = get_cmb2_value( 'tour_info_background_image' );
+$tour_background_video = get_cmb2_value( 'tour_info_background_video' );
+
 
 function do_section( $section_label, $tour ) {
 	if ( !empty( $tour ) ) { ?>
@@ -48,9 +51,11 @@ function do_section_videos( $section_label, $tour ) {
 
 ?>
 	
-	<div class="tour">
-
+	<div class="tour"<?php print ( !empty( $tour_background_image ) ? ' style="background-image: url(' . $tour_background_image . ')"' : '' ) ?>>
+		
+		<?php if ( !empty( $tour_background_video) ) { ?>
 		<video autoplay muted loop class="tour-background"><source src="https://www.ripon.edu/wp-content/uploads/2018/11/Website-Background-General-720.mp4" type="video/mp4"></video>
+		<?php } ?>
 
 		<div class="tour-sections">
 			<div class="section about">

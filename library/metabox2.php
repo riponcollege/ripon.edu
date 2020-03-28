@@ -386,7 +386,7 @@ function cmb2_sample_metaboxes() {
         'show_names' => true, // Show field names on the left
     ) );
     $tour_info_box->add_field( array(
-        'name' => 'Overview Document URL',
+        'name' => 'Background Image',
         'id' => CMB_PREFIX . 'tour_info_background_image',
         'type' => 'file'
     ) );
