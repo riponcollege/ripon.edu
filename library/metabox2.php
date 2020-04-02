@@ -446,6 +446,14 @@ function cmb2_sample_metaboxes() {
     ) );
 
     $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Photo',
+        'id'   => 'photo',
+        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
         'name' => 'Content',
         'id'   => 'content',
         'type' => 'wysiwyg',
@@ -493,6 +501,14 @@ function cmb2_sample_metaboxes() {
         'id'   => 'video',
         'desc' => 'Enter the video URL (from Vimeo/Youtube)',
         'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Photo',
+        'id'   => 'photo',
+        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'type' => 'file',
         'sanitization_cb' => false
     ) );
 
@@ -548,6 +564,14 @@ function cmb2_sample_metaboxes() {
     ) );
 
     $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Photo',
+        'id'   => 'photo',
+        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
         'name' => 'Content',
         'id'   => 'content',
         'type' => 'wysiwyg',
@@ -599,6 +623,14 @@ function cmb2_sample_metaboxes() {
     ) );
 
     $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Photo',
+        'id'   => 'photo',
+        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
         'name' => 'Content',
         'id'   => 'content',
         'type' => 'wysiwyg',
@@ -646,6 +678,14 @@ function cmb2_sample_metaboxes() {
         'id'   => 'video',
         'desc' => 'Enter the video URL (from Vimeo/Youtube)',
         'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Photo',
+        'id'   => 'photo',
+        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'type' => 'file',
         'sanitization_cb' => false
     ) );
 

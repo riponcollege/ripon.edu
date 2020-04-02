@@ -134,7 +134,13 @@ function do_section_videos( $section_label, $tour ) {
 		<div class="section-video <?php print $section_label; ?>-<?php print $key ?>">
 			<a class="section-close">Back to Tour Home</a>
 			<div class="video">
-				<?php print apply_filters( 'the_content', $link['video'] ); ?>
+				<?php
+				if ( !empty( $link['video'] ) ) {
+					print apply_filters( 'the_content', $link['video'] );
+				} else if ( !empty( $link['photo'] ) ) {
+					print "<img src='" . $link['photo'] . "' alt='" . $link['title'] . "'>";
+				}
+				?>
 			</div>
 			<div class="caption">
 				<h3><?php print $link['title'] ?></h3>
