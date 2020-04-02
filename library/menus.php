@@ -7,7 +7,8 @@ register_nav_menus( array(
 	'constituent' => 'Header - Constituent',
 	'links' => 'Header - Links',
 	'academics-primary' => 'Academics Menu',
-	'academics-buttons' => 'Academics Buttons'
+	'academics-buttons' => 'Academics Buttons',
+	'tour' => 'Virtual Tour'
 ) );
 
 

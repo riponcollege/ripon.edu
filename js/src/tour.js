@@ -3,18 +3,45 @@
 // onload tour stuffs
 jQuery(document).ready(function($){
 	
+	var win_width = $(window).width();
+	var no_touch = $('html').hasClass( 'no-touchevents' );
+
 	// if we're on the tour page.
 	if ( $( '.tour' ) ) {
 
 		// select the tour section just once so we don't have to repeat ourselves.
 		var $tour = $( '.tour' );
 		
-		// when someone clicks on one of the section handles
-		$tour.find( '.section > a' ).on( 'click.tour', function(){
+		if ( win_width < 900 || !no_touch ) {
 
-			// expand that section of links
-			$(this).parent( '.section' ).toggleClass( 'open' );
-		});
+			// when someone clicks on one of the section handles
+			$tour.find( '.section > a' ).on( 'click.tour', function(){
+
+				// expand that section of links
+				$(this).parent( '.section' ).toggleClass( 'open' );
+
+			});
+
+		} else {
+
+			// when someone clicks on one of the section handles
+			$tour.find( '.section' ).on( 'mouseover.tour', function(){
+
+				// expand that section of links
+				$(this).addClass( 'open' );
+
+			});
+
+			// when someone clicks on one of the section handles
+			$tour.find( '.section' ).on( 'mouseout.tour', function(){
+
+				// expand that section of links
+				$(this).removeClass( 'open' );
+
+			});
+
+		}
+
 
 		// when someone clicks to close a section video
 		$tour.find( '.section-close' ).on( 'click.tour', function(){
