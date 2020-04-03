@@ -185,7 +185,7 @@ function do_section_videos( $section_label, $tour ) {
 			</div>
 
 			<div class="section wellness">
-				<a class="handle">Health & Wellness</a>
+				<a class="handle">Athletics</a>
 				<div class="links">
 					<?php do_section( 'wellness', $tour_wellness ); ?>
 				</div>
