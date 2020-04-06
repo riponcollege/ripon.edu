@@ -61,15 +61,57 @@ jQuery(document).ready(function($){
 
 			// grab the video ID
 			var video_id = $(this).attr('class').replace( 'show-video ', '' );
+			var $video_section = $tour.find( '.section-video.'+video_id );
 
 			// show the video for that section
-			$tour.find( '.section-video.'+video_id ).fadeIn( 500 );
+			$video_section.fadeIn( 500 );
 
 			// hide the mission statement
 			$tour.find( '.tour-mission' ).fadeOut( 500 );
 
 			// hide all the tour section buttons
 			$tour.find( '.tour-sections' ).addClass( 'hidden' );
+
+			// get the photos if they exist
+			var $images = $video_section.find( '.video' );
+
+			// if we have more than one image
+			if ( $images.find( '.next-photo' ) ) {
+
+				// select all the photos
+				var all_photos = $images.children( '.photo' );
+
+				// when you click the next photo button
+				$images.find( '.next-photo' ).on( 'click.tour', function(){
+
+					// get the currently visible
+					var current_photo = $images.children( '.photo:visible' );
+
+					// get the next photo - if it's empty, return to the beginning
+					var next_photo = ( current_photo.next( '.photo' ).length > 0 ? current_photo.next( '.photo' ) : all_photos.first() );
+					
+					// hide the current photo, and show the next one.
+					current_photo.hide();
+					next_photo.show();
+				
+				});
+
+				// when you click the next photo button
+				$images.find( '.prev-photo' ).on( 'click.tour', function(){
+
+					// get the currently visible
+					var current_photo = $images.children( '.photo:visible' );
+
+					// get the next photo - if it's empty, return to the beginning
+					var prev_photo = ( current_photo.prev( '.photo' ).length > 0 ? current_photo.prev( '.photo' ) : all_photos.last() );
+					
+					// hide the current photo, and show the next one.
+					current_photo.hide();
+					prev_photo.show();
+				
+				});
+
+			}
 		});
 
 	}

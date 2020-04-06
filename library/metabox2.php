@@ -446,10 +446,73 @@ function cmb2_sample_metaboxes() {
     ) );
 
     $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
-        'name' => 'Photo',
-        'id'   => 'photo',
-        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'name' => 'Photo 1',
+        'id'   => 'photo1',
+        'desc' => 'Select a photo - photos will only be used if the video is not set.',
         'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Caption 1',
+        'id'   => 'caption1',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Photo 2',
+        'id'   => 'photo2',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Caption 2',
+        'id'   => 'caption2',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Photo 3',
+        'id'   => 'photo3',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Caption 3',
+        'id'   => 'caption3',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Photo 4',
+        'id'   => 'photo4',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Caption 4',
+        'id'   => 'caption4',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Photo 5',
+        'id'   => 'photo5',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_about_metabox->add_group_field( $tour_about_metabox_group, array(
+        'name' => 'Caption 5',
+        'id'   => 'caption5',
+        'type' => 'text',
         'sanitization_cb' => false
     ) );
 
@@ -505,10 +568,73 @@ function cmb2_sample_metaboxes() {
     ) );
 
     $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
-        'name' => 'Photo',
-        'id'   => 'photo',
-        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'name' => 'Photo 1',
+        'id'   => 'photo1',
+        'desc' => 'Select a photo - photos will only be used if the video is not set.',
         'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Caption 1',
+        'id'   => 'caption1',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Photo 2',
+        'id'   => 'photo2',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Caption 2',
+        'id'   => 'caption2',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Photo 3',
+        'id'   => 'photo3',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Caption 3',
+        'id'   => 'caption3',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Photo 4',
+        'id'   => 'photo4',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Caption 4',
+        'id'   => 'caption4',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Photo 5',
+        'id'   => 'photo5',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_academics_metabox->add_group_field( $tour_academics_metabox_group, array(
+        'name' => 'Caption 5',
+        'id'   => 'caption5',
+        'type' => 'text',
         'sanitization_cb' => false
     ) );
 
@@ -564,10 +690,73 @@ function cmb2_sample_metaboxes() {
     ) );
 
     $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
-        'name' => 'Photo',
-        'id'   => 'photo',
-        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'name' => 'Photo 1',
+        'id'   => 'photo1',
+        'desc' => 'Select a photo - photos will only be used if the video is not set.',
         'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Caption 1',
+        'id'   => 'caption1',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Photo 2',
+        'id'   => 'photo2',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Caption 2',
+        'id'   => 'caption2',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Photo 3',
+        'id'   => 'photo3',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Caption 3',
+        'id'   => 'caption3',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Photo 4',
+        'id'   => 'photo4',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Caption 4',
+        'id'   => 'caption4',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Photo 5',
+        'id'   => 'photo5',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_student_metabox->add_group_field( $tour_student_metabox_group, array(
+        'name' => 'Caption 5',
+        'id'   => 'caption5',
+        'type' => 'text',
         'sanitization_cb' => false
     ) );
 
@@ -623,10 +812,73 @@ function cmb2_sample_metaboxes() {
     ) );
 
     $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
-        'name' => 'Photo',
-        'id'   => 'photo',
-        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'name' => 'Photo 1',
+        'id'   => 'photo1',
+        'desc' => 'Select a photo - photos will only be used if the video is not set.',
         'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Caption 1',
+        'id'   => 'caption1',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Photo 2',
+        'id'   => 'photo2',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Caption 2',
+        'id'   => 'caption2',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Photo 3',
+        'id'   => 'photo3',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Caption 3',
+        'id'   => 'caption3',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Photo 4',
+        'id'   => 'photo4',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Caption 4',
+        'id'   => 'caption4',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Photo 5',
+        'id'   => 'photo5',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_wellness_metabox->add_group_field( $tour_wellness_metabox_group, array(
+        'name' => 'Caption 5',
+        'id'   => 'caption5',
+        'type' => 'text',
         'sanitization_cb' => false
     ) );
 
@@ -682,10 +934,73 @@ function cmb2_sample_metaboxes() {
     ) );
 
     $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
-        'name' => 'Photo',
-        'id'   => 'photo',
-        'desc' => 'Select a photo - this will only be used if the video is not set.',
+        'name' => 'Photo 1',
+        'id'   => 'photo1',
+        'desc' => 'Select a photo - photos will only be used if the video is not set.',
         'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Caption 1',
+        'id'   => 'caption1',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Photo 2',
+        'id'   => 'photo2',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Caption 2',
+        'id'   => 'caption2',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Photo 3',
+        'id'   => 'photo3',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Caption 3',
+        'id'   => 'caption3',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Photo 4',
+        'id'   => 'photo4',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Caption 4',
+        'id'   => 'caption4',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Photo 5',
+        'id'   => 'photo5',
+        'type' => 'file',
+        'sanitization_cb' => false
+    ) );
+
+    $tour_map_metabox->add_group_field( $tour_map_metabox_group, array(
+        'name' => 'Caption 5',
+        'id'   => 'caption5',
+        'type' => 'text',
         'sanitization_cb' => false
     ) );
 

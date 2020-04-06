@@ -137,8 +137,26 @@ function do_section_videos( $section_label, $tour ) {
 				<?php
 				if ( !empty( $link['video'] ) ) {
 					print apply_filters( 'the_content', $link['video'] );
-				} else if ( !empty( $link['photo'] ) ) {
-					print "<img src='" . $link['photo'] . "' alt='" . $link['title'] . "'>";
+				} else if ( !empty( $link['photo1'] ) ) {
+					print "<div class='photo'><img src='" . $link['photo1'] . "' alt='" . $link['title'] . "'>
+						<div class='photo-caption'>" . $link['caption1'] . "</div></div>";
+					if ( !empty( $link['photo2']) ) {
+						print "<div class='photo'><img src='" . $link['photo2'] . "' alt='" . $link['title'] . "'>
+							<div class='photo-caption'>" . $link['caption2'] . "</div></div>";
+					}
+					if ( !empty( $link['photo3']) ) {
+						print "<div class='photo'><img src='" . $link['photo3'] . "' alt='" . $link['title'] . "'>
+							<div class='photo-caption'>" . $link['caption3'] . "</div></div>";
+					}
+					if ( !empty( $link['photo4']) ) {
+						print "<div class='photo'><img src='" . $link['photo4'] . "' alt='" . $link['title'] . "'>
+							<div class='photo-caption'>" . $link['caption4'] . "</div></div>";
+					}
+					if ( !empty( $link['photo5']) ) {
+						print "<div class='photo'><img src='" . $link['photo5'] . "' alt='" . $link['title'] . "'>
+							<div class='photo-caption'>" . $link['caption5'] . "</div></div>";
+					}
+					if ( !empty( $link['photo1'] ) && !empty( $link['photo2'] ) ) print "<a class='prev-photo'>&laquo;</a><a class='next-photo'>&raquo;</a>";
 				}
 				?>
 			</div>
