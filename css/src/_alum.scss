@@ -277,6 +277,8 @@
 }
 
 .alum-title {
+	background: none;
+
 	@include respond-to( 1024px ) {
 		float: left;
 	}
