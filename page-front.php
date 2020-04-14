@@ -43,7 +43,7 @@ get_header();
 
 		<div class="events">
 			<h3>Ripon <span>Events</span></h3>
-			<div style="background-color: #fecb00; color: black; padding: 5px 8px;"><strong>In response to COVID-19</strong>, we have postponed all on and off-campus college-sponsored events through May 15.</div>
+			<div style="background-color: #fecb00; color: black; padding: 5px 8px;">All college-sponsored events have been postponed until May 15 or until virtual arrangements can be made.</div>
 			<div class="events-widget">
 			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('home-events')) : ?>[events widget]<?php endif; ?>
 			</div>
