@@ -14,11 +14,16 @@ body.page-template-page-tour {
 
 
 .tour {
-	background: url(../img/bg-tour.jpg) center center no-repeat;
-	background-size: cover;
 	padding: 40px 20px;
 	position: relative;
 	text-align: center;
+	background: url(../img/bg-tour-mobile.jpg) top center no-repeat;
+
+	@include respond-to( 550px ) {
+		background: url(../img/bg-tour.jpg) center center no-repeat;
+		background-size: cover;
+	}
+
 
 	.tour-background {
 		display: none;
