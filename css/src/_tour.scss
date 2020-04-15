@@ -1,5 +1,18 @@
 
 
+body.page-template-page-tour {
+	.logo {
+		padding: 10px 0 !important;
+	}
+
+	.main-menus {
+		display: block !important;
+		text-align: center !important;
+	}
+}
+
+
+
 .tour {
 	background: url(../img/bg-tour.jpg) center center no-repeat;
 	background-size: cover;

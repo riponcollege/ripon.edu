@@ -25,7 +25,7 @@ Template Name: Tour
 <?php wp_head(); ?>
 
 <?php if ( is_search() ) { ?><meta name="robots" content="noindex" /><?php } ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=160" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=161" rel="stylesheet" type="text/css">
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -82,7 +82,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</a>
 		</div>
 
-		<button class="menu-toggle">show/hide menu</button>
 		<div class="main-menus">
 			<?php wp_nav_menu( array( 'theme_location' => 'tour', 'menu_class' => 'aux-menu' ) ); ?>
 		</div>
