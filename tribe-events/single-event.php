@@ -21,7 +21,7 @@ $events_label_plural   = tribe_get_event_label_plural();
 $event_id = get_the_ID();
 
 ?>
-<div style="background-color: #fecb00; color: black; padding: 5px 8px;"><strong>In response to COVID-19</strong>, we have postponed all on and off-campus college-sponsored events through May 15.</div>
+<div style="background-color: #fecb00; color: black; padding: 5px 8px;"><strong>Due to COVID-19</strong>, all college-sponsored events have been postponed until May 26 or until virtual arrangements can be made.</div>
 
 <div id="tribe-events-content" class="tribe-events-single">
 
