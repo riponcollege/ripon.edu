@@ -22,7 +22,7 @@ tribe_get_template_part( 'month/title-bar' );
 // Tribe Bar
 tribe_get_template_part( 'modules/bar' );
 ?>
-<div style="background-color: #fecb00; color: black; padding: 5px 8px;"><strong>In response to COVID-19</strong>, we have postponed all on and off-campus college-sponsored events through May 15.</div><br>
+<div style="background-color: #fecb00; color: black; padding: 5px 8px;"><strong>Due to COVID-19</strong>, all college-sponsored events have been postponed until May 26 or until virtual arrangements can be made.</div><br>
 <?php
 // Main Events Content
 tribe_get_template_part( 'month/content' );
