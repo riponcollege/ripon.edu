@@ -19,6 +19,8 @@
 
 			<?php 
 
+			
+
 			global $wp_query;
 			$wp_query->query_vars["posts_per_page"] = 20;
 			$wp_query->query_vars["post_type"] = 'faculty';
