@@ -25,21 +25,33 @@
 			$wp_query->query_vars["orderby"] = 'title';
 			$wp_query->query_vars["order"] = 'ASC';
 			$wp_query->query_vars["meta_query"] = array(
-	            array(
-	                'key' => CMB_PREFIX . 'faculty_areas',
-	                'value' => $_REQUEST['s'],
-	                'compare' => 'LIKE'
-	            )
-	        );
+				'relation' => 'OR',
+				array(
+					'key' => CMB_PREFIX . 'faculty_fname',
+					'value' => $query->query_vars['s'],
+					'compare' => 'LIKE',
+				),
+				array(
+					'key' => CMB_PREFIX . 'faculty_lname',
+					'value' => $query->query_vars['s'],
+					'compare' => 'LIKE',
+				),
+				array(
+					'key' => CMB_PREFIX . 'faculty_areas',
+					'value' => $query->query_vars['s'],
+					'compare' => 'LIKE',
+				),
+			);
+
 			$wp_query->get_posts();
 
-			if ( have_posts() ) : ?>
+			if ( $wp_query->have_posts() ) : ?>
 
 			<div class="faculty-directory">
 			<?php
 
 				// Start the Loop.
-				while ( have_posts() ) : the_post(); 
+				while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
 					?>
 				<div class="faculty-entry">
 					<?php the_post_thumbnail(); ?>

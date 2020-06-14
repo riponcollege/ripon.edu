@@ -37,8 +37,31 @@ get_header();
 			<?php 
 
 			global $wp_query;
+
+			$wp_query->query_vars["posts_per_page"] = 20;
+			$wp_query->query_vars["post_type"] = 'faculty';
 			$wp_query->query_vars["orderby"] = 'title';
 			$wp_query->query_vars["order"] = 'ASC';
+			if ( isset( $_REQUEST['s'] ) ) {
+				$wp_query->query_vars["meta_query"] = array(
+					'relation' => 'OR',
+					array(
+						'key' => CMB_PREFIX . 'faculty_fname',
+						'value' => $wp_query->query_vars['s'],
+						'compare' => 'LIKE',
+					),
+					array(
+						'key' => CMB_PREFIX . 'faculty_lname',
+						'value' => $wp_query->query_vars['s'],
+						'compare' => 'LIKE',
+					),
+					array(
+						'key' => CMB_PREFIX . 'faculty_areas',
+						'value' => $wp_query->query_vars['s'],
+						'compare' => 'LIKE',
+					),
+				);
+			}
 			$wp_query->get_posts();
 
 			if ( have_posts() ) : 
