@@ -13,11 +13,10 @@
 		line-height: 40px;
 		font-size: 14px;
 		padding: 0 15px;
-		text-transform: uppercase;
-		font-style: italic;
 	}
 
 	button {
+		display: none;
 		position: absolute;
 		top: 15px;
 		right: 15px;
@@ -118,6 +117,10 @@
 		border-bottom: 1px solid lighten( $grey, 50% );
 		@include clearfix;
 
+		&.hidden {
+			display: none;
+		}
+
 		.info {
 			float: right;
 			width: 77%;
@@ -148,7 +151,6 @@
 
 .faculty-title {
 	padding: 2px 0;
-	text-transform: uppercase;
 	color: lighten( $grey, 20% );
 	font-size: 12pt;
 }

@@ -24,24 +24,27 @@
 			$wp_query->query_vars["post_type"] = 'faculty';
 			$wp_query->query_vars["orderby"] = 'title';
 			$wp_query->query_vars["order"] = 'ASC';
-			$wp_query->query_vars["meta_query"] = array(
-				'relation' => 'OR',
-				array(
-					'key' => CMB_PREFIX . 'faculty_fname',
-					'value' => $query->query_vars['s'],
-					'compare' => 'LIKE',
-				),
-				array(
-					'key' => CMB_PREFIX . 'faculty_lname',
-					'value' => $query->query_vars['s'],
-					'compare' => 'LIKE',
-				),
-				array(
-					'key' => CMB_PREFIX . 'faculty_areas',
-					'value' => $query->query_vars['s'],
-					'compare' => 'LIKE',
-				),
-			);
+			if ( isset( $_REQUEST['s'] ) ) {
+				$wp_query->query_vars['s'] = $_REQUEST['s'];
+				$wp_query->query_vars["meta_query"] = array(
+					'relation' => 'OR',
+					array(
+						'key' => CMB_PREFIX . 'faculty_fname',
+						'value' => $query->query_vars['s'],
+						'compare' => 'LIKE',
+					),
+					array(
+						'key' => CMB_PREFIX . 'faculty_lname',
+						'value' => $query->query_vars['s'],
+						'compare' => 'LIKE',
+					),
+					array(
+						'key' => CMB_PREFIX . 'faculty_areas',
+						'value' => $query->query_vars['s'],
+						'compare' => 'LIKE',
+					),
+				);
+			}
 
 			$wp_query->get_posts();
 

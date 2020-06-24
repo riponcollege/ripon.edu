@@ -32,36 +32,19 @@ get_header();
 
 		<div class="three-quarter">
 
-			<?php include( "searchform-faculty.php" ); ?>
-
+			<div class="faculty-search-widget-container faculty-search">
+				<input type="text" value="<?php print ( isset( $_REQUEST['s'] ) ? $_REQUEST['s'] : "" ) ?>" name="s" id="s" placeholder="Search Name, Academic Department Or Area of Interest">
+			</div>
 			<?php 
 
 			global $wp_query;
 
-			$wp_query->query_vars["posts_per_page"] = 20;
+			$wp_query->query_vars["posts_per_page"] = 200;
 			$wp_query->query_vars["post_type"] = 'faculty';
-			$wp_query->query_vars["orderby"] = 'title';
+			$wp_query->query_vars["orderby"] = 'meta_value';
+			$wp_query->query_vars['meta_key'] = '_p_faculty_lname';
 			$wp_query->query_vars["order"] = 'ASC';
-			if ( isset( $_REQUEST['s'] ) ) {
-				$wp_query->query_vars["meta_query"] = array(
-					'relation' => 'OR',
-					array(
-						'key' => CMB_PREFIX . 'faculty_fname',
-						'value' => $wp_query->query_vars['s'],
-						'compare' => 'LIKE',
-					),
-					array(
-						'key' => CMB_PREFIX . 'faculty_lname',
-						'value' => $wp_query->query_vars['s'],
-						'compare' => 'LIKE',
-					),
-					array(
-						'key' => CMB_PREFIX . 'faculty_areas',
-						'value' => $wp_query->query_vars['s'],
-						'compare' => 'LIKE',
-					),
-				);
-			}
+
 			$wp_query->get_posts();
 
 			if ( have_posts() ) : 
@@ -73,11 +56,11 @@ get_header();
 				// Start the Loop.
 				while ( have_posts() ) : the_post(); 
 					?>
-					<div class="faculty-entry">
+					<div class="faculty-entry visible">
 						<?php the_post_thumbnail(); ?>
 						<div class="info">
 							<a href="<?php the_permalink(); ?>" class="btn"><i class="fa fa-lg fa-search"></i></a>
-							<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+							<h4><a href="<?php the_permalink() ?>"><?php print get_cmb_value( "faculty_lname" ); ?>, <?php print get_cmb_value( "faculty_fname" ); ?></a></h4>
 							<p class="faculty-title"><?php print get_cmb_value( "faculty_title" ); ?></p>
 							<a href="mailto:<?php print get_cmb_value( "faculty_email" ); ?>"><?php print get_cmb_value( "faculty_email" ); ?></a>
 						</div>

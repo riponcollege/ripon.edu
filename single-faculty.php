@@ -14,6 +14,7 @@ $courses = get_cmb_value( "faculty_courses" );
 		<?php 
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); 
+				edit_post_link( __( 'Edit', 'textdomain' ), '<p>', '</p>', null, 'btn btn-primary btn-edit-post-link' );
 				?>
 		<div class="quarter">
 			<div class="tab-nav">
