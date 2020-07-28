@@ -72,7 +72,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-AZ",
-                    info: "Counselor: " + territory10
+                    info: "Counselor: " + territory13
                 },
                 {
                     id: "US-AR",
@@ -80,11 +80,11 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-CA",
-                    info: "Counselor: " + territory5
+                    info: "Counselor: " + territory2
                 },
                 {
                     id: "US-CO",
-                    info: "Counselor: " + territory10
+                    info: "Counselor: " + territory13
                 },
                 {
                     id: "US-CT",
@@ -172,7 +172,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-NV",
-                    info: "Counselor: " + territory10
+                    info: "Counselor: " + territory13
                 },
                 {
                     id: "US-NH",
@@ -184,7 +184,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-NM",
-                    info: "Counselor: " + territory10
+                    info: "Counselor: " + territory13
                 },
                 {
                     id: "US-NY",
@@ -236,7 +236,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-UT",
-                    info: "Counselor: " + territory10
+                    info: "Counselor: " + territory13
                 },
                 {
                     id: "US-VT",
@@ -256,7 +256,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-WI",
-                    info: "North: " + territory13 + "<br>North East: " + territory12 + "<br>North West: " + territory12 + "<br>Central: " + territory10 + "<br>South East: " + territory7 + "<br>South West: " + territory13
+                    info: "North East: " + territory11 + "<br>North West: " + territory12 + "<br>Central: " + territory10 + "<br>South East: " + territory7 + "<br>South West: " + territory13
                 },
                 {
                     id: "US-WY",
