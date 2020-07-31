@@ -236,3 +236,7 @@ li#menu-item-77523 a {
 	border-right-color: $red-light;
 }
 
+
+.entry-content.no-margin p:first-child {
+	padding: 0;
+}

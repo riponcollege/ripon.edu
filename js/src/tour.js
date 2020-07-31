@@ -116,5 +116,10 @@ jQuery(document).ready(function($){
 
 	}
 
+
+	setTimeout(function(){
+		$('.youvisit-embed').height( 500 ).css('max-height','500px');
+	}, 3000);
+
 });
 

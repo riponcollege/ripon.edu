@@ -8,18 +8,10 @@ get_header();
 
 	<?php the_showcase(); ?>
 
-	<div class="page-title group">
-		<div class="wrap">
-			<div class="three-quarter">
-				<h1><?php the_title() ?></h1>
-			</div>
-		</div>
-	</div>
-
 	<?php 
 	while ( have_posts() ) : the_post(); ?>
 	
-	<div class="entry-content">
+	<div class="entry-content no-margin">
 		<?php the_content(); ?>
 	</div>
 
