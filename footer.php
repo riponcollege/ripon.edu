@@ -53,5 +53,6 @@
 
 <?php wp_footer(); ?>
 <script async="async" src="https://apply.ripon.edu/ping"></script>
+<script async="async" defer="defer" src="https://www.youvisit.com/tour/Embed/js3" type="text/javascript"></script>
 </body>
 </html>
