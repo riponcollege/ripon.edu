@@ -118,7 +118,7 @@ jQuery(document).ready(function($){
 
 
 	setTimeout(function(){
-		$('.youvisit-embed').css('max-height','500px').css('transition','400ms height ease-in-out').height( 500 );
+		$('.youvisit-embed').css('max-height','200px').css('transition','400ms height ease-in-out').height( 200 );
 	}, 3000);
 
 });
