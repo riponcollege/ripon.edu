@@ -21,9 +21,7 @@ tribe_get_template_part( 'month/title-bar' );
 
 // Tribe Bar
 tribe_get_template_part( 'modules/bar' );
-?>
-<div style="background-color: #fecb00; color: black; padding: 5px 8px;"><strong>Due to COVID-19</strong>, all college-sponsored events have been postponed until further notice or until virtual arrangements can be made.</div><br>
-<?php
+
 // Main Events Content
 tribe_get_template_part( 'month/content' );
 
