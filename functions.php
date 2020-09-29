@@ -41,6 +41,10 @@ include( "library/accordions.php" );
 include( "library/search.php" );
 
 
+// include HEPdata stuff
+include( "library/hep/send-donation.php" );
+
+
 // make excerpts shorter
 function ripon_excerpt_length( $length ) {
 	return 25;
