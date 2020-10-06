@@ -52,7 +52,7 @@ function hep_hook( $entry, $form ) {
 	$re = '/(.*) - (.*)/s';
 	preg_match_all( $re, $entry['24'], $company_info );
 
-	print_r( $entry );
+	print_r( $entry ); die;
 
 	// create the data object from the form entry data
 	$data_obj = (object) [
