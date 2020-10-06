@@ -52,13 +52,11 @@ function hep_hook( $entry, $form ) {
 	$re = '/(.*) - (.*)/s';
 	preg_match_all( $re, $entry['24'], $company_info );
 
-	print_r( $entry ); die;
-
 	// create the data object from the form entry data
 	$data_obj = (object) [
 	    'name' => $entry['7.3'] . ' ' . $entry['7.6'],
 	    'email' => $entry['9'],
-	    'amount' => $entry['16.1'],
+	    'amount' => $entry['23'],
 	    'phone' => $entry['30'],
 	    'company_name' => str_replace( "&", "%26", $company_info[1][0] ),
 	    'foundation_id' => $company_info[2][0],
