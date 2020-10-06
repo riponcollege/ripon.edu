@@ -52,6 +52,8 @@ function hep_hook( $entry, $form ) {
 	$re = '/(.*) - (.*)/s';
 	preg_match_all( $re, $entry['24'], $company_info );
 
+	print_r( $entry );
+
 	// create the data object from the form entry data
 	$data_obj = (object) [
 	    'name' => $entry['7.3'] . ' ' . $entry['7.6'],
