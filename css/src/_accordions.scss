@@ -1,5 +1,5 @@
 
-$accordion-arrow-size: 26px;
+$accordion-arrow-size: 14px;
 
 .accordions {
 	margin: 0 -20px;
@@ -14,21 +14,25 @@ $accordion-arrow-size: 26px;
 
 		.accordion-handle {
 			position: relative;
-			background: $grey;
-			color: white;
-			padding: 15px 20px;
+			color: $grey;
+			padding: 15px 10px 15px 30px;
 			cursor: pointer;
-			border-bottom: 5px solid $red-light;
+			font-size: 1.2em;
+
+			&:hover {
+				color: $red-light;
+				cursor: pointer;
+			}
 
 			&:after {
 				position: absolute;
-				right: 10px;
+				left: 10px;
 				top: 50%;
 				margin-top: -( $accordion-arrow-size / 2 );
 				width: $accordion-arrow-size;
 				height: $accordion-arrow-size;
 				@include font-awesome;
-				content: $fa-var-chevron-down;
+				content: $fa-var-chevron-right;
 				font-size: $accordion-arrow-size;
 				line-height: $accordion-arrow-size;
 				pointer-events: none;
@@ -45,16 +49,15 @@ $accordion-arrow-size: 26px;
 
 		&.open {
 			.accordion-handle:after {
-				content: $fa-var-chevron-up;
+				content: $fa-var-chevron-down;
 			}
 
 			.accordion-content {
 				display: block;
-				padding: 10px;
-				background: $grey-light;
+				padding: 0 10px 10px 20px;
 
 				@include respond-to( 480px ) {
-					padding: 20px 30px;
+					padding: 0px 10px 5px 30px;
 				}
 			}
 		}
