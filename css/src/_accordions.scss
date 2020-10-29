@@ -48,8 +48,12 @@ $accordion-arrow-size: 14px;
 		}
 
 		&.open {
-			.accordion-handle:after {
-				content: $fa-var-chevron-down;
+			.accordion-handle {
+				color: $red-light;
+
+				&:after {
+					content: $fa-var-chevron-down;
+				}
 			}
 
 			.accordion-content {
