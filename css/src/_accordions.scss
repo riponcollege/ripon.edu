@@ -1,9 +1,10 @@
 
-$accordion-arrow-size: 14px;
+$accordion-arrow-size: 20px;
 
 .accordions {
 	margin: 0 -20px;
-	padding: 10px 0;
+	border: 1px solid lighten( $grey, 50% );
+	border-bottom: 0;
 
 	@include respond-to( 768px ) {
 		margin: 0;
@@ -13,11 +14,13 @@ $accordion-arrow-size: 14px;
 		margin-bottom: 7px;
 
 		.accordion-handle {
+			@include font-medium;
 			position: relative;
-			color: $grey;
-			padding: 15px 10px 15px 30px;
+			color: $red-dark;
+			padding: 15px 10px 15px 35px;
 			cursor: pointer;
-			font-size: 1.2em;
+			font-size: 1.1em;
+			border-bottom: 1px solid lighten( $grey, 50% );
 
 			&:hover {
 				color: $red-light;
@@ -26,13 +29,13 @@ $accordion-arrow-size: 14px;
 
 			&:after {
 				position: absolute;
-				left: 10px;
+				left: 15px;
 				top: 50%;
 				margin-top: -( $accordion-arrow-size / 2 );
 				width: $accordion-arrow-size;
 				height: $accordion-arrow-size;
-				@include font-awesome;
-				content: $fa-var-chevron-right;
+				@include font-bold;
+				content: "+";
 				font-size: $accordion-arrow-size;
 				line-height: $accordion-arrow-size;
 				pointer-events: none;
@@ -41,6 +44,7 @@ $accordion-arrow-size: 14px;
 
 		.accordion-content {
 			display: none;
+			border-bottom: 1px solid lighten( $grey, 50% );
 
 			h4 {
 				padding: 11px 0 4px;
@@ -49,10 +53,10 @@ $accordion-arrow-size: 14px;
 
 		&.open {
 			.accordion-handle {
-				color: $red-light;
+				color: $teal;
 
 				&:after {
-					content: $fa-var-chevron-down;
+					content: "-";
 				}
 			}
 
@@ -61,7 +65,7 @@ $accordion-arrow-size: 14px;
 				padding: 0 10px 10px 20px;
 
 				@include respond-to( 480px ) {
-					padding: 0px 10px 5px 30px;
+					padding: 0px 10px 5px 35px;
 				}
 			}
 		}
