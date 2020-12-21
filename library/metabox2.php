@@ -208,7 +208,7 @@ function cmb2_sample_metaboxes() {
         )
     ) );
     $area_box->add_field( array(
-        'name' => 'Sidebar Video',
+        'name' => 'Program Spotlight',
         'id' => CMB_PREFIX . 'area_sidebar_video',
         'type' => 'text_url'
     ) );

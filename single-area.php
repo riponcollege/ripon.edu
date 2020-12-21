@@ -81,14 +81,15 @@ the_showcase();
 				<?php the_content(); ?>
 				<hr />
 				
+				<?php
+				if ( !empty( $sidebar_video_url ) ) { ?>
 				<div class="half video">
 					<h3>Program Spotlight</h3>
-					<?php
-					if ( !empty( $sidebar_video_url ) ) {
-						print apply_filters( 'the_content', $sidebar_video_url );
-					}
-					?>
+					<?php print apply_filters( 'the_content', $sidebar_video_url ); ?>
 				</div>
+					<?php
+				}
+				?>
 				<?php if ( !empty( get_cmb2_value( 'area_post_tag' ) ) ) { ?>
 				<div class="half">
 					<h3>Featured Articles</h3>

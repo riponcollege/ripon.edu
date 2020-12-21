@@ -120,4 +120,3 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 
-
