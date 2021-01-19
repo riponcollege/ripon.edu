@@ -148,7 +148,7 @@ AmCharts.ready(function() {
                 },
                 {
                     id: "US-MI",
-                    info: "Upper: " + territory11 + "<br>Lower: " + territory11
+                    info: "Counselor: " + territory11
                 },
                 {
                     id: "US-MN",
