@@ -100,7 +100,7 @@ function p_image_resize( $url, $width, $height = null, $crop = null ) {
 function p_is_image( $img_path ) {
 
     // valid image extensions
-    $valid_extensions = array( 'jpg', 'png', 'gif' );
+    $valid_extensions = array( 'jpg', 'jpeg', 'png', 'gif' );
 
     // get file info
     $info = pathinfo( $img_path );
